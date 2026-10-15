@@ -1,5 +1,6 @@
 {
-  "notice_id": "TOMN-edbf3c38713bc85e48f08da73c50428ee2e631193216de07ec145850db3754c8",
+  "notice_id": "TOMN-b0433aa9ac8476f481a73c2d96acb2bf1ee272a19d061eb404ca01b6a4c30b31",
+  "from": "[ORG]AIOC-TOM",
   "release": {
     "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "version": "1",
@@ -21,5 +22,6 @@
       "part": "role register",
       "text": "..."
     }
-  ]
+  ],
+  "rests_on": []
 }

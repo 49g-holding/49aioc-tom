@@ -2303,13 +2303,15 @@ A Library item of 49GAION, proposed in `upstream/REFERENCE-MODEL-CATALOGUE.md`. 
 
 ### E.20 The release notice (`contracts/release-notice.schema.json`, `$id` `urn:49gaion:library:tom:release-notice:v0.5`)
 
-Sent to the next stage on every filing of a decided release (§5.9 step 8a). It points; it never carries release text. **New** in v0.5.0.
+Sent to the next stage on every filing of a decided release (§5.9 step 8a). It points; it never carries release text. **New** in v0.5.0. It is this AIOC's specialisation of the Library's release notice contract, proposed to 49GAION: the same fields, with this AIOC's patterns and values.
 
 | Field | Type | Req | Meaning |
 |---|---|---|---|
 | `notice_id` | `^TOMN-[a-f0-9]{64}$` | yes | `TOMN-` + the SHA-256 of the notice without this field |
+| `from` | `[ORG]AIOC-TOM` | yes | this AIOC |
 | `release` | `{release_id ^TOMR-[a-f0-9]{64}$, version, manifest_sha256}` | yes | the release it announces |
-| `filed_ref` | `{source_id, version, sha256}` | yes | the release's filed copy in Source Lifecycle; `sha256` equals `manifest_sha256` |
+| `rests_on` | empty array | yes | the decided releases this release was designed from: none, since a TOM Release rests on sources only |
+| `filed_ref` | `{source_id, version, sha256}` | yes | the release's filed copy in Source Lifecycle, as the filing receipt names it |
 | `final_status` | `ACCEPT` · `ACCEPT WITH CORRECTIONS` | yes | the decided final status; no notice is sent for any other |
 | `final_status_ref` | string | yes | the decision reference in Source Lifecycle |
 | `supersedes` | `^TOMR-[a-f0-9]{64}$` or null | yes | the release it supersedes, if any |

@@ -1,5 +1,6 @@
 {
-  "notice_id": "TOMN-fdcf511a8a2a6eafeb9d340c189ae0452968eea2bfd944b0b8c55e34bf88e1c0",
+  "notice_id": "TOMN-7239fe35538a6ac2a690c858d01f094516d3d387c5c6538ee50e8054256733e1",
+  "from": "[ORG]AIOC-TOM",
   "release": {
     "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "version": "1",
@@ -17,5 +18,6 @@
     "return three"
   ],
   "to": "[ORG]AIOC-PPD",
-  "sent_at": "2026-10-16T09:00:00Z"
+  "sent_at": "2026-10-16T09:00:00Z",
+  "rests_on": []
 }
