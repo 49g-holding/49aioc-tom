@@ -2,7 +2,7 @@
 
 | Item | State |
 |---|---|
-| Blueprint | `v0.4.0`, draft, closed (15 October 2026); adds four features to v0.3.0 (`decisions/DR-0003`) |
+| Blueprint | `v0.4.1`, draft, closed (15 October 2026): v0.4.0 adds four features to v0.3.0 (`decisions/DR-0003`); v0.4.1 changes wording only: no natural person, positions only (`decisions/DR-0004`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `06b00d9` |
 | 49GAION versions | Standard `v1.5.0`; Protocol `v1.5.0`, with §13 (Source Lifecycle) on main under the unreleased `v1.6.0` row; signature list pinned in `contracts/PINS.json` |
 | Protocol section on this AIOC | drafted (`upstream/PROTOCOL-TOM-SECTION.md`), not yet proposed |
