@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.4.0"
+  blueprint_version: "v0.4.1"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -25,9 +25,9 @@ blueprint:
     functional: ["Request Reconstruction", "Needs Requests", "Structuring", "Entity Packaging", "Entity Model Design", "Hand-offs", "Operational Walkthrough", "Independent Review", "Decision Package and Release"]
 ```
 
-# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.4.0`
+# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.4.1`
 
-**Draft, closed at v0.4.0, 15 October 2026.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002` and `decisions/DR-0003`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, closed at v0.4.0, 15 October 2026; v0.4.1 the same day changes wording only (`decisions/DR-0004`): every human position is a HOAC position, and no natural person exists in the system.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002` and `decisions/DR-0003`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **TOM in one page**
 >
@@ -93,7 +93,7 @@ blueprint:
 | Made from | none yet. This text is proposed as the Library blueprint "49GAION Target Operating Model" (`upstream/`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `06b00d9` |
 | Mother | none yet |
-| Blueprint version and status | `v0.4.0` · draft, closed (the Closure statement above §0) |
+| Blueprint version and status | `v0.4.1` · draft, closed (the Closure statement above §0); v0.4.1 changes wording only (`decisions/DR-0004`) |
 | Writing repository | `<org>aioc-tom`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch Strictly confidential sources or personal data (Naming Standard R9) |
 | Code project | `<org>aioc-tom`, on the organisation's code platform |
 | Panel | not yet built |
@@ -161,7 +161,7 @@ card:
   version: "0.4.0"
   lineage: { id: "[ORG]AIOC-TOM", version: "0.4.0", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.4.0"
+  blueprint_version: "v0.4.1"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-TDL"
@@ -228,7 +228,7 @@ card:
 | The builder of every tool | `<filled>` |
 | The Library blueprint this core is made from | 49GAION Target Operating Model (proposed) |
 | **The Requesting Authority**: the seat that asks for the design and decides it | `<code of the human Cell carrying [ORG]HOAC-GOV>`, or of a human Cell carrying a HOAC label whose `authority_scope`, delegated by that Cell under `delegate-authority`, covers the design decisions of this AIOC (Standard §4.4, item 8). Its code is the `answering_cell` of every non-delegable row, except a row of a listed type, whose `answering_cell` is the Cell that signs that type (for `set-purpose-or-values`, the Cell carrying `[ORG]HOAC-GOV`) |
-| **The TOM Design Lead's holder** | recorded only in the holders register. Never the holder of the Requesting Authority's Cell. Where the organisation has fewer people than this needs, GOV records a compensating control (Standard §4.4, item 12), for example an outside reviewer of the Design Lead's attestations and rulings |
+| **The TOM Design Lead position** | a HOAC position (`[ORG]HOAC-ACS`), a legal persona. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, item 9, proposed by `49GAION/DR-0013`). One rule is given to that mechanism, and is never checked by this AIOC: the Design Lead position and the Requesting Authority's position are never occupied by the same natural person. Where the organisation cannot meet it, GOV records a compensating control (Standard §4.4, item 12), for example an outside review of the Design Lead's attestations and rulings |
 | **The source of record** | `[ORG]AIOC-SL`: the only source this AIOC asks and files into. Sources of other types may be read beside it, each through its own adapter (§4.3). |
 | **The engine register** | held at the tool gateway, in the Charter (Standard §4.4 item 11); read by this AIOC (Annex E.12) |
 
@@ -253,7 +253,7 @@ card:
 
 | Position (standard title) | Purpose | Reports to | Run today by | Deputy |
 |---|---|---|---|---|
-| TOM Design Lead | the accountable seat of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; decides a re-base; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a person (holders register) | an acting filler appointed under `appoint-acting-filler` (Standard §4.1, item 12) |
+| TOM Design Lead | the accountable seat of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; decides a re-base; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a HOAC position (`[ORG]HOAC-ACS`); who occupies it is top management's own mechanism, never seen by this AIOC | as top management arranges (`appoint-acting-filler`, Standard §4.1, item 12) |
 | Chief of Staff | keep each run moving, honest and traced; the only door to Source Lifecycle | TOM Design Lead | an agent (`[ORG]CELL-TCS`) | none; the run halts |
 | Source Proxy | answer only from the sources, with a citation, or refuse | Chief of Staff | an agent (`[ORG]CELL-TSP`) | none; the step halts |
 | Request Analyst | reconstruct the request into the Design Brief; derive and read the lenses; write the party register; raise only the needs that pass the leverage test; author A of the frame | Chief of Staff | an agent (`[ORG]CELL-TRA`) | none; the step halts |
@@ -272,6 +272,7 @@ card:
 - The **Requesting Authority** is not a position of this AIOC (§2.1). It decides the design; this AIOC only prepares the decision.
 - The Process Auditor of v0.2.0 is not a position. The process audit is kept as review point RP1b (§5.8).
 - No AI Cell signs anything (Protocol §10, item 3). Each AI Cell's bot has its own identity card (Annex A.5 of the template; §17).
+- **No natural person** (Standard §1.1, item 9, proposed by `49GAION/DR-0013`). Every human position this AIOC deals with, its own and the organisation's, is a HOAC position, a legal persona. This AIOC addresses positions only, through their HU ports; who occupies them, and how, is top management's own mechanism, and no part of this AIOC holds, reads or infers it.
 - Each position's role pack is carried in the role cards of the capabilities it performs (§4, §5).
 
 ---
@@ -1339,6 +1340,7 @@ H-01 to H-27 and H-30 to H-34 are taken by GOV, the TM Cell or the Requesting Au
 | v0.1.0 | 2026-10-14 | First draft: six earlier capabilities joined as Pods; documents only; needs requests to the Chief of Staff of `[ORG]AIOC-SL`; TOM Release filed into Source Lifecycle | v1.5.0 | not published |
 | v0.2.0 | 2026-10-14 | Applies three independent reviews (fidelity, conformance, direction): the AIOC answers to the TM Cell; the run envelope and the Design Request are defined; the run has states; the order's audits come before its decision rows; decomposition comes before the parent floor; Gate A, admissible criteria and decision rules are written out; confirmation never lowers a label; the source reference matches what Source Lifecycle serves; listed types need a gateway signature; the Missing Report; the material finding notice; reviewer independence; per-part tests and bot identity cards; organisation-specific history moved to the private code project | v1.5.0 | this commit |
 | v0.3.0 | 2026-10-15 | Closes the blueprint. Applies four independent reviews of v0.2.0 and their debate, under the directions recorded in `decisions/DR-0002`. Changes: a one-page front and a closure statement; nine stages, each with one input, one output and one done-test (§5.0); the Input Pack, versioned, with atomising and labelling in the socket; adapters, one file per source type; the Review Panel rule (three to five engines from two or more families at every review point; a blind pass; a debate held to quotes; settlement by code; rulings by the Design Lead on contested findings only); Hand-offs in place of Group Assembly, with no model of the whole; a release that is fully about the operating model (quality checks in place of review records; the release lint); carry-forward of earlier slices; the restored question set, request kinds, lens pass, understanding check and Gate B rows; Design Brief and Readiness Report; one list of human decisions; card `lifecycle_state: designed`; TEST-TOM v2 | v1.5.0 | this commit |
+| v0.4.1 | 2026-10-15 | Wording only, under the direction recorded in `decisions/DR-0004`: every human position is a HOAC position, a legal persona; no natural person exists in the system (Standard §1.1, item 9, proposed by `49GAION/DR-0013`). The Design Lead position in §2.1 and §3; a §3 note; SL-A2 in `docs/INTAKE-WITH-SOURCE-LIFECYCLE.md` addresses a position, not a holder. No rule, stage, test or card changes | v1.5.0 | this commit |
 | v0.4.0 | 2026-10-15 | Adds four features, under the direction recorded in `decisions/DR-0003`, and removes or weakens nothing of v0.3.0: the role register, made by code at S6 (§5.6; Annex E.17); the run depth (Annex F); two independent authors at S1 and S5, with the Second Request Analyst, the Frame Reconciler and the Second Designer (Annex G); reference models from the 49GAION Library, as methods never evidence (§5.5; Annex B.5; Annex E.19). TEST-TOM v3 (cases 85–99; TDL-7) | v1.5.0 | this commit |
 
 ---
@@ -2275,4 +2277,4 @@ Every other difference (wording, order, a narrative cell with the same linked en
 
 **Done when.** For each two-author output: both drafts locked before the compare step; the difference register complete, with every material difference disposed under G.5; its decision rows and needs requests sent through the Chief of Staff (§5.2); the stage's reviews settled as §5.8 requires.
 
-*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.4.0 · Powered by 49GAION*
+*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.4.1 · Powered by 49GAION*

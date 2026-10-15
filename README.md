@@ -43,7 +43,7 @@
 
 The writing repository of **`[ORG]AIOC-TOM`, Target Operating Model**: the AIOC that designs an organisation's target operating model from its own documents. It is proposed as the second stage of an organisation's design under 49GAION, after Source Lifecycle: the "next stage" of the 49GAION Operating Protocol §13, item 6. In each organisation this repository is named `<org>aioc-tom` (49GAION Naming Standard R9).
 
-**Status: draft `v0.4.0`, closed, 15 October 2026. Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 adds four features to the closed v0.3.0 and removes nothing (`decisions/DR-0003`).
+**Status: draft `v0.4.1`, closed, 15 October 2026 (v0.4.1: wording only, `decisions/DR-0004`). Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 adds four features to the closed v0.3.0 and removes nothing (`decisions/DR-0003`).
 
 ## Where to read
 
