@@ -1,0 +1,11 @@
+{
+  "request_id": "NR-DOC-0003",
+  "request_version": 1,
+  "request_type": "document",
+  "outcome": "declared absent",
+  "reason": "No delegation-of-authority document exists.",
+  "answered_by": {
+    "contributor_ref": "CONTRIB-0003"
+  },
+  "answered_at": "2026-10-21T11:00:00Z"
+}

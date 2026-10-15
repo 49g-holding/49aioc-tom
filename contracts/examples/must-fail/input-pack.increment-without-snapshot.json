@@ -1,0 +1,615 @@
+{
+  "pack_id": "TOMI-32f05118ffe425d93681c3877867aa4e922e6773dc0a97b9b07112b534f2394a",
+  "version": "P1",
+  "previous_pack_id": "TOMI-3a34ecea34d7baa647e0991928eaf1f56c586c42ca68c225d430130437c7fe36",
+  "run_id": "RUN-EXAMPLE-001",
+  "run_work_item": "WI-RUN-EXAMPLE-001",
+  "made_at": "2026-10-20T10:05:00Z",
+  "made_because": "needs answer",
+  "design_request": {
+    "reference": {
+      "source_id": "SRC-DRQ-0001",
+      "held": "held",
+      "version": "1",
+      "sha256": "1b1e83f7e32717fb16ab388d1b639ad589d2387a4b7a39c63e93fd36fb3ea9a8",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "statement_labels": [
+        {
+          "anchor": "f1",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "f2",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "f3",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "f4",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "f6",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "f7",
+          "sl_label": "stated"
+        }
+      ]
+    },
+    "request_kind": "reorganisation",
+    "field_atoms": {
+      "1": [
+        "ADP-SL:SRC-DRQ-0001@1#f1"
+      ],
+      "2": [
+        "ADP-SL:SRC-DRQ-0001@1#f2"
+      ],
+      "3": [
+        "ADP-SL:SRC-DRQ-0001@1#f3"
+      ],
+      "4": [
+        "ADP-SL:SRC-DRQ-0001@1#f4"
+      ],
+      "6": [
+        "ADP-SL:SRC-DRQ-0001@1#f6"
+      ],
+      "7": [
+        "ADP-SL:SRC-DRQ-0001@1#f7"
+      ]
+    }
+  },
+  "adapters": [
+    {
+      "adapter_id": "ADP-SL",
+      "adapter_version": "v1.0.0",
+      "adapter_file": "adapters/source-lifecycle.adapter.md",
+      "adapter_file_sha256": "3d21a8cbdf6f4b994af50310c444db2cb6737b73628422fdeb365446d5ee1aec",
+      "grant_ref": "REG-EVENT-0041",
+      "scope": "organisation design: read",
+      "expires": "2027-10-14",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "read_at": "2026-10-16T08:00:00Z",
+      "test": {
+        "id": "TEST-TOM-ADP-SL",
+        "version": "v1",
+        "result": "PASS"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "ref": {
+        "source_id": "SRC-DRQ-0001",
+        "held": "held",
+        "version": "1",
+        "sha256": "1b1e83f7e32717fb16ab388d1b639ad589d2387a4b7a39c63e93fd36fb3ea9a8",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "explainer",
+        "status": "in force",
+        "confidentiality": "internal",
+        "statement_labels": [
+          {
+            "anchor": "f1",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "f2",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "f3",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "f4",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "f6",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "f7",
+            "sl_label": "stated"
+          }
+        ]
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "defaulted": [],
+      "atomised": true,
+      "atom_count": 6,
+      "first_pack": "P0",
+      "read_at": "2026-10-16T08:00:00Z",
+      "flags": []
+    },
+    {
+      "ref": {
+        "source_id": "SRC-ARTICLES",
+        "held": "held",
+        "version": "1",
+        "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "document",
+        "status": "in force",
+        "confidentiality": "internal"
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "defaulted": [],
+      "atomised": true,
+      "atom_count": 3,
+      "first_pack": "P0",
+      "read_at": "2026-10-16T08:00:00Z",
+      "flags": []
+    },
+    {
+      "ref": {
+        "source_id": "SRC-ORG-CHART",
+        "held": "held",
+        "version": "1",
+        "sha256": "a90f1a6453f37779723c21a657141e28b782695b4c238b58e8e58c92dd4783a4",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "document",
+        "status": "draft",
+        "confidentiality": "internal"
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "document",
+      "status": "draft",
+      "confidentiality": "internal",
+      "defaulted": [],
+      "atomised": true,
+      "atom_count": 2,
+      "first_pack": "P0",
+      "read_at": "2026-10-16T08:00:00Z",
+      "flags": []
+    },
+    {
+      "ref": {
+        "source_id": "SRC-REGISTER",
+        "held": "held",
+        "version": "1",
+        "sha256": "3055341ece39455e1aacd13bdfca2515dbf992d9d4dce6307f627cd995d72c82",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "document",
+        "status": "in force",
+        "confidentiality": "confidential"
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "confidential",
+      "defaulted": [],
+      "atomised": true,
+      "atom_count": 2,
+      "first_pack": "P0",
+      "read_at": "2026-10-16T08:00:00Z",
+      "flags": []
+    },
+    {
+      "ref": {
+        "source_id": "SRC-APPROVAL-MATRIX",
+        "held": "not held",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f"
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "document",
+      "status": "not served",
+      "confidentiality": "strictly confidential",
+      "defaulted": [
+        "origin kind",
+        "status",
+        "confidentiality"
+      ],
+      "atomised": false,
+      "atom_count": 0,
+      "first_pack": "P0",
+      "read_at": "2026-10-16T08:00:00Z",
+      "flags": []
+    },
+    {
+      "ref": {
+        "source_id": "SRC-EX04-0001",
+        "held": "held",
+        "version": "1",
+        "sha256": "9f070e197dcb4b6c206c49f779ec2f1259e63c4af8c9c9731d0b893c00e972da",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "explainer",
+        "status": "in force",
+        "confidentiality": "internal",
+        "statement_labels": [
+          {
+            "anchor": "p1",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "p2",
+            "sl_label": "inferred"
+          }
+        ]
+      },
+      "adapter_id": "ADP-SL",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "defaulted": [],
+      "atomised": true,
+      "atom_count": 2,
+      "first_pack": "P1",
+      "read_at": "2026-10-20T10:05:00Z",
+      "flags": []
+    }
+  ],
+  "atoms": [
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f1",
+      "sha256": "da75f9efd70c0ac6697961ad8b6334556fbf4f9b4395f69bfed91c7a91c66254",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f2",
+      "sha256": "eea3d982fa6694e22a2c2de32cc43fca8d94870d469c3cf4768bd3aa0fe7a788",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f3",
+      "sha256": "7967f8b005f4a5745db8808e005b1be9490acb11ab388b06baadef7b85d6dc14",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f4",
+      "sha256": "41cffa246688b3e176d09a664c6bcd7299b464e5f69ac0fd0456dba1448b38bb",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f6",
+      "sha256": "6cd5b454f365f7ad61d7ec7ee1a7bc931aed366478b74188282f0334d6a28995",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-DRQ-0001@1#f7",
+      "sha256": "46f3284df75772fdf6a3f95e95123a3c5461adfc2ca732b80f6c7311dc52719e",
+      "anchor_kind": "record field",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-ARTICLES@1#s2",
+      "sha256": "f89662ce933ffcda7d32d1cf569a59b92ca9d942be4ef182273d7d0e4ad63133",
+      "anchor_kind": "paragraph",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "label": "source-backed",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-ARTICLES@1#s12",
+      "sha256": "8b0319286529ce5d6013a52e69065fbb93cf871e2356f5c182a0d3fba0646125",
+      "anchor_kind": "paragraph",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "label": "source-backed",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-ARTICLES@1#s20",
+      "sha256": "f00498052f90df661a2a023046ad1db280609d7cfd46a6c0e6ed06ccecf378a5",
+      "anchor_kind": "paragraph",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "label": "source-backed",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-ORG-CHART@1#r1",
+      "sha256": "2950d1cf11abf3f909126d41ce3456ec80f19b5f50d586be9c43205bc351f9b1",
+      "anchor_kind": "table row",
+      "origin_kind": "document",
+      "status": "draft",
+      "confidentiality": "internal",
+      "label": "inferred",
+      "label_basis": "status cap",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-ORG-CHART@1#r2",
+      "sha256": "6e17c1a8e5dc80a7a8fb9ed08c73c526424e7621f5e54988f270d8e886731fad",
+      "anchor_kind": "table row",
+      "origin_kind": "document",
+      "status": "draft",
+      "confidentiality": "internal",
+      "label": "inferred",
+      "label_basis": "status cap",
+      "first_pack": "P0",
+      "flags": [
+        "instruction-like text"
+      ]
+    },
+    {
+      "atom_id": "ADP-SL:SRC-REGISTER@1#e1",
+      "sha256": "5dbcff12a3d04eb8e17c24cc6225d831cc7d9d102f56f5466521b87e3daf2398",
+      "anchor_kind": "record field",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "confidential",
+      "label": "source-backed",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-REGISTER@1#e2",
+      "sha256": "5a44954de701121d5e5e1e641044a592206e361ae9d49bcc0bd4f6bafddf96d5",
+      "anchor_kind": "record field",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "confidential",
+      "label": "source-backed",
+      "label_basis": "mapping",
+      "first_pack": "P0",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-EX04-0001@1#p1",
+      "sha256": "81d5f5b95f185b9d0282d7363f8d9c61579da8b60de921f4f41f2a491c213848",
+      "anchor_kind": "paragraph",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "stated",
+      "label": "organisation-stated",
+      "label_basis": "mapping",
+      "first_pack": "P1",
+      "flags": []
+    },
+    {
+      "atom_id": "ADP-SL:SRC-EX04-0001@1#p2",
+      "sha256": "9e3d842a319c2fdb32fd4e6141037b0ba9caba697e3ec500a13764e666dffef4",
+      "anchor_kind": "paragraph",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "sl_label": "inferred",
+      "label": "inferred",
+      "label_basis": "mapping",
+      "first_pack": "P1",
+      "flags": []
+    }
+  ],
+  "refused": [
+    {
+      "offered": {
+        "channel": "human port"
+      },
+      "reason": "human port",
+      "at": "2026-10-16T07:55:00Z"
+    }
+  ],
+  "unknowns": [
+    {
+      "kind": "not held",
+      "ref": {
+        "source_id": "SRC-APPROVAL-MATRIX",
+        "held": "not held",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f"
+      }
+    },
+    {
+      "kind": "cited, not held",
+      "cited_reference": "the delegation-of-authority policy named in the articles",
+      "cited_in": "ADP-SL:SRC-ARTICLES@1#s12"
+    }
+  ],
+  "increment": {
+    "kind": "needs answer",
+    "request_id": "NR-EX-0001",
+    "answer_refs": [
+      {
+        "source_id": "SRC-EX04-0001",
+        "held": "held",
+        "version": "1",
+        "sha256": "9f070e197dcb4b6c206c49f779ec2f1259e63c4af8c9c9731d0b893c00e972da",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "explainer",
+        "status": "in force",
+        "confidentiality": "internal",
+        "statement_labels": [
+          {
+            "anchor": "p1",
+            "sl_label": "stated"
+          },
+          {
+            "anchor": "p2",
+            "sl_label": "inferred"
+          }
+        ]
+      }
+    ],
+    "atoms_added": 2,
+    "atoms_flagged": 0,
+    "reopens": [
+      "S1/FRAME#5"
+    ],
+    "acceptance": {
+      "checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "result": "pass"
+    }
+  },
+  "carried": [],
+  "pack_report": {
+    "counts": {
+      "sources": 6,
+      "held": 5,
+      "not_held": 1,
+      "atomised_sources": 5,
+      "atoms": 15,
+      "refused": 1,
+      "unknowns": 2
+    },
+    "by_origin_kind": {
+      "document": 7,
+      "explainer": 8,
+      "confirmation": 0,
+      "status": 0,
+      "export": 0,
+      "decision": 0,
+      "operating model": 0,
+      "design report": 0
+    },
+    "by_status": {
+      "draft": 2,
+      "in review": 0,
+      "approved": 0,
+      "in force": 13,
+      "superseded": 0,
+      "not served": 0
+    },
+    "by_confidentiality": {
+      "public": 0,
+      "internal": 13,
+      "confidential": 2,
+      "strictly confidential": 0
+    },
+    "by_label": {
+      "source-backed": 5,
+      "inferred": 3,
+      "organisation-stated": 7,
+      "assumed": 0,
+      "unknown": 0
+    },
+    "defaulted": {
+      "origin_kind": 1,
+      "status": 1,
+      "confidentiality": 1
+    },
+    "duplicates": [],
+    "live_version_conflicts": [],
+    "coverage": [
+      {
+        "named": {
+          "ref": "ADP-SL:SRC-DRQ-0001@1#f2",
+          "span": [
+            0,
+            11
+          ],
+          "span_sha256": "fd20b676e8c7f5590809478b5b06f1f202e11f8f21fc59a34442a23013261972"
+        },
+        "kind": "entity",
+        "sources_found": 3,
+        "atoms_found": 7
+      },
+      {
+        "named": {
+          "ref": "ADP-SL:SRC-DRQ-0001@1#f3",
+          "span": [
+            0,
+            17
+          ],
+          "span_sha256": "ebd9ce21bf84884a5072eb2c07894a662a41b191726b71e37d54cbfe921f6fb5"
+        },
+        "kind": "topic",
+        "sources_found": 2,
+        "atoms_found": 4
+      },
+      {
+        "named": {
+          "ref": "ADP-SL:SRC-DRQ-0001@1#f4",
+          "span": [
+            0,
+            23
+          ],
+          "span_sha256": "9e10be0aee7e4c3288359eb6d55f9138bdccaa9b203dea60cde954725620277b"
+        },
+        "kind": "period",
+        "sources_found": 0,
+        "atoms_found": 0
+      }
+    ],
+    "instruction_like": 1,
+    "highest_confidentiality": "confidential"
+  }
+}

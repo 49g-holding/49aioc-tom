@@ -1,0 +1,51 @@
+{
+  "request_id": "NR-EX-0001",
+  "version": 1,
+  "run_id": "RUN-EXAMPLE-001",
+  "parent_work_item": "WI-RUN-EXAMPLE-001",
+  "raised_by": "[ORG]POD-TRR",
+  "type": "explainer",
+  "question_plain": "Who decides what today, and what needs whose approval? Please explain it in your own words.",
+  "question_original": "Present-state decision rights for the committed entity are stated in no held source; S3 cannot be answered above 'unknown' for decision domains.",
+  "asking_form": {
+    "form": "explainer template",
+    "explainer_template": "EX-04"
+  },
+  "why_it_matters": "Decision rights must start from what is real, not assumed.",
+  "blocks": "Design Brief section 5 (present state: decision rights); Entity Model A4",
+  "effect_of_answer": "Decides whether the governance skeleton can name decision domains from evidence or must stop at the coarsest grain.",
+  "if_unanswered": {
+    "carried_as": "unknown",
+    "cost": "A4 is limited to the domains the constitutional documents name; the child may end incomplete-design."
+  },
+  "minimality_proof": {
+    "searched": [],
+    "why_unanswered": "The articles name the board's reserved matters only; the chart is a draft and shows reporting lines, not decisions."
+  },
+  "leverage": {
+    "breadth": "high",
+    "irreversibility": "medium",
+    "cost_of_being_wrong": "high"
+  },
+  "suggested_seat": {
+    "role_as_named": "the managing director, as the articles name the role",
+    "citation": {
+      "source_id": "SRC-ARTICLES",
+      "held": "held",
+      "version": "1",
+      "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "anchor": "s12"
+    }
+  },
+  "non_delegable": false,
+  "depends_on": [],
+  "pass_id": "PASS-1",
+  "row": 3,
+  "due": "2026-11-01",
+  "missing_report_ref": "MR-RUN-EXAMPLE-001-1"
+}

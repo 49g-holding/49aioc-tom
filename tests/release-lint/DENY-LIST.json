@@ -1,0 +1,125 @@
+{
+  "name": "Release lint deny-list of [ORG]AIOC-TOM",
+  "version": "v1",
+  "date": "2026-10-15",
+  "source": "blueprint Annex D item 19 and Annex E.15; the words a release part may not hold",
+  "owner": "the Cell carrying [ORG]HOAC-TM, owner of TEST-TOM",
+  "change_rule": "A word is added by a tested change. A word is removed only as change-fixed-test-or-threshold, signed by the Cell carrying [ORG]HOAC-TM.",
+  "matching": "Words and phrases match on word boundaries, where a hyphen is part of a word: 'AI-or-human' is caught by A-P1, not by the word list. Whitespace inside a phrase matches any run of whitespace. Patterns are applied as written here.",
+  "rule_sets": {
+    "A": {
+      "about": "how the work was made",
+      "applies_to": "every release part, including the string values of the manifest, the design ledgers and the trace; in CI, docs/OUTPUT.md and the enum strings of contracts/tom-release.schema.json",
+      "exemption": "A hit passes only when it is the organisation's own subject matter: it lies inside an element marked <!-- el:<ID> --> whose cited atoms contain the same word, case-insensitive. Never in the quality checks, the fixed framing of the Decision Package, the manifest's own fields or docs/OUTPUT.md.",
+      "entries": [
+        {
+          "id": "A-word",
+          "kind": "words",
+          "case_sensitive": true,
+          "words": ["AI", "A.I.", "LLM", "LLMs", "GPT"]
+        },
+        {
+          "id": "A-word",
+          "kind": "words",
+          "case_sensitive": false,
+          "words": [
+            "artificial intelligence",
+            "machine learning",
+            "language model",
+            "language models",
+            "AI model",
+            "model family",
+            "model families",
+            "model identity",
+            "served model",
+            "reviewer model",
+            "engine",
+            "engines",
+            "agent",
+            "agents",
+            "agentic",
+            "bot",
+            "bots",
+            "chatbot",
+            "automation",
+            "automated",
+            "automate",
+            "automates",
+            "algorithm",
+            "algorithms",
+            "prompt",
+            "prompts",
+            "reviewer",
+            "reviewers",
+            "degraded",
+            "executor",
+            "executors",
+            "human-only",
+            "tool",
+            "tools",
+            "tooling",
+            "vendor",
+            "vendors"
+          ]
+        },
+        {
+          "id": "A-P1",
+          "kind": "pattern",
+          "case_sensitive": false,
+          "pattern": "\\b(ai|human)s?\\s*-?\\s*(-|/|or|and|vs\\.?|versus)\\s*-?\\s*(ai|human)s?\\b",
+          "meaning": "an AI-or-human allocation",
+          "note": "v1 widens the pattern of the change specification, \\b(ai|human)s?\\s*(-|/|or|and|vs\\.?|versus)\\s*(ai|human)s?\\b, by an optional hyphen on each side of the joining word, so that 'AI-or-human' is caught, as the matching rule above requires."
+        },
+        {
+          "id": "A-P2",
+          "kind": "pattern",
+          "case_sensitive": false,
+          "pattern": "\\bwhich work\\b.{0,40}\\b(ai|machines?|computers?)\\b"
+        },
+        {
+          "id": "A-P3",
+          "kind": "pattern",
+          "case_sensitive": false,
+          "pattern": "\\bwho or what\\b"
+        },
+        {
+          "id": "A-P4",
+          "kind": "pattern",
+          "case_sensitive": false,
+          "pattern": "\\bnames? no executor\\b"
+        }
+      ]
+    },
+    "B": {
+      "about": "internal codes",
+      "applies_to": "the human-readable release parts: every part except the manifest, the design ledgers and the trace",
+      "exemption": "none",
+      "entries": [
+        {
+          "id": "B-1",
+          "kind": "pattern",
+          "case_sensitive": true,
+          "pattern": "\\[ORG\\]"
+        },
+        {
+          "id": "B-2",
+          "kind": "pattern",
+          "case_sensitive": true,
+          "pattern": "\\b[0-9A-Za-z]*AIOC-[A-Z]{2,5}\\b"
+        },
+        {
+          "id": "B-3",
+          "kind": "pattern",
+          "case_sensitive": true,
+          "pattern": "\\b[0-9A-Za-z]*(HOAC|CELL|POD)-[A-Z0-9]{2,8}\\b"
+        },
+        {
+          "id": "B-4",
+          "kind": "pattern",
+          "case_sensitive": true,
+          "pattern": "\\bHOAC\\b"
+        }
+      ]
+    }
+  }
+}

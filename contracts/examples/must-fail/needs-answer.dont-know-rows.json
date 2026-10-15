@@ -1,0 +1,39 @@
+{
+  "request_id": "NR-EX-0001",
+  "request_version": 1,
+  "request_type": "explainer",
+  "outcome": "answered",
+  "sources": [
+    {
+      "source_id": "SRC-EX04-0001",
+      "held": "held",
+      "version": "1",
+      "sha256": "9f070e197dcb4b6c206c49f779ec2f1259e63c4af8c9c9731d0b893c00e972da",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "explainer",
+      "status": "in force",
+      "confidentiality": "internal",
+      "statement_labels": [
+        {
+          "anchor": "p1",
+          "sl_label": "stated"
+        },
+        {
+          "anchor": "p2",
+          "sl_label": "inferred"
+        }
+      ]
+    }
+  ],
+  "answered_by": {
+    "contributor_ref": "CONTRIB-0007"
+  },
+  "simplification_note": "none",
+  "answered_at": "2026-10-20T10:00:00Z",
+  "dont_know_rows": [
+    1,
+    5,
+    9
+  ]
+}

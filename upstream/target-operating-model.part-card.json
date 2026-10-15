@@ -1,0 +1,45 @@
+{
+  "part": "49GAION Target Operating Model",
+  "version": "v0.4.0",
+  "inputs": [
+    {
+      "name": "a run request from the Requesting Authority's Cell, carrying the reference of an approved Design Request held in Source Lifecycle, stating how fine the model should be",
+      "format": "Work Item (ID + version), received through the HU input port at the tool gateway"
+    },
+    {
+      "name": "the organisation's sources, by reference only: from the output socket of Source Lifecycle, and from any other source through its own adapter, read only",
+      "format": "source reference (ID + version + hash; held or not held), received through the Input socket"
+    },
+    {
+      "name": "answers to needs requests, recorded and approved as sources in Source Lifecycle",
+      "format": "needs answer, by reference only"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "needs requests to the Chief of Staff of Source Lifecycle, one thing and one decision per row, with a report of what is still missing",
+      "format": "Work Item sub-items (ID + version), sent through the tool gateway"
+    },
+    {
+      "name": "a TOM Release: an operating model that names roles and what each decides, with a register of its roles, traced to its sources, walked, independently checked at every stage, and decided element by element by the Requesting Authority",
+      "format": "frozen, content-addressed release (manifest + parts by hash), filed into Source Lifecycle as a source of origin kind operating model"
+    },
+    {
+      "name": "where no design brief or release can be formed, a Readiness Report or a Held Report",
+      "format": "versioned record, filed into Source Lifecycle as a source of origin kind design report"
+    }
+  ],
+  "test": {
+    "id": "TEST-TOM",
+    "version": "v3",
+    "location": "tests/TEST-TOM.md of the writing repository of [ORG]AIOC-TOM",
+    "last_result": "NOT_RUN"
+  },
+  "tool_roles": [
+    "source of record (the output socket of Source Lifecycle)",
+    "tool gateway (signatures, metering, the stop door)",
+    "engines through the shared gateway, bound per call from its engine register; three or more engines from two or more families check each stage",
+    "the 49GAION reference-model catalogue, read by version and hash, as a method only"
+  ],
+  "status": "DRAFT"
+}

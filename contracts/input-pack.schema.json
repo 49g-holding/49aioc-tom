@@ -1,0 +1,1393 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:input-pack:v0.4",
+  "title": "[ORG]AIOC-TOM Input Pack v0.4",
+  "description": "One version of the Input Pack: what the Input socket hands to the engine (blueprint §4.3; Annex E.1). It holds references, hashes and labels only, never the text of a source. pack_id is 'TOMI-' + SHA-256 of the canonical pack body without pack_id (the canon of the release: keys sorted, separators ',' and ':', UTF-8, non-ASCII kept). P0 is made at admission; each later version adds atoms or flags and removes nothing. Dates are checked by the validator with format assertion on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack_id",
+    "version",
+    "previous_pack_id",
+    "run_id",
+    "run_work_item",
+    "made_at",
+    "made_because",
+    "design_request",
+    "adapters",
+    "sources",
+    "atoms",
+    "refused",
+    "unknowns",
+    "increment",
+    "carried",
+    "pack_report"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "version"
+        ],
+        "properties": {
+          "version": {
+            "const": "P0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "previous_pack_id": {
+            "const": null
+          },
+          "increment": {
+            "const": null
+          },
+          "made_because": {
+            "const": "admission"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "previous_pack_id": {
+            "type": "string",
+            "pattern": "^TOMI-[a-f0-9]{64}$"
+          },
+          "increment": {
+            "type": "object"
+          },
+          "made_because": {
+            "enum": [
+              "needs answer",
+              "decision",
+              "notice",
+              "source opened",
+              "re-base"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "made_because"
+        ],
+        "properties": {
+          "made_because": {
+            "const": "needs answer"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "increment": {
+            "properties": {
+              "kind": {
+                "const": "needs answer"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "made_because"
+        ],
+        "properties": {
+          "made_because": {
+            "const": "decision"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "increment": {
+            "properties": {
+              "kind": {
+                "const": "decision"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "made_because"
+        ],
+        "properties": {
+          "made_because": {
+            "const": "notice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "increment": {
+            "properties": {
+              "kind": {
+                "const": "notice"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "made_because"
+        ],
+        "properties": {
+          "made_because": {
+            "const": "source opened"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "increment": {
+            "properties": {
+              "kind": {
+                "const": "source opened"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "made_because"
+        ],
+        "properties": {
+          "made_because": {
+            "const": "re-base"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "increment": {
+            "properties": {
+              "kind": {
+                "const": "re-base"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "pack_id": {
+      "type": "string",
+      "pattern": "^TOMI-[a-f0-9]{64}$",
+      "description": "'TOMI-' + the content address of the pack without pack_id."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^P[0-9]+$",
+      "description": "P0 at admission, then P1, P2 ..."
+    },
+    "previous_pack_id": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "pattern": "^TOMI-[a-f0-9]{64}$",
+      "description": "null for P0; the previous version's pack_id otherwise."
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN-[A-Za-z0-9-]+$"
+    },
+    "run_work_item": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The run Work Item ID."
+    },
+    "made_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "made_because": {
+      "enum": [
+        "admission",
+        "needs answer",
+        "decision",
+        "notice",
+        "source opened",
+        "re-base"
+      ],
+      "description": "'admission' if and only if P0."
+    },
+    "design_request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference"
+      ],
+      "properties": {
+        "reference": {
+          "allOf": [
+            {
+              "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+            },
+            {
+              "properties": {
+                "held": {
+                  "const": "held"
+                }
+              }
+            }
+          ],
+          "description": "The approved Design Request in Source Lifecycle; held."
+        },
+        "request_kind": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The kind the Design Request states (DRQ-01 field 7), if any."
+        },
+        "depth": {
+          "enum": [
+            "light",
+            "standard",
+            "deep"
+          ],
+          "description": "The run depth the Design Request states (DRQ-01 field 9), if any; absent means standard (blueprint Annex F)."
+        },
+        "field_atoms": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Per DRQ-01 field number (1 to 9), the atoms of that field.",
+          "properties": {
+            "1": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "2": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "3": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "4": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "5": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "6": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "7": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "8": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            },
+            "9": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "adapters": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Per adapter read.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "adapter_id",
+          "adapter_version",
+          "adapter_file",
+          "adapter_file_sha256",
+          "grant_ref",
+          "scope",
+          "expires",
+          "snapshot_id",
+          "read_at",
+          "test"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "adapter_id"
+              ],
+              "properties": {
+                "adapter_id": {
+                  "const": "ADP-SL"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "snapshot_id": {
+                  "pattern": "^SLM-[a-f0-9]{64}$"
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "adapter_id": {
+            "type": "string",
+            "pattern": "^ADP-[A-Z0-9]{2,12}$"
+          },
+          "adapter_version": {
+            "type": "string",
+            "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "adapter_file": {
+            "type": "string",
+            "minLength": 1,
+            "description": "For example adapters/source-lifecycle.adapter.md."
+          },
+          "adapter_file_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "grant_ref": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The register event of the grant (connect-external-port)."
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expires": {
+            "type": "string",
+            "format": "date"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The snapshot pinned for this adapter; it changes only at a re-base. For ADP-SL: ^SLM-[a-f0-9]{64}$."
+          },
+          "read_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "test": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "version",
+              "result"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^TEST-TOM-ADP-[A-Z0-9]{2,12}$"
+              },
+              "version": {
+                "type": "string",
+                "pattern": "^v[0-9]+$"
+              },
+              "result": {
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "NOT_RUN"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "description": "The source catalogue, cumulative: every source in scope.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ref",
+          "adapter_id",
+          "origin_kind",
+          "status",
+          "confidentiality",
+          "defaulted",
+          "atomised",
+          "atom_count",
+          "first_pack",
+          "read_at",
+          "flags"
+        ],
+        "properties": {
+          "ref": {
+            "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+          },
+          "adapter_id": {
+            "type": "string",
+            "pattern": "^ADP-[A-Z0-9]{2,12}$"
+          },
+          "origin_kind": {
+            "enum": [
+              "document",
+              "explainer",
+              "confirmation",
+              "status",
+              "export",
+              "decision",
+              "operating model",
+              "design report"
+            ]
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "in review",
+              "approved",
+              "in force",
+              "superseded",
+              "not served"
+            ]
+          },
+          "confidentiality": {
+            "enum": [
+              "public",
+              "internal",
+              "confidential",
+              "strictly confidential"
+            ]
+          },
+          "defaulted": {
+            "type": "array",
+            "description": "Which values the adapter did not serve and the default filled.",
+            "items": {
+              "enum": [
+                "origin kind",
+                "status",
+                "confidentiality"
+              ]
+            }
+          },
+          "atomised": {
+            "type": "boolean"
+          },
+          "atom_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "first_pack": {
+            "type": "string",
+            "pattern": "^P[0-9]+$"
+          },
+          "read_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instruction-like text",
+                "superseded since pin",
+                "duplicate",
+                "live versions conflict",
+                "carried release"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "atoms": {
+      "type": "array",
+      "description": "Cumulative; an atom is never edited or removed.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "atom_id",
+          "sha256",
+          "anchor_kind",
+          "origin_kind",
+          "status",
+          "confidentiality",
+          "label",
+          "label_basis",
+          "first_pack",
+          "flags"
+        ],
+        "description": "One atom: references, hashes and labels only. It has no text field.",
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "origin_kind"
+              ],
+              "properties": {
+                "origin_kind": {
+                  "const": "export"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "as_of"
+              ]
+            }
+          }
+        ],
+        "properties": {
+          "atom_id": {
+            "type": "string",
+            "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$",
+            "description": "<adapter ID>:<source ID>@<version>#<anchor>."
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Of the atom's bytes."
+          },
+          "anchor_kind": {
+            "enum": [
+              "paragraph",
+              "list item",
+              "table row",
+              "record field"
+            ]
+          },
+          "origin_kind": {
+            "enum": [
+              "document",
+              "explainer",
+              "confirmation",
+              "status",
+              "export",
+              "decision",
+              "operating model",
+              "design report"
+            ]
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "in review",
+              "approved",
+              "in force",
+              "superseded",
+              "not served"
+            ]
+          },
+          "confidentiality": {
+            "enum": [
+              "public",
+              "internal",
+              "confidential",
+              "strictly confidential"
+            ]
+          },
+          "sl_label": {
+            "enum": [
+              "stated",
+              "inferred",
+              "assumed",
+              "unknown"
+            ],
+            "description": "The source's own statement label."
+          },
+          "label": {
+            "enum": [
+              "source-backed",
+              "inferred",
+              "organisation-stated",
+              "assumed",
+              "unknown"
+            ],
+            "description": "Annex B label, assigned once, here."
+          },
+          "label_basis": {
+            "enum": [
+              "mapping",
+              "status cap",
+              "default cap",
+              "carried label",
+              "confirmation note"
+            ]
+          },
+          "standing_note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "For example 'confirmed → NR-0007' or 'decided → <ref>'."
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date",
+            "description": "Required when origin_kind is export."
+          },
+          "first_pack": {
+            "type": "string",
+            "pattern": "^P[0-9]+$"
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instruction-like text",
+                "superseded since pin",
+                "currency drift"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "refused": {
+      "type": "array",
+      "description": "Every item refused; may be empty.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "offered",
+          "reason",
+          "at"
+        ],
+        "description": "An item refused; it never carries its content.",
+        "properties": {
+          "offered": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "channel"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "adapter_id": {
+                "type": "string",
+                "pattern": "^ADP-[A-Z0-9]{2,12}$"
+              },
+              "channel": {
+                "enum": [
+                  "adapter",
+                  "human port",
+                  "other channel"
+                ]
+              }
+            }
+          },
+          "reason": {
+            "enum": [
+              "no reference",
+              "outside scope",
+              "scope expired",
+              "does not resolve",
+              "hash mismatch",
+              "carries a secret",
+              "not atomisable",
+              "human port",
+              "other channel",
+              "connection revoked"
+            ]
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "description": "May be empty; the stage that relies on one adds its cost.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "not held"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "ref"
+              ]
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "cited, not held"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "cited_reference",
+                "cited_in"
+              ]
+            }
+          }
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "not held",
+              "cited, not held"
+            ]
+          },
+          "ref": {
+            "allOf": [
+              {
+                "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+              },
+              {
+                "properties": {
+                  "held": {
+                    "const": "not held"
+                  }
+                }
+              }
+            ],
+            "description": "Required for 'not held'."
+          },
+          "cited_reference": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Required for 'cited, not held'."
+          },
+          "cited_in": {
+            "type": "string",
+            "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$",
+            "description": "Required for 'cited, not held'."
+          }
+        }
+      }
+    },
+    "increment": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "atoms_added",
+        "atoms_flagged",
+        "reopens"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "kind"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "needs answer",
+                  "decision"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "request_id",
+              "answer_refs",
+              "snapshot_id",
+              "acceptance"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "kind"
+            ],
+            "properties": {
+              "kind": {
+                "const": "re-base"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "rebase"
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "needs answer",
+            "decision",
+            "notice",
+            "source opened",
+            "re-base"
+          ],
+          "description": "Equals made_because."
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^NR-[A-Za-z0-9-]+$"
+        },
+        "answer_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+          }
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The snapshot the answer names."
+        },
+        "atoms_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "atoms_flagged": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reopens": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^S[0-8]/\\S+$",
+            "description": "<stage ID>/<item ID>, for example S5/CHILD-A1#CAP-3."
+          }
+        },
+        "acceptance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "checks",
+            "result"
+          ],
+          "properties": {
+            "checks": {
+              "type": "array",
+              "minItems": 8,
+              "maxItems": 8,
+              "description": "The eight checks of the acceptance test (blueprint §4.3), in order.",
+              "items": {
+                "const": true
+              }
+            },
+            "result": {
+              "const": "pass"
+            }
+          }
+        },
+        "rebase": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "decision_ref",
+            "from_pack_id",
+            "diff_sha256",
+            "atoms_changed"
+          ],
+          "properties": {
+            "decision_ref": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The TOM Design Lead's run-control record."
+            },
+            "from_pack_id": {
+              "type": "string",
+              "pattern": "^TOMI-[a-f0-9]{64}$"
+            },
+            "diff_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "atoms_changed": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      },
+      "description": "null for P0; otherwise what this version added."
+    },
+    "carried": {
+      "type": "array",
+      "description": "Per carried release; may be empty.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "release_id",
+          "release_ref",
+          "pack_ids",
+          "children"
+        ],
+        "properties": {
+          "release_id": {
+            "type": "string",
+            "pattern": "^TOMR-[a-f0-9]{64}$"
+          },
+          "release_ref": {
+            "allOf": [
+              {
+                "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+              },
+              {
+                "properties": {
+                  "origin_kind": {
+                    "const": "operating model"
+                  }
+                },
+                "required": [
+                  "origin_kind"
+                ]
+              }
+            ],
+            "description": "The carried release, as a source of origin kind operating model."
+          },
+          "pack_ids": {
+            "type": "array",
+            "minItems": 1,
+            "description": "The packs named in that release's manifest.",
+            "items": {
+              "type": "string",
+              "pattern": "^TOMI-[a-f0-9]{64}$"
+            }
+          },
+          "children": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^CHILD-[A-Za-z0-9-]+$"
+            }
+          }
+        }
+      }
+    },
+    "pack_report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counts",
+        "by_origin_kind",
+        "by_status",
+        "by_confidentiality",
+        "by_label",
+        "defaulted",
+        "duplicates",
+        "live_version_conflicts",
+        "coverage",
+        "instruction_like",
+        "highest_confidentiality"
+      ],
+      "description": "The pack report (blueprint Annex E.1a), written by a code step.",
+      "properties": {
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sources",
+            "held",
+            "not_held",
+            "atomised_sources",
+            "atoms",
+            "refused",
+            "unknowns"
+          ],
+          "properties": {
+            "sources": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "held": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "not_held": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "atomised_sources": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "atoms": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "refused": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unknowns": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "by_origin_kind": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "document",
+            "explainer",
+            "confirmation",
+            "status",
+            "export",
+            "decision",
+            "operating model",
+            "design report"
+          ],
+          "properties": {
+            "document": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "explainer": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "confirmation": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "export": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "decision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "operating model": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "design report": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "by_status": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "draft",
+            "in review",
+            "approved",
+            "in force",
+            "superseded",
+            "not served"
+          ],
+          "properties": {
+            "draft": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "in review": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "approved": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "in force": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "superseded": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "not served": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "by_confidentiality": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "public",
+            "internal",
+            "confidential",
+            "strictly confidential"
+          ],
+          "properties": {
+            "public": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "internal": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "confidential": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "strictly confidential": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "by_label": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source-backed",
+            "inferred",
+            "organisation-stated",
+            "assumed",
+            "unknown"
+          ],
+          "properties": {
+            "source-backed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "inferred": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "organisation-stated": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "assumed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unknown": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "defaulted": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "origin_kind",
+            "status",
+            "confidentiality"
+          ],
+          "properties": {
+            "origin_kind": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "status": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "confidentiality": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "duplicates": {
+          "type": "array",
+          "description": "The same bytes under two IDs or two adapters: one source, several references.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "sha256",
+              "source_refs"
+            ],
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "source_refs": {
+                "type": "array",
+                "minItems": 2,
+                "description": "<adapter ID>:<source ID>@<version>.",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+$"
+                }
+              }
+            }
+          }
+        },
+        "live_version_conflicts": {
+          "type": "array",
+          "description": "Passed to S1 as candidate contradictions; never resolved at S0.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "versions"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "versions": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        },
+        "coverage": {
+          "type": "array",
+          "description": "Coverage of what the Design Request names.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "named",
+              "kind",
+              "sources_found",
+              "atoms_found"
+            ],
+            "properties": {
+              "named": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "ref",
+                  "span",
+                  "span_sha256"
+                ],
+                "description": "A quote (blueprint Annex E, conventions): never the quoted text.",
+                "properties": {
+                  "ref": {
+                    "type": "string",
+                    "pattern": "^ADP-[A-Z0-9]{2,12}:[^@#\\s]+@[^#\\s]+#\\S+$",
+                    "description": "An atom ID of the Design Request."
+                  },
+                  "span": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "description": "[start, end] character offsets in the resolved text.",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "span_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$",
+                    "description": "SHA-256 of the quoted characters, UTF-8."
+                  }
+                }
+              },
+              "kind": {
+                "enum": [
+                  "entity",
+                  "period",
+                  "topic"
+                ]
+              },
+              "sources_found": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "atoms_found": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "instruction_like": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "highest_confidentiality": {
+          "enum": [
+            "public",
+            "internal",
+            "confidential",
+            "strictly confidential"
+          ]
+        }
+      }
+    }
+  }
+}

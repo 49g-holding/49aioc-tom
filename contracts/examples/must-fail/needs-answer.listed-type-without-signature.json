@@ -1,0 +1,32 @@
+{
+  "request_id": "NR-PV-0001",
+  "request_version": 1,
+  "request_type": "decision",
+  "outcome": "answered",
+  "sources": [
+    {
+      "source_id": "SRC-DEC-0001",
+      "held": "held",
+      "version": "1",
+      "sha256": "6d4fb28b6705fb9cea13293c9aea678db6f0dc74d9d84a59c3df4ddaab9f760c",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "decision",
+      "status": "in force",
+      "confidentiality": "internal"
+    }
+  ],
+  "answered_by": {
+    "contributor_ref": "CONTRIB-0001",
+    "cell": "[ORG]CELL-GOV"
+  },
+  "decision": {
+    "deciding_cell": "[ORG]CELL-GOV",
+    "taken": "2026-11-20",
+    "recorded": "2026-11-20",
+    "value": "ACCEPT",
+    "listed_type": "set-purpose-or-values",
+    "weak_approval_signal": false
+  },
+  "answered_at": "2026-11-20T09:00:00Z"
+}

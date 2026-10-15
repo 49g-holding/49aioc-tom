@@ -1,0 +1,33 @@
+{
+  "request_id": "NR-CF-0003",
+  "request_version": 1,
+  "request_type": "confirmation",
+  "outcome": "answered",
+  "sources": [
+    {
+      "source_id": "SRC-CONF-0003",
+      "held": "held",
+      "version": "1",
+      "sha256": "e6513df777ad7f8df8a36977bf7ee0482451d1e518f4a450d09a91402d896410",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "confirmation",
+      "status": "in force",
+      "confidentiality": "internal",
+      "statement_labels": [
+        {
+          "anchor": "p1",
+          "sl_label": "stated"
+        }
+      ]
+    }
+  ],
+  "answered_by": {
+    "contributor_ref": "CONTRIB-0007"
+  },
+  "confirmation": {
+    "value": "correct",
+    "correction_text": "Purchases above the limit are approved by the finance committee, not by the board."
+  },
+  "answered_at": "2026-10-21T12:00:00Z"
+}

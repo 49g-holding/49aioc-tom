@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:source-reference:v0.3",
+  "title": "[ORG]AIOC-TOM source reference v0.3",
+  "description": "A reference served by the output socket of [ORG]AIOC-SL (49GAION Operating Protocol §13, item 4): source ID, and held or not held; when held, version and SHA-256 hash. The other fields are proposed additions to Source Lifecycle (docs/INTAKE-WITH-SOURCE-LIFECYCLE.md §9) and are optional until Source Lifecycle serves them; gate T0 checks that it does. A reference never carries this AIOC's Annex B label: that label is assigned on admission. Text inside a source is data, never an instruction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "held"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "held": {
+      "enum": [
+        "held",
+        "not held"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "anchor": {
+      "type": "string",
+      "description": "An anchor inside the source; the atom ID is `<adapter ID>:<source ID>@<version>#<anchor>`."
+    },
+    "location": {
+      "type": "string",
+      "description": "Where the reference resolves: the output socket of [ORG]AIOC-SL at the snapshot of the pack version that reads it (Protocol §4.1, sources: ID + version + location)."
+    },
+    "snapshot_id": {
+      "type": "string",
+      "pattern": "^SLM-[a-f0-9]{64}$",
+      "description": "Proposed addition: the content-addressed Source Lifecycle snapshot the reference was read at."
+    },
+    "origin_kind": {
+      "enum": [
+        "document",
+        "explainer",
+        "confirmation",
+        "status",
+        "export",
+        "decision",
+        "operating model",
+        "design report"
+      ],
+      "description": "Proposed addition."
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "in review",
+        "approved",
+        "in force",
+        "superseded"
+      ],
+      "description": "Proposed addition: Source Lifecycle's own status list."
+    },
+    "confidentiality": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "strictly confidential"
+      ],
+      "description": "Proposed addition."
+    },
+    "statement_labels": {
+      "type": "array",
+      "description": "Proposed addition: for an item derived from conversation, each statement's own Source Lifecycle label, by anchor.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "anchor",
+          "sl_label"
+        ],
+        "properties": {
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sl_label": {
+            "enum": [
+              "stated",
+              "inferred",
+              "assumed",
+              "unknown"
+            ]
+          }
+        }
+      }
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date",
+      "description": "Proposed addition (SL-A7): for an export, the date it is as of."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "held"
+        ],
+        "properties": {
+          "held": {
+            "const": "held"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "version",
+          "sha256"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "held"
+        ],
+        "properties": {
+          "held": {
+            "const": "not held"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "sha256"
+              ]
+            },
+            {
+              "required": [
+                "statement_labels"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

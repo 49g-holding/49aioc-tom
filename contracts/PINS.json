@@ -1,0 +1,26 @@
+{
+  "signature_list": {
+    "repository": "49GAION hub",
+    "path": "upstream/human-floor-signature-types.json",
+    "tag": "v1.5.0",
+    "commit": "bd03a3c",
+    "also_read_at": "66d2a56",
+    "sha256": "5d0a65f94698685bab006449c8a5be0a1fedf7e660aadd47cc4138b0540b4e73",
+    "read_on": "2026-10-15"
+  },
+  "protocol_schemas": {
+    "repository": "49GAION-protocol",
+    "path": "spec/schemas",
+    "commit": "d228d3b",
+    "note": "identical to tag v1.5.0 for spec/schemas"
+  },
+  "reference_model_catalogue": {
+    "repository": "49GAION-protocol",
+    "path": "library/reference-models/reference-model-catalogue.json",
+    "status": "not in the Library",
+    "version": null,
+    "commit": null,
+    "sha256": null,
+    "note": "Proposed in upstream/REFERENCE-MODEL-CATALOGUE.md. Until 49GAION holds it and this pin names its version, commit and SHA-256, every run declares the catalogue unavailable (blueprint §5.5). Taking a version into use is H-34."
+  }
+}

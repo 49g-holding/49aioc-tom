@@ -1,0 +1,66 @@
+{
+  "request_id": "NR-EXP-0001",
+  "version": 1,
+  "run_id": "RUN-EXAMPLE-001",
+  "parent_work_item": "WI-RUN-EXAMPLE-001",
+  "raised_by": "[ORG]POD-TRR",
+  "type": "export",
+  "question_plain": "Please export the register of entities and their ownership, as of 31 October 2026.",
+  "question_original": "The entity roster for S1 rests on a register held only in a system; no held document lists all entities and owners.",
+  "asking_form": {
+    "form": "export request",
+    "export_of": "the register of entities and ownership",
+    "system_role": "the corporate registry system",
+    "as_of": "2026-10-31"
+  },
+  "why_it_matters": "Each committed entity needs its own standing; the roster decides which entities the design covers.",
+  "blocks": "Design Brief section 1 (entity roster); gate T1",
+  "effect_of_answer": "Decides which entities are committed and which are context.",
+  "if_unanswered": {
+    "carried_as": "unknown",
+    "cost": "The roster rests on the held articles only; entities they do not name stay unknown."
+  },
+  "minimality_proof": {
+    "searched": [
+      {
+        "source_id": "SRC-ARTICLES",
+        "held": "held",
+        "version": "1",
+        "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "document",
+        "status": "in force",
+        "confidentiality": "internal"
+      }
+    ],
+    "why_unanswered": "The articles name the parent only, not its subsidiaries or their owners."
+  },
+  "leverage": {
+    "breadth": "high",
+    "irreversibility": "medium",
+    "cost_of_being_wrong": "high"
+  },
+  "suggested_seat": {
+    "role_as_named": "the company secretary, as the articles name the role",
+    "citation": {
+      "source_id": "SRC-ARTICLES",
+      "held": "held",
+      "version": "1",
+      "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "anchor": "s20"
+    }
+  },
+  "non_delegable": false,
+  "depends_on": [],
+  "pass_id": "PASS-1",
+  "row": 4,
+  "due": "2026-11-01",
+  "missing_report_ref": "MR-RUN-EXAMPLE-001-1",
+  "answering_cell": "[ORG]CELL-GOV"
+}

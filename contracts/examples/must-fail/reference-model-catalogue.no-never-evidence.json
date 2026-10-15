@@ -1,0 +1,81 @@
+{
+  "catalogue": "49GAION Reference-Model Catalogue",
+  "version": "v0.1.0",
+  "status": "draft",
+  "rules": [
+    "A pattern is a method. It may suggest a structure; it never states a fact about an organisation.",
+    "Every element a pattern suggests still needs the organisation's own evidence. Without it, the element is an assumption, with what breaks if it is false.",
+    "A pattern never raises the label of a statement, never closes an unknown and never settles a contradiction.",
+    "A pattern names role-types, never persons, holders or numbers of people.",
+    "This catalogue holds no organisation's data and no copied text. Each pattern is a plain description of a widely known way to organise."
+  ],
+  "patterns": [
+    {
+      "pattern_id": "RMP-FUNCTIONAL",
+      "name": "Functional organisation",
+      "summary": "Work is grouped by kind of expertise, such as sales, operations, finance and people. Each function has one accountable lead, and the top role joins the functions together.",
+      "typical_capabilities": [
+        "Direction and governance",
+        "Sales and customer relations",
+        "Operations or delivery",
+        "Finance",
+        "People",
+        "Support services, such as legal, premises and information"
+      ],
+      "decision_rights": [
+        {
+          "decision": "Overall direction and priorities",
+          "role_type": "the top role"
+        },
+        {
+          "decision": "The budget across functions",
+          "role_type": "the top role, advised by the finance lead"
+        },
+        {
+          "decision": "Methods and standards inside a function",
+          "role_type": "the function lead"
+        },
+        {
+          "decision": "Hiring inside an approved budget",
+          "role_type": "the function lead"
+        }
+      ],
+      "typical_hand_offs": [
+        {
+          "from": "sales",
+          "to": "operations",
+          "what_crosses": "a confirmed order or commitment to deliver"
+        },
+        {
+          "from": "operations",
+          "to": "finance",
+          "what_crosses": "delivery records for billing"
+        },
+        {
+          "from": "every function",
+          "to": "finance",
+          "what_crosses": "spending requests inside the budget"
+        },
+        {
+          "from": "people",
+          "to": "every function",
+          "what_crosses": "new staff ready to work"
+        }
+      ],
+      "fits_when": [
+        "There is one main line of products or services.",
+        "The organisation serves one market or a few similar ones.",
+        "Depth of expertise matters more than speed across functions."
+      ],
+      "does_not_fit_when": [
+        "There are several distinct product lines or markets that need their own priorities.",
+        "Most work needs fast coordination across many functions every day."
+      ],
+      "known_risks": [
+        "Each function serves its own goals before the whole.",
+        "Decisions that cross functions are slow and pile up at the top role.",
+        "No one owns a customer's whole experience."
+      ]
+    }
+  ]
+}

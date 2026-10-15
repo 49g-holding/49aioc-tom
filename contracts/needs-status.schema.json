@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:needs-status:v0.3",
+  "title": "[ORG]AIOC-TOM needs status v0.3",
+  "description": "A state change of one needs request. Source Lifecycle sends accepted, returned and asked; this AIOC sends withdrawn and superseded, and Source Lifecycle stops asking on either. Each maps onto the one status list of Protocol §4.2. Dates are checked by the validator with format assertion on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "version",
+    "state",
+    "protocol_status",
+    "sender",
+    "at"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^NR-[A-Za-z0-9-]+$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "state": {
+      "enum": [
+        "accepted",
+        "returned",
+        "asked",
+        "withdrawn",
+        "superseded"
+      ]
+    },
+    "protocol_status": {
+      "enum": [
+        "in-progress",
+        "rejected"
+      ]
+    },
+    "sender": {
+      "enum": [
+        "[ORG]AIOC-SL",
+        "[ORG]AIOC-TOM"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "superseded_by_version": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "accepted",
+              "returned",
+              "asked"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sender": {
+            "const": "[ORG]AIOC-SL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "withdrawn",
+              "superseded"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sender": {
+            "const": "[ORG]AIOC-TOM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "accepted",
+              "asked"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "protocol_status": {
+            "const": "in-progress"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "returned",
+              "withdrawn"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason"
+        ],
+        "properties": {
+          "protocol_status": {
+            "const": "rejected"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "const": "superseded"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "superseded_by_version"
+        ],
+        "properties": {
+          "protocol_status": {
+            "const": "rejected"
+          }
+        }
+      }
+    }
+  ]
+}

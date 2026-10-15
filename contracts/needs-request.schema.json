@@ -1,0 +1,656 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:needs-request:v0.4",
+  "title": "[ORG]AIOC-TOM needs request v0.4",
+  "description": "One request from the Target Operating Model AIOC to the Chief of Staff of [ORG]AIOC-SL for one thing the held sources do not answer. Sent as a sub-item of the run Work Item (docs/INTAKE-WITH-SOURCE-LIFECYCLE.md §2a). It never names a person. Dates are checked by the validator with format assertion on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "version",
+    "run_id",
+    "parent_work_item",
+    "raised_by",
+    "type",
+    "question_plain",
+    "question_original",
+    "asking_form",
+    "why_it_matters",
+    "blocks",
+    "effect_of_answer",
+    "if_unanswered",
+    "minimality_proof",
+    "leverage",
+    "non_delegable",
+    "depends_on",
+    "pass_id",
+    "row",
+    "due",
+    "missing_report_ref"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^NR-[A-Za-z0-9-]+$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "A changed request is a new version; it supersedes the earlier one, and a needs status 'superseded' tells Source Lifecycle."
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN-[A-Za-z0-9-]+$"
+    },
+    "parent_work_item": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The run Work Item; chain depth 1."
+    },
+    "raised_by": {
+      "enum": [
+        "[ORG]POD-TRR",
+        "[ORG]POD-TS",
+        "[ORG]POD-TEP",
+        "[ORG]POD-TEM",
+        "[ORG]POD-TH",
+        "[ORG]POD-TW",
+        "[ORG]POD-TR",
+        "[ORG]CELL-TCS"
+      ]
+    },
+    "type": {
+      "enum": [
+        "document",
+        "explainer",
+        "confirmation",
+        "status",
+        "export",
+        "decision"
+      ]
+    },
+    "question_plain": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "question_original": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asking_form": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "form"
+      ],
+      "properties": {
+        "form": {
+          "enum": [
+            "document kind",
+            "explainer template",
+            "confirmation row",
+            "status row",
+            "export request",
+            "decision row"
+          ]
+        },
+        "document_kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explainer_template": {
+          "type": "string",
+          "pattern": "^(EX-[0-9]{2}|DRQ-01)$"
+        },
+        "inferred_item": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inferred_from": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+          }
+        },
+        "row_purpose": {
+          "enum": [
+            "inferred item",
+            "understanding check",
+            "found, not said",
+            "assumption",
+            "obligation"
+          ]
+        },
+        "status_of": {
+          "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+        },
+        "export_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "system_role": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The system of record, by role; never a tool name in central text."
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "decision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "dont know",
+              "ACCEPT",
+              "CORRECT",
+              "REJECT",
+              "ACCEPT WITH CORRECTIONS (before the next stage)",
+              "ACCEPT WITH CORRECTIONS (after the next stage)",
+              "RETURN FOR REDESIGN",
+              "A governs",
+              "B governs",
+              "both, in different cases",
+              "in scope",
+              "out of scope",
+              "committed",
+              "context",
+              "SUPPLY",
+              "WITHDRAW",
+              "REDESIGN",
+              "ACCEPT AS KNOWN DEFECT",
+              "CLOSE",
+              "reading A",
+              "reading B",
+              "both readings",
+              "same role",
+              "different roles",
+              "other"
+            ]
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "document kind"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document_kind"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "explainer template"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "explainer_template"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "confirmation row"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "inferred_item",
+              "inferred_from",
+              "row_purpose"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "status row"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "status_of"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "export request"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "export_of",
+              "system_role",
+              "as_of"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "form"
+            ],
+            "properties": {
+              "form": {
+                "const": "decision row"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "decision",
+              "options"
+            ]
+          }
+        }
+      ]
+    },
+    "why_it_matters": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocks": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The brief section, child, element or gate the answer blocks."
+    },
+    "effect_of_answer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "if_unanswered": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "carried_as",
+        "cost"
+      ],
+      "properties": {
+        "carried_as": {
+          "enum": [
+            "assumption",
+            "unknown"
+          ]
+        },
+        "cost": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "minimality_proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "searched",
+        "why_unanswered"
+      ],
+      "properties": {
+        "searched": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+          }
+        },
+        "why_unanswered": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "leverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "breadth",
+        "irreversibility",
+        "cost_of_being_wrong"
+      ],
+      "properties": {
+        "breadth": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "irreversibility": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "cost_of_being_wrong": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
+    "suggested_seat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role_as_named",
+        "citation"
+      ],
+      "description": "Only for a delegable row: the role the held sources suggest can answer, with the citation. Never a person's name. The Chief of Staff of [ORG]AIOC-SL chooses who answers.",
+      "properties": {
+        "role_as_named": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "citation": {
+          "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+        }
+      }
+    },
+    "non_delegable": {
+      "type": "boolean",
+      "description": "True only on a decision row that only the Requesting Authority may answer."
+    },
+    "answering_cell": {
+      "type": "string",
+      "pattern": "^(\\[ORG\\]|[0-9A-Za-z]+)CELL-[A-Z0-9]{2,8}$",
+      "description": "Required when non_delegable is true, and only then: the code of the Requesting Authority's Cell, or, for a row of a listed type, of the Cell that signs that type (for set-purpose-or-values, the Cell carrying [ORG]HOAC-GOV). Source Lifecycle returns the request if anyone else answers."
+    },
+    "listed_type": {
+      "enum": [
+        "set-purpose-or-values"
+      ],
+      "description": "A subset of the pinned Standard's signature list (`contracts/PINS.json`); a type this AIOC's decisions can be. Others go under `org_listed_type`."
+    },
+    "org_listed_type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{2,60}$",
+      "description": "When the decision is a type the [ORG]AION added to its own signature list (Protocol §4.9, item 4); the validator checks it against that list."
+    },
+    "depends_on": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^NR-[A-Za-z0-9-]+$"
+      }
+    },
+    "pass_id": {
+      "type": "string",
+      "pattern": "^PASS-[0-9]+$"
+    },
+    "row": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "due": {
+      "type": "string",
+      "format": "date",
+      "description": "The planned start date of the step the answer blocks, from the run plan in the run record."
+    },
+    "missing_report_ref": {
+      "type": "string",
+      "pattern": "^MR-[A-Za-z0-9-]+$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "non_delegable"
+        ],
+        "properties": {
+          "non_delegable": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "answering_cell"
+        ],
+        "properties": {
+          "type": {
+            "const": "decision"
+          }
+        },
+        "not": {
+          "required": [
+            "suggested_seat"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "non_delegable"
+        ],
+        "properties": {
+          "non_delegable": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "answering_cell"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "decision"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "decision row"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "anyOf": [
+          {
+            "required": [
+              "listed_type"
+            ]
+          },
+          {
+            "required": [
+              "org_listed_type"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "decision"
+          },
+          "non_delegable": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "explainer"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "explainer template"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "document"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "document kind"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "confirmation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "confirmation row"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "status"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "status row"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "export"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "asking_form": {
+            "properties": {
+              "form": {
+                "const": "export request"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

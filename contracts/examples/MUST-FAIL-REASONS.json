@@ -1,0 +1,194 @@
+{
+  "input-pack.atom-with-text.json": {
+    "path": "/atoms/6",
+    "keyword": "additionalProperties"
+  },
+  "input-pack.atom-without-label.json": {
+    "path": "/atoms/6",
+    "keyword": "required"
+  },
+  "input-pack.increment-without-snapshot.json": {
+    "path": "/increment",
+    "keyword": "required"
+  },
+  "input-pack.p0-with-previous.json": {
+    "path": "/previous_pack_id",
+    "keyword": "const"
+  },
+  "input-pack.p1-without-previous.json": {
+    "path": "/previous_pack_id",
+    "keyword": "type"
+  },
+  "input-pack.refused-without-reason.json": {
+    "path": "/refused/0",
+    "keyword": "required"
+  },
+  "needs-answer.absent-with-sources.json": {
+    "path": "",
+    "keyword": "not"
+  },
+  "needs-answer.absent-without-reason.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "needs-answer.answered-without-sources.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "needs-answer.confirmation-without-value.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "needs-answer.correct-without-text.json": {
+    "path": "/confirmation",
+    "keyword": "required"
+  },
+  "needs-answer.deciding-seat-free-text.json": {
+    "path": "/decision",
+    "keyword": "additionalProperties"
+  },
+  "needs-answer.decision-without-cell.json": {
+    "path": "/answered_by",
+    "keyword": "required"
+  },
+  "needs-answer.degraded-review-decision.json": {
+    "path": "/decision/value",
+    "keyword": "enum"
+  },
+  "needs-answer.dont-know-rows.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "needs-answer.label-served.json": {
+    "path": "/sources/0",
+    "keyword": "additionalProperties"
+  },
+  "needs-answer.listed-type-without-signature.json": {
+    "path": "/decision",
+    "keyword": "required"
+  },
+  "needs-request.ai-listed-type.json": {
+    "path": "/listed_type",
+    "keyword": "enum"
+  },
+  "needs-request.degraded-review-option.json": {
+    "path": "/asking_form/options/3",
+    "keyword": "enum"
+  },
+  "needs-request.delegable-with-answering-cell.json": {
+    "path": "",
+    "keyword": "not"
+  },
+  "needs-request.export-incomplete.json": {
+    "path": "/asking_form",
+    "keyword": "required"
+  },
+  "needs-request.listed-type-delegable.json": {
+    "path": "/non_delegable",
+    "keyword": "const"
+  },
+  "needs-request.names-a-person.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "needs-request.non-delegable-explainer.json": {
+    "path": "/type",
+    "keyword": "const"
+  },
+  "needs-request.non-delegable-without-cell.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "needs-request.nothing-searched.json": {
+    "path": "/minimality_proof/searched",
+    "keyword": "minItems"
+  },
+  "needs-request.raised-by-prose.json": {
+    "path": "/raised_by",
+    "keyword": "enum"
+  },
+  "needs-request.row-13.json": {
+    "path": "/row",
+    "keyword": "maximum"
+  },
+  "needs-status.withdrawn-by-sl.json": {
+    "path": "/sender",
+    "keyword": "const"
+  },
+  "reference-model-catalogue.no-never-evidence.json": {
+    "path": "/patterns/0",
+    "keyword": "required"
+  },
+  "source-reference.held-without-hash.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "source-reference.status-unknown-value.json": {
+    "path": "/status",
+    "keyword": "enum"
+  },
+  "tom-release.ai-listed-type.json": {
+    "path": "/decisions/1/decision/listed_type",
+    "keyword": "enum"
+  },
+  "tom-release.blueprint-without-child.json": {
+    "path": "/parts/2",
+    "keyword": "required"
+  },
+  "tom-release.degraded-review-decision.json": {
+    "path": "/decisions/2/decision/value",
+    "keyword": "enum"
+  },
+  "tom-release.depth-not-a-depth.json": {
+    "path": "/depth",
+    "keyword": "enum"
+  },
+  "tom-release.filed-as-inside.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "tom-release.known-defect-unlisted.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "tom-release.lint-failed.json": {
+    "path": "/release_lint/result",
+    "keyword": "const"
+  },
+  "tom-release.listed-type-without-signature.json": {
+    "path": "/decisions/1/decision",
+    "keyword": "required"
+  },
+  "tom-release.no-role-register.json": {
+    "path": "/parts",
+    "keyword": "contains"
+  },
+  "tom-release.no-slice.json": {
+    "path": "/scope",
+    "keyword": "required"
+  },
+  "tom-release.one-part-only.json": {
+    "path": "/parts",
+    "keyword": "minItems"
+  },
+  "tom-release.patterns-without-catalogue.json": {
+    "path": "/reference_models/patterns_used",
+    "keyword": "maxItems"
+  },
+  "tom-release.review-records-part.json": {
+    "path": "/parts/15/part",
+    "keyword": "enum"
+  },
+  "tom-release.source-snapshot-field.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "tom-release.supersedes-not-an-id.json": {
+    "path": "/supersedes",
+    "keyword": "oneOf"
+  },
+  "tom-release.weak-approval-decided.json": {
+    "path": "/decisions/0/decision/weak_approval_signal",
+    "keyword": "const"
+  }
+}

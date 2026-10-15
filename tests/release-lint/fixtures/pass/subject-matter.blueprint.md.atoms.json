@@ -1,0 +1,14 @@
+{
+  "elements": {
+    "CAP-1": [
+      "The workshop receives aircraft engines from airline customers under the overhaul contracts."
+    ],
+    "CAP-2": [
+      "Customer engines are stripped, inspected, repaired and rebuilt in the main hangar.",
+      "Each rebuilt unit is released to service with a certificate signed by the quality manager."
+    ],
+    "DR-1": [
+      "The workshop manager sets the intake order. The quality manager signs every release to service."
+    ]
+  }
+}

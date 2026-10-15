@@ -1,0 +1,24 @@
+{
+  "request_id": "NR-CF-0002",
+  "request_version": 1,
+  "request_type": "confirmation",
+  "outcome": "dont know",
+  "reason": "The contributor does not know whether the approval limit still applies.",
+  "sources": [
+    {
+      "source_id": "SRC-CONF-0002",
+      "held": "held",
+      "version": "1",
+      "sha256": "69d68095ee702d7902e8e803a5e99a057c752922516074bd63ad6c09a97b6afd",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "confirmation",
+      "status": "in force",
+      "confidentiality": "internal"
+    }
+  ],
+  "answered_by": {
+    "contributor_ref": "CONTRIB-0007"
+  },
+  "answered_at": "2026-10-21T10:00:00Z"
+}

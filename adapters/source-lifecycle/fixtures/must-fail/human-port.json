@@ -1,0 +1,28 @@
+{
+  "case": "Words received through a human port are not a source: refused.",
+  "served": null,
+  "context": {
+    "channel": "human port",
+    "in_scope": true,
+    "scope_expires": "2027-01-01",
+    "read_on": "2026-11-01",
+    "revoked": false,
+    "resolves": true,
+    "computed_sha256": null,
+    "atomisable": true,
+    "carries_secret": false,
+    "conversation_derived": false
+  },
+  "expect": {
+    "admitted": false,
+    "refusal_reason": "human port",
+    "origin_kind": null,
+    "status": null,
+    "confidentiality": null,
+    "defaulted": [],
+    "status_cap": null,
+    "unknown": null,
+    "as_of": null,
+    "labels": []
+  }
+}

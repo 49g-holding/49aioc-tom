@@ -1,0 +1,417 @@
+{
+  "release_id": "TOMR-9262a215e4ad77ff8c4c7e503def9d6402aa55fe116dd02e9121c10edc4b295b",
+  "org_aion": "[ORG]AION",
+  "scope": {
+    "subject": "whole organisation",
+    "shape": "single entity",
+    "committed_entities": [
+      "ENTITY-A"
+    ],
+    "slice": {
+      "designed": [
+        "CHILD-A1",
+        "CHILD-A2"
+      ],
+      "not_yet_designed": []
+    }
+  },
+  "blueprint_version": "v0.3.0",
+  "standard_versions": {
+    "standard": "v1.5.0",
+    "protocol": "v1.5.0",
+    "library": "v1.5.0"
+  },
+  "depth": "standard",
+  "input_packs": [
+    {
+      "pack_id": "TOMI-4d2d5d24ac2d12e128a9ddd18538f09363897b6d0e5fbb8d00e62227c70942f8",
+      "version": "P0",
+      "snapshots": [
+        {
+          "adapter_id": "ADP-SL",
+          "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f"
+        }
+      ]
+    },
+    {
+      "pack_id": "TOMI-3a34ecea34d7baa647e0991928eaf1f56c586c42ca68c225d430130437c7fe36",
+      "version": "P0",
+      "snapshots": [
+        {
+          "adapter_id": "ADP-SL",
+          "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f"
+        }
+      ],
+      "from_release": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35"
+    },
+    {
+      "pack_id": "TOMI-fee938e71e6757d0e657d187e4e817b2cc30a74e5e43bfe5b569cb1ed166c558",
+      "version": "P1",
+      "snapshots": [
+        {
+          "adapter_id": "ADP-SL",
+          "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f"
+        }
+      ],
+      "from_release": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35"
+    }
+  ],
+  "parts": [
+    {
+      "part": "design brief",
+      "path": "design-brief.md",
+      "sha256": "f3af2ba2bc302feb91656f9d61e373c3537a038c8c9b8a3c55a33fbc8262f6bd",
+      "bytes": 1000
+    },
+    {
+      "part": "structure",
+      "path": "structure.md",
+      "sha256": "83c85797f0e584ed0fd35cd557c3cfe3170d35c1f5ebb5b3b06799e2149e73c8",
+      "bytes": 1100
+    },
+    {
+      "part": "blueprint",
+      "child": "CHILD-A1",
+      "path": "CHILD-A1/blueprint.md",
+      "sha256": "f5a05085dc5748da4f57cf243b4446889d3d97a7dcbd1c46c1d6b93083152e0f",
+      "bytes": 1200,
+      "carried_from": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35"
+    },
+    {
+      "part": "blueprint",
+      "child": "CHILD-A2",
+      "path": "CHILD-A2/blueprint.md",
+      "sha256": "1bf2490895378cf49998bf9efebdc18944fc30a5ef92a265ab85cfd029057ce4",
+      "bytes": 1200
+    },
+    {
+      "part": "rationale and evidence brief",
+      "child": "CHILD-A1",
+      "path": "CHILD-A1/rationale-and-evidence-brief.md",
+      "sha256": "6a95a877ccc283a95a0ca3d083d7f3f3a389d0c540579290faf8cdd9651a408b",
+      "bytes": 1300,
+      "carried_from": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35"
+    },
+    {
+      "part": "rationale and evidence brief",
+      "child": "CHILD-A2",
+      "path": "CHILD-A2/rationale-and-evidence-brief.md",
+      "sha256": "5291e5b20852dc45410a4cc2ac2c6b023502a7ac57fa9d72aecf14fa53913164",
+      "bytes": 1300
+    },
+    {
+      "part": "design ledger",
+      "child": "CHILD-A1",
+      "path": "CHILD-A1/design-ledger.json",
+      "sha256": "97909e8835f44bf650686d7d6e0412ecbf81757531441c096df24455c2ff639b",
+      "bytes": 1400,
+      "carried_from": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35"
+    },
+    {
+      "part": "design ledger",
+      "child": "CHILD-A2",
+      "path": "CHILD-A2/design-ledger.json",
+      "sha256": "be0b5655425cd764c396ae16287511f1596c3d6d8ac5d16b36a1eb17c6dc5d25",
+      "bytes": 1400
+    },
+    {
+      "part": "hand-offs register",
+      "path": "hand-offs-register.md",
+      "sha256": "d4281028f10a117b2e8c8727337c3d509003551ca90088d2593c8d4b0026cbf2",
+      "bytes": 400
+    },
+    {
+      "part": "counterparty register",
+      "path": "counterparty-register.md",
+      "sha256": "d25a273f896ebbff334bc0911dc165b9ad3bec8f32af6be5f729162502bca454",
+      "bytes": 1500
+    },
+    {
+      "part": "legal and regulatory perimeter",
+      "path": "legal-and-regulatory-perimeter.md",
+      "sha256": "09b4fb6b579e77bfcab6d72fb3e1bda8e679f5c5b3e18d70dd9a3e5090255f16",
+      "bytes": 1600
+    },
+    {
+      "part": "deferred-boundary register",
+      "path": "deferred-boundary-register.md",
+      "sha256": "9eb048ec6cebcc53e917241b5abdf9c94a258723552cd36d498d486833cac031",
+      "bytes": 1700
+    },
+    {
+      "part": "seam findings",
+      "path": "seam-findings.md",
+      "sha256": "fbde26b86373042e9ed26b6c3eefef70b42178e49f60590576bc00d7d5fc67c0",
+      "bytes": 300
+    },
+    {
+      "part": "walkthrough report",
+      "path": "walkthrough-report.md",
+      "sha256": "4be7f150b1e7e5666361bb51d586b7f88bb82fdc406e99b045a481b632b00ed5",
+      "bytes": 1800
+    },
+    {
+      "part": "quality checks",
+      "path": "quality-checks.md",
+      "sha256": "30dc49f18dc262fe0cd9d3dbb5cbc8ceee7a9eca4940097302273f17c6d09493",
+      "bytes": 1900
+    },
+    {
+      "part": "decision package",
+      "path": "decision-package.md",
+      "sha256": "63ca9777279a6148e059ed3e49792a8a02b25018d8c848226be1d5a2a8f2e0ec",
+      "bytes": 2000
+    },
+    {
+      "part": "registers",
+      "path": "registers.md",
+      "sha256": "59ac0d4521f4f741ad1caed9d13067a71af3c543991a7be2dc634a62e90adc0f",
+      "bytes": 2100
+    },
+    {
+      "part": "trace",
+      "path": "trace.md",
+      "sha256": "85cb622e6f1e02ad9b1a713b41a2df69958373503050edf2841f5dfcf4d9bacf",
+      "bytes": 2200
+    },
+    {
+      "part": "role register",
+      "path": "role-register.md",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bytes": 1000
+    }
+  ],
+  "run_records": [
+    {
+      "kind": "run record",
+      "ref": "RUN-EXAMPLE-003/run-record",
+      "sha256": "3682991cd8dc3f4019cab0392cb57f726ad10845f0aa6e2b8800d7c9731be481"
+    },
+    {
+      "kind": "read plan",
+      "ref": "RUN-EXAMPLE-003/read-plan",
+      "sha256": "5566930007e622fe1f6855950597c2e2bad4b0220845c640091286beaef5c533"
+    },
+    {
+      "kind": "round log",
+      "ref": "RUN-EXAMPLE-003/round-log",
+      "sha256": "f9de4bd3452b10e5c9f513a260723399bab8d459ca90c4ad7c939d44f975f53b"
+    },
+    {
+      "kind": "lens record",
+      "ref": "RUN-EXAMPLE-003/lens-record",
+      "sha256": "0840e1b2d408a1493393c3052a47732f5c52fe6ff644f9b76cb947970b476bdc"
+    },
+    {
+      "kind": "party register",
+      "ref": "RUN-EXAMPLE-003/party-register",
+      "sha256": "0a1192f908ef345f7428a2741ebd968e467dbae6490e7a120240947ad67a91ba"
+    },
+    {
+      "kind": "child package",
+      "ref": "RUN-EXAMPLE-003/child-package",
+      "sha256": "4ec7c31637760f617236c8d364ca0810b334287ab05e05590a091635868379e3"
+    },
+    {
+      "kind": "packaging ledger",
+      "ref": "RUN-EXAMPLE-003/packaging-ledger",
+      "sha256": "5804aa258051856024ddd3aefcaa7e55ff58a4c26279e1b3d1d8a82c3b60e1bc"
+    },
+    {
+      "kind": "packaging record",
+      "ref": "RUN-EXAMPLE-003/packaging-record",
+      "sha256": "1b3ddb1540ce2f8c2905029fe04ed829795ec27d816422c2e276d553aa13fefe"
+    },
+    {
+      "kind": "gate report",
+      "ref": "RUN-EXAMPLE-003/gate-report",
+      "sha256": "325e8268dc7e0cd16dc9b31f08f72fc9bb5c722850ec2a76577bb8666b559516"
+    },
+    {
+      "kind": "pairing table",
+      "ref": "RUN-EXAMPLE-003/pairing-table",
+      "sha256": "bc5eff92cb091f09e2ad1e2080bcb7c6ff1dbd6cd1951cc63a956c224bb25ee3"
+    },
+    {
+      "kind": "walk input",
+      "ref": "RUN-EXAMPLE-003/walk-input",
+      "sha256": "1a9f1bdef05af5968be6d282602932c2bb0573bec23466321a6b357bcbdc3428"
+    },
+    {
+      "kind": "blind brief",
+      "ref": "RUN-EXAMPLE-003/blind-brief",
+      "sha256": "fcf8e457b38a834a631c30f0978690d43726f20fd36fa836c25470709ef67d15"
+    },
+    {
+      "kind": "hop trace",
+      "ref": "RUN-EXAMPLE-003/hop-trace",
+      "sha256": "bc7b0b3183a355760f1b429cb99b7654fc9608871ba7f55182aded638050b30c"
+    },
+    {
+      "kind": "run preview",
+      "ref": "RUN-EXAMPLE-003/run-preview",
+      "sha256": "1d87b90b120d021a25ffd11d4e50cbbec9db7900fd13f16535ac411451e31710"
+    },
+    {
+      "kind": "review record",
+      "ref": "RUN-EXAMPLE-003/review-record",
+      "sha256": "66022e6d37ce1a74f3b53efb03f2282a8df20b76bfbd8da351935785917b0714"
+    },
+    {
+      "kind": "ruling sheet",
+      "ref": "RUN-EXAMPLE-003/ruling-sheet",
+      "sha256": "b4736383d9764da5b3353e356fe8c47a6bec114a6293dce7fa9422d9c7cafff1"
+    },
+    {
+      "kind": "lint report",
+      "ref": "RUN-EXAMPLE-003/lint-report",
+      "sha256": "b080b476967e4db885f49cf08818831ed7e212e47f153b8640b0f935a87fa469"
+    },
+    {
+      "kind": "carry-forward record",
+      "ref": "RUN-EXAMPLE-003/carry-forward-record",
+      "sha256": "97dead9c8ee1576554bd5f7f656b0664aae0c82102d04abfe6190563f5bf667f"
+    }
+  ],
+  "release_lint": {
+    "deny_list_version": "v1",
+    "deny_list_sha256": "ef428a258d42e5441d78094f0f0a7fff1e81b6089d0721d947af8877028e1444",
+    "report_sha256": "b080b476967e4db885f49cf08818831ed7e212e47f153b8640b0f935a87fa469",
+    "result": "pass",
+    "exemptions": []
+  },
+  "decisions": [
+    {
+      "reference": {
+        "source_id": "SRC-DEC-0107",
+        "held": "held",
+        "version": "1",
+        "sha256": "c65b4f991f7f770ba6583afa34cc2eefae8528bae4516d3bde14fe7e0908112f",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "decision",
+        "status": "in force",
+        "confidentiality": "internal"
+      },
+      "subject": "final status",
+      "decision": {
+        "deciding_cell": "[ORG]CELL-GOV",
+        "taken": "2027-02-20",
+        "recorded": "2027-02-20",
+        "value": "ACCEPT"
+      }
+    },
+    {
+      "reference": {
+        "source_id": "SRC-DEC-0104",
+        "held": "held",
+        "version": "1",
+        "sha256": "f16f121c32fd3616bcaa77e825b4cd9bdd5404a9105823dac7ee0b985a579cdb",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "decision",
+        "status": "in force",
+        "confidentiality": "internal"
+      },
+      "subject": "element CHILD-A2#CAP-1",
+      "decision": {
+        "deciding_cell": "[ORG]CELL-GOV",
+        "taken": "2027-02-19",
+        "recorded": "2027-02-19",
+        "value": "ACCEPT"
+      }
+    }
+  ],
+  "final_status": "ACCEPT",
+  "honesty_ceiling": {
+    "release": {
+      "label": "inferred",
+      "claim_ref": "LEDGER-A1#release",
+      "distribution": {
+        "source-backed": 31,
+        "inferred": 9,
+        "organisation-stated": 0,
+        "assumed": 0,
+        "unknown": 0
+      }
+    },
+    "present_state": {
+      "label": "inferred",
+      "claim_ref": "LEDGER-A1#present_state",
+      "distribution": {
+        "source-backed": 31,
+        "inferred": 9,
+        "organisation-stated": 0,
+        "assumed": 0,
+        "unknown": 0
+      }
+    },
+    "outcome": {
+      "label": "inferred",
+      "claim_ref": "LEDGER-A1#outcome",
+      "distribution": {
+        "source-backed": 31,
+        "inferred": 9,
+        "organisation-stated": 0,
+        "assumed": 0,
+        "unknown": 0
+      }
+    },
+    "per_entity": {
+      "ENTITY-A": {
+        "label": "inferred",
+        "claim_ref": "LEDGER-A1#release",
+        "distribution": {
+          "source-backed": 31,
+          "inferred": 9,
+          "organisation-stated": 0,
+          "assumed": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "criteria": [
+      {
+        "label": "inferred",
+        "claim_ref": "LEDGER-A1#outcome",
+        "distribution": {
+          "source-backed": 31,
+          "inferred": 9,
+          "organisation-stated": 0,
+          "assumed": 0,
+          "unknown": 0
+        }
+      }
+    ],
+    "pattern_reliance": {
+      "informed": 0,
+      "assumed": 0
+    }
+  },
+  "confidentiality": "internal",
+  "supersedes": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35",
+  "attestation": "RUN-EXAMPLE-003/attestation",
+  "carries": [
+    {
+      "release_id": "TOMR-dec3362fd2332fb86d3ac46cb29eefeae36dfda879905f3107f05edc4f26ee35",
+      "release_ref": {
+        "source_id": "SRC-TOMR-0001",
+        "held": "held",
+        "version": "1",
+        "sha256": "1f46b713661bd756280be9be8d94224eb2d8ef9b9f3e03caf423c5568a8f7694",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "operating model",
+        "status": "in force",
+        "confidentiality": "internal"
+      },
+      "children": [
+        "CHILD-A1"
+      ]
+    }
+  ],
+  "reference_models": {
+    "catalogue": "unavailable",
+    "patterns_used": []
+  }
+}

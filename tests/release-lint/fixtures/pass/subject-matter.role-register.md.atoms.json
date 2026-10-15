@@ -1,0 +1,11 @@
+{
+  "elements": {
+    "ROLE-1": [
+      "Each insurance agent advises the client and chooses the policy to offer within the product rules."
+    ],
+    "ROLE-2": [
+      "The underwriting lead accepts or declines each risk and sets its terms.",
+      "The insurance agent sends the signed proposal to underwriting and receives the quote back."
+    ]
+  }
+}

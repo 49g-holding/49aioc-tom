@@ -1,0 +1,44 @@
+{
+  "case": "No origin kind served: read as a document, with every statement capped at inferred.",
+  "served": {
+    "source_id": "SRC-MEMO-0004",
+    "held": "held",
+    "version": "1",
+    "sha256": "5af4aefc4d3727c3f48f607ca8b84c7dff8e9eeea1dbf0e05b65ffdcab70236f",
+    "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+    "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+    "status": "in force",
+    "confidentiality": "internal"
+  },
+  "context": {
+    "channel": "adapter",
+    "in_scope": true,
+    "scope_expires": "2027-01-01",
+    "read_on": "2026-11-01",
+    "revoked": false,
+    "resolves": true,
+    "computed_sha256": "5af4aefc4d3727c3f48f607ca8b84c7dff8e9eeea1dbf0e05b65ffdcab70236f",
+    "atomisable": true,
+    "carries_secret": false,
+    "conversation_derived": false
+  },
+  "expect": {
+    "admitted": true,
+    "refusal_reason": null,
+    "origin_kind": "document",
+    "status": "in force",
+    "confidentiality": "internal",
+    "defaulted": [
+      "origin kind"
+    ],
+    "status_cap": "none",
+    "unknown": null,
+    "as_of": null,
+    "labels": [
+      {
+        "anchor": "p1",
+        "label": "inferred"
+      }
+    ]
+  }
+}

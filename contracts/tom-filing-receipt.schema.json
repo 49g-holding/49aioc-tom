@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:tom-filing-receipt:v0.3",
+  "title": "[ORG]AIOC-TOM filing receipt v0.3",
+  "description": "The receipt of filing one TOM Release (or a design report) into [ORG]AIOC-SL. Kept beside the manifest, never inside it, so the release's content address does not change. Dates are checked by the validator with format assertion on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "filed_item_id",
+    "filed_as",
+    "origin_kind",
+    "filed_on_behalf_of",
+    "write_scope_ref",
+    "approval_decision",
+    "status_set",
+    "filed_at"
+  ],
+  "properties": {
+    "filed_item_id": {
+      "type": "string",
+      "pattern": "^(TOMR|TOMD)-[a-f0-9]{64}$",
+      "description": "TOMR- for a TOM Release (its release_id); TOMD- + SHA-256 of the body for a design report (a Readiness Report or a Held Report)."
+    },
+    "filed_as": {
+      "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+    },
+    "origin_kind": {
+      "enum": [
+        "operating model",
+        "design report"
+      ]
+    },
+    "filed_on_behalf_of": {
+      "type": "string",
+      "pattern": "^(\\[ORG\\]|[0-9A-Za-z]+)CELL-[A-Z0-9]{2,8}$",
+      "description": "The TOM Design Lead's Cell; its holder has accepted the contributor agreement of Source Lifecycle."
+    },
+    "write_scope_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The register event of the write scope signed under connect-external-port."
+    },
+    "approval_decision": {
+      "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+    },
+    "status_set": {
+      "enum": [
+        "in force",
+        "draft"
+      ],
+      "description": "Set by Source Lifecycle from the approval decision; a design report stays draft."
+    },
+    "filed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

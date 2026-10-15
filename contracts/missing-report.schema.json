@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:missing-report:v0.3",
+  "title": "[ORG]AIOC-TOM Missing Report v0.3",
+  "description": "Sent with every pass to the Chief of Staff of [ORG]AIOC-SL, which shows it to the organisation as 'what is missing for your operating model'. Written in the organisation's language; names seats, never people. Its open needs equal the open entries of the needs log. Dates are checked by the validator with format assertion on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "version",
+    "run_id",
+    "pass_id",
+    "language",
+    "answered_from_sources",
+    "open_needs",
+    "carried_without_asking",
+    "past_deadline",
+    "issued_at"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "pattern": "^MR-[A-Za-z0-9-]+$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN-[A-Za-z0-9-]+$"
+    },
+    "pass_id": {
+      "type": "string",
+      "pattern": "^PASS-[0-9]+$"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 2,
+      "description": "The organisation's language (BCP 47 tag)."
+    },
+    "answered_from_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "items"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "question",
+              "answered_by"
+            ],
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "answered_by": {
+                "$ref": "urn:49gaion:library:tom:source-reference:v0.3"
+              }
+            }
+          }
+        }
+      }
+    },
+    "open_needs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "documents",
+        "explainers",
+        "confirmations",
+        "statuses",
+        "exports",
+        "decisions"
+      ],
+      "properties": {
+        "documents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "explainers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "confirmations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "exports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "request_id",
+              "blocks",
+              "if_unanswered"
+            ],
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "pattern": "^NR-[A-Za-z0-9-]+$"
+              },
+              "blocks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "if_unanswered": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "carried_without_asking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item",
+          "carried_as",
+          "cost"
+        ],
+        "properties": {
+          "item": {
+            "type": "string",
+            "minLength": 1
+          },
+          "carried_as": {
+            "enum": [
+              "assumption",
+              "unknown"
+            ]
+          },
+          "cost": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "past_deadline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "request_id",
+          "days_past"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "pattern": "^NR-[A-Za-z0-9-]+$"
+          },
+          "days_past": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
