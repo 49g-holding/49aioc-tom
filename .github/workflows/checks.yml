@@ -1,7 +1,8 @@
 # Checks of this writing repository, on every pull request and on main.
 # cards: the cards in cards/ are exactly what tools/make_cards.py generates from the blueprint,
 #        and they validate against the schemas of 49GAION-protocol on main.
-# contracts: every contract example is as expected (tools/check_contracts.py).
+# contracts: every contract example is as expected (tools/check_contracts.py), with check 7 run
+#            against the Human Floor signature list at the hub version pinned in contracts/PINS.json.
 # no-persian: no Persian or Arabic-script character in any tracked file, the PR title or the PR body.
 # no-org-names: the scanner of 49GAION-protocol finds no organisation name, host or 49-prefixed code.
 name: checks
@@ -34,8 +35,17 @@ jobs:
         run: python3 tools/make_cards.py .deps/protocol/spec/schemas
       - name: The committed cards are the generated cards
         run: git diff --exit-code -- cards
-      - name: Check the contracts
-        run: python3 tools/check_contracts.py
+      - name: Read the pinned version of the Human Floor signature list
+        id: pin
+        run: echo "tag=$(python3 -c "import json; print(json.load(open('contracts/PINS.json'))['signature_list']['tag'])")" >> "$GITHUB_OUTPUT"
+      - name: Check out the 49GAION hub at that version
+        uses: actions/checkout@v4
+        with:
+          repository: 49g-holding/49GAION
+          ref: ${{ steps.pin.outputs.tag }}
+          path: .deps/hub
+      - name: Check the contracts (check 7 against the pinned signature list)
+        run: python3 tools/check_contracts.py --signature-list .deps/hub/upstream/human-floor-signature-types.json
 
   no-persian:
     runs-on: ubuntu-latest
