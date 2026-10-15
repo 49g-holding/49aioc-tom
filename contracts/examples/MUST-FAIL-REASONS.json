@@ -119,6 +119,26 @@
     "path": "/patterns/0",
     "keyword": "required"
   },
+  "release-notice.answers-not-a-return-id.json": {
+    "path": "/answers/0",
+    "keyword": "pattern"
+  },
+  "release-notice.carries-release-text.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "release-notice.not-decided.json": {
+    "path": "/final_status",
+    "keyword": "enum"
+  },
+  "release-notice.not-filed.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "release-notice.wrong-stage.json": {
+    "path": "/to",
+    "keyword": "const"
+  },
   "source-reference.held-without-hash.json": {
     "path": "",
     "keyword": "required"

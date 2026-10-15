@@ -1,0 +1,34 @@
+{
+  "return_id": "DIR-2",
+  "run_id": "RUN-0011",
+  "release": {
+    "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "kind": "assumption invalid",
+  "elements": [
+    {
+      "part": "design ledger",
+      "element_id": "DD-9"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "DD-9"
+    },
+    {
+      "ref": "ATOM-88",
+      "span_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+    }
+  ],
+  "held_here": [
+    "GAP-5"
+  ],
+  "round": 1,
+  "filed_ref": {
+    "source_id": "SRC-151",
+    "version": "1",
+    "sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+  },
+  "status": "open"
+}

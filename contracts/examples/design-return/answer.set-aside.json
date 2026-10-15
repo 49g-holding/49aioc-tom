@@ -1,0 +1,33 @@
+{
+  "return_id": "PPDR-3",
+  "run_id": "RUN-0007",
+  "release": {
+    "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "kind": "cannot use",
+  "missing": "the decision right for approving a new supplier",
+  "elements": [
+    {
+      "part": "design ledger",
+      "element_id": "DD-4"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "DD-4"
+    }
+  ],
+  "held_here": [
+    "P-12"
+  ],
+  "round": 2,
+  "filed_ref": {
+    "source_id": "SRC-141",
+    "version": "2",
+    "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "status": "set aside by decision",
+  "answered_by": "DEC-60",
+  "carried_forward_on": "decided assumption"
+}

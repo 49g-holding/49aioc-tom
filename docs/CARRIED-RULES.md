@@ -257,7 +257,7 @@ The Readiness Report is the honest output when no brief (or no child brief for a
 2. Every return is a learning input to the sufficiency standard.
 3. A return for information that a specialist later discovers is normal. A return for information this AIOC should reasonably have obtained (standing, stated intent, scope, a decision, a criterion the organisation could state) is a defect of this AIOC.
 4. A later stage may extend a release but never rewrite it; a change is a new release that supersedes it.
-5. A return is filed into Source Lifecycle as a source. The Requesting Authority opens a new run whose revised Design Request cites it (blueprint §5.9, Slices and carry-forward, rule 10).
+5. A return comes to this AIOC directly, from Process and Position Design or from Delivery and Implementation, under the Library's design return contract; its sender also files it into Source Lifecycle as a source, with the same hash. It ends by blueprint §5.10: answered by a new release (a continuation run whose revised Design Request cites the filed return; blueprint §5.9, Slices and carry-forward, rule 10), answered by a decision of the Requesting Authority, set aside by that decision and carried forward as a known defect or a decided assumption, or withdrawn by its sender. *(v0.5.0: replaces the earlier item 5, under which a return reached this AIOC only through Source Lifecycle.)*
 
 ### §4.5 The frame decision pass
 
@@ -631,7 +631,7 @@ The walkthrough walks the operating model structurally through realistic situati
 
 **Execution.** The walk is deterministic, against the published rules. Decisions propagate: a decision domain's output is the next hop's input. An engine may act **only** as a constrained proposer of a next hop from a node's own text. Its proposal is accepted only if the rules license it, and its words are never themselves a finding. No stochastic trials. No free role-play. **No finding may depend solely on free role-play by an engine**; a finding that cannot be re-derived from the recorded trace and the published rules is void.
 
-**Actors are derived, never invented.** One per capability (its script is its own owns and does-not-own text); one per decision domain (it may decide only what the domain states); one per **declared** crossing, opaque, and inert where its condition is unmet. Outside parties appear only as sources of events, never played out. **No job title, team, headcount or reporting line may be introduced. Inventing one voids the situation.**
+**Actors are derived, never invented.** One per capability (its script is its own owns and does-not-own text); one per decision domain (it may decide only what the domain states); one per **declared** crossing, opaque, and inert where its condition is unmet. Outside parties appear only as sources of events, never played out. **No job title, team, workload or reporting line may be introduced. Inventing one voids the situation.**
 
 ### §10.1 The binding rules and their precedence
 
@@ -659,7 +659,7 @@ The walkthrough walks the operating model structurally through realistic situati
 
 **Per walk:** coverage (capabilities × domains × boundaries × streams **actually required**, not merely mentioned); the finding register; loops; dead ends; no-claim and multi-claim; authority violations; load-bearing assumptions, by ID; unmet crossings with and without a holding obligation; invocations of excluded, deferred or withdrawn elements; unbindable-prose cells; situations returned `NOT-WALKABLE`.
 
-**Not recorded, because it would be fabricated:** elapsed real time, cost per transaction, headcount, queue depth.
+**Not recorded, because it would be fabricated:** elapsed real time, cost per transaction, workload, queue depth.
 
 ### §10.4 The five known defects and their fixes
 

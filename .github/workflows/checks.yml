@@ -2,7 +2,8 @@
 # cards: the cards in cards/ are exactly what tools/make_cards.py generates from the blueprint,
 #        and they validate against the schemas of 49GAION-protocol on main.
 # contracts: every contract example is as expected (tools/check_contracts.py), with check 7 run
-#            against the Human Floor signature list at the hub version pinned in contracts/PINS.json.
+#            against the Human Floor signature list at the hub version pinned in contracts/PINS.json,
+#            and check 11 against the Library's design return contract at the commit pinned there.
 # no-persian: no Persian or Arabic-script character in any tracked file, the PR title or the PR body.
 # no-org-names: the scanner of 49GAION-protocol finds no organisation name, host or 49-prefixed code.
 name: checks
@@ -44,8 +45,17 @@ jobs:
           repository: 49g-holding/49GAION
           ref: ${{ steps.pin.outputs.tag }}
           path: .deps/hub
-      - name: Check the contracts (check 7 against the pinned signature list)
-        run: python3 tools/check_contracts.py --signature-list .deps/hub/upstream/human-floor-signature-types.json
+      - name: Read the pinned commit of the design return contract
+        id: pin_return
+        run: echo "commit=$(python3 -c "import json; print(json.load(open('contracts/PINS.json'))['design_return_contract']['commit'])")" >> "$GITHUB_OUTPUT"
+      - name: Check out 49GAION-protocol at that commit
+        uses: actions/checkout@v4
+        with:
+          repository: 49g-holding/49GAION-protocol
+          ref: ${{ steps.pin_return.outputs.commit }}
+          path: .deps/protocol-pin
+      - name: Check the contracts (check 7 against the pinned signature list; check 11 against the pinned design return contract)
+        run: python3 tools/check_contracts.py --signature-list .deps/hub/upstream/human-floor-signature-types.json --design-return .deps/protocol-pin/library/contracts/design-return.schema.json
 
   no-persian:
     runs-on: ubuntu-latest

@@ -1,6 +1,6 @@
 # Proposals to 49GAION from the Target Operating Model work
 
-**From `[ORG]AIOC-OCO` · 15 October 2026 · drafts, not yet proposed.** Generalised: no organisation's name or data. Each proposal reaches 49GAION only as a pull request, merged on the decision of the governing seat (GOV) of 49GAION.
+**From `[ORG]AIOC-OCO` · 15 October 2026 · drafts.** State on 16 October 2026: item 1 is merged in a revised form (Protocol §19, the Library card and Standard §3.1, item 4; `49GAION-protocol` pull request #36, `49GAION` pull request #68, `49GAION/DR-0016`). Items 2 to 9 are not yet proposed. Generalised: no organisation's name or data. Each proposal reaches 49GAION only as a pull request, merged on the decision of the governing seat (GOV) of 49GAION.
 
 ## 1. The Target Operating Model as a Library part and a Protocol section
 

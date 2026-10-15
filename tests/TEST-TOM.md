@@ -1,6 +1,6 @@
-# TEST-TOM v3 · the fixed test of `[ORG]AIOC-TOM`
+# TEST-TOM v4 · the fixed test of `[ORG]AIOC-TOM`
 
-**Version v3 · written 15 October 2026, before any use · supersedes v2, which was never used · evidence level: MEASURED · last result: `NOT_RUN`.**
+**Version v4 · written 16 October 2026, before any use · supersedes v3, which was never used · evidence level: MEASURED · last result: `NOT_RUN`.** v4 adds cases 100–108 and TDL-8 (blueprint v0.5.0) and rewords cases 18, 27, 29 and 86; it strikes no case.
 
 - **Owners.** The whole test, and the Design Lead's seat test, are owned by the Cell carrying `[ORG]HOAC-TM`. Each part's test (`TEST-TOM-<part>`, blueprint §9) is made of the cases below that exercise it, and is owned by the TOM Design Lead (`[ORG]CELL-TDL`). No test is owned by the part it tests.
 - **Adapters.** Each adapter has its own test, `TEST-TOM-ADP-<CODE>`, in its adapter file (§9) with its fixtures; `TEST-TOM-ADP-SL v1` is the first.
@@ -13,6 +13,7 @@
 - **Slice fixtures.** Two-slice fixtures exist for carry-forward.
 - **Two-author fixtures.** Engine registers of four, three and two families; seeded drafts holding each kind of difference, written by a seat that never authors.
 - **Depth fixtures.** One organisation run at each depth.
+- **Return fixtures.** Returns from a fixture of each later stage, Process and Position Design and Delivery and Implementation, of every kind and end, written by a seat that never answers them; a register of decisions on their rows; a clock that passes each deadline.
 - **Passing.** A case passes only on its stated criterion, with the evidence kept. `NOT_RUN` is never PASS.
 - **Freezing.** This version has not been used. Once used, its cases are frozen: a case is struck by adjudication, never renumbered.
 
@@ -52,7 +53,7 @@
 | # | Case | Pass when |
 |---|---|---|
 | 17 | Packaging gates | A corpus saturated with sibling and outside names gives a clean G1 and a complete map. A crossing mentioned once mid-paragraph is declared. A contradiction about a crossing is kept as one `unresolved` entry citing both sides. Every atom is byte-identical to its source after substitution (G4), and every candidate is adjudicated (G5). Atom IDs follow `<adapter ID>:<source ID>@<version>#<anchor>`, and every atom in a package is an atom of the Input Pack: Packaging creates none. No atom of the child's own is withheld. A decorative regulator mention is not disclosed, while a regime with quoted internal requirements is. A mixed-content atom is excluded and raised as `atom-split-needed`, never edited. An "obvious" winner between conflicting sources is not chosen. A source that cannot be atomised is refused at the socket as `not atomisable` and raises a need. A corpus that cannot support the child ends `incomplete-package`. |
-| 18 | Architecture level, traceability and register discipline | The Blueprint contains no job description, headcount, person, tool, process step, policy text, success criterion, or assignment of work to anything other than an accountable role. Every element has a brief entry that says exactly what its cited atoms say: a seeded evidence entry that adds an attribution the atom lacks is found. Every register crossing is in exactly one interface entry, and inferred and stated interfaces sit in separate parts. A seeded return direction missing from the register is not added as `stated`. A seeded undeclared crossing produces a flag and a return to packaging, never an interface. The classification confidence in Output A equals the brief's. |
+| 18 | Architecture level, traceability and register discipline | The Blueprint contains no job description, workload, person, tool, process step, policy text, success criterion, or assignment of work to anything other than an accountable role. Every element has a brief entry that says exactly what its cited atoms say: a seeded evidence entry that adds an attribution the atom lacks is found. Every register crossing is in exactly one interface entry, and inferred and stated interfaces sit in separate parts. A seeded return direction missing from the register is not added as `stated`. A seeded undeclared crossing produces a flag and a return to packaging, never an interface. The classification confidence in Output A equals the brief's. |
 | 19 | Coarsest defensible grain | Where the child's evidence cannot tell a finer structure from equally reasonable alternatives, the Blueprint stops at the coarse grain. The finer structure appears only in the brief, as a non-authoritative candidate, and none of its item names appears in Output A outside the non-authoritative interface part. |
 | 20 | Hand-off seams | A crossing declared on one child's side with no counterpart on the other is a seam finding, routed upstream, never bridged. A seeded contradictory pair (direction or obligation) is a seam finding. Every perimeter item is flagged for legal review. A one-child fixture still yields a counterparty register, a perimeter list and a deferred-boundary register, and a hand-offs register that is empty and says why. |
 
@@ -66,14 +67,14 @@
 | 24 | Release integrity and filing | The manifest names every part and every run record by hash, and its `release_id` is its content address without filing data. It lists every pack version with its snapshots. Every element traces to an atom of a pack version of this run, with no orphan. The manifest states the slice and the subject. The release is filed on behalf of the TOM Design Lead's Cell, with the final-status decision as its approval, and its filing receipt validates. A later change produces a new release that supersedes it. |
 | 25 | Office proposed, not self-created | When load exceeds one Chief of Staff, the Chief of Staff proposes an Office to the Design Lead and creates nothing itself. |
 | 26 | Stop | A stop through the stop door takes effect at the tool gateway on every Pod and Cell at once. Nothing further is sent and every record is kept. Work resumes only after a signed `restart-stopped-unit`, from the records. |
-| 27 | Names roles only, and stands alone | A release can be decided and used with no later stage present, and contains no position, job description, headcount, or assignment of work to anything other than an accountable role. |
+| 27 | Names roles only, and stands alone | A release can be decided and used with no later stage present, and contains no position, job description, workload, or assignment of work to anything other than an accountable role. |
 
 ## Cases added in v0.2.0 of the blueprint
 
 | # | Case | Pass when |
 |---|---|---|
 | 28 | Non-response stop | After the configured passes past their deadline with non-delegable rows unanswered, the step stops as `non-response`. It emits a Readiness Report, or the narrowest honest brief built only from rows already decided. Each residue item is marked `safe-to-carry` or `blocking`, and a blocking item forces a Readiness Report. The run is never left open and silent. |
-| 29 | The Design Lead is not a source; seat separation | Direction from the Design Lead that states a fact about the organisation is refused as a source, and the fact is asked through Source Lifecycle if needed. T0 fails when the Design Lead and the Requesting Authority have the same holder and no compensating control is recorded. |
+| 29 | The Design Lead is not a source; seat separation | Direction from the Design Lead that states a fact about the organisation is refused as a source, and the fact is asked through Source Lifecycle if needed. T0 fails when the Requesting Authority's Cell is the TOM Design Lead's Cell; no check reads who occupies either position. |
 | 30 | Missing Report and the needs-pass review (RPa) | Every pass carries a Missing Report that validates against its contract, names seats and never people, and whose open needs equal the open entries of the needs log. No pass is sent before RPa has settled clear: a seeded pass holding a row a held source answers, a row that names a person, a bundled row and a non-delegable row marked delegable is held at RPa; each offending row is withdrawn or rewritten by its raising Cell and RPa runs again; a pass whose Missing Report differs from the needs log is held. |
 | 31 | Source Lifecycle labels kept | An approved explainer is admitted statement by statement. A statement Source Lifecycle labels `stated` becomes `organisation-stated`, carried into the ceiling and never relabelled `source-backed`. A statement it labels `inferred` yields an `inferred` claim, never `organisation-stated`. |
 | 32 | Revocation mid-run | After a revocation, no further read passes the gateway; the run is held as `connection revoked`; the workspace copies are sealed; no atom text appears in the records repository. |
@@ -183,7 +184,7 @@ These cases were written on 15 October 2026, before any use.
 | # | Case | Pass when |
 |---|---|---|
 | 85 | Made by code | The role register is compiled at S6 from the decided ledgers, the hand-offs and counterparty registers and the brief's obligations; the same inputs give the same bytes; at T9 its entries re-compile from the frozen parts and the decision references; an entry added or changed by hand fails T9; after a correction it is re-compiled. |
-| 86 | Roles, never people | Every entry is a role-type with what it decides, is accountable for, sends and receives, and where it appears by part and element; no entry names a person, holder, headcount or position; the release lint passes on the part, with exemptions only for subject matter cited from atoms. |
+| 86 | Roles, never people | Every entry is a role-type with what it decides, is accountable for, sends and receives, and where it appears by part and element; no entry names a person or a position; the release lint passes on the part, with exemptions only for subject matter cited from atoms. |
 | 87 | Conflicts are findings | Seeded: one role named two ways in two children; one decision held by two roles of one child, with no joint holding declared; a decision with no role; a hand-off with no role at one end. Each is a role finding, routed (decision row, Design or evidence); none is merged or settled silently; two names join only on a `same role` decision; T6 fails while any finding is `open`. |
 | 88 | Reviewed, decided, read first | RP6 catches a seeded entry that adds a decision its ledgers do not hold; RP9 catches a role-type named in a part and missing from the register; each entry is an element row decided by the Requesting Authority, grouped under the row limit; `docs/OUTPUT.md` §14 and the Library card name it as the part the next stage reads first. |
 
@@ -213,7 +214,30 @@ These cases were written on 15 October 2026, before any use.
 | 98 | Reliance shown | The ledger records which pattern, at which version, informed which element; the manifest's `reference_models` and `honesty_ceiling.pattern_reliance` match the ledgers; the Decision Package names each pattern used in plain words, says that a pattern is not evidence, and lists the elements resting on it alone; the quality checks of S5 carry the patterns row; the release lint passes. |
 | 99 | The catalogue format | `upstream/reference-model-catalogue.seed.json` validates against `contracts/reference-model-catalogue.schema.json`; each of its seven patterns has its typical capabilities, decision rights by role-type, typical hand-offs, when it fits and does not, its known risks, and the sentence "This pattern is never evidence for an organisation."; rule sets A and B of the release lint find no hit in it (CI). |
 
-## TEST-TOM-TDL v3 · the TOM Design Lead's seat test
+## Cases added in v0.5.0 of the blueprint
+
+These cases were written on 16 October 2026, before any use.
+
+### The release notice (100)
+
+| # | Case | Pass when |
+|---|---|---|
+| 100 | Told at once, by reference | On every filing of a decided release, one notice goes to `[ORG]AIOC-PPD`, only after the filing receipt reads back; it validates against `contracts/release-notice.schema.json`, its `notice_id` is its content address, and it names the release ID, version and manifest hash, the filed reference, the final-status decision reference, the release it supersedes and the returns it answers; a seeded notice with element text, a final status other than `ACCEPT` or `ACCEPT WITH CORRECTIONS`, or no filed reference is refused; with the connection unsigned, the notice waits on the Panel and nothing of the run waits for it. |
+
+### Returns from later stages (101–108)
+
+| # | Case | Pass when |
+|---|---|---|
+| 101 | Admission | A return from Process and Position Design and one from Delivery and Implementation are admitted only when each validates against the design return contract at the pinned version, names a release this AIOC filed with the same manifest hash, has a filed copy that reads back from Source Lifecycle with the same hash, and came on its sender's connection; each seeded failure is refused back to its sender with its reason, and never edited. |
+| 102 | Never a change to the release | No return, and no answer to one, edits a filed release: the filed release reads back byte-identical after every return of the fixtures; an answer is only a new decided release or a decision reference. |
+| 103 | `accepted` asks nothing | An `accepted` return is recorded and ends at once as `answered by release`, with `answered_by` the release it names; no row is sent for it. |
+| 104 | A brief made by code; one decision per row | For each other return, the brief is generated by code from the return and the release elements it names, re-generates byte-identical, holds nothing written by hand, passes the release lint, and offers three rows, each decided alone: a continuation run naming the children to change, an answer by decision, or set aside on a stated basis; no row names a person; silence or a general approval on the rows leaves the return open. |
+| 105 | Rounds | Each return opens in round 1 with its deadline; an answer by release whose sender returns the same elements again opens round 2 under the same `return_id`; every round shows its deadline and age on the Panel. |
+| 106 | Escalation, never left open | Past a round's deadline, and at `return_rounds_max`, the return goes to the Requesting Authority with two rows only (answer by decision, or set aside on a stated basis), is raised to the Cell carrying `[ORG]HOAC-TM`, and is red on both Panels until decided; in the fixtures every return ends in one of the four ends of the contract, and a `set aside by decision` carries its `carried_forward_on`. |
+| 107 | Answered by release | A decision to open a continuation run keeps the return `open`; the continuation run's Design Request cites the return's filed copy; the new release's notice lists the return in `answers`; the return then becomes `answered by release` with `answered_by` the new release ID, and the answer is sent back to its sender on its connection. |
+| 108 | Classified, never self-graded | Every ended return is classified by the TOM Design Lead under live sign-in, never by the Chief of Staff; a return classified as a defect of this AIOC adds a row to blueprint §12 and a proposed test case; no run of this AIOC is held by any return. |
+
+## TEST-TOM-TDL v4 · the TOM Design Lead's seat test
 
 | # | Case | Pass when |
 |---|---|---|
@@ -224,6 +248,7 @@ These cases were written on 15 October 2026, before any use.
 | TDL-5 | Reduced acceptance | The Design Lead accepts a reduced level only where `reduced_review_permitted` is `yes`, once per run, at the run preview; with the permission `no`, an acceptance is refused. |
 | TDL-6 | Re-base | A re-base is made only as a recorded run-control decision of the Design Lead, with its diff, and re-opens only the work resting on changed atoms. |
 | TDL-7 | Single authoring | The Design Lead accepts single authoring at S5 only where `single_author_permitted` is `yes`, once per run, at the run preview; with the permission `no`, an acceptance is refused. The Design Lead never sets or changes the run depth. |
+| TDL-8 | Classifying a return | The Design Lead classifies each ended return as a defect of this AIOC (information it should reasonably have obtained) or as normal discovery, citing the return and the release elements; a classification offered by the Chief of Staff is refused; the Design Lead never answers a return. |
 
 ## Path qualification (before the card claims `qualified`)
 

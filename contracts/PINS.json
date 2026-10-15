@@ -22,5 +22,14 @@
     "commit": null,
     "sha256": null,
     "note": "Proposed in upstream/REFERENCE-MODEL-CATALOGUE.md. Until 49GAION holds it and this pin names its version, commit and SHA-256, every run declares the catalogue unavailable (blueprint §5.5). Taking a version into use is H-34."
+  },
+  "design_return_contract": {
+    "repository": "49GAION-protocol",
+    "path": "library/contracts/design-return.schema.json",
+    "commit": "5ac8aeda8b7f17e784728d575bafd04163239e5e",
+    "also_read_at": "768de29",
+    "sha256": "0c951a9f2ca31f98e81563b88661136b1462c8da66910cf6722507a7ace667a5",
+    "read_on": "2026-10-16",
+    "note": "The Library's design return contract (49GAION DR-0018; Protocol §17, item 11). This AIOC keeps no copy; check 11 validates its return examples against it. A new version is taken into use by a tested change of this pin."
   }
 }
