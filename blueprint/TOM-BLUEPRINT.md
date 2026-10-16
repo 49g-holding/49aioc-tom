@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.5.0"
+  blueprint_version: "v0.6.0"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -25,9 +25,9 @@ blueprint:
     functional: ["Request Reconstruction", "Needs Requests", "Structuring", "Entity Packaging", "Entity Model Design", "Hand-offs", "Operational Walkthrough", "Independent Review", "Decision Package and Release"]
 ```
 
-# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.5.0`
+# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.6.0`
 
-**Draft, closed at v0.4.0, 15 October 2026; v0.4.1 the same day changes wording only (`decisions/DR-0004`): every human position is a HOAC position, and no natural person exists in the system. v0.5.0, 16 October 2026, links this AIOC directly to the stages after it (`decisions/DR-0005`): a release notice to Process and Position Design on every filing, and the returns of Process and Position Design and of Delivery and Implementation received directly, each carried to an end under the Library's design return contract (§5.10).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002`, `decisions/DR-0003` and `decisions/DR-0005`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, closed at v0.4.0, 15 October 2026; v0.4.1 the same day changes wording only (`decisions/DR-0004`): every human position is a HOAC position, and no natural person exists in the system. v0.5.0, 16 October 2026, links this AIOC directly to the stages after it (`decisions/DR-0005`): a release notice to Process and Position Design on every filing, and the returns of Process and Position Design and of Delivery and Implementation received directly, each carried to an end under the Library's design return contract (§5.10). v0.6.0, 16 October 2026, adds what the model also states and reads (`decisions/DR-0006`; Annex H): the strategy on one page, how each capability is delivered and how mature it is, the critical value streams, each outside party's journey, the value case, the priority of each element, and records of the work as it runs today, never about a person.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002`, `decisions/DR-0003`, `decisions/DR-0005` and `decisions/DR-0006`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **TOM in one page**
 >
@@ -39,6 +39,7 @@ blueprint:
 > 1. An approved design request, recorded in Source Lifecycle, the organisation's library of sources: who asks, what the design is for, what should be different, and how fine the model should be (light, standard or deep).
 > 2. The organisation's own documents, read only by reference. The input socket checks them, cuts them into numbered passages, labels each passage with how far it can be trusted, and hands the engine one sealed Input Pack.
 > 3. Answers to what the documents do not say. TOM never asks a person. It asks the Chief of Staff of Source Lifecycle, who gets the answer from the right person, has it approved and recorded, and returns it. Each answer arrives as a new version of the Input Pack.
+> 4. Where the organisation has them, records of how the work runs today, exported by role and by process and never about a person. Where there are none, the model says so and goes on.
 >
 > Today Source Lifecycle is the only source. Other kinds of source plug into the same socket, each through its own adapter file, and only to be read.
 >
@@ -57,8 +58,9 @@ blueprint:
 >
 > **What comes out: the TOM Release**
 > 1. The Decision Package: a plain summary, what is still unknown, and the choices to make.
-> 2. For each part: what it must be able to do, its main flows, who decides what, and where it hands work over, each with its reasons and sources.
-> 3. The hand-offs between parts and with outside parties, and the legal questions for a lawyer.
+> 2. For each part: what it must be able to do, how each capability is delivered and how mature it is, its main flows and which are critical, who decides what, and where it hands work over, each with its reasons and sources.
+> 3. The hand-offs between parts and with outside parties, each outside party's journey through the organisation, and the legal questions for a lawyer.
+> 3a. The strategy on one page, the value the change is meant to bring, the priority of each element, and how the work runs today where records exist.
 > 4. The role register: every role in the model, what it decides, what it answers for, and what it hands to whom.
 > 5. The test against situations, and the quality checks made at each stage.
 > 6. What is still open: unknowns, assumptions, deferred items, and any defect the organisation chose to accept.
@@ -71,7 +73,7 @@ blueprint:
 > - Every return goes back and forth until it ends: answered by a new release, answered by a decision, or set aside by decision and carried forward as a known defect or a decided assumption. None is left open.
 > - Auditors and lawyers use the sources, the trace and the record.
 
-**Closure.** This blueprint is closed at v0.4.0; v0.5.0 adds its links to the stages after it and removes nothing. Every stage is fixed by its input, its output and its done-test (§5.0), and every object a stage makes has its field list (Annex E; `docs/CARRIED-RULES.md`). It holds no open design question. What remains is to build and test it, and the decisions that only a human seat can take, listed once in §13.
+**Closure.** This blueprint is closed at v0.4.0; v0.5.0 adds its links to the stages after it, and v0.6.0 what the model also states and reads (Annex H); neither removes anything. Every stage is fixed by its input, its output and its done-test (§5.0), and every object a stage makes has its field list (Annex E; `docs/CARRIED-RULES.md`). It holds no open design question. What remains is to build and test it, and the decisions that only a human seat can take, listed once in §13.
 
 ---
 
@@ -94,7 +96,7 @@ blueprint:
 | Made from | the Library part 49GAION Target Operating Model, part card `v1` (DRAFT), and the Protocol section of the same name (§19), merged on 15 October 2026 (`49GAION/DR-0016`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `06b00d9` |
 | Mother | 49GAION Target Operating Model, part card `v1`. This text is its mother blueprint (`49GAION/DR-0016`, item 7) |
-| Blueprint version and status | `v0.5.0` · draft, closed at v0.4.0 (the Closure statement above §0); v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 adds the direct links to the stages after it (`decisions/DR-0005`) |
+| Blueprint version and status | `v0.6.0` · draft, closed at v0.4.0 (the Closure statement above §0); v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 adds the direct links to the stages after it (`decisions/DR-0005`); v0.6.0 adds Annex H (`decisions/DR-0006`) |
 | Writing repository | `<org>aioc-tom`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch Strictly confidential sources or personal data (Naming Standard R9) |
 | Code project | `<org>aioc-tom`, on the organisation's code platform |
 | Panel | not yet built |
@@ -117,29 +119,29 @@ card:
   inner_units: ["[ORG]CELL-TDL", "[ORG]CELL-TCS", "[ORG]POD-TRR", "[ORG]POD-TS", "[ORG]POD-TEP", "[ORG]POD-TEM", "[ORG]POD-TH", "[ORG]POD-TW", "[ORG]POD-TR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.5.0"
+  card_version: "v0.6.0"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
     - kind: "run request"                 # a Work Item from the Requesting Authority's Cell, through the HU input port; it carries only the reference of an approved Design Request source in [ORG]AIOC-SL
       format: "Work Item (Protocol §4.1) whose sources field holds one Design Request reference"
-      acceptance_test: "TEST-TOM v4, cases 3, 29, 44, 81, 89"
+      acceptance_test: "TEST-TOM v5, cases 3, 29, 44, 81, 89"
       decision_needed: false
     - kind: "source reference"            # served through an adapter of the Input socket; in this version, the output socket of [ORG]AIOC-SL
       format: "source reference (contracts/source-reference.schema.json)"
-      acceptance_test: "TEST-TOM v4, cases 1-6, 31-34, 44-52"
+      acceptance_test: "TEST-TOM v5, cases 1-6, 31-34, 44-52, 119"
       decision_needed: false
     - kind: "needs answer"                # the output of a needs request sub-item
       format: "needs answer (contracts/needs-answer.schema.json)"
-      acceptance_test: "TEST-TOM v4, cases 10-12, 35, 36, 49"
+      acceptance_test: "TEST-TOM v5, cases 10-12, 35, 36, 49, 118"
       decision_needed: false
     - kind: "needs status"                # accepted, returned or asked, from [ORG]AIOC-SL
       format: "needs status (contracts/needs-status.schema.json)"
-      acceptance_test: "TEST-TOM v4, case 10"
+      acceptance_test: "TEST-TOM v5, case 10"
       decision_needed: false
     - kind: "return"                      # a design return from [ORG]AIOC-PPD or [ORG]AIOC-DI on a release of this AIOC (Protocol §19, items 5 and 6); carried to an end by §5.10
       format: "design return (49GAION-protocol library/contracts/design-return.schema.json, at the version pinned in contracts/PINS.json)"
-      acceptance_test: "TEST-TOM v4, cases 101-107"
+      acceptance_test: "TEST-TOM v5, cases 101-107"
       decision_needed: true
   delivers:
     - kind: "needs request"
@@ -161,9 +163,9 @@ card:
       format: "the return at its next version (49GAION-protocol library/contracts/design-return.schema.json): its status, the answering release or decision reference, and for a return set aside, its carried_forward_on"
       usual_receivers: ["[ORG]AIOC-PPD", "[ORG]AIOC-DI"]
   anatomy:
-    panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "needs open", "needs past deadline", "run state", "pack version", "reviews held", "review budget used", "run depth", "authoring", "role findings open", "returns open", "returns past deadline", "return age", "return round"] } }
+    panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "needs open", "needs past deadline", "run state", "pack version", "reviews held", "review budget used", "run depth", "authoring", "role findings open", "returns open", "returns past deadline", "return age", "return round", "strategy elements not given", "activity profile"] } }
     back_office: { converses_with_humans: false, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-tom, blueprint/TOM-BLUEPRINT.md", version: "v0.5.0" }
+    definition: { location: "<org>aioc-tom, blueprint/TOM-BLUEPRINT.md", version: "v0.6.0" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "source of record", connector: "[ORG]AIOC-SL output socket", access_managed_in: "panel" }   # the Panel shows and requests it; the grant itself is signed at the tool gateway as connect-external-port by the [ORG]HOAC-ACS seat over [ORG]AIOC-SL (Protocol §13, item 5; upstream/PROPOSALS.md, item 4)
@@ -171,16 +173,16 @@ card:
       - { role: "returns from the last stage", connector: "[ORG]AIOC-DI output port: returns in", access_managed_in: "panel" }   # signed as above (Protocol §20, item 3; H-35)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Target Operating Model"
-  version: "0.5.0"
-  lineage: { id: "[ORG]AIOC-TOM", version: "0.5.0", relation: "original" }
+  version: "0.6.0"
+  lineage: { id: "[ORG]AIOC-TOM", version: "0.6.0", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.5.0"
+  blueprint_version: "v0.6.0"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-TDL"
   hoac: "[ORG]HOAC-ACS"
   label_holder: "[ORG]CELL-TDL"
-  fixed_test: { id: "TEST-TOM", version: "v4", owner: "[ORG]CELL-TMS" }
+  fixed_test: { id: "TEST-TOM", version: "v5", owner: "[ORG]CELL-TMS" }
   skills:
     - { id: "tom-request-reconstruction", name: "Request reconstruction from sources", tags: ["design", "intake"] }
     - { id: "tom-entity-model", name: "Entity operating model design", tags: ["design"] }
@@ -189,11 +191,11 @@ card:
     - { id: "tom-role-register", name: "Role register across the release", tags: ["design"] }
     - { id: "tom-returns", name: "Returns from later stages, each carried to an end", tags: ["coordination"] }
   ports:
-    - { unit: "[ORG]AIOC-TOM", port: "ai-in", direction: "input", type: "AI", identification: "technical-key", accepted_content: ["source reference", "needs answer", "needs status", "return"], authority_limit: "read only, within the organisation-design scope signed for this connection; returns only on the connections signed with [ORG]AIOC-PPD and [ORG]AIOC-DI", audit_trail: "unit register and the serve log of [ORG]AIOC-SL", required_tests: ["TEST-TOM v4"], enforcement: "shared-gateway-outside-unit" }
-    - { unit: "[ORG]AIOC-TOM", port: "ai-out", direction: "output", type: "AI", identification: "technical-key", accepted_content: ["needs request", "missing report", "needs status", "TOM Release filing", "release notice", "return answer"], authority_limit: "requests, reports and filings only; files only sources of origin kind operating model or design report, within the write scope signed for this connection; release notices and return answers by reference only, on the connections signed with [ORG]AIOC-PPD and [ORG]AIOC-DI; never an instruction to a person", audit_trail: "Work Item record and the unit register", required_tests: ["TEST-TOM v4"], enforcement: "shared-gateway-outside-unit" }
-    - { unit: "[ORG]AIOC-TOM", port: "hu-in", direction: "input", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["run request from the Requesting Authority's Cell (a Design Request reference only)", "run control and configuration from the TOM Design Lead (never a source)"], authority_limit: "the signer's authority_scope; nothing received here is a source", audit_trail: "Office record", required_tests: ["TEST-TOM v4"], enforcement: "shared-gateway-outside-unit" }
-    - { unit: "[ORG]AIOC-TOM", port: "hu-out", direction: "output", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["run brief to the TOM Design Lead", "run preview to the TOM Design Lead", "ruling sheets to the TOM Design Lead", "release notice to the Requesting Authority's Cell"], authority_limit: "information only; never a question about the organisation", audit_trail: "Office record", required_tests: ["TEST-TOM v4"], enforcement: "shared-gateway-outside-unit" }
-    - { unit: "[ORG]AIOC-TOM", port: "stop", direction: "input", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["stop"], authority_limit: "stop only", audit_trail: "unit register", required_tests: ["TEST-TOM v4"], enforcement: "shared-gateway-outside-unit", stop_door: true }
+    - { unit: "[ORG]AIOC-TOM", port: "ai-in", direction: "input", type: "AI", identification: "technical-key", accepted_content: ["source reference", "needs answer", "needs status", "return"], authority_limit: "read only, within the organisation-design scope signed for this connection; returns only on the connections signed with [ORG]AIOC-PPD and [ORG]AIOC-DI", audit_trail: "unit register and the serve log of [ORG]AIOC-SL", required_tests: ["TEST-TOM v5"], enforcement: "shared-gateway-outside-unit" }
+    - { unit: "[ORG]AIOC-TOM", port: "ai-out", direction: "output", type: "AI", identification: "technical-key", accepted_content: ["needs request", "missing report", "needs status", "TOM Release filing", "release notice", "return answer"], authority_limit: "requests, reports and filings only; files only sources of origin kind operating model or design report, within the write scope signed for this connection; release notices and return answers by reference only, on the connections signed with [ORG]AIOC-PPD and [ORG]AIOC-DI; never an instruction to a person", audit_trail: "Work Item record and the unit register", required_tests: ["TEST-TOM v5"], enforcement: "shared-gateway-outside-unit" }
+    - { unit: "[ORG]AIOC-TOM", port: "hu-in", direction: "input", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["run request from the Requesting Authority's Cell (a Design Request reference only)", "run control and configuration from the TOM Design Lead (never a source)"], authority_limit: "the signer's authority_scope; nothing received here is a source", audit_trail: "Office record", required_tests: ["TEST-TOM v5"], enforcement: "shared-gateway-outside-unit" }
+    - { unit: "[ORG]AIOC-TOM", port: "hu-out", direction: "output", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["run brief to the TOM Design Lead", "run preview to the TOM Design Lead", "ruling sheets to the TOM Design Lead", "release notice to the Requesting Authority's Cell"], authority_limit: "information only; never a question about the organisation", audit_trail: "Office record", required_tests: ["TEST-TOM v5"], enforcement: "shared-gateway-outside-unit" }
+    - { unit: "[ORG]AIOC-TOM", port: "stop", direction: "input", type: "HU", identification: "live-human-sign-in-at-gateway", accepted_content: ["stop"], authority_limit: "stop only", audit_trail: "unit register", required_tests: ["TEST-TOM v5"], enforcement: "shared-gateway-outside-unit", stop_door: true }
   configuration:                          # every slot is set by the organisation (§15); an empty slot fails the joining test
     office_accountable_human: { value: "<set by the organisation>", set_by: "<seat>", date: "<date>", version: "<vN>" }
     central_head: { value: "<the OCO of this [ORG]AION>", set_by: "<seat>", date: "<date>", version: "<vN>" }
@@ -253,8 +255,8 @@ card:
 - **Where it sits.** A top-level AIOC under the Charter, beside `[ORG]AIOC-SL`. It is the second stage of an organisation's design: the "next stage" of Protocol §13, item 6, set out in the Protocol section Target Operating Model (§19).
 - **Its role.** It turns an organisation's own sources into a target operating model, decided by the organisation's own authority. It names roles and what each decides. It does not say what fills a role.
 - **Scope.**
-  - **It does:** reconstruct the request and write the Design Brief from sources; ask, through Source Lifecycle, for what the sources lack, and report what is missing; structure the work into children; brief each child; package each child in isolation; design each child's operating model with its rationale; record the hand-offs between children and with outside parties; list every accountable role-type once, in the role register; walk the model through realistic situations; have every stage's output checked under the Review Panel rule; prepare the decision; release the model.
-  - **It does not:** ask any person anything about the organisation; write job descriptions; set workloads; assign work to anything other than an accountable role; choose tools or vendors; write processes, procedures or policies; write a success criterion; make a legal determination; decide anything for the organisation.
+  - **It does:** reconstruct the request and write the Design Brief from sources; ask, through Source Lifecycle, for what the sources lack, and report what is missing; structure the work into children; brief each child; package each child in isolation; design each child's operating model with its rationale; record the hand-offs between children and with outside parties; list every accountable role-type once, in the role register; state the strategy frame from the sources and the organisation's decisions; record each capability's delivery model and maturity, each value stream's criticality and each outside party's journey; compile the value case, each element's proposed priority and the activity profile (Annex H); walk the model through realistic situations; have every stage's output checked under the Review Panel rule; prepare the decision; release the model.
+  - **It does not:** ask any person anything about the organisation; write job descriptions; set workloads; assign work to anything other than an accountable role; choose tools or vendors; write processes, procedures or policies; write a success criterion; write a goal, a target, a level or a figure of its own; watch work, or read a record that says who did a piece of work; make a legal determination; decide anything for the organisation.
 - **Shapes it serves.** Any shape: a single person, a single entity, a group of entities, or a group with independent institutions inside it (the same four shapes as Source Lifecycle). A unit of an organisation may be the subject of a design (`scope.subject`, `docs/OUTPUT.md` §3).
 - **Boundaries with other AIOCs.**
   - **`[ORG]AIOC-SL`** holds every source and every contact with a person. This AIOC holds only references and its own design records. It asks; the Chief of Staff of `[ORG]AIOC-SL` gets the answer and records it. Source Lifecycle never designs; this AIOC never records a source, except its own filed release and design reports.
@@ -305,7 +307,7 @@ Default.
 #### Role card
 None while the form is a single Chief of Staff.
 #### Fixed test
-TEST-TOM-TCS v4 (TEST-TOM v4, case 25: an Office is proposed, never self-created) · result `NOT_RUN`
+TEST-TOM-TCS v5 (TEST-TOM v5, case 25: an Office is proposed, never self-created) · result `NOT_RUN`
 
 ### 4.2 Chief of Staff
 #### Definition
@@ -340,10 +342,10 @@ Default, plus:
 | Escalation | to the Design Lead in one line, with evidence linked; a stop goes to the stop door, never through this Cell |
 | Tools and access | the connection of each adapter (in this version, Source Lifecycle's), and the connections with `[ORG]AIOC-PPD` and `[ORG]AIOC-DI`, through the tool gateway, within their signed scopes; the code steps of the code project; no credential in any instruction |
 | Deputy and cover | none; on failure the run halts and the Design Lead is told |
-| Fixed test and score | TEST-TOM-TCS v4 (§9), plus the default Chief of Staff test (a)-(h) |
-| Card version and status | v0.5.0 · draft |
+| Fixed test and score | TEST-TOM-TCS v5 (§9), plus the default Chief of Staff test (a)-(h) |
+| Card version and status | v0.6.0 · draft |
 #### Fixed test
-TEST-TOM-TCS v4 · result `NOT_RUN`
+TEST-TOM-TCS v5 · result `NOT_RUN`
 
 ### 4.3 Input socket
 #### Definition
@@ -375,13 +377,14 @@ Default, with this AIOC's standard format, the **source reference** (`contracts/
 
 **5. What Source Lifecycle serves, and what it is asked to add.**
 - **What Source Lifecycle serves today** (Protocol §13, item 4): the source ID, version and SHA-256 hash, and `held` or `not held`, within the approved scope.
-- **What Source Lifecycle is asked to add** (`docs/INTAKE-WITH-SOURCE-LIFECYCLE.md` §9): the snapshot ID; the origin kind (document, explainer, confirmation, status, export, decision, operating model, design report); the status from Source Lifecycle's own list (draft, in review, approved, in force, superseded); the confidentiality level; for an export, the date it is as of; and, for an item derived from conversation, each statement's own Source Lifecycle label with its anchor (SL-A7). It is also asked to pin snapshots, read a needs answer at the snapshot that answer names, and keep every snapshot named by a filed release readable (SL-A8, as amended), and to send notices of revocation, narrowing, reclassification and supersession (SL-A11). Until Source Lifecycle serves these fields, gate T0 fails (Annex C). How the adapter reads each field, with the defaults where a value is not served, is fixed in `adapters/source-lifecycle.adapter.md`.
+- **What Source Lifecycle is asked to add** (`docs/INTAKE-WITH-SOURCE-LIFECYCLE.md` §9): the snapshot ID; the origin kind (document, explainer, confirmation, status, export, decision, operating model, design report); the status from Source Lifecycle's own list (draft, in review, approved, in force, superseded); the confidentiality level; for an export, the date it is as of; and, for an item derived from conversation, each statement's own Source Lifecycle label with its anchor (SL-A7). It is also asked to pin snapshots, read a needs answer at the snapshot that answer names, and keep every snapshot named by a filed release readable (SL-A8, as amended), and to send notices of revocation, narrowing, reclassification and supersession (SL-A11). **New in v0.6.0.** It is asked to admit an export of records of the work only as the organisation's projection by role-type and process, after its impact assessment and its HF-17 decision (SL-A13; Annex H.8), and to show and record the priority of an element row (the v0.6 sockets contract). Until Source Lifecycle serves these fields, gate T0 fails (Annex C). How the adapter reads each field, with the defaults where a value is not served, is fixed in `adapters/source-lifecycle.adapter.md`.
 
 **6. `not held`.** A `not held` answer is recorded in the pack's `unknowns`, as an unknown with its cost. It is never taken to mean that the fact is absent.
 
 **7. What is refused.**
 - **New. Nothing that arrives through a human port is a source.** A run request is admitted only if it carries the reference of an approved Design Request in Source Lifecycle; the reference is admitted, never the words around it. Direction from the TOM Design Lead covers only method, configuration and run control (start, pause, stop, a second run, the budget, a re-base). A statement about the organisation in it is refused under case 2, and, if the design needs it, is asked through Source Lifecycle like any other need.
 - **New.** A source that is not served by reference, or that comes from any channel other than an adapter's connection, is refused with its reason. Words typed or spoken to this AIOC are not a source.
+- **New in v0.6.0.** An export of records of the work whose records still carry a field that says who did the work is refused `person-level records`, and nothing of it is kept (Annex H.8).
 - The refusal reasons are those of Annex E.1 (`refused[].reason`).
 
 **8. The acceptance test of a needs answer** (it makes case 11 concrete). An answer is admitted into a pack version only when all eight hold:
@@ -406,6 +409,7 @@ Default, plus the socket's five steps (STANDARD-CAPABILITIES §4.3), run by the 
    - the item resolves to exactly one valid version, and the hash matches (Protocol §8, item 2);
    - it is inside its scope, the scope is not expired, and the connection is not revoked;
    - it carries no secret;
+   - an export of records of the work carries no field that says who did the work (Annex H.8);
    - instruction-like text is flagged, and kept as data;
    - for a Work Item: it is within the card;
    - for a needs answer: it passes the acceptance test of part 8 of the Definition, above.
@@ -414,7 +418,7 @@ Default, plus the socket's five steps (STANDARD-CAPABILITIES §4.3), run by the 
 #### Role card
 Default; performed by the Chief of Staff (`[ORG]CELL-TCS`) through the socket's code steps and its adapters (Definition, part 4).
 #### Fixed test
-TEST-TOM-TCS v4 (TEST-TOM v4, cases 1-6, 29, 31-34, 44, 46, 49-52, 61, 81, 89 and 96); each adapter's own test (`TEST-TOM-ADP-SL v1`); plus the default Input socket test · result `NOT_RUN`
+TEST-TOM-TCS v5 (TEST-TOM v5, cases 1-6, 29, 31-34, 44, 46, 49-52, 61, 81, 89, 96, 119 and 120); each adapter's own test (`TEST-TOM-ADP-SL v2`); plus the default Input socket test · result `NOT_RUN`
 
 ### 4.4 Panel
 #### Definition
@@ -432,6 +436,7 @@ Default. The Panel of this AIOC also shows, for each run:
 - per stage S1 and S5: two authors or one, and each job's differences by disposition;
 - the role findings, by kind and state;
 - the reference-model catalogue version, or `unavailable`;
+- the strategy frame, with each element `not given`; the activity profile, or `no observation` (Annex H);
 - the decision state of the release.
 
 Across runs, it also shows every return received (§5.10): its sender, kind and elements, its round and the deadline of that round, its status and its age, and the decision rows open on it. A return past its deadline is shown in red, here and on its sender's Panel.
@@ -459,14 +464,14 @@ Each stage is one run state and closes on its gate. The last stage closes on T8,
 | ID | Plain name | Run state | Gate(s) | Exact input | Exact output (contract or file) | Done-test | Human decision |
 |---|---|---|---|---|---|---|---|
 | S0 | **Admit** | `admitting` | T0 | The run Work Item from the Requesting Authority's Cell, whose `sources` holds one approved Design Request reference. The connection grant of each adapter. Each adapter at its pinned snapshot (v0.4.0: `ADP-SL` only). The engine register, read at the tool gateway. The pins of `contracts/PINS.json`, among them the reference-model catalogue's (Annex E.19). | **Input Pack `P0`** (`contracts/input-pack.schema.json`), with its pack report. The run record, opened. The **run preview** (Annex E.13), with the run depth, the authoring of S1 and S5, and the catalogue version or `unavailable`. The RP0 review record (run record). | **T0** (Annex C.2): conditions (a) to (j). | Requesting Authority: approves the Design Request in Source Lifecycle and opens the run. Seat over `[ORG]AIOC-SL`: signs the connection. TOM Design Lead: acknowledges the run preview and, where only a reduced level is possible, accepts it within the TM Cell's permission. Requesting Authority: states the run depth in the Design Request (DRQ-01 field 9). TOM Design Lead: where two authors at S5 would lower its review, accepts single authoring there within the TM Cell's permission (Annex G.7). |
-| S1 | **Frame** | `framing` | T1 | The Input Pack version named by each step (P0 or later). The Design Request's atoms. The request kind profiles (`docs/ASKING-CATALOGUE.md` §3b). | The **Design Brief frame**, reconciled from two drafts written blind by two authors of two families (Annex G), with its Gate A record (field list: `docs/CARRIED-RULES.md` §4.1 items 1–12 and 14–20; JSON Schema `design-brief`: build item). The **party register** (Annex E.3). The do-not-ask and do-not-use-as-fact lists. The lens record (run record, Annex E.14). The two locked drafts and the **difference register** (run records; Annex E.18). The **frame decision pass**: needs requests carrying non-delegable decision rows (scope, exclusions, the entity roster, contradictions touching them, and each reading of the request that the two drafts differ on and the sources do not settle) and delegable confirmation rows (understanding check, "found, not said", load-bearing assumptions, obligations). Or a **Readiness Report** for the whole request. | **T1**: both drafts locked before the compare step, and every material difference disposed under Annex G.5; RP1b and RP1 settled clear before any row was sent; Gate A recorded and re-assessed at RP1; party register reviewed at RP1; the non-delegable rows decided (none "don't know"; weak-approval signal cleared). | Requesting Authority: scope, exclusions, roster (`committed` or `context`), contradictions touching them; the reading meant, where two readings differ (`reading A`, `reading B`, `both readings`). Delegable rows may be answered by delegation (recorded `delegated, not decided`). |
+| S1 | **Frame** | `framing` | T1 | The Input Pack version named by each step (P0 or later). The Design Request's atoms. The request kind profiles (`docs/ASKING-CATALOGUE.md` §3b). | The **Design Brief frame**, reconciled from two drafts written blind by two authors of two families (Annex G), with its Gate A record (field list: `docs/CARRIED-RULES.md` §4.1 items 1–12 and 14–20; JSON Schema `design-brief`: build item). The **party register** (Annex E.3). The **strategy frame** and the **current-state activity profile** (release parts; Annex H.1, H.8). The do-not-ask and do-not-use-as-fact lists. The lens record (run record, Annex E.14). The two locked drafts and the **difference register** (run records; Annex E.18). The **frame decision pass**: needs requests carrying non-delegable decision rows (scope, exclusions, the entity roster, contradictions touching them, and each reading of the request that the two drafts differ on and the sources do not settle) and delegable confirmation rows (understanding check, "found, not said", load-bearing assumptions, obligations). Or a **Readiness Report** for the whole request. | **T1**: both drafts locked before the compare step, and every material difference disposed under Annex G.5; RP1b and RP1 settled clear before any row was sent; Gate A recorded and re-assessed at RP1; party register reviewed at RP1; the non-delegable rows decided (none "don't know"; weak-approval signal cleared); the strategy frame row decided, with purpose and values cited from a source in force or signed (Annex H.1); the activity profile compiled, or `no observation` (Annex H.8). | Requesting Authority: scope, exclusions, roster (`committed` or `context`), contradictions touching them; the reading meant, where two readings differ (`reading A`, `reading B`, `both readings`); the strategy frame (Annex H.1). Cell carrying `[ORG]HOAC-GOV`: purpose and values, where no source in force states them. Delegable rows may be answered by delegation (recorded `delegated, not decided`). |
 | S2 | **Structure** | `structuring` | T2 | The decided frame. The current pack version. The party register. | The **Structure Proposal**, then the decided structure and first slice (field list: `docs/OUTPUT.md` §5 and `CARRIED-RULES.md` §6; JSON Schema `structure`: build item), child IDs `CHILD-…`. The party register extended with the sibling children. | **T2**: orphans 0; exclusion violations 0; every child passes the four legs; RP2 settled clear before any row was sent; each child row and the first-slice row decided; the party register extended with the sibling children. | Requesting Authority: each child; the first slice. |
 | S3 | **Child briefs** | `child briefing` | T3 | Per child of the slice: its decided structure row; the decided frame; the current pack version. | Per child: a **child brief** (its Gate A record and floor; its criteria; the contradictions decided for it; JSON Schema `design-brief`, child part: build item), or a child **Readiness Report** section. | **T3**, per child: Gate A recorded and re-assessed at RP3; floor holds; RP3 settled clear before any row was sent; every non-delegable row decided, none "don't know"; or a Readiness Report section. | Requesting Authority: the child's criteria; contradictions touching the child. |
 | S4 | **Package** | `packaging` | T4 | Per child: its child brief; the pack atoms of the current version (Packaging selects atoms; it creates none); the party register (quarantined, read only by code steps); the decided constraints. | Per child: the **child package** (six sections and the integrity line; field list `CARRIED-RULES.md` §7.1; JSON Schema `child-package`: build item); the **packaging ledger** (`packaging-ledger`: build item); the marker-to-identity map, the withheld-context record and the packaging record (run records). | **T4**: G1–G5 pass for every child package; RP4 settled with no unresolved `MATERIAL` finding. | TOM Design Lead: rules on contested `MATERIAL` findings. Requesting Authority: only the choice on a material finding notice. |
-| S5 | **Design** | `designing` | T5 | Per child: the child package; and the reference-model catalogue at the run's pinned version, a method and never evidence (Annex B.5). Nothing else. | Per child: two **design ledger** drafts, written blind by the Designer and the Second Designer and locked (one, under Annex G.7); the **difference register** (run record; Annex E.18); the reconciled and revised **design ledger** (field list `CARRIED-RULES.md` §8.2; JSON Schema `design-ledger`: build item); Output A (TOM Blueprint) and Output B (Rationale and Evidence Brief), rendered by code; the revision record. | **T5**: schema and code checks (`CARRIED-RULES.md` §8.3) pass; the difference register complete, every material difference disposed under Annex G.5; RP5 settled with no unresolved `MATERIAL` finding; the step is `complete`, or `incomplete-design` routed as a needs request or a WITHDRAW choice. | As S4. |
-| S6 | **Hand-offs** | `hand-offs` | T6 | The decided design ledgers of the slice, and those of any carried children; their declared boundary registers; the marker-to-identity maps; the withheld-context records; the party register; the deferred-boundary register; the decided Design Brief and structure. | The pairing table (run record; Annex E.6a). The **seam findings**, the **hand-offs register**, the **counterparty register**, the **legal and regulatory perimeter** and the **deferred-boundary register** (release parts; Annex E.4–E.7a). The **role register**, with its role findings (release part; Annex E.17), compiled by code. | **T6**: every declared crossing is paired or is a seam finding; every seam finding is resolved upstream, decided or registered; the role register compiled by code, and no role finding `open`; RP6 settled with no unresolved `MATERIAL` finding. | Requesting Authority: seam decision rows; role rows (two names, one role?); notice choices. TOM Design Lead: rulings. |
+| S5 | **Design** | `designing` | T5 | Per child: the child package; and the reference-model catalogue at the run's pinned version, a method and never evidence (Annex B.5). Nothing else. | Per child: two **design ledger** drafts, written blind by the Designer and the Second Designer and locked (one, under Annex G.7); the **difference register** (run record; Annex E.18); the reconciled and revised **design ledger** (field list `CARRIED-RULES.md` §8.2; JSON Schema `design-ledger`: build item), with each capability's delivery model and maturity and each value stream's criticality (Annex H.2–H.4); Output A (TOM Blueprint) and Output B (Rationale and Evidence Brief), rendered by code; the revision record. | **T5**: schema and code checks (`CARRIED-RULES.md` §8.3) pass; the difference register complete, every material difference disposed under Annex G.5; RP5 settled with no unresolved `MATERIAL` finding; the step is `complete`, or `incomplete-design` routed as a needs request or a WITHDRAW choice. | As S4. |
+| S6 | **Hand-offs** | `hand-offs` | T6 | The decided design ledgers of the slice, and those of any carried children; their declared boundary registers; the marker-to-identity maps; the withheld-context records; the party register; the deferred-boundary register; the decided Design Brief and structure. | The pairing table (run record; Annex E.6a). The **seam findings**, the **hand-offs register**, the **counterparty register**, the **legal and regulatory perimeter** and the **deferred-boundary register** (release parts; Annex E.4–E.7a). The **role register**, with its role findings (release part; Annex E.17), compiled by code. The **outside-party journeys** (release part; Annex H.5). | **T6**: every declared crossing is paired or is a seam finding; every journey moment is a crossing of its entry, and every crossing that delivers a capability is paired, registered or deferred (Annex H.11 checks 2 and 4); every seam finding is resolved upstream, decided or registered; the role register compiled by code, and no role finding `open`; RP6 settled with no unresolved `MATERIAL` finding. | Requesting Authority: seam decision rows; role rows (two names, one role?); notice choices. TOM Design Lead: rulings. |
 | S7 | **Walk** | `walking` | T7 | The **walk input** (Annex E.8) and the **blind brief** (Annex E.9), both compiled by code; the version of the standard situation library and the request kind's situation pack. The run depth (Annex F), which sets the situation budget above its floors. | The sealed situation set; the trace; the **finding register** (field list `CARRIED-RULES.md` §10.3 and §10.6; JSON Schema `finding-register`: build item); the **walkthrough report**. | **T7**: situations sealed before the walk; the mix met or its shortfall declared; RP7 settled with no unresolved `MATERIAL` finding. | Requesting Authority: notice choices. TOM Design Lead: rulings. |
-| S8 | **Decide and release** | `deciding`; end states `released`, then `filed` | T8, then T9 | Every reviewed part of S1–S7, by hash; every pack version; the settled review records and rulings of S0–S7. | The **quality checks** (Annex E.11), generated by code from the settled review records, and extended after RP8. The TOM Design Lead's attestation of T0–T7. The **Decision Package** (field list `CARRIED-RULES.md` §12.1; JSON Schema `decision-package`: build item), which states in plain words the run depth, the general patterns relied on, and the role register; its decision rows; the decision references (admitted as pack versions). Then the **TOM Release** manifest (`contracts/tom-release.schema.json`) and its parts; the release lint report (run record, Annex E.15); the **filing receipt** (`contracts/tom-filing-receipt.schema.json`); the **release notice** to the next stage (`contracts/release-notice.schema.json`; §5.9 step 8a). | **T8**: RP8 settled clear before any row was sent; every element row (each entry of the role register included) and the final status decided; purpose-and-values rows carry the GOV Cell's gateway signature. **T9**: the manifest is content-addressed; every element traces to an atom of a pack version of this run or of a carried release; every pattern a ledger cites resolves in the catalogue pinned for the run, by version and hash; the role register's entries re-compile from the frozen parts and the decision references; the release lint passes; RP9 settled with no `MATERIAL` finding; the release is filed and reads back by hash. | Requesting Authority: each element (`ACCEPT`, `CORRECT`, `REJECT`) and the final status. Cell carrying `[ORG]HOAC-GOV`: purpose-and-values rows, signed at the gateway. TOM Design Lead: the attestation of T0–T7. |
+| S8 | **Decide and release** | `deciding`; end states `released`, then `filed` | T8, then T9 | Every reviewed part of S1–S7, by hash; every pack version; the settled review records and rulings of S0–S7. | The **quality checks** (Annex E.11), generated by code from the settled review records, and extended after RP8. The TOM Design Lead's attestation of T0–T7. The **Decision Package** (field list `CARRIED-RULES.md` §12.1; JSON Schema `decision-package`: build item), which states in plain words the run depth, the general patterns relied on, and the role register; the **value case** (release part; Annex H.6), compiled by code; its decision rows, each element row with its proposed priority (Annex H.7); the decision references (admitted as pack versions). Then the **TOM Release** manifest (`contracts/tom-release.schema.json`) and its parts; the release lint report (run record, Annex E.15); the **filing receipt** (`contracts/tom-filing-receipt.schema.json`); the **release notice** to the next stage (`contracts/release-notice.schema.json`; §5.9 step 8a). | **T8**: RP8 settled clear before any row was sent; every element row (each entry of the role register included) and the final status decided; each element row decided `ACCEPT` or `CORRECT` carries its priority, and the value case row is decided (Annex H.6, H.7); purpose-and-values rows carry the GOV Cell's gateway signature. **T9**: the manifest is content-addressed; every element traces to an atom of a pack version of this run or of a carried release; every pattern a ledger cites resolves in the catalogue pinned for the run, by version and hash; the role register's entries re-compile from the frozen parts and the decision references; the value case and the activity profile re-compile from the frozen parts and the decision references (Annex H.11 check 5); the release lint passes; RP9 settled with no `MATERIAL` finding; the release is filed and reads back by hash. | Requesting Authority: each element (`ACCEPT`, `CORRECT`, `REJECT`) and the final status. Cell carrying `[ORG]HOAC-GOV`: purpose-and-values rows, signed at the gateway. TOM Design Lead: the attestation of T0–T7. |
 
 **Not stages: services and rules used by every stage.**
 
@@ -498,6 +503,7 @@ Each stage is one run state and closes on its gate. The last stage closes on T8,
 - **Run depth**: how fine the model is, `light`, `standard` or `deep` (Annex F).
 - **Pattern**: an entry of the reference-model catalogue of the 49GAION Library; a method, never evidence (Annex B.5). In reader text: "general pattern".
 - **Role register**: the release part that lists every role-type once (Annex E.17). It lists roles, never positions: the Position Register belongs to the next stage (Naming Standard §3).
+- **Strategy frame**: the organisation's strategy on one page, as its sources state it or as it decides it (Annex H.1). **Value case**: per outcome, its measures, baselines and targets, compiled by code (Annex H.6). **Activity profile**: how the work runs today, by role-type and process, from approved exports only (Annex H.8). **Journey**: the moments where one outside party meets the organisation, in order (Annex H.5).
 
 ### 5.1 Request Reconstruction
 
@@ -509,9 +515,9 @@ Each stage is one run state and closes on its gate. The last stage closes on T8,
 | Purpose | Understand the request as completely as the sources support, and no further, before any burden is put on a person. |
 | Scope | Does: read, cite, read through lenses, reconstruct, label, find contradictions and gaps, state the request kind, write the party register, record Gate A, raise needs. Does not: design the solution; choose tools; write a success criterion; settle a contradiction; treat an inference as confirmed; narrow the request alone; answer its own Gate A independently (the review at RP1 does that, §5.8). |
 | Inputs | The current Input Pack version (§4.3), named by each step; answers to earlier needs requests, as later pack versions; the request kind profiles (`docs/ASKING-CATALOGUE.md` §3b); for the child briefs, the decided structure (§5.3). |
-| Outputs | The **Design Brief** (`docs/OUTPUT.md` §4), versioned. The **party register** (Annex E.3). The **lens record** (Annex E.14). The two locked frame drafts and the **difference register** (Annex E.18). The **do-not-ask list**, bounded to: (a) needs candidates raised by a Pod in this run; (b) the fields of the published contracts this run must fill (the Design Brief sections, the explainer templates in play); (c) needs answers already received. Each entry has the answering citation; the list is never an unbounded enumeration. The **do-not-use-as-fact list** (weak or inferred items). The **frame decision pass** (`docs/CARRIED-RULES.md` §4.5) and needs requests (§5.2). Where no frame can be decided at all, a **Readiness Report** for the whole request (`docs/OUTPUT.md` §4, last paragraph). |
+| Outputs | The **Design Brief** (`docs/OUTPUT.md` §4), versioned. The **strategy frame** (Annex H.1) and the **current-state activity profile** (Annex H.8), release parts. The **party register** (Annex E.3). The **lens record** (Annex E.14). The two locked frame drafts and the **difference register** (Annex E.18). The **do-not-ask list**, bounded to: (a) needs candidates raised by a Pod in this run; (b) the fields of the published contracts this run must fill (the Design Brief sections, the explainer templates in play); (c) needs answers already received. Each entry has the answering citation; the list is never an unbounded enumeration. The **do-not-use-as-fact list** (weak or inferred items). The **frame decision pass** (`docs/CARRIED-RULES.md` §4.5) and needs requests (§5.2). Where no frame can be decided at all, a **Readiness Report** for the whole request (`docs/OUTPUT.md` §4, last paragraph). |
 | Done when | S1: gate T1. S3: gate T3, per child (§5.0). |
-| Limits | Citation or refusal: every answer carries a source reference, or it is refused and recorded as `unknown`. No new world facts and no outside research. No claim may cite a source the read plan marks as not opened. An unknown or contested item closes only on a cited source; a silent closure fails the run. An inferred item stays inferred, and keeps raising the question, until the organisation confirms it through Source Lifecycle (sticky inferred, Annex B.1). "The organisation wants…" must trace to a source, never to inference. Which of two disagreeing sources governs is settled only by a precedence rule a held source states, cited, or by a non-delegable decision of the Requesting Authority for this brief (Annex B.2). This AIOC never writes a success criterion; it checks a criterion's admissibility (Annex C.3). Frame and Child briefs read the Input Pack only. The Structure Proposal, the child package and the design ledger are consumer contracts and never enter reconstruction (`docs/CARRIED-RULES.md` §2.6). The two frame drafts are reconciled only under Annex G.5. |
+| Limits | Citation or refusal: every answer carries a source reference, or it is refused and recorded as `unknown`. No new world facts and no outside research. No claim may cite a source the read plan marks as not opened. An unknown or contested item closes only on a cited source; a silent closure fails the run. An inferred item stays inferred, and keeps raising the question, until the organisation confirms it through Source Lifecycle (sticky inferred, Annex B.1). "The organisation wants…" must trace to a source, never to inference; so must every element of the strategy frame (Annex H.1). Which of two disagreeing sources governs is settled only by a precedence rule a held source states, cited, or by a non-delegable decision of the Requesting Authority for this brief (Annex B.2). This AIOC never writes a success criterion; it checks a criterion's admissibility (Annex C.3). Frame and Child briefs read the Input Pack only. The Structure Proposal, the child package and the design ledger are consumer contracts and never enter reconstruction (`docs/CARRIED-RULES.md` §2.6). The two frame drafts are reconciled only under Annex G.5. |
 | Sources | 49GAION Operating Protocol `v1.5.0` §8 (provenance), §13 items 4 and 6 (unreleased `v1.6.0` row); Standard `v1.5.0` §3.2 items 1 and 8. Design basis: `docs/DESIGN-BASIS.md` §1, §2; rule texts: `docs/CARRIED-RULES.md` §1-§4, §2.7, §2.8, §4.5 |
 | Status | draft |
 
@@ -530,20 +536,22 @@ Each stage is one run state and closes on its gate. The last stage closes on T8,
 
 Steps 1–9 are run twice, blind (Annex G.2): by the Request Analyst, and by the Second Request Analyst on an engine of the other author family, each with its own Source Proxy rounds. Each output of steps 1–9 is that author's own.
 
-1. **Request Analyst**: declares the **read plan** before reading: what is read in full, sampled or not opened, and why the unopened material is unlikely to change a decision; the selection basis carries its own label. The socket atomises each source the plan opens, as a new pack version, where the corpus is above `lazy_atomising_threshold` → *read plan* (evidence: run record entry and hash).
+0. **Chief of Staff (runs the activity-profile code step)**: before the authors start, and again on each pack version that admits an export of records of the work, compiles the current-state activity profile, or `no observation` (Annex H.8) → *activity profile* (evidence: hash; `mechanically-verified`). Both authors read it as present state.
+
+1. **Request Analyst**: declares the **read plan** before reading: what is read in full, sampled or not opened, and why the unopened material is unlikely to change a decision; the selection basis carries its own label; the organisation dictionary is opened wherever Source Lifecycle serves one (Annex H.9). The socket atomises each source the plan opens, as a new pack version, where the corpus is above `lazy_atomising_threshold` → *read plan* (evidence: run record entry and hash).
 2. **Source Proxy**: screens each source's Source Lifecycle status. Recency is never authority; presence in the sources is never adoption; a precedence between two sources is admitted only when a held source states it, cited. The pack's `live_version_conflicts` enter as candidate contradictions → *currency screen* (evidence: run record).
 3. **Request Analyst ↔ Source Proxy**: internal rounds. The Proxy answers only from the sources, with a citation, or refuses. The Analyst may ask about situation, history, constraints and intent found in the sources. It may never ask about solutions, design preferences, tools or success criteria → *round log* (evidence: run record).
 4. **Request Analyst**: the lens pass (`docs/CARRIED-RULES.md` §2.7), with at most the lens cap of the run depth (Annex F) → *lens record* (evidence: run record).
 5. **Request Analyst**: builds the Working Context: what exists today; who does what; the contradiction register; what was expected and not found; unclear authority; the currency screen; every row labelled (Annex B). Retained lens findings enter only with their citations → *Working Context* (evidence: run record).
 6. **Request Analyst**: states the request kind with its reason (`CARRIED-RULES.md` §2.8), and writes the party register (Annex E.3) → *party register* (evidence: run record).
-7. **Request Analyst**: reconstructs the frame. It covers: the requesting authority per entity, each entity `committed` or `context`, with its veto-holders; the request as interpreted; scope in; named exclusions; present state; outcomes, each stated as a difference from today that two independent readers would judge the same; criteria only as the sources state them, each checked for admissibility (Annex C.3); constraints; assumptions, each with what breaks if false; unknowns, carried or blocking; contradictions; obligations; open items; the request kind; the honesty ceiling → *frame draft* (evidence: run record and hash).
+7. **Request Analyst**: reconstructs the frame. It covers: the requesting authority per entity, each entity `committed` or `context`, with its veto-holders; the request as interpreted; scope in; named exclusions; present state; outcomes, each stated as a difference from today that two independent readers would judge the same; criteria only as the sources state them, each checked for admissibility (Annex C.3); constraints; assumptions, each with what breaks if false; unknowns, carried or blocking; contradictions; obligations; open items; the request kind; the honesty ceiling; and the strategy frame, each element cited or `not given` (Annex H.1) → *frame draft* (evidence: run record and hash).
 8. **Request Analyst**: records **Gate A** for the whole request: the eight questions of Annex C.3, each answered yes or no with a reason → *Gate A record* (evidence: run record).
-9. **Request Analyst**: applies the **decision-leverage test** to each item the sources cannot answer: does any scope boundary, constraint, criterion or design decision change with its value? If not, the item is carried as an assumption and not asked. If so, it becomes a needs candidate (§5.2), ranked by breadth, irreversibility and cost of being wrong → *needs candidates with leverage proofs* (evidence: needs log).
+9. **Request Analyst**: applies the **decision-leverage test** to each item the sources cannot answer: does any scope boundary, constraint, criterion or design decision change with its value? If not, the item is carried as an assumption and not asked. If so, it becomes a needs candidate (§5.2), ranked by breadth, irreversibility and cost of being wrong. An element of the strategy frame that no held source states is always a candidate, asked once through EX-10 (Annex H.1, item 3) → *needs candidates with leverage proofs* (evidence: needs log).
 9a. **Chief of Staff (runs the compare code step)**: once both authors' drafts of steps 1–9 are locked by hash, aligns them and writes the difference register (Annex G.4; Annex E.18) → *difference register* (evidence: hashes; `mechanically-verified`).
 9b. **Frame Reconciler**: in a fresh context, with only the two locked drafts, the difference register, the atoms they cite and the rules, reconciles them into one frame, party register, do-not-ask and do-not-use-as-fact lists and set of needs candidates, under Annex G.5, recording each disposition; a reading of the request that only the organisation can settle becomes a row of the frame decision pass (step 12) → *reconciled frame* (evidence: run record).
 10. **Review Pod**: the process audit, review point RP1b (§5.8), over both authors' round logs and lens records. A `MATERIAL` verdict stops the step, and the author whose rounds hold the defect re-forms its draft from its last clean round; steps 9a and 9b then run again → *RP1b record* (evidence: the review record).
 11. **Review Pod**: the frame review, review point RP1 (§5.8), with the question set of `CARRIED-RULES.md` §11.1. It sees only the pack atoms the frame cites, the reconciled frame with its Gate A record, the party register, the two locked drafts and the difference register, never the rounds. It re-assesses every Gate A answer and the floor on its own → *RP1 record* (evidence: the review record).
-12. **Request Analyst**: runs only after RP1b and RP1 have settled clear. It sends the frame decision pass (`CARRIED-RULES.md` §4.5), through the Chief of Staff (§5.2): non-delegable rows for scope, exclusions, the roster and contradictions; delegable confirmation rows for the understanding check, findings not said, load-bearing assumptions and obligations; and a non-delegable row for each reading of the request that step 9b could not settle (`reading A`, `reading B`, `both readings`) → *frame decision pass* (evidence: needs log).
+12. **Request Analyst**: runs only after RP1b and RP1 have settled clear. It sends the frame decision pass (`CARRIED-RULES.md` §4.5), through the Chief of Staff (§5.2): non-delegable rows for scope, exclusions, the roster and contradictions; delegable confirmation rows for the understanding check, findings not said, load-bearing assumptions and obligations; a non-delegable row for each reading of the request that step 9b could not settle (`reading A`, `reading B`, `both readings`); one non-delegable row for the strategy frame, and the purpose-and-values rows where no source in force states them (Annex H.1) → *frame decision pass* (evidence: needs log).
 
 **The child briefs (S3)**, after the structure is decided (§5.3).
 
@@ -564,11 +572,11 @@ Steps 1–9 are run twice, blind (Annex G.2): by the Request Analyst, and by the
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door | same | to the Chief of Staff in one line; a stop goes to the stop door | same |
 | Tools and access | none beyond its inputs; no file, search or web tool; access only through the Panel; no credential in any instruction | same | none beyond its inputs; no file, search or web tool; access only through the Panel; no credential in any instruction | none beyond its inputs; no file, search or web tool; no credential in any instruction |
 | Deputy and cover | none; on failure the step halts and the Chief of Staff raises it | same | none; on failure the step halts and the Chief of Staff raises it | same |
-| Fixed test and score | TEST-TOM-TSP v4 (cases 4, 5, 14, 92) | TEST-TOM-TRA v4 (cases 8, 14, 15, 28, 73-75, 83, 91, 92) | TEST-TOM-TSRA v4 (cases 8, 14, 15, 73-75, 83, 91, 92) | TEST-TOM-TFR v4 (cases 93, 94) |
+| Fixed test and score | TEST-TOM-TSP v5 (cases 4, 5, 14, 92) | TEST-TOM-TRA v5 (cases 8, 14, 15, 28, 73-75, 83, 91, 92, 109-111, 123) | TEST-TOM-TSRA v5 (cases 8, 14, 15, 73-75, 83, 91, 92, 109-111, 123) | TEST-TOM-TFR v5 (cases 93, 94) |
 | Card version and status | v0.4.0 · draft | v0.4.0 · draft | v0.4.0 · draft | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TRR v4: TEST-TOM v4, cases 4, 5, 8, 14, 15, 28, 73-76, 83 and 91-93 · result `NOT_RUN`
+TEST-TOM-TRR v5: TEST-TOM v5, cases 4, 5, 8, 14, 15, 28, 73-76, 83, 91-93, 109-111, 121 and 123 · result `NOT_RUN`
 
 ### 5.2 Needs Requests
 
@@ -622,11 +630,11 @@ TEST-TOM-TRR v4: TEST-TOM v4, cases 4, 5, 8, 14, 15, 28, 73-76, 83 and 91-93 · 
 | Escalation | as in §4.2 |
 | Tools and access | as in §4.2 |
 | Deputy and cover | none; the run halts |
-| Fixed test and score | TEST-TOM-TCS v4 (cases 7-13, 28, 30, 75, 76) |
+| Fixed test and score | TEST-TOM-TCS v5 (cases 7-13, 28, 30, 75, 76, 109) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v4 (cases 7-13, 28, 30, 75 and 76 for this capability) · result `NOT_RUN`
+TEST-TOM-TCS v5 (cases 7-13, 28, 30, 75, 76 and 109 for this capability) · result `NOT_RUN`
 
 ### 5.3 Structuring
 
@@ -677,11 +685,11 @@ TEST-TOM-TCS v4 (cases 7-13, 28, 30, 75 and 76 for this capability) · result `N
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door |
 | Tools and access | none beyond its inputs; no file, search or web tool; no credential in any instruction |
 | Deputy and cover | none; on failure the step halts |
-| Fixed test and score | TEST-TOM-TWS v4 (TEST-TOM v4, cases 16, 42, 83) |
+| Fixed test and score | TEST-TOM-TWS v5 (TEST-TOM v5, cases 16, 42, 83) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TS v4: TEST-TOM v4, cases 16, 42 and 83 · result `NOT_RUN`
+TEST-TOM-TS v5: TEST-TOM v5, cases 16, 42 and 83 · result `NOT_RUN`
 
 ### 5.4 Entity Packaging
 
@@ -742,11 +750,11 @@ Each field carries its own basis, or `unknown`.
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door |
 | Tools and access | none beyond its inputs; no file, search or web tool; no credential in any instruction |
 | Deputy and cover | none; on failure the step halts |
-| Fixed test and score | TEST-TOM-TP v4 (TEST-TOM v4, cases 17, 41, 45) |
+| Fixed test and score | TEST-TOM-TP v5 (TEST-TOM v5, cases 17, 41, 45) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TEP v4: TEST-TOM v4, cases 17, 41 and 45 · result `NOT_RUN`
+TEST-TOM-TEP v5: TEST-TOM v5, cases 17, 41 and 45 · result `NOT_RUN`
 
 ### 5.5 Entity Model Design
 
@@ -758,9 +766,9 @@ TEST-TOM-TEP v4: TEST-TOM v4, cases 17, 41 and 45 · result `NOT_RUN`
 | Purpose | Give the child an operating model that is honest about its evidence and stops where its evidence stops. |
 | Scope | Does: design inside one child; state the entity type it used; record rejected alternatives; mark candidate finer structures as non-authoritative. Does not: design across children (Hand-offs pairs their crossings); write job descriptions, processes, conventions, standards or tool choices; assign work to anything other than an accountable role; size teams; set success criteria; discover the present state beyond the package. |
 | Inputs | One child package (§5.4), and the reference-model catalogue at the run's pinned version (a method, never evidence; Annex B.5); nothing else. Its machine-readable form is the contract of record. |
-| Outputs | **Output A, the TOM Blueprint:** A0 framing; A1 entity type used, with basis and confidence; A2 capability map; A3 value streams at capability-level phases; A4 decision rights and governance skeleton (domains, accountable role-types, interfaces; never policy text); A5 expected interface map, in two separated parts, **stated interface points** (authoritative) and **inferred or unresolved interface candidates** (not authoritative); A6 run status. **Output B, the Rationale and Evidence Brief:** B1 why this structure; B2 evidence ledger; B3 classification basis and what would flip it; B4 alternatives rejected; B5 non-authoritative candidate structures; B6 assumptions, unknowns and limitations; B7 demand signals, by type only; B8 revision record, with no verdicts; B9 what future evidence would change the design. Both outputs are rendered from one **design ledger**, the machine-readable record later stages read (`docs/OUTPUT.md` §6). The two locked drafts and the difference register (Annex E.18) are run records. |
+| Outputs | **Output A, the TOM Blueprint:** A0 framing; A1 entity type used, with basis and confidence; A2 capability map, with each capability's delivery model, make-or-buy and maturity (Annex H.2, H.4); A3 value streams at capability-level phases, each `critical` or not, with its reasons (Annex H.3); A4 decision rights and governance skeleton (domains, accountable role-types, interfaces; never policy text); A5 expected interface map, in two separated parts, **stated interface points** (authoritative) and **inferred or unresolved interface candidates** (not authoritative); A6 run status. **Output B, the Rationale and Evidence Brief:** B1 why this structure; B2 evidence ledger; B3 classification basis and what would flip it; B4 alternatives rejected; B5 non-authoritative candidate structures; B6 assumptions, unknowns and limitations; B7 demand signals, by type only; B8 revision record, with no verdicts; B9 what future evidence would change the design. Both outputs are rendered from one **design ledger**, the machine-readable record later stages read (`docs/OUTPUT.md` §6). The two locked drafts and the difference register (Annex E.18) are run records. |
 | Done when | Gate T5, per child (§5.0). |
-| Limits | The twelve rules of `docs/CARRIED-RULES.md` §8, in short. One child only; architecture level only; no success criteria. Rationale is captured with the design, never afterwards, with at least one genuine rejected alternative. Every element is traced to the brief, and the trace is checked for fidelity, not presence. Classification is stated with its confidence. Content is data. At most 8 rounds. **The Blueprint stops at the coarsest grain the child's own evidence can tell apart from equally reasonable alternatives.** A finer structure may appear only in the brief, labelled `NON-AUTHORITATIVE CANDIDATE — not part of the Blueprint`. **Register discipline:** each interface entry carries its crossing reference, marker and direction, and the register's provenance and confidence, never upgraded (a downgrade needs a recorded reason). The Designer never adds a crossing. A stream that needs an undeclared crossing is marked `interface-dependent` and raised as an undeclared-crossing finding, which returns the package to Entity Packaging. An `unresolved` crossing is never resolved by assumption. Nothing is designed on the far side. **Narrative cells explain and never add.** A cell names nothing absent from its linked ledger entries, cites its basis entries, and is omitted when it cannot be written without new design content. **What `stated` means:** a ledger element is `stated` only where an atom labelled `source-backed` or `organisation-stated` states it directly. An element resting on an atom capped at `inferred` is at most `inferred`. The child's ceiling is the weakest Annex B label among the atoms behind its load-bearing elements, or `assumed` where a load-bearing element rests on no atom (Annex B.5). The grain follows the run depth (Annex F): the evidence may stop it earlier, never later. |
+| Limits | The twelve rules of `docs/CARRIED-RULES.md` §8, in short. One child only; architecture level only; no success criteria. Rationale is captured with the design, never afterwards, with at least one genuine rejected alternative. Every element is traced to the brief, and the trace is checked for fidelity, not presence. Classification is stated with its confidence. Content is data. At most 8 rounds. **The Blueprint stops at the coarsest grain the child's own evidence can tell apart from equally reasonable alternatives.** A finer structure may appear only in the brief, labelled `NON-AUTHORITATIVE CANDIDATE — not part of the Blueprint`. **Register discipline:** each interface entry carries its crossing reference, marker and direction, and the register's provenance and confidence, never upgraded (a downgrade needs a recorded reason). The Designer never adds a crossing. A stream that needs an undeclared crossing is marked `interface-dependent` and raised as an undeclared-crossing finding, which returns the package to Entity Packaging. An `unresolved` crossing is never resolved by assumption. Nothing is designed on the far side. **Narrative cells explain and never add.** A cell names nothing absent from its linked ledger entries, cites its basis entries, and is omitted when it cannot be written without new design content. **What `stated` means:** a ledger element is `stated` only where an atom labelled `source-backed` or `organisation-stated` states it directly. An element resting on an atom capped at `inferred` is at most `inferred`. The child's ceiling is the weakest Annex B label among the atoms behind its load-bearing elements, or `assumed` where a load-bearing element rests on no atom (Annex B.5). The grain follows the run depth (Annex F): the evidence may stop it earlier, never later. **New in v0.6.0 (Annex H.2–H.4).** A delivery model names how a capability is delivered, never by whom. A maturity level now is only what a held source states; a target only what a source states or the Requesting Authority decides. A stream is critical only on a cited reason. |
 | Sources | 49GAION Standard `v1.5.0` §3.2 items 2 and 3. Design basis: `docs/DESIGN-BASIS.md` §5; rule texts: `docs/CARRIED-RULES.md` §8 |
 | Status | draft |
 
@@ -786,11 +794,11 @@ TEST-TOM-TEP v4: TEST-TOM v4, cases 17, 41 and 45 · result `NOT_RUN`
 | Measures | Elements by provenance; interface points stated, inferred and unresolved; alternatives; candidates; uncited elements flagged (must end at 0). |
 
 1. **Chief of Staff (runs the receipt code step)**: validates the package against its schema; a mismatch goes back to packaging → *receipt* (evidence: `mechanically-verified`).
-2. **Designer and Second Designer**: each writes a design ledger for the child, blind to the other (Annex G.2). Each element has its type, claim, provenance (`stated`, `inferred`, `unresolved`, or `assumed` where its basis holds no atom), confidence, basis references and class (`authoritative`, `candidate`, `narrative`), and, where a reference model informed it, its pattern references. A decision-domain element names its decision and its accountable role-type. The ledger also holds the narrative cells, bound to the entries they draw on; the alternatives; the candidates; and the demand signals → *two ledger drafts* (evidence: run record).
+2. **Designer and Second Designer**: each writes a design ledger for the child, blind to the other (Annex G.2). Each element has its type, claim, provenance (`stated`, `inferred`, `unresolved`, or `assumed` where its basis holds no atom), confidence, basis references and class (`authoritative`, `candidate`, `narrative`), and, where a reference model informed it, its pattern references. A decision-domain element names its decision and its accountable role-type. A capability carries its delivery model, the crossings that deliver it where it is not in-house, and its maturity now and target; a value stream carries `critical`, with its reasons (Annex H.2–H.4). The ledger also holds the narrative cells, bound to the entries they draw on; the alternatives; the candidates; and the demand signals → *two ledger drafts* (evidence: run record).
 3. **Chief of Staff (runs the render code step)**: validates each ledger against its schema, renders Outputs A and B from each, and locks both drafts by hash → *two rendered drafts, locked* (evidence: hashes).
 3a. **Chief of Staff (runs the compare code step)**: aligns the two locked ledgers and writes the difference register (Annex G.4; Annex E.18) → *difference register* (evidence: hashes; `mechanically-verified`).
 4. **Ledger Reviser**: works in a fresh context, with only the package, the two locked drafts, the difference register and the rules. It first reconciles the two drafts into one ledger under Annex G.5, recording each disposition; then it revises that ledger as before. Its record states only what changed, and each disposition with its reason and quotes, with no verdict → *reconciled and revised ledger* (evidence: run record). With one author (Annex G.7), steps 3a and the reconciliation are skipped, and it revises the one locked draft.
-5. **Chief of Staff (runs the design-check code step)**: renders Outputs A and B from the revised ledger and runs the code checks of `docs/CARRIED-RULES.md` §8.3. Register to interface: one-to-one. Externals: referenced only by marker. Provenance, confidence and direction: none upgraded from the register. Candidate names: none in Output A outside A5's non-authoritative part, swept on every narrative cell and again on the rendered Output A. Narrative cells: no negative enumeration; no confidence or provenance vocabulary; no name absent from the cell's linked entries. Every element: has a brief entry. Schema: no undeclared section. Patterns: every pattern reference resolves in the pinned catalogue; an element on no atom is `assumed`. Role fields: every decision domain names its decision and its role-type, or `unknown` → *gate report* (evidence: `mechanically-verified`).
+5. **Chief of Staff (runs the design-check code step)**: renders Outputs A and B from the revised ledger and runs the code checks of `docs/CARRIED-RULES.md` §8.3. Register to interface: one-to-one. Externals: referenced only by marker. Provenance, confidence and direction: none upgraded from the register. Candidate names: none in Output A outside A5's non-authoritative part, swept on every narrative cell and again on the rendered Output A. Narrative cells: no negative enumeration; no confidence or provenance vocabulary; no name absent from the cell's linked entries. Every element: has a brief entry. Schema: no undeclared section. Patterns: every pattern reference resolves in the pinned catalogue; an element on no atom is `assumed`. Role fields: every decision domain names its decision and its role-type, or `unknown`. Delivery and maturity: every capability's delivery model is in the closed list, with the make-or-buy that follows from it and its crossings where it is not in-house; every critical stream has a cited reason; every level cites its basis (Annex H.11 checks 2 and 3; `CARRIED-RULES.md` §8.3 items 11 and 12) → *gate report* (evidence: `mechanically-verified`).
 6. **Review Pod**: review point RP5 (§5.8). It checks fidelity, not presence: every Blueprint element, and every evidence entry supporting one, says exactly what its cited atoms say. Coverage is full; a declared sample is allowed only for entries that support no element. It also looks for semantic paraphrase of candidates. It also checks each difference's disposition (Annex G.6), and that no pattern is used as evidence (Annex B.5) → *RP5 record* (evidence: `externally-audited`).
 7. **Chief of Staff**: on an upheld or ruled `MATERIAL` finding, starts bounded repair (§5.8 rule 19); otherwise records the step `complete` → *step state* (evidence: run record).
 
@@ -807,11 +815,11 @@ TEST-TOM-TEP v4: TEST-TOM v4, cases 17, 41 and 45 · result `NOT_RUN`
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door | same | same |
 | Tools and access | none beyond its inputs; no file, search or web tool; no credential in any instruction | same | same |
 | Deputy and cover | none; on failure the step halts | same | same |
-| Fixed test and score | TEST-TOM-TD v4 (cases 18, 19, 38, 39, 91, 92, 97) | TEST-TOM-TSD v4 (cases 18, 19, 38, 39, 91, 92, 97) | TEST-TOM-TLR v4 (cases 18, 93) |
+| Fixed test and score | TEST-TOM-TD v5 (cases 18, 19, 38, 39, 91, 92, 97, 112–115) | TEST-TOM-TSD v5 (cases 18, 19, 38, 39, 91, 92, 97, 112–115) | TEST-TOM-TLR v5 (cases 18, 93) |
 | Card version and status | v0.4.0 · draft | v0.4.0 · draft | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TEM v4: TEST-TOM v4, cases 18, 19, 38, 39, 91-93, 96 and 97 · result `NOT_RUN`
+TEST-TOM-TEM v5: TEST-TOM v5, cases 18, 19, 38, 39, 91-93, 96, 97 and 112-115 · result `NOT_RUN`
 
 ### 5.6 Hand-offs
 
@@ -819,11 +827,11 @@ TEST-TOM-TEM v4: TEST-TOM v4, cases 18, 19, 38, 39, 91-93, 96 and 97 · result `
 | Field | Content |
 |---|---|
 | Name | Hand-offs |
-| What it is | **Hand-offs** (short for "hand-offs between parts and with outside parties"). For the decided slice, the work that must pass between its children, and between each child and its outside parties, and nothing above or beside them. It pairs every declared crossing with its counterpart, including crossings between children of one entity. It reports every seam that does not pair and routes it back, never bridging it. For each clean pair it records what crosses, each side's obligation and trigger, the accountable role at each end, and the decision on the crossing, as one field. It keeps the counterparty register by class, for every shape of organisation. It lists the legal and regulatory perimeter for human legal review. It keeps the register of every boundary class not yet designed. It designs no capability, value stream, decision domain or body of the whole: there is no model of the whole beyond the children and the hand-offs between them. A shared service is a hand-off like any other. **New in v0.4.0.** By code, it also lists every accountable role-type of the release in the **role register** (Annex E.17): what each decides, what it is accountable for, where it appears, and the hand-offs it sends and receives. A conflict between roles is a role finding, routed back or put as a decision row, never merged. The register designs nothing: it lists what the children's decided models already hold. |
+| What it is | **Hand-offs** (short for "hand-offs between parts and with outside parties"). For the decided slice, the work that must pass between its children, and between each child and its outside parties, and nothing above or beside them. It pairs every declared crossing with its counterpart, including crossings between children of one entity. It reports every seam that does not pair and routes it back, never bridging it. For each clean pair it records what crosses, each side's obligation and trigger, the accountable role at each end, and the decision on the crossing, as one field. It keeps the counterparty register by class, for every shape of organisation, and, for each of its entries, the journey of that outside party through the organisation (Annex H.5). It lists the legal and regulatory perimeter for human legal review. It keeps the register of every boundary class not yet designed. It designs no capability, value stream, decision domain or body of the whole: there is no model of the whole beyond the children and the hand-offs between them. A shared service is a hand-off like any other. **New in v0.4.0.** By code, it also lists every accountable role-type of the release in the **role register** (Annex E.17): what each decides, what it is accountable for, where it appears, and the hand-offs it sends and receives. A conflict between roles is a role finding, routed back or put as a decision row, never merged. The register designs nothing: it lists what the children's decided models already hold. |
 | Purpose | Make every hand-off between children, and every crossing with an outside party, visible and owned at both ends, without hiding a seam and without designing anything above the children. |
-| Scope | Does: restore identities inside the hand-offs workspace only; pair crossings; check seams; record each clean pair in the hand-offs register; map counterparties by class; list the perimeter; keep the deferred-boundary register; pair carried children with new ones (§5.9); compile the role register by code and route its findings. Does not: change a child's own model; design a capability, value stream, decision domain or body of the whole; make a legal determination; bridge or reconcile a seam by its own choice; merge two role names; give a decision to a role; settle a role finding by its own choice. |
+| Scope | Does: restore identities inside the hand-offs workspace only; pair crossings; check seams; record each clean pair in the hand-offs register; map counterparties by class; record each outside party's journey; list the perimeter; keep the deferred-boundary register; pair carried children with new ones (§5.9); compile the role register by code and route its findings. Does not: change a child's own model; design a capability, value stream, decision domain or body of the whole; make a legal determination; bridge or reconcile a seam by its own choice; merge two role names; give a decision to a role; settle a role finding by its own choice. |
 | Inputs | The decided design ledgers of the slice, and those of any carried children; their declared boundary registers; the marker-to-identity maps; the withheld-context records; the party register; the deferred-boundary register; the decided Design Brief and structure. |
-| Outputs | The seam findings, the hand-offs register, the counterparty register, the legal and regulatory perimeter and the deferred-boundary register, and the role register (Annex E.4–E.7a, E.17; `docs/OUTPUT.md` §7); the pairing table (run record; Annex E.6a). |
+| Outputs | The seam findings, the hand-offs register, the counterparty register, the legal and regulatory perimeter and the deferred-boundary register, the role register, and the outside-party journeys (Annex E.4–E.7a, E.17, H.5; `docs/OUTPUT.md` §7); the pairing table (run record; Annex E.6a). |
 | Done when | Gate T6 (§5.0). |
 | Limits | A crossing with no counterpart, or a pair whose direction, content or obligations disagree, is a **seam finding**. It is routed back as a decomposition (Structuring), packaging or evidence defect, or put as a decision row. It is never bridged, and never reconciled by the Hand-off Analyst's own choice: reconciliation is done by routing back, and Hand-offs never edits a child's model. A child's own accountability stays in its model; the relationship with the counterparty is recorded here or deferred. A relationship between independent entities is named as a relationship, never as a body above them. A shared service is a hand-off like any other. A boundary class is never dropped. Each deferred class carries a durable ID, its evidence by atom, the run that surfaced it, the reason for deferral and its destination. It leaves the register only when a designed capability incorporates it, recorded against its ID. The known deferred classes this capability must be able to accept and place are listed in `docs/CARRIED-RULES.md` §9.2. The role register is never a model of the whole, and never names a person, a holder, a number of people or a position. |
 | Sources | Standard `v1.5.0` §1.7; design basis `docs/DESIGN-BASIS.md` §6; rule texts `docs/CARRIED-RULES.md` §9 |
@@ -844,6 +852,8 @@ TEST-TOM-TEM v4: TEST-TOM v4, cases 18, 19, 38, 39, 91-93, 96 and 97 · result `
 2. **Chief of Staff (runs the seam-check code step)**: every unmatched or contradictory crossing between children becomes a seam finding (Annex E.6) → *seam findings* (evidence: `mechanically-verified`).
 3. **Hand-off Analyst**: records each clean pair in the hand-offs register (Annex E.4), from both sides' registers and ledgers, citing sources or decided items only; the decision on the crossing is one field → *hand-offs register* (evidence: run record).
 4. **Hand-off Analyst**: maps every counterparty by class (Annex E.5); raises a need where the sources are silent on a class the organisation's shape normally has → *counterparty register* (evidence: run record).
+4a. **Hand-off Analyst**: records the journey of each counterparty entry: its moments in order, each a crossing of that entry, with the stream and phase it meets; a moment no crossing carries becomes a seam finding (Annex H.5) → *outside-party journeys* (evidence: run record).
+4b. **Chief of Staff (runs the journey and delivery code step)**: checks every journey moment against its entry and every phase against the decided ledgers, and every crossing that delivers a `shared service`, `outsourced` or `partner` capability against the hand-offs register, the counterparty register and the deferred-boundary register; each miss is a seam finding (Annex H.11 checks 2 and 4) → *check report* (evidence: `mechanically-verified`).
 5. **Hand-off Analyst**: lists the legal and regulatory perimeter, each item flagged for human legal review → *perimeter list*.
 6. **Hand-off Analyst**: places or registers every deferred boundary class (Annex E.7) → *deferred-boundary register*.
 6a. **Chief of Staff (runs the role-register code step)**: compiles the role register from the decided ledgers of the slice and of carried children, the hand-offs and counterparty registers and the obligations of the decided Design Brief, by the rules of Annex E.17; raises the role findings; sends each `decision row` finding as a non-delegable row (§5.2) and routes the others → *role register and role findings* (evidence: hashes; `mechanically-verified`).
@@ -862,11 +872,11 @@ TEST-TOM-TEM v4: TEST-TOM v4, cases 18, 19, 38, 39, 91-93, 96 and 97 · result `
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door |
 | Tools and access | none beyond its inputs; no file, search or web tool; no credential in any instruction |
 | Deputy and cover | none; on failure the step halts |
-| Fixed test and score | TEST-TOM-THA v4 (cases 20, 37, 42, 65, 66, 70, 87) |
+| Fixed test and score | TEST-TOM-THA v5 (cases 20, 37, 42, 65, 66, 70, 87, 116) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TH v4: cases 20, 37, 42, 65, 66, 70 and 85-88 · result `NOT_RUN`
+TEST-TOM-TH v5: cases 20, 37, 42, 65, 66, 70, 85-88, 113 and 116 · result `NOT_RUN`
 
 ### 5.7 Operational Walkthrough
 
@@ -961,11 +971,11 @@ Each finding states what was injected, where the path stopped, which element and
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door | same |
 | Tools and access | none beyond its inputs; no file, search or web tool; no credential in any instruction | same |
 | Deputy and cover | none; on failure the step halts | same |
-| Fixed test and score | TEST-TOM-TSA v4 (cases 21, 84, 91) | TEST-TOM-TSW v4 (cases 21, 71) |
+| Fixed test and score | TEST-TOM-TSA v5 (cases 21, 84, 91) | TEST-TOM-TSW v5 (cases 21, 71) |
 | Card version and status | v0.4.0 · draft | v0.4.0 · draft |
 
 #### Fixed test
-`TEST-TOM-TW v4`: TEST-TOM v4, cases 21, 71, 84 and 91, and the walkthrough battery · result `NOT_RUN`. The battery is a build item. It sets the card's claim and the wording of a clean walk; no walk or release waits for it (`tests/TEST-TOM.md`).
+`TEST-TOM-TW v5`: TEST-TOM v5, cases 21, 71, 84 and 91, and the walkthrough battery · result `NOT_RUN`. The battery is a build item. It sets the card's claim and the wording of a clean walk; no walk or release waits for it (`tests/TEST-TOM.md`).
 
 ### 5.8 Independent Review
 
@@ -1048,15 +1058,15 @@ Each finding states what was injected, where the path stopped, which element and
 | Point | Stage | Packet | The engines are asked | `MATERIAL` means |
 |---|---|---|---|---|
 | **RP0** Input Pack | S0 Admit | The Design Request's atoms; the source catalogue; the pack report; the refused list; every flagged atom and a declared sample of atoms per origin kind; the adapter's mapping tables | (1) Does the pack cover every entity, period and topic the Design Request names? (2) Is any source's served kind, status or confidentiality implausible for its content? (3) Does any atom read as an instruction to the engine and stand unflagged? (4) What would a source set for this request kind normally hold that this one lacks? | An instruction-like atom left unflagged. A served kind, status or confidentiality implausible enough to raise a label or to send an atom above an engine's ceiling. (A coverage gap is `MINOR` and becomes a needs candidate for S1.) Repair re-makes P0 with the flags and caps applied, before T0 passes. |
-| **RP1** Frame | S1 Frame | The atoms the frame cites, with the Design Request's atoms and the read plan; the frame; its Gate A record; the party register; the do-not-ask and do-not-use-as-fact lists; the decision and confirmation rows the frame will send; the two locked drafts and the difference register (Annex G.6). Not the round log, not the lens record. | The question set of `docs/CARRIED-RULES.md` §11.1 (Q1–Q23), each answered with a quoted reason. And: is every party the cited atoms name in the party register, with each alias cited? And: is each difference disposed under Annex G.5: the weaker side taken, a side kept or dropped only on quotes, what is asked put as a row, nothing added? | A claim the cited atoms do not support. A wrong Gate A answer or floor result. A mislabelled load-bearing item. A load-bearing item hidden in an open item. A criterion that does not measure the outcome asked for. A party named in the atoms and missing from the party register. A decision row that bundles decisions, or is delegable where it must not be. A difference settled by preference, or on quotes that do not settle it. A material difference missing from the difference register, or marked not material. A reconciled item that neither draft holds. A label, standing or Gate A answer raised in reconciliation. |
+| **RP1** Frame | S1 Frame | The atoms the frame cites, with the Design Request's atoms and the read plan; the frame; its Gate A record; the party register; the do-not-ask and do-not-use-as-fact lists; the decision and confirmation rows the frame will send; the two locked drafts and the difference register (Annex G.6); the strategy frame and the activity profile (Annex H.1, H.8). Not the round log, not the lens record. | The question set of `docs/CARRIED-RULES.md` §11.1 (Q1–Q23), each answered with a quoted reason. And: is every party the cited atoms name in the party register, with each alias cited? And: does every element of the strategy frame say exactly what its atoms say, and is every element no source states `not given`? Does the activity profile say only what the exports state, with nothing about a person? And: is each difference disposed under Annex G.5: the weaker side taken, a side kept or dropped only on quotes, what is asked put as a row, nothing added? | A claim the cited atoms do not support. A wrong Gate A answer or floor result. A mislabelled load-bearing item. A load-bearing item hidden in an open item. A criterion that does not measure the outcome asked for. A party named in the atoms and missing from the party register. A decision row that bundles decisions, or is delegable where it must not be. A difference settled by preference, or on quotes that do not settle it. A material difference missing from the difference register, or marked not material. A reconciled item that neither draft holds. A label, standing or Gate A answer raised in reconciliation. An element of the strategy frame written or inferred, not cited. A line of the activity profile that the exports do not state, or that is about a person. |
 | **RP1b** Process audit | S1 Frame | The round logs; the lens records (of both authors); the question typology (`CARRIED-RULES.md` §2.3 item 3); the guard targets (§2.1 item 3). This is the only packet that holds the dialogue of the work, because the dialogue is what it audits. | Is there an invented answer, a leading question, label drift, or a forbidden question type? Did a lens finding enter the Working Context without a citation? | An invented answer. A forbidden question that survived. A label that drifted upward. An uncited lens finding in the Working Context. A `MATERIAL` verdict stops the step, and the frame is re-formed from the last clean round (`CARRIED-RULES.md` §2.1 item 5). |
 | **RP2** Structure | S2 Structure | The decided frame; the Structure Proposal; the orphan table, the exclusion matrix, the four-leg answers, any attempted-split table, the alternatives, the dependency order and the first slice; the party register's extension | Is each of the four legs answered honestly? Is any orphan or excluded item smuggled in? Is design hidden in a child description? Is the set the smallest that passes? Does the first slice bind only as a decision row? | An orphan. An exclusion crossed. Design inside a child description. A leg answered against its evidence. A live dependency cycle. |
 | **RP3** Child brief, per child | S3 Child briefs | As RP1, for the child: its decided structure row; the decided frame; the child brief; its Gate A record; its criteria rows | The question set of `CARRIED-RULES.md` §11.1, for the child. Is each criterion admissible (Annex C.3)? Does the floor hold for this child? | As RP1. An inadmissible criterion counted toward the floor. |
 | **RP4** Package, per child | S4 Package | The markerised atoms; the child row; the package; the packaging ledger; the G1–G5 report; the rules (`CARRIED-RULES.md` §7) | Is far-side content left after substitution? Is there semantic identity leakage? Is an evidenced crossing not declared? Is the child's own evidence withheld? | Far-side content. A semantic identity leak. An undeclared evidenced crossing. Own evidence withheld. |
-| **RP5** Design, per child | S5 Design | The package; the locked ledger; Outputs A and B; the revision record; the design-check report; the rules (`CARRIED-RULES.md` §8); the two locked drafts; the difference register; the reference-model catalogue at the run's pinned version | Does each element say exactly what its cited atoms say (fidelity, not presence)? Is any structure finer than the evidence? Does a candidate leak into Output A, by name or by paraphrase? Is register discipline kept? Is each difference disposed under Annex G.5? Is any pattern used as evidence: an element `stated` or `inferred` on a pattern alone, or a major or core capability authoritative on a pattern alone? | An element that adds to, drops or alters what its atoms say. A candidate leak. An upgraded provenance, confidence or direction. A minted crossing. A difference settled by preference, put as a design question, or missing. A reconciled element that neither draft holds. A pattern used as evidence. A pattern cited that the pinned catalogue does not hold. |
-| **RP6** Hand-offs | S6 Hand-offs | The child ledgers; their boundary registers; the pairing table; the seam findings; the hand-offs register; the counterparty register; the perimeter list; the deferred-boundary register; the role register and its role findings; the rules (`CARRIED-RULES.md` §9) | Is any seam bridged by choice? Is any hand-off field (what crosses, each side's obligation and trigger, the role at each end, the decision on the crossing) unsupported by both sides' evidence or a decision? Is anything designed for the whole (a capability, stream, domain or body above the children)? Is any legal question decided? Is any boundary class dropped? Does each role entry say exactly what its ledgers and registers hold? Is any role merged, renamed or given a decision without a decision row? Is a conflict missing from the role findings, or routed by choice? Does the register add any role or body above the children? | A bridged seam. An unsupported hand-off field. Design of the whole. A legal determination. A dropped boundary class. A role entry that adds or drops a decision, an accountability or a hand-off. Two names joined without a `same role` decision. A role finding missing or settled by choice. A person named. |
+| **RP5** Design, per child | S5 Design | The package; the locked ledger; Outputs A and B; the revision record; the design-check report; the rules (`CARRIED-RULES.md` §8); the two locked drafts; the difference register; the reference-model catalogue at the run's pinned version | Does each element say exactly what its cited atoms say (fidelity, not presence)? Is any structure finer than the evidence? Does a candidate leak into Output A, by name or by paraphrase? Is register discipline kept? Is each difference disposed under Annex G.5? Is any pattern used as evidence: an element `stated` or `inferred` on a pattern alone, or a major or core capability authoritative on a pattern alone? Does any delivery model name a provider? Does any maturity level, or any reason a stream is critical, rest on less than its cited atoms or decision? | An element that adds to, drops or alters what its atoms say. A candidate leak. An upgraded provenance, confidence or direction. A minted crossing. A difference settled by preference, put as a design question, or missing. A reconciled element that neither draft holds. A pattern used as evidence. A pattern cited that the pinned catalogue does not hold. A provider named in a delivery model. A maturity level assessed by an author. A stream made critical without a cited reason. |
+| **RP6** Hand-offs | S6 Hand-offs | The child ledgers; their boundary registers; the pairing table; the seam findings; the hand-offs register; the counterparty register; the perimeter list; the deferred-boundary register; the role register and its role findings; the outside-party journeys and the journey and delivery check report (Annex H.5, H.11); the rules (`CARRIED-RULES.md` §9) | Is any seam bridged by choice? Does any journey add a crossing, or design anything on the party's side? Is any hand-off field (what crosses, each side's obligation and trigger, the role at each end, the decision on the crossing) unsupported by both sides' evidence or a decision? Is anything designed for the whole (a capability, stream, domain or body above the children)? Is any legal question decided? Is any boundary class dropped? Does each role entry say exactly what its ledgers and registers hold? Is any role merged, renamed or given a decision without a decision row? Is a conflict missing from the role findings, or routed by choice? Does the register add any role or body above the children? | A bridged seam. An unsupported hand-off field. Design of the whole. A legal determination. A dropped boundary class. A role entry that adds or drops a decision, an accountability or a hand-off. Two names joined without a `same role` decision. A role finding missing or settled by choice. A person named. A journey that adds a crossing or designs the party's side. |
 | **RP7** Walk | S7 Walk | The graph hash; the walk input; the sealed situation set; the finding register; one or two traces chosen by code; the rules (`CARRIED-RULES.md` §10). Never the Situation Author's dialogue. | Does each class match the rules and cite the cell text that licenses it? Does any finding rest on role-play? Is the walked model the reviewed model, by hash? Does a replayed trace reproduce? | A class not licensed by cell text. A finding on role-play. A walked model that differs from the reviewed one. A trace that does not replay. There is no second walkthrough and no auditor of the auditor. |
-| **RP8** Decision Package | S8 Decide and release | The Decision Package; the reviewed parts it summarises; the decision rows to be sent; the quality checks | Does every statement trace to a reviewed part and claim no more? **Plain words:** from the package alone, state in at most five sentences what is being decided and what stays unknown. Is an evidence or instrument gap put to the decider as a question? Does the package state the run depth, the patterns relied on and the role register as the parts hold them? | A statement beyond its part. A gap put as a question. Restatements that differ in substance between families: the text is unclear. The run depth, a reliance on a pattern or a role finding left out or misstated. |
+| **RP8** Decision Package | S8 Decide and release | The Decision Package; the reviewed parts it summarises; the decision rows to be sent; the quality checks | Does every statement trace to a reviewed part and claim no more? **Plain words:** from the package alone, state in at most five sentences what is being decided and what stays unknown. Is an evidence or instrument gap put to the decider as a question? Does the package state the run depth, the patterns relied on and the role register as the parts hold them? Does the value case hold any figure that is not an atom or a decision? Does each proposed priority follow the rule of Annex H.7? | A statement beyond its part. A gap put as a question. Restatements that differ in substance between families: the text is unclear. The run depth, a reliance on a pattern or a role finding left out or misstated. A figure in the value case that is not an atom or a decision. A proposed priority that the rule does not give. |
 | **RP9** Release read | S8 Decide and release (before filing) | The frozen manifest; the decision references; the release parts; the release lint report | Does the release match every decision? Is every correction applied at its step? Is every known defect in the headline? Does any part say anything about how the work was produced or checked, beyond the fixed forms of the quality checks? Is every lint exemption the organisation's own subject matter? Is every role-type the parts name in the role register? | A mismatch with a decision. A correction not applied. A known defect missing from the headline. Any word about engines, agents, automation or tools that is not the organisation's own subject matter. A role-type named in a part and missing from the role register. A `MATERIAL` finding stops filing; the release is re-frozen after repair, and was never filed. |
 | **RPa** Needs pass | Asking service, before each pass is sent | The pass's rows; the do-not-ask list; the references searched; the Missing Report; the needs log | Does a held source already answer a row? Is each row one decision? Is a row leading, or does it name a person? Is each row's delegability right? Does the Missing Report equal the needs log? | A row a held source answers. A row that names a person. A bundled row. A non-delegable row marked delegable. A Missing Report that differs from the needs log. The pass is held; the offending rows are withdrawn or rewritten by their raising Cell, and RPa runs again. |
 
@@ -1098,11 +1108,11 @@ Each finding states what was injected, where the path stopped, which element and
 | Escalation | to the Chief of Staff in one line; a stop goes to the stop door |
 | Tools and access | none; no file, search or web tool; no credential in any instruction |
 | Deputy and cover | none; any other seat covers an unavailable one |
-| Fixed test and score | `TEST-TOM-TBRA v4` to `TEST-TOM-TBRE v4`: cases 22, 53, 55 and 72, and the reviewer battery (§9) |
+| Fixed test and score | `TEST-TOM-TBRA v5` to `TEST-TOM-TBRE v5`: cases 22, 53, 55 and 72, and the reviewer battery (§9) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-`TEST-TOM-TR v4`: TEST-TOM v4, cases 22, 23, 41, 53–64, 72, 88, 90, 91, 93, 94 and 97, and the reviewer battery · result `NOT_RUN`
+`TEST-TOM-TR v5`: TEST-TOM v5, cases 22, 23, 41, 53–64, 72, 88, 90, 91, 93, 94 and 97, and the reviewer battery · result `NOT_RUN`
 
 ### 5.9 Decision Package and Release
 
@@ -1112,11 +1122,11 @@ Each finding states what was injected, where the path stopped, which element and
 | Name | Decision Package and Release |
 | What it is | The preparation of the decision for the Requesting Authority, in the organisation's own language. After the decision, the release of the model as one frozen, content-addressed **TOM Release**, filed back into Source Lifecycle as a source. |
 | Purpose | Let the organisation decide its operating model element by element, without reading any technical file, and keep the decided model where every later stage will look for it. |
-| Scope | Does: generate the quality checks; write the Decision Package; send the decision rows; record the decision references; freeze and release; run the release lint; file the release; send the release notice to the next stage; carry earlier slices forward. Does not: decide; count silence or a general approval as a decision. |
+| Scope | Does: generate the quality checks; compile the value case and propose each element's priority, by code; write the Decision Package; send the decision rows; record the decision references; freeze and release; run the release lint; file the release; send the release notice to the next stage; carry earlier slices forward. Does not: decide; count silence or a general approval as a decision. |
 | Inputs | The decided Design Brief and structure; the complete child designs, the hand-offs and the walkthrough, each with a settled review, or carrying only `MATERIAL` findings accepted as known defects; the quality checks (Annex E.11), generated by code. |
 | Outputs | The **Decision Package** (`docs/OUTPUT.md` §10); its decision rows, as needs requests; the **TOM Release** (`contracts/tom-release.schema.json`); the release lint report (run record); the **filing receipt** (`contracts/tom-filing-receipt.schema.json`); the **release notice** to `[ORG]AIOC-PPD` (`contracts/release-notice.schema.json`). |
 | Done when | Gates T8, then T9 (§5.0). |
-| Limits | The decision rules of Annex C.4 apply. **What is put to decision.** An element is one of: a child's capability map as a whole; a value stream; a decision domain; an entry of the hand-offs register; a counterparty class; an entry of the role register. Before any row is sent, the Decision Package states the number of rows and passes. Where they exceed the configured limit (§15), rows are grouped one level up (per child, then per part), and the grouping is stated; one decision per row still holds. Evidence gaps and instrument gaps are never put to the Requesting Authority as questions. **Purpose and values.** Rows on the organisation's purpose and values are the listed type `set-purpose-or-values` (HF-04). The Cell carrying `[ORG]HOAC-GOV` signs them at the tool gateway's signature surface (Standard §6.1, item 6; Protocol §4.10, items 7-10), never through the Chief of Staff of `[ORG]AIOC-SL` or any Panel. Source Lifecycle records the decision with its `signature_ref`. This AIOC treats the row as decided only when that signature record is valid for the exact row payload. **Corrections.** A correction that states a fact about the organisation is admitted as `organisation-stated` by its decision reference, and checked like any other evidence. A correction that changes only a design choice is applied as a decision. A correction that needs a fact no source holds becomes a needs request, never an edit. **The release says nothing about how it was made**, beyond the quality checks. The release lint checks this by code (Annex D item 19; Annex E.15). **Slices:** see Slices and carry-forward, below. The TOM Design Lead attests that the method was followed; the attestation is not a design decision. |
+| Limits | The decision rules of Annex C.4 apply. **What is put to decision.** An element is one of: a child's capability map as a whole (with each capability's delivery model and maturity target); a value stream (with whether it is critical); a decision domain; an entry of the hand-offs register; a counterparty class (with its journeys); an entry of the role register; the value case (Annex H.6). Each element row carries its proposed priority, and the decision records the priority decided (Annex H.7). The strategy frame is decided at S1 (Annex H.1). Before any row is sent, the Decision Package states the number of rows and passes. Where they exceed the configured limit (§15), rows are grouped one level up (per child, then per part), and the grouping is stated; one decision per row still holds. Evidence gaps and instrument gaps are never put to the Requesting Authority as questions. **Purpose and values.** Rows on the organisation's purpose and values are the listed type `set-purpose-or-values` (HF-04). The Cell carrying `[ORG]HOAC-GOV` signs them at the tool gateway's signature surface (Standard §6.1, item 6; Protocol §4.10, items 7-10), never through the Chief of Staff of `[ORG]AIOC-SL` or any Panel. Source Lifecycle records the decision with its `signature_ref`. This AIOC treats the row as decided only when that signature record is valid for the exact row payload. **Corrections.** A correction that states a fact about the organisation is admitted as `organisation-stated` by its decision reference, and checked like any other evidence. A correction that changes only a design choice is applied as a decision. A correction that needs a fact no source holds becomes a needs request, never an edit. **The release says nothing about how it was made**, beyond the quality checks. The release lint checks this by code (Annex D item 19; Annex E.15). **Slices:** see Slices and carry-forward, below. The TOM Design Lead attests that the method was followed; the attestation is not a design decision. |
 | Sources | 49GAION Standard `v1.5.0` §4.4 items 6-9 (signature list, signer); §6.1 item 6; Operating Protocol `v1.5.0` §4.9, §4.10 items 7-10, §13 items 5 and 6. Design basis: `docs/DESIGN-BASIS.md` §8; rule texts: `docs/CARRIED-RULES.md` §5, §12 |
 | Status | draft |
 
@@ -1131,11 +1141,12 @@ Each finding states what was injected, where the path stopped, which element and
 | Cadence | per release |
 | Measures | Rows decided per element; corrections; passes used; time from package to decision (measured, no target). |
 
-- **1. Chief of Staff**: writes the Decision Package (`docs/OUTPUT.md` §10). It contains: an executive summary; for each element, its purpose, what it owns and does not own, why it exists and its main evidence; value streams in plain language; the decision model; the boundary as inside, outside and deferred, visibly separated; the rationale; the open items in five blocks (A evidence gaps, B instrument gaps, C deferred cross-child scope, D remaining design uncertainty, E items needing a decision now, and only E asks anything); the missing-evidence signal in plain words; risks and limitations; the walkthrough summary; findings of the quality checks only where they help the decision, never wording hygiene; the elements carried from an earlier release, listed apart as decided in release <ID>; the sources superseded since the pin, in plain words; the run depth, in plain words; the general patterns relied on, and each element resting on one alone; the role register in plain words, with each role finding and how it was settled; the number of rows and passes → *package* (evidence: hash).
+- **1. Chief of Staff**: writes the Decision Package (`docs/OUTPUT.md` §10). It contains: an executive summary; for each element, its purpose, what it owns and does not own, why it exists and its main evidence; value streams in plain language; the decision model; the boundary as inside, outside and deferred, visibly separated; the rationale; the open items in five blocks (A evidence gaps, B instrument gaps, C deferred cross-child scope, D remaining design uncertainty, E items needing a decision now, and only E asks anything); the missing-evidence signal in plain words; risks and limitations; the walkthrough summary; findings of the quality checks only where they help the decision, never wording hygiene; the elements carried from an earlier release, listed apart as decided in release <ID>; the sources superseded since the pin, in plain words; the run depth, in plain words; the general patterns relied on, and each element resting on one alone; the role register in plain words, with each role finding and how it was settled; the strategy frame, with each element `not given`; each capability's delivery model and maturity, and each critical stream with its reasons; each outside party's journey; the value case; how the work runs today, or that no record of it was given; each element's proposed priority, with the rule that gave it; the number of rows and passes → *package* (evidence: hash).
+- **1b. Chief of Staff (runs the value-case and priority code step)**: compiles the value case from the decided parts and the decision references (Annex H.6), and proposes each element's priority by the fixed rule of Annex H.7 → *value case; proposed priorities* (evidence: hashes; `mechanically-verified`).
 - **1a. Chief of Staff (runs the quality-checks code step)**: generates the quality checks (Annex E.11) from the settled review records and rulings → *quality checks* (evidence: hash).
 - **2. Review Pod**: review point RP8 (§5.8). Every statement traces to a reviewed part and claims no more; the plain-words restatement → *RP8 record* (evidence: `externally-audited`). Once RP8 has settled, the quality-checks code step adds the section of this stage from the settled RP8 record.
 - **3. TOM Design Lead**: attests that gates T0-T7 passed, each with its evidence → *attestation* (evidence: run record, live sign-in).
-- **4. Chief of Staff**: sends the decision sheet as decision needs requests: one row per element (`ACCEPT`, `CORRECT` with a comment, `REJECT`), then one final-status row (`ACCEPT`; `ACCEPT WITH CORRECTIONS`, before or after the next stage; `RETURN FOR REDESIGN`; `REJECT`). Carried elements are not asked again. Purpose-and-values rows are marked with their listed type → *decision rows* (evidence: needs log).
+- **4. Chief of Staff**: sends the decision sheet as decision needs requests: one row per element (`ACCEPT`, `CORRECT` with a comment, `REJECT`), each showing its proposed priority (`must`, `should`, `could`), which `ACCEPT` keeps and `CORRECT` may change (Annex H.7); one row for the value case; then one final-status row (`ACCEPT`; `ACCEPT WITH CORRECTIONS`, before or after the next stage; `RETURN FOR REDESIGN`; `REJECT`). Carried elements are not asked again. Purpose-and-values rows are marked with their listed type → *decision rows* (evidence: needs log).
 - **5. Requesting Authority** (in Source Lifecycle, outside this AIOC): decides each row. The Cell carrying `[ORG]HOAC-GOV` signs the purpose-and-values rows at the gateway. Source Lifecycle records each decision → *decision references* (evidence: Source Lifecycle's decision records).
 - **6. Chief of Staff**: applies corrections at the smallest affected step and re-runs only what they re-open, with the failing situations as regression. On `ACCEPT` or `ACCEPT WITH CORRECTIONS`, it freezes the release: the manifest names every part and every run record by hash, every pack version with its snapshots, the decision references and every version → *TOM Release* (evidence: the `release_id`, computed over the manifest without any filing data).
 - **6a. Chief of Staff (runs the release-lint code step)**: lints every part (Annex D item 19). A hit fails T9 → *lint report* (evidence: the report's hash in the manifest).
@@ -1170,11 +1181,11 @@ Each finding states what was injected, where the path stopped, which element and
 | Escalation | as in §4.2 |
 | Tools and access | as in §4.2, plus the write scope of the connection, for origin kinds `operating model` and `design report` only |
 | Deputy and cover | none; the run halts |
-| Fixed test and score | TEST-TOM-TCS v4 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98) |
-| Card version and status | v0.4.0 · draft |
+| Fixed test and score | TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 117, 118, 122) |
+| Card version and status | v0.6.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v4 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98 and 100 for this capability) · result `NOT_RUN`
+TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 100, 117, 118 and 122 for this capability) · result `NOT_RUN`
 
 ### 5.10 Returns from later stages
 
@@ -1228,11 +1239,11 @@ TEST-TOM-TCS v4 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98 and 100
 | Escalation | as in §4.2; a return past its deadline goes to the Requesting Authority and the Cell carrying `[ORG]HOAC-TM` (limit 6) |
 | Tools and access | as in §4.2: the connections with `[ORG]AIOC-PPD` and `[ORG]AIOC-DI` and with Source Lifecycle |
 | Deputy and cover | none; returns wait, each shown on the Panel with its age |
-| Fixed test and score | TEST-TOM-TCS v4 (cases 101–108) |
+| Fixed test and score | TEST-TOM-TCS v5 (cases 101–108) |
 | Card version and status | v0.5.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v4 (cases 101–108 for this capability) and TEST-TOM-TDL v4 (TDL-8) · result `NOT_RUN`
+TEST-TOM-TCS v5 (cases 101–108 for this capability) and TEST-TOM-TDL v5 (TDL-8) · result `NOT_RUN`
 
 ---
 
@@ -1303,39 +1314,39 @@ TEST-TOM-TCS v4 (cases 101–108 for this capability) and TEST-TOM-TDL v4 (TDL-8
 
 ## 9. Fixed tests: index, triggers and scores
 
-Each part has its own fixed test, made of the cases of TEST-TOM v4 (`tests/TEST-TOM.md`) that exercise it. The owner of every part's test is the TOM Design Lead (`[ORG]CELL-TDL`). The owner of the AIOC's whole test, and of the Design Lead's own seat test, is the Cell carrying `[ORG]HOAC-TM`.
+Each part has its own fixed test, made of the cases of TEST-TOM v5 (`tests/TEST-TOM.md`) that exercise it. The owner of every part's test is the TOM Design Lead (`[ORG]CELL-TDL`). The owner of the AIOC's whole test, and of the Design Lead's own seat test, is the Cell carrying `[ORG]HOAC-TM`.
 
-| Part | Test ID and version | Cases of TEST-TOM v4 | Evidence level | Last run | Result |
+| Part | Test ID and version | Cases of TEST-TOM v5 | Evidence level | Last run | Result |
 |---|---|---|---|---|---|
-| `[ORG]AIOC-TOM` (whole), with path qualification | TEST-TOM v4 | all (1–108), path qualification, the walkthrough battery, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TDL` TOM Design Lead | TEST-TOM-TDL v4 | TDL-1 to TDL-8 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-TOM-TCS v4 | 1–13, 23–36, 40, 43, 44, 46, 49–52, 61, 64, 67–69, 75, 76, 78, 80–82, 85, 87, 89, 90, 92, 94–96, 98–108 | MEASURED | — | `NOT_RUN` |
-| Input socket adapter `ADP-SL` | TEST-TOM-ADP-SL v1 | its fixtures (adapter file §9); cases 47, 48 | MEASURED | — | `NOT_RUN` |
+| `[ORG]AIOC-TOM` (whole), with path qualification | TEST-TOM v5 | all (1–123), path qualification, the walkthrough battery, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TDL` TOM Design Lead | TEST-TOM-TDL v5 | TDL-1 to TDL-8 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-TOM-TCS v5 | 1–13, 23–36, 40, 43, 44, 46, 49–52, 61, 64, 67–69, 75, 76, 78, 80–82, 85, 87, 89, 90, 92, 94–96, 98–110, 117–122 | MEASURED | — | `NOT_RUN` |
+| Input socket adapter `ADP-SL` | TEST-TOM-ADP-SL v2 | its fixtures (adapter file §9); cases 47, 48, 119 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TRR` Request Reconstruction | TEST-TOM-TRR v4 | 4, 5, 8, 14, 15, 28, 73–76, 83, 91–93 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TSP` Source Proxy | TEST-TOM-TSP v4 | 4, 5, 14, 92 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TRA` Request Analyst | TEST-TOM-TRA v4 | 8, 14, 15, 28, 73–75, 83, 91, 92 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TSRA` Second Request Analyst | TEST-TOM-TSRA v4 | 8, 14, 15, 73–75, 83, 91, 92 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TFR` Frame Reconciler | TEST-TOM-TFR v4 | 93, 94 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TS` Structuring | TEST-TOM-TS v4 | 16, 42, 83 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TWS` Work Structurer | TEST-TOM-TWS v4 | 16, 42, 83 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TEP` Entity Packaging | TEST-TOM-TEP v4 | 17, 41, 45 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TP` Packager | TEST-TOM-TP v4 | 17, 41, 45 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TEM` Entity Model Design | TEST-TOM-TEM v4 | 18, 19, 38, 39, 91–93, 96, 97 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TD` Designer | TEST-TOM-TD v4 | 18, 19, 38, 39, 91, 92, 97 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TSD` Second Designer | TEST-TOM-TSD v4 | 18, 19, 38, 39, 91, 92, 97 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TLR` Ledger Reviser | TEST-TOM-TLR v4 | 18, 93 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TH` Hand-offs | TEST-TOM-TH v4 | 20, 37, 42, 65, 66, 70, 85–88 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-THA` Hand-off Analyst | TEST-TOM-THA v4 | 20, 37, 42, 65, 66, 70, 87 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TW` Operational Walkthrough | TEST-TOM-TW v4 | 21, 71, 84, 91, the walkthrough battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TSA` Situation Author | TEST-TOM-TSA v4 | 21, 84, 91 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TSW` Situation Walker | TEST-TOM-TSW v4 | 21, 71 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-TR` Independent Review | TEST-TOM-TR v4 | 22, 23, 41, 53–64, 72, 88, 90, 91, 93, 94, 97, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TBRA` Blind Reviewer A | TEST-TOM-TBRA v4 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TBRB` Blind Reviewer B | TEST-TOM-TBRB v4 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TBRC` Blind Reviewer C | TEST-TOM-TBRC v4 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TBRD` Blind Reviewer D | TEST-TOM-TBRD v4 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TBRE` Blind Reviewer E | TEST-TOM-TBRE v4 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TRR` Request Reconstruction | TEST-TOM-TRR v5 | 4, 5, 8, 14, 15, 28, 73–76, 83, 91–93, 109–111, 120, 121, 123 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TSP` Source Proxy | TEST-TOM-TSP v5 | 4, 5, 14, 92 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TRA` Request Analyst | TEST-TOM-TRA v5 | 8, 14, 15, 28, 73–75, 83, 91, 92, 109–111, 123 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TSRA` Second Request Analyst | TEST-TOM-TSRA v5 | 8, 14, 15, 73–75, 83, 91, 92, 109–111, 123 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TFR` Frame Reconciler | TEST-TOM-TFR v5 | 93, 94 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TS` Structuring | TEST-TOM-TS v5 | 16, 42, 83 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TWS` Work Structurer | TEST-TOM-TWS v5 | 16, 42, 83 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TEP` Entity Packaging | TEST-TOM-TEP v5 | 17, 41, 45 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TP` Packager | TEST-TOM-TP v5 | 17, 41, 45 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TEM` Entity Model Design | TEST-TOM-TEM v5 | 18, 19, 38, 39, 91–93, 96, 97, 112–115 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TD` Designer | TEST-TOM-TD v5 | 18, 19, 38, 39, 91, 92, 97, 112–115 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TSD` Second Designer | TEST-TOM-TSD v5 | 18, 19, 38, 39, 91, 92, 97, 112–115 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TLR` Ledger Reviser | TEST-TOM-TLR v5 | 18, 93 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TH` Hand-offs | TEST-TOM-TH v5 | 20, 37, 42, 65, 66, 70, 85–88, 113, 116 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-THA` Hand-off Analyst | TEST-TOM-THA v5 | 20, 37, 42, 65, 66, 70, 87, 116 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TW` Operational Walkthrough | TEST-TOM-TW v5 | 21, 71, 84, 91, the walkthrough battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TSA` Situation Author | TEST-TOM-TSA v5 | 21, 84, 91 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TSW` Situation Walker | TEST-TOM-TSW v5 | 21, 71 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-TR` Independent Review | TEST-TOM-TR v5 | 22, 23, 41, 53–64, 72, 88, 90, 91, 93, 94, 97, 111, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TBRA` Blind Reviewer A | TEST-TOM-TBRA v5 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TBRB` Blind Reviewer B | TEST-TOM-TBRB v5 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TBRC` Blind Reviewer C | TEST-TOM-TBRC v5 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TBRD` Blind Reviewer D | TEST-TOM-TBRD v5 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-TBRE` Blind Reviewer E | TEST-TOM-TBRE v5 | 22, 53, 55, 72, the reviewer battery | MEASURED | — | `NOT_RUN` |
 
 - **Re-run triggers.** The template defaults, plus any change to a contract in `contracts/`, to the Source Lifecycle output socket, or to the situation library; and any change to an adapter file or its fixtures, to the engine register, or to the release lint deny-list; any change to the reference-model catalogue pin; any change to the pin of the Library's design return contract (`contracts/PINS.json`).
 - **Where results are kept.** In this section; on the Panel's Health section; and, as evidence, in `<org>aioc-tom-records`.
@@ -1373,6 +1384,7 @@ Lessons from the case study are history, not evidence (§0).
 | 2026-10-15 | Capabilities dropped because they were never developed, or because they needed conversation, can run through Source Lifecycle: the request kind, the lens, the understanding check, the evaluator's questions and Gate B are restored | 72–76 | yes |
 | 2026-10-15 | A design read by one author keeps that author's blind spots, and the reviews of v0.3.0 proposed four features for later; the governing seat directed that they be added now: two authors at S1 and S5, a role register, a run depth, and reference models used only as methods | 85–99 | yes |
 | 2026-10-16 | A later stage that could only file its returns in Source Lifecycle was not heard until someone opened a new run, and nothing made a return end. The next stage is now told of each release directly, its returns come back directly, and each ends in one of four ways | 100–108 | yes (`49GAION/DR-0016`, `DR-0018`) |
+| 2026-10-16 | A study of fifteen comparable products found that a decided model was still missing what the stages after it need to start: the strategy it serves, how each capability is delivered and how mature it is, which streams are critical, each outside party's journey, the value case, a priority per element, and how the work runs today. Each is added in the stage where it belongs, from sources and decisions only, never written by this AIOC and never about a person | 109–123 | yes (`49GAION/DR-0023`) |
 
 ## 13. For the `[ORG]HOAC-ACS` seat, and every decision only a human seat can take
 
@@ -1386,7 +1398,7 @@ Every decision that only a human seat can take is listed here once, with its sea
 | H-04 | Add `accept-operating-model` to the organisation's own signature list (`change-org-standard-or-signature-list`; Protocol §4.9 item 4), related to HF-03 | GOV | added before the first run; until then final-status rows are decided with a fresh live sign-in (HF-10) |
 | H-05 | The engine register at the tool gateway: which families it carries; each engine's confidentiality ceiling, retention and use (`change-gateway-policy`, Standard §4.4 item 11) | GOV and the TM Cell, both signing | at least four families: at least two that may author and at least two used for reviewing only; ceilings such that two author engines of two families, and three reviewer engines of two other families, may receive the organisation's highest confidentiality level |
 | H-06 | An earlier, partial run before every stage is built | GOV | no: every stage is built before the first real run |
-| H-07 | Admit observation of real work (the `observed` label; the personal-data floor, HF-17) | GOV | not admitted |
+| H-07 | Take records of the work as it runs today as an input: exports by role-type and process, never about a person, each admitted only as H-40 sets out (Annex H.8). The label `observed` is not used: this AIOC never watches work | GOV | directed (`decisions/DR-0006`): the input exists; where no export is admitted, the activity profile reads `no observation` and the run goes on |
 | H-08 | Whether any route other than the Chief of Staff of `[ORG]AIOC-SL` may ever ask the organisation. At 49GAION, the matching line on Protocol §13 item 7: if a part ever replaces Source Lifecycle, the Protocol must name the new asking route | GOV (the organisation's; and 49GAION's governing seat for the Protocol) | no: adapters only read |
 | H-09 | Send the drafts of `upstream/` to 49GAION; each reaches 49GAION only as a pull request merged by 49GAION's governing seat | GOV | after v0.4.0 is accepted |
 | H-10 | Install `[ORG]AIOC-TOM` (`create-or-install-unit`); its `change-parent`; its `restart-stopped-unit` | TM Cell | none |
@@ -1394,7 +1406,7 @@ Every decision that only a human seat can take is listed here once, with its sea
 | H-12 | `reduced_review_permitted` | TM Cell | `no` |
 | H-13 | `review_budget_per_run`, and the AIOC's `budget_cap` (`widen-ai-budget-or-unattended-action`) | TM Cell | none: must be set |
 | H-14 | `non_response_passes` and the waiting deadlines | TM Cell | none: must be set |
-| H-15 | Accept the Source Lifecycle additions SL-A1 to SL-A12, with SL-A8 as amended, as a change to `[ORG]AIOC-SL` proposed through OCO | TM Cell | required before joining (T0: `SL contract not supported`) |
+| H-15 | Accept the Source Lifecycle additions SL-A1 to SL-A13, with SL-A8 as amended, as a change to `[ORG]AIOC-SL` proposed through OCO | TM Cell | required before joining (T0: `SL contract not supported`) |
 | H-16 | Create `<org>aioc-tom-records` and `<org>aioc-tom-records-restricted`, recorded first (Naming Standard R9) | TM Cell | before the first run |
 | H-17 | The first real run while the AIOC's card status is `DRAFT` (path qualification and the batteries not yet passed) | TM Cell | yes, once the joining test and every seat test pass; the walkthrough's clean-report wording applies |
 | H-18 | A change to a fixed test of TEST-TOM or its threshold, including the release lint deny-list (`change-fixed-test-or-threshold`, HF-14) | TM Cell (owner of TEST-TOM); the Design Lead for per-part tests | none |
@@ -1418,8 +1430,10 @@ Every decision that only a human seat can take is listed here once, with its sea
 | H-36 | `return_round_deadline` and `return_rounds_max` (§15) | TM Cell | none: must be set; until set, every admitted return goes straight to the Requesting Authority with the two rows of §5.10, limit 6 |
 | H-37 | Each return row (§5.10): open a continuation run naming the children to change; answer by decision; or set the return aside and carry its elements forward as a `known defect` or a `decided assumption` | Requesting Authority | undecided; past its deadline, escalated (§5.10, limit 6) |
 | H-38 | Classify each ended return: a defect of this AIOC, or normal discovery (§5.10, limit 8) | the TOM Design Lead | none taken; the classification waits, shown on the Panel |
+| H-39 | The strategy frame row (S1); the value case row and each element's priority (S8); a maturity target or a value-case target set by correction (Annex H.1, H.4, H.6, H.7) | Requesting Authority; purpose and values, the Cell carrying `[ORG]HOAC-GOV` (H-03) | undecided; a missing strategy element is `not given`, a missing target `not set` |
+| H-40 | Admit each export of records of the work in Source Lifecycle: the organisation's projection by role-type and process, removing who did the work; its impact assessment; its decision on it (HF-17; where the projection moves personal data, the listed type `export-share-or-purge-personal-data`) (Annex H.8; SL-A13) | the seat that holds data protection (HF-17), in the organisation's own mechanism | none: no export is admitted, and the activity profile reads `no observation` |
 
-H-01 to H-27, H-30 to H-34, H-36 and H-37 are taken by GOV, the TM Cell or the Requesting Authority. H-28, H-29, H-35 and H-38 are listed so that the list is complete; they are not design questions.
+H-01 to H-27, H-30 to H-34, H-36, H-37 and H-39 are taken by GOV, the TM Cell or the Requesting Authority. H-40 is taken in the organisation's own mechanism, outside this AIOC. H-28, H-29, H-35, H-38 and H-40 are listed so that the list is complete; they are not design questions.
 
 **Money:** the AI budget cap and the review budget (H-13); the deepest run depth permitted (H-31). **People:** none; this AIOC writes no position. **Legal:** none decided here; the perimeter list goes to a human legal reviewer.
 
@@ -1433,6 +1447,7 @@ H-01 to H-27, H-30 to H-34, H-36 and H-37 are taken by GOV, the TM Cell or the R
 | v0.4.1 | 2026-10-15 | Wording only, under the direction recorded in `decisions/DR-0004`: every human position is a HOAC position, a legal persona; no natural person exists in the system (Standard §1.1, item 9, proposed by `49GAION/DR-0013`). The Design Lead position in §2.1 and §3; a §3 note; SL-A2 in `docs/INTAKE-WITH-SOURCE-LIFECYCLE.md` addresses a position, not a holder. No rule, stage, test or card changes | v1.5.0 | this commit |
 | v0.4.0 | 2026-10-15 | Adds four features, under the direction recorded in `decisions/DR-0003`, and removes or weakens nothing of v0.3.0: the role register, made by code at S6 (§5.6; Annex E.17); the run depth (Annex F); two independent authors at S1 and S5, with the Second Request Analyst, the Frame Reconciler and the Second Designer (Annex G); reference models from the 49GAION Library, as methods never evidence (§5.5; Annex B.5; Annex E.19). TEST-TOM v3 (cases 85–99; TDL-7) | v1.5.0 | this commit |
 | v0.5.0 | 2026-10-16 | Links this AIOC directly to the stages after it, under the direction recorded in `decisions/DR-0005` and `49GAION/DR-0016`; removes nothing. A release notice to Process and Position Design on every filing (§5.9 step 8a; `contracts/release-notice.schema.json`); the returns of Process and Position Design and of Delivery and Implementation received directly, under the Library's design return contract pinned in `contracts/PINS.json`, and carried round by round to one of four ends (§5.10, new; Annex E.20 to E.22; slots `return_round_deadline` and `return_rounds_max`; H-35 to H-38); the mother is the Library part (§0). Wording, under `49GAION/DR-0015`: two positions are two parties, and no check reads who occupies a position (T0 condition (d), H-02, H-11, the filing); no text states a number of people, even to deny one. TEST-TOM v4 (cases 100–108; TDL-8; cases 18, 27, 29 and 86 reworded) | v1.5.0 | this commit |
+| v0.6.0 | 2026-10-16 | Adds what the model also states and reads, under the direction recorded in `decisions/DR-0006`; removes nothing (Annex H, new): the strategy frame at S1, asked once through EX-10 and decided in one row (H.1); each capability's delivery model, make-or-buy and maturity, and each value stream's criticality, at S5 (H.2–H.4); each outside party's journey at S6 (H.5); the value case and each element's priority, by code, at S8 (H.6, H.7); records of the work as it runs today, exports by role-type and process only, the refusal `person-level records` and the activity profile (H.8); the organisation dictionary read where served (H.9). Four release parts (twenty in all); a decided priority on each element decision; the v0.6 contracts (`tom-release`, `input-pack`, `needs-request`, `needs-answer`); adapter `ADP-SL` v1.1.0; H-07 rewritten; H-39, H-40. TEST-TOM v5 (cases 109–123) | v1.5.0 | this commit |
 
 ---
 
@@ -1478,7 +1493,7 @@ Waiting deadlines and escalation follow the template slot `waiting_deadlines` (P
 
 - **Type:** Specialised.
 - **Why this AIOC exists:** an organisation needs a target operating model that is honest about its evidence and decided by its own authority; this AIOC makes one from the organisation's documents alone.
-- **Type-specific test:** TEST-TOM v4, case 27 · result `NOT_RUN`.
+- **Type-specific test:** TEST-TOM v5, case 27 · result `NOT_RUN`.
 
 ---
 
@@ -1488,32 +1503,32 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 
 | Code | Kind | Type | Filler kind | HOAC label | Parent | Attached to | Fixed test (owner) | External ports |
 |---|---|---|---|---|---|---|---|---|
-| `[ORG]CELL-TDL` | CELL | Human Seat | human | `[ORG]HOAC-ACS` | `[ORG]AIOC-TOM` | none | TEST-TOM-TDL v4 (the Cell carrying `[ORG]HOAC-TM`) | none |
-| `[ORG]CELL-TCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-TOM` | none | TEST-TOM-TCS v4 (`[ORG]CELL-TDL`) | `[ORG]AIOC-SL`: `sl-in` and `sl-out`; `[ORG]AIOC-PPD`: `ppd-in` and `ppd-out`; `[ORG]AIOC-DI`: `di-in` and `di-out`; all through the tool gateway |
-| `[ORG]POD-TRR` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TRR v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TSP` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TSP v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TRA` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TRA v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TSRA` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TSRA v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TFR` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TFR v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TS` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TS v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TWS` | CELL | AI Agent | ai | none | `[ORG]POD-TS` | none | TEST-TOM-TWS v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TEP` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TEP v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TP` | CELL | AI Agent | ai | none | `[ORG]POD-TEP` | none | TEST-TOM-TP v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TEM` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TEM v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TD` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TD v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TLR` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TLR v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TSD` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TSD v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TH` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TH v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-THA` | CELL | AI Agent | ai | none | `[ORG]POD-TH` | none | TEST-TOM-THA v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TW` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TW v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TSA` | CELL | AI Agent | ai | none | `[ORG]POD-TW` | none | TEST-TOM-TSA v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TSW` | CELL | AI Agent | ai | none | `[ORG]POD-TW` | none | TEST-TOM-TSW v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]POD-TR` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TR v4 (`[ORG]CELL-TDL`) | — |
-| `[ORG]CELL-TBRA` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRA v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TBRB` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRB v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TBRC` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRC v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TBRD` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRD v4 (`[ORG]CELL-TDL`) | none |
-| `[ORG]CELL-TBRE` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRE v4 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TDL` | CELL | Human Seat | human | `[ORG]HOAC-ACS` | `[ORG]AIOC-TOM` | none | TEST-TOM-TDL v5 (the Cell carrying `[ORG]HOAC-TM`) | none |
+| `[ORG]CELL-TCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-TOM` | none | TEST-TOM-TCS v5 (`[ORG]CELL-TDL`) | `[ORG]AIOC-SL`: `sl-in` and `sl-out`; `[ORG]AIOC-PPD`: `ppd-in` and `ppd-out`; `[ORG]AIOC-DI`: `di-in` and `di-out`; all through the tool gateway |
+| `[ORG]POD-TRR` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TRR v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TSP` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TSP v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TRA` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TRA v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TSRA` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TSRA v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TFR` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TFR v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TS` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TS v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TWS` | CELL | AI Agent | ai | none | `[ORG]POD-TS` | none | TEST-TOM-TWS v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TEP` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TEP v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TP` | CELL | AI Agent | ai | none | `[ORG]POD-TEP` | none | TEST-TOM-TP v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TEM` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TEM v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TD` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TD v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TLR` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TLR v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TSD` | CELL | AI Agent | ai | none | `[ORG]POD-TEM` | none | TEST-TOM-TSD v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TH` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TH v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-THA` | CELL | AI Agent | ai | none | `[ORG]POD-TH` | none | TEST-TOM-THA v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TW` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TW v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TSA` | CELL | AI Agent | ai | none | `[ORG]POD-TW` | none | TEST-TOM-TSA v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TSW` | CELL | AI Agent | ai | none | `[ORG]POD-TW` | none | TEST-TOM-TSW v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]POD-TR` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TR v5 (`[ORG]CELL-TDL`) | — |
+| `[ORG]CELL-TBRA` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRA v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TBRB` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRB v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TBRC` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRC v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TBRD` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRD v5 (`[ORG]CELL-TDL`) | none |
+| `[ORG]CELL-TBRE` | CELL | AI Agent | ai | none | `[ORG]POD-TR` | none | TEST-TOM-TBRE v5 (`[ORG]CELL-TDL`) | none |
 
 **The card data (the blueprint governs).** The block below holds every value of every Pod and Cell card and of the bot identity card of every AI Cell. `tools/make_cards.py` expands it into the complete forms of the template (§17 of the template; `spec/schemas/unit-card.schema.json` and `bot-identity-card.schema.json` of `49GAION-protocol`), writes them into `cards/` as generated copies, and checks them: against the schemas; against the code rules of `tests/cards/check_cards.py` (a fixed test is never owned by the part itself; a bot never claims a right to sign; no credential is shared); and against this blueprint (the inner units of the AIOC card are exactly the parts whose parent is the AIOC, and the AIOC is accountable to no Cell inside it). Each port gets the standard fields (`identification`, `enforcement` at the shared gateway outside the unit, `audit_trail`, `required_tests`); the stop door accepts only `stop`.
 
@@ -1521,10 +1536,10 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-TDL"
-    card_version: "v0.5.0"
-    version: "0.5.0"
+    card_version: "v0.6.0"
+    version: "0.6.0"
     lifecycle_state: "designed"
-    test_version: "v4"
+    test_version: "v5"
     test_owner: "[ORG]CELL-TDL"
     audit_trail: "the run record of [ORG]AIOC-TOM"
     hu_in: ["run control and configuration from the TOM Design Lead (never a source)"]
@@ -1634,7 +1649,7 @@ The codes checked against: `[ORG]CELL-TDL`, `-TCS`, `-TSP`, `-TRA`, `-TWS`, `-TP
 | `assumed` | carried without evidence | what breaks if it is false, and when to re-check |
 | `unknown` | not established | why the sources cannot answer it; whether it blocks |
 
-- **Order:** `source-backed` > `inferred` > `organisation-stated` > `assumed` > `unknown`. The label `observed` is reserved: observation of real work is not admitted, and admitting it is a decision of GOV (§13, H-07).
+- **Order:** `source-backed` > `inferred` > `organisation-stated` > `assumed` > `unknown`. The label `observed` is not used: this AIOC never watches work. Records of the work as it runs today are read as exports, by role-type and process, never about a person (Annex H.8; §13, H-07).
 - **Source Lifecycle's own labels** are kept statement by statement (`adapters/source-lifecycle.adapter.md` §5; B.1a). A statement Source Lifecycle labels `stated` is admitted as `source-backed` when it stands in a document, and as `organisation-stated` when it was recorded from conversation. `inferred`, `assumed` and `unknown` stay as they are. An approved explainer never lifts a statement Source Lifecycle holds as `inferred` or `assumed`.
 - **Confirmation never lowers a label, and never launders one.** An organisation's confirmation of an inferred item keeps the label `inferred` and adds the standing note `confirmed → <confirmation reference>`. The item is then released from the sticky-inferred rule; it never becomes `source-backed`. A correction replaces the item with the corrected text, labelled `organisation-stated`. "Don't know" leaves the item as it was, unconfirmed, with the answer recorded. No answer ever lowers a label.
 - **No label laundering.** A label changes only on evidence of the destination's own class. A change of what a claim covers ("the source says X" becoming "X is true") needs its own record row even when the label stays.
@@ -1649,7 +1664,7 @@ The codes checked against: `[ORG]CELL-TDL`, `-TCS`, `-TSP`, `-TRA`, `-TWS`, `-TP
 | `explainer` | `stated` → `organisation-stated`; `inferred`, `assumed` and `unknown` stay as they are |
 | `confirmation` | Annex B.1: a confirm keeps `inferred` and adds the standing note `confirmed → <ref>`; a correction's text → `organisation-stated`; "don't know" leaves the item as it was |
 | `status` | not a claim about the organisation; it only sets the canonical status of its target source |
-| `export` | `source-backed` as of its export date; the date (`as_of`) travels with every atom |
+| `export` | `source-backed` as of its export date; the date (`as_of`) travels with every atom. An export of records of the work is admitted only by role-type and process (Annex H.8) |
 | `decision` | the decided value is a decision, with the standing note `decided → <ref>`; a fact in a correction → `organisation-stated` |
 | `operating model` (an earlier release) | its decided elements are carried as decided, with their original labels (`label_basis: carried label`); never upgraded |
 | `design report` | history only; its claims keep their original labels and never become `source-backed` |
@@ -1711,15 +1726,15 @@ The Chief of Staff records labels and never writes one on a check it ran. No Cel
 | Gate | Passes when | Who decides |
 |---|---|---|
 | **T0 Admission** | (a) the run request comes from the Requesting Authority's Cell and carries an approved Design Request in Source Lifecycle; (b) each adapter's connection is signed, in scope and not expired; (c) Source Lifecycle's card declares support for the needs-request, needs-answer, needs-status and Missing Report contracts and for the reference fields of §4.3, otherwise the reason is `SL contract not supported`; (d) the Requesting Authority's Cell is not the TOM Design Lead's Cell (two positions are two parties; who occupies either is never read, §2.1); (e) every adapter used has passed its fixed test, otherwise `adapter not tested`; (f) P0 validates against `contracts/input-pack.schema.json`, its `pack_id` is its content address, every atom re-hashes to its source, every label follows the adapter's mapping, and no refused item is among the atoms, otherwise `pack invalid`; (g) at P0's highest confidentiality level, every AI Cell can be bound to an eligible engine, otherwise `engine ceiling`; and at least three eligible reviewer engines from at least two families, none of an author's family (both author families at RP1b, RP1 and RP5; Annex G.3), exist, or a reduced level is permitted by the TM Cell and accepted by the Design Lead at the run preview, otherwise `no eligible reviewers`; (h) RP0 is settled with no `MATERIAL` finding outstanding; (i) the run depth the Design Request states is at or below `run_depth_permitted` (Annex F.1), otherwise `depth not permitted`; (j) at P0's highest confidentiality level, author engines of at least two families are eligible (Annex G.3), otherwise `no second author`; and where two authors at S5 would bring its review below the level one author allows, `single_author_permitted` is `yes` and the Design Lead accepted single authoring at S5 at the run preview, otherwise `no second author`. Conditions (a) to (f) and (i) are checked before the run preview; (g) and (j) after it | code; the seat over `[ORG]AIOC-SL` (the connection); the Requesting Authority (the Design Request); the TOM Design Lead (the run preview); the TM Cell (the two permissions, H-31 and H-32) |
-| **T1 Frame** | both frame drafts locked before the compare step, and every material difference disposed under Annex G.5; RP1b and RP1 settled clear before any decision row was sent; Gate A for the whole request recorded with reasons and re-assessed at RP1; the party register made and reviewed at RP1; scope, exclusions, the entity roster and the contradictions touching them decided in Source Lifecycle (none "don't know"; the weak-approval signal cleared) | the Requesting Authority |
+| **T1 Frame** | both frame drafts locked before the compare step, and every material difference disposed under Annex G.5; RP1b and RP1 settled clear before any decision row was sent; Gate A for the whole request recorded with reasons and re-assessed at RP1; the party register made and reviewed at RP1; scope, exclusions, the entity roster and the contradictions touching them decided in Source Lifecycle (none "don't know"; the weak-approval signal cleared); the strategy frame row decided, with purpose and values cited from a source in force or signed by the GOV Cell (Annex H.1); the activity profile compiled, or `no observation` (Annex H.8) | the Requesting Authority; the Cell carrying `[ORG]HOAC-GOV` for purpose and values |
 | **T2 Structure** | orphans 0; exclusion violations 0; every child passes the four legs; RP2 settled clear before the rows were sent; each child and the first slice decided; the party register extended with the sibling children | the Requesting Authority |
 | **T3 Child briefs** | per child: Gate A recorded and re-assessed at RP3; the floor holds (C.3); RP3 settled clear before the rows were sent; its non-delegable rows decided with a value other than "don't know"; or a Readiness Report section for that child | the Requesting Authority |
 | **T4 Packages** | G1-G5 pass for every child package; RP4 settled with no unresolved `MATERIAL` finding | code and the Review Panel; the TOM Design Lead rules on contested `MATERIAL` findings; the Requesting Authority only to choose on a material finding notice |
-| **T5 Child designs** | schema and code checks pass; the difference register complete, with every material difference disposed under Annex G.5 (or one author, under Annex G.7); RP5 settled with no unresolved `MATERIAL` finding | as T4 |
-| **T6 Hand-offs** | every declared crossing paired or a seam finding; every seam finding resolved upstream, decided or registered; the role register compiled by code, and no role finding `open`; RP6 settled with no unresolved `MATERIAL` finding | as T4; the Requesting Authority on seam and role rows |
+| **T5 Child designs** | schema and code checks pass, among them the delivery, criticality and maturity checks (Annex H.11 checks 2 and 3); the difference register complete, with every material difference disposed under Annex G.5 (or one author, under Annex G.7); RP5 settled with no unresolved `MATERIAL` finding | as T4 |
+| **T6 Hand-offs** | every declared crossing paired or a seam finding; every journey moment a crossing of its entry, and every crossing that delivers a capability paired, registered or deferred (Annex H.11 checks 2 and 4); every seam finding resolved upstream, decided or registered; the role register compiled by code, and no role finding `open`; RP6 settled with no unresolved `MATERIAL` finding | as T4; the Requesting Authority on seam and role rows |
 | **T7 Walk** | situations sealed before the walk; the mix met or its shortfall declared; RP7 settled; no unresolved `MATERIAL` finding | as T4 |
-| **T8 Decision** | RP8 settled clear before any decision row was sent; every element row (each entry of the role register included) and the final status decided in Source Lifecycle; the purpose-and-values rows carry a valid gateway signature of the GOV Cell | the Requesting Authority; the Cell carrying `[ORG]HOAC-GOV` for purpose and values |
-| **T9 Release** | the manifest names every part and every run record by hash, and lists every pack version with its snapshots; every element traces to an atom of a pack version of this run, or of a carried release, each resolving by hash at its snapshot, with no orphan; every pattern a ledger cites resolves in the catalogue pinned for the run, by version and hash; the role register's entries re-compile from the frozen parts and the decision references; the release lint passes; RP9 settled with no `MATERIAL` finding; the release is filed into Source Lifecycle and reads back by hash | code (hash, trace and lint checks) and the Review Panel (RP9), citing the TOM Design Lead's attestation of gates T0-T7 |
+| **T8 Decision** | RP8 settled clear before any decision row was sent; every element row (each entry of the role register included), the value case row and the final status decided in Source Lifecycle; each element row decided `ACCEPT` or `CORRECT` carries its priority (Annex H.7); the purpose-and-values rows carry a valid gateway signature of the GOV Cell | the Requesting Authority; the Cell carrying `[ORG]HOAC-GOV` for purpose and values |
+| **T9 Release** | the manifest names every part and every run record by hash, and lists every pack version with its snapshots; every element traces to an atom of a pack version of this run, or of a carried release, each resolving by hash at its snapshot, with no orphan; every pattern a ledger cites resolves in the catalogue pinned for the run, by version and hash; the role register's entries re-compile from the frozen parts and the decision references; the value case and the activity profile re-compile from them too (Annex H.11 check 5); the release lint passes; RP9 settled with no `MATERIAL` finding; the release is filed into Source Lifecycle and reads back by hash | code (hash, trace and lint checks) and the Review Panel (RP9), citing the TOM Design Lead's attestation of gates T0-T7 |
 
 A gate passes only on visible evidence in the run record. A step's own report is never evidence. "Unresolved" in this table has the meaning of Annex D, item 12.
 
@@ -1786,10 +1801,13 @@ These rules apply to every decision row (`docs/CARRIED-RULES.md` §5):
 25. Edit a filed release in answer to a return; decide, answer or classify a return in the Chief of Staff; or write a return brief by hand.
 26. Leave a return without its round and its deadline, count silence as its answer, or let it end other than in one of the contract's four ends.
 27. Send a release notice before the filing receipt reads back, or put release text into a notice.
+28. Write a goal, a target, a maturity level, a baseline or any figure of its own; infer an element of the strategy frame; or let an author propose a priority (Annex H).
+29. Watch work; admit a record of work that says who did it; or put into any part a field about a person (Annex H.8).
+30. Name a provider in a delivery model, or design anything on an outside party's side of its journey (Annex H.2, H.5).
 
 ## Annex E. Field lists of the new objects
 
-Each object a stage makes, and that `docs/CARRIED-RULES.md` does not already list, has its field list here. Annex E is the one home of each list; other files point to it. A JSON Schema made later from a list may add nothing. Two lists have a JSON Schema: the Input Pack (`contracts/input-pack.schema.json`) and the reference-model catalogue as this AIOC reads it (`contracts/reference-model-catalogue.schema.json`). The rules of the pack, the five steps of the socket, the acceptance test of a needs answer and the three adapter rules are written in §4.3.
+Each object a stage makes, and that `docs/CARRIED-RULES.md` does not already list, has its field list here, except the objects of Annex H, whose lists are in Annex H.10. Each list has one home; other files point to it. A JSON Schema made later from a list may add nothing. Two lists have a JSON Schema: the Input Pack (`contracts/input-pack.schema.json`) and the reference-model catalogue as this AIOC reads it (`contracts/reference-model-catalogue.schema.json`). The rules of the pack, the five steps of the socket, the acceptance test of a needs answer and the three adapter rules are written in §4.3.
 
 **Conventions.**
 - "Req" = required.
@@ -1803,7 +1821,7 @@ Each object a stage makes, and that `docs/CARRIED-RULES.md` does not already lis
   - Annex B label: `source-backed`, `inferred`, `organisation-stated`, `assumed`, `unknown`.
 - **Content address** = SHA-256 of the canonical JSON of the object without its ID field (keys sorted, separators `,` and `:`, UTF-8, non-ASCII kept). It is the same canon as the release (`tools/check_contracts.py`, `content_address`).
 
-### E.1 The Input Pack (`contracts/input-pack.schema.json`, `$id` `urn:49gaion:library:tom:input-pack:v0.4`)
+### E.1 The Input Pack (`contracts/input-pack.schema.json`, `$id` `urn:49gaion:library:tom:input-pack:v0.6`)
 
 One versioned, content-addressed object per pack version. It holds references, hashes and labels only, never source text. `additionalProperties: false` at every level.
 
@@ -1820,7 +1838,7 @@ One versioned, content-addressed object per pack version. It holds references, h
 | `adapters` | array, minItems 1, of object | yes | per adapter read: `adapter_id` (req); `adapter_version` `^v[0-9]+\.[0-9]+\.[0-9]+$` (req); `adapter_file` (string, req, e.g. `adapters/source-lifecycle.adapter.md`); `adapter_file_sha256` (req); `grant_ref` (req: the register event of the grant); `scope` (req, string); `expires` (date, req); `snapshot_id` (string, req: the snapshot pinned for this adapter; it changes only at a re-base; for SL `^SLM-[a-f0-9]{64}$`); `read_at` (date-time, req); `test` (req: `{id ^TEST-TOM-ADP-[A-Z0-9]{2,12}$, version ^v[0-9]+$, result enum PASS, FAIL, NOT_RUN}`) |
 | `sources` | array of object | yes | the source catalogue, cumulative: every source in scope. Per source: `ref` (source reference; req); `adapter_id` (req); `origin_kind`, `status`, `confidentiality` (canonical values; req); `defaulted` (array of enum `origin kind`, `status`, `confidentiality`; req, may be empty: which values the adapter did not serve and the default filled); `atomised` (boolean, req); `atom_count` (integer ≥ 0, req); `first_pack` (`^P[0-9]+$`, req); `read_at` (date-time, req); `flags` (array of enum `instruction-like text`, `superseded since pin`, `duplicate`, `live versions conflict`, `carried release`; req, may be empty) |
 | `atoms` | array of object | yes | cumulative; an atom is never edited or removed. Per atom: `atom_id` (req); `sha256` (of the atom's bytes; req); `anchor_kind` (enum `paragraph`, `list item`, `table row`, `record field`; req); `origin_kind`, `status`, `confidentiality` (req); `sl_label` (enum `stated`, `inferred`, `assumed`, `unknown`; optional: the source's own statement label); `label` (Annex B; req); `label_basis` (enum `mapping`, `status cap`, `default cap`, `carried label`, `confirmation note`; req); `standing_note` (string; optional, e.g. `confirmed → NR-0007`, `decided → <ref>`); `as_of` (date; req when `origin_kind` = `export`); `first_pack` (req); `flags` (array of enum `instruction-like text`, `superseded since pin`, `currency drift`; req, may be empty). **No `text` field.** |
-| `refused` | array of object | yes | every item refused, may be empty: `offered` (object: `source_id` (optional), `adapter_id` (optional), `channel` (enum `adapter`, `human port`, `other channel`; req)); `reason` (enum `no reference`, `outside scope`, `scope expired`, `does not resolve`, `hash mismatch`, `carries a secret`, `not atomisable`, `human port`, `other channel`, `connection revoked`; req); `at` (date-time; req). A refused item never carries its content. |
+| `refused` | array of object | yes | every item refused, may be empty: `offered` (object: `source_id` (optional), `adapter_id` (optional), `channel` (enum `adapter`, `human port`, `other channel`; req)); `reason` (enum `no reference`, `outside scope`, `scope expired`, `does not resolve`, `hash mismatch`, `carries a secret`, `person-level records`, `not atomisable`, `human port`, `other channel`, `connection revoked`; req); `at` (date-time; req). A refused item never carries its content. |
 | `unknowns` | array of object | yes | may be empty: `kind` (enum `not held`, `cited, not held`; req); `ref` (source reference with `held` = `not held`; req for `not held`); `cited_reference` (string; req for `cited, not held`); `cited_in` (atom ID; req for `cited, not held`). The stage that relies on it adds its cost. |
 | `increment` | null, or object | yes | null for `P0`. Otherwise: `kind` (enum `needs answer`, `decision`, `notice`, `source opened`, `re-base`; req; equals `made_because`); `request_id` (`^NR-[A-Za-z0-9-]+$`; req for `needs answer` and `decision`); `answer_refs` (array of source references; req for `needs answer` and `decision`); `snapshot_id` (string; req for `needs answer` and `decision`: the snapshot the answer names); `atoms_added` (integer ≥ 0; req); `atoms_flagged` (integer ≥ 0; req); `reopens` (array of string `<stage ID>/<item ID>`, e.g. `S5/CHILD-A1#CAP-3`; req, may be empty); `acceptance` (for a needs answer: `{checks: array of 8 booleans, result: pass}`; req for `needs answer` and `decision`); `rebase` (req for `re-base`: `decision_ref` (string: the Design Lead's run-control record), `from_pack_id` (`^TOMI-`), `diff_sha256`, `atoms_changed` (integer ≥ 0)) |
 | `carried` | array of object | yes | may be empty: per carried release, `release_id` (`^TOMR-[a-f0-9]{64}$`), `release_ref` (source reference, origin kind `operating model`), `pack_ids` (array of `^TOMI-`, the packs named in that release's manifest), `children` (array of `^CHILD-[A-Za-z0-9-]+$`) |
@@ -1857,7 +1875,7 @@ One file per source type. Its fixtures are in `adapters/<source-type>/fixtures/v
 | 5 | Mappings | Closed tables onto the canonical origin kind, status, confidentiality and statement label. The **trust ceiling**: the highest Annex B label a statement of this source type may reach. The **defaults** when a value is not served: status → `not served` (caps at `inferred`); confidentiality → `strictly confidential` (records go to `-records-restricted`); origin kind → `document`, with statements capped at `inferred` |
 | 6 | Atomisation | The anchor scheme per format it serves (paragraph, list item, table row, record field). What cannot be atomised is refused `not atomisable`, and a need for a cleaner version is raised |
 | 7 | Notices | Which changes the source reports (revocation, narrowing, reclassification, supersession). If it reports none, every read re-checks status and scope |
-| 8 | Limits | **Reads only.** It never asks, never files and never writes. Asking stays with the Chief of Staff of `[ORG]AIOC-SL`. A release is filed only into `[ORG]AIOC-SL`, whatever adapters a run reads. Personal-data and confidentiality rules; secrets refused |
+| 8 | Limits | **Reads only.** It never asks, never files and never writes. Asking stays with the Chief of Staff of `[ORG]AIOC-SL`. A release is filed only into `[ORG]AIOC-SL`, whatever adapters a run reads. Personal-data and confidentiality rules; secrets refused; records of work that say who did the work refused (Annex H.8) |
 | 9 | Fixed test | `TEST-TOM-ADP-<CODE> v<n>`: a good sample passes; one bad sample per refusal reason is refused with that reason; each mapping table round-trips; the defaults apply when a value is not served |
 | 10 | Version history | One row per version |
 
@@ -1879,7 +1897,7 @@ adapter:
       conversation: { stated: organisation-stated, inferred: inferred, assumed: assumed, unknown: unknown }
   defaulted_origin_kind_cap: inferred
   trust_ceiling: source-backed
-  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "not atomisable", "human port", "other channel", "connection revoked"]
+  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "person-level records", "not atomisable", "human port", "other channel", "connection revoked"]
 ```
 
 "Conversation" covers a source recorded from conversation: an explainer, a correction, or a decision's comment.
@@ -1892,14 +1910,15 @@ adapter:
 {
   "case": "<one line>",
   "served": "<a source reference as served (contracts/source-reference.schema.json), or null when nothing is served by reference>",
-  "context": { "channel": "adapter | human port | other channel", "in_scope": true, "scope_expires": "2027-01-01", "read_on": "2026-11-01", "revoked": false, "resolves": true, "computed_sha256": "<64 hex, or null>", "atomisable": true, "carries_secret": false, "conversation_derived": false },
+  "context": { "channel": "adapter | human port | other channel", "in_scope": true, "scope_expires": "2027-01-01", "read_on": "2026-11-01", "revoked": false, "resolves": true, "computed_sha256": "<64 hex, or null>", "atomisable": true, "carries_secret": false, "person_level_records": false, "conversation_derived": false },
   "expect": { "admitted": true, "refusal_reason": null, "origin_kind": "document", "status": "in force", "confidentiality": "internal", "defaulted": [], "status_cap": "none", "unknown": null, "as_of": null, "labels": [{ "anchor": "p1", "label": "source-backed" }] }
 }
 ```
 
 - `expect.unknown` is `null`, or `"not held"` for a reference served `not held` (then `admitted` is true and `labels` is empty). `expect.as_of` is `null`, or the export date, which every label of that source carries.
-- **Valid fixtures** (8, for `ADP-SL`): `in-force-document`, `explainer-statement-labels`, `draft-capped`, `no-status-default`, `no-confidentiality-default`, `no-origin-kind-default`, `not-held`, `export-with-date`.
-- **Must-fail fixtures** (10, one per refusal reason): `no-reference`, `outside-scope`, `scope-expired`, `does-not-resolve`, `hash-mismatch`, `carries-a-secret`, `not-atomisable`, `human-port`, `other-channel`, `connection-revoked`. Each is refused with exactly its reason.
+- `context.person_level_records` is true when an export of records of the work still carries a field that says who did the work (Annex H.8).
+- **Valid fixtures** (9, for `ADP-SL`): `in-force-document`, `explainer-statement-labels`, `draft-capped`, `no-status-default`, `no-confidentiality-default`, `no-origin-kind-default`, `not-held`, `export-with-date`, `records-of-work-by-role`.
+- **Must-fail fixtures** (11, one per refusal reason): `no-reference`, `outside-scope`, `scope-expired`, `does-not-resolve`, `hash-mismatch`, `carries-a-secret`, `person-level-records`, `not-atomisable`, `human-port`, `other-channel`, `connection-revoked`. Each is refused with exactly its reason.
 
 ### E.3 The party register (run record; made at S1, extended at S2)
 
@@ -2430,4 +2449,175 @@ Every other difference (wording, order, a narrative cell with the same linked en
 
 **Done when.** For each two-author output: both drafts locked before the compare step; the difference register complete, with every material difference disposed under G.5; its decision rows and needs requests sent through the Chief of Staff (§5.2); the stage's reviews settled as §5.8 requires.
 
-*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.5.0 · Powered by 49GAION*
+## Annex H. What the model also states, and the organisation as it runs today
+
+**New** in v0.6.0 (`decisions/DR-0006`). **In plain words.** The model now also states the organisation's strategy on one page, how each capability is delivered and how mature it is, which value streams are critical, the path each outside party takes through the organisation, the value the change is meant to bring, and the priority of each element. It can also read records of how the work runs today, never about a person, and where there are none it says so and goes on.
+
+Nine additions, each placed in a stage that already exists. They add no stage, gate, review point or seat, and they remove or weaken nothing. Every rule of this blueprint applies to them: citation or refusal, labels (Annex B), one decision per row, and roles and positions only. **This AIOC never writes a goal, a target, a level or a figure of its own.** Each is stated by a held source, decided by the organisation, or shown as `not given`, `unknown` or `not set`.
+
+| # | Addition | Stage | Where it is kept | Who decides |
+|---|---|---|---|---|
+| H.1 | Strategy frame | S1 | release part `strategy frame` | the Requesting Authority, one row; purpose and values, the Cell carrying `[ORG]HOAC-GOV` |
+| H.2 | Delivery model and make-or-buy, per capability | S5; checked at S6 | design ledger | the Requesting Authority, with the capability map row |
+| H.3 | Critical value streams | S5 | design ledger | the Requesting Authority, with the value stream row |
+| H.4 | Maturity per capability, now and target | S5 | design ledger | now: a held source; target: a held source or the Requesting Authority |
+| H.5 | Outside parties' journeys | S6 | release part `outside-party journeys` | the Requesting Authority, with the counterparty class row |
+| H.6 | Value case | S8 | release part `value case` | the Requesting Authority, one row |
+| H.7 | Priority per element | S8 | each element's decision (`decisions[].decision.priority`) | the Requesting Authority, with each element row |
+| H.8 | Records of the work as it runs today, and the activity profile | S0, S1 | release part `current-state activity profile` | the organisation admits each export in Source Lifecycle (H-07, H-40) |
+| H.9 | The organisation dictionary | S1 | read as a held source | — |
+
+### H.1 The strategy frame (S1)
+
+1. **What it holds.** Six elements: the purpose; the values; the long-range target; the three-year picture; the one-year goals, each with its measure; the critical numbers, each with its definition. Field list: H.10.1.
+2. **Where each element comes from.** From held sources, cited, with their labels. The authors of the frame never write an element and never derive one from other material: what the organisation wants is never inferred (`docs/CARRIED-RULES.md` §1.2 item 4).
+3. **Asked once.** Where the sources lack any element, the first pass of S1 carries one explainer, EX-10 "Strategy on one page" (`docs/ASKING-CATALOGUE.md` §3), naming only the elements missing. Its leverage proof is standing: the priority of every element (H.7), the value case (H.6) and the next stage's objectives start from it. The Chief of Staff of `[ORG]AIOC-SL` chooses who answers; the answer is recorded there as a source and admitted like any other (`organisation-stated`).
+4. **Purpose and values.** Where a source in force states them, they are cited and not asked again. Where none does, their row is the listed type `set-purpose-or-values` (HF-04), signed by the Cell carrying `[ORG]HOAC-GOV` at the gateway (§5.9, Purpose and values; H-03).
+5. **Decided.** The frame decision pass (§5.1 step 12) carries one non-delegable row for the strategy frame as a whole (`ACCEPT`, `CORRECT`, `REJECT`), which names each element `not given`. T1 needs it decided. A `REJECT` is asked again through a new EX-10, within `decision_passes_max`.
+6. **Never blocking.** An element still missing after its answer (`declared absent`, `declined` or `dont know`) is `not given`. It is shown in the part and in block A of the Decision Package (evidence gaps), and the run goes on. Nothing fills it.
+7. **Released.** The decided strategy frame is the release part `strategy frame`. The Design Brief points to it (`docs/CARRIED-RULES.md` §4.1, section 22).
+
+### H.2 Delivery model and make-or-buy (S5)
+
+1. **Delivery model.** Each capability of a child's capability map (A2) carries `delivery_model`: `in-house`, `shared service`, `outsourced`, `partner` or `not decided`. It says how the capability is delivered, never by whom: no provider is named, and a provider outside the organisation is a counterparty marker (§5.6).
+2. **Make or buy**, computed by code, never written by an author: `make` for `in-house` and `shared service`; `buy` for `outsourced` and `partner`; `not decided` otherwise.
+3. **A design choice, with its basis.** The delivery model carries its provenance, confidence and basis like any element (`docs/CARRIED-RULES.md` §8.2): `stated` where an atom states it; `inferred` where the design chooses it on cited atoms; `not decided` where the child's own evidence cannot tell the options apart (§8.1 rule 11, the coarsest defensible grain). A pattern may suggest it and never supports it alone (Annex B.5).
+4. **Carried by a crossing.** A capability that is `shared service`, `outsourced` or `partner` names, in `delivered_through`, the crossings of its child's register that carry it. One that names none is an undeclared-crossing finding, which returns the package to Entity Packaging (§5.5). At S6, each such crossing is paired as a hand-off, or appears in the counterparty register, or is a deferred boundary of the class of service providers (`docs/CARRIED-RULES.md` §9.2 item 1); otherwise it is a seam finding (H.11 check 2).
+5. **Decided** with the capability map row (§5.9).
+
+### H.3 Critical value streams (S5)
+
+1. Each value stream (A3) carries `critical`: `yes`, `no` or `not decided`. A `yes` names at least one reason from a closed list, `revenue`, `customer`, `legal or regulatory`, `safety` or `continuity`, and each reason cites the atoms that support it.
+2. It is the authors' proposal, with provenance like any element. A stream is never critical on a pattern alone.
+3. **Decided** with the value stream row (§5.9). A critical stream sets the priority of the elements on it (H.7).
+
+### H.4 Maturity (S5)
+
+1. Each capability carries `maturity`, `now` and `target`, each a level of one closed scale: 1 `ad hoc`, 2 `repeatable`, 3 `defined`, 4 `measured`, 5 `improving`. The scale is a method, never evidence.
+2. **Now** is stated by a held source, such as an assessment the organisation made and recorded, cited, with its label and its date; otherwise `unknown`. No author assesses a level (`docs/CARRIED-RULES.md` §8.1 rule 10: no forensic discovery of the present state).
+3. **Target** is stated by a held source, or decided by the Requesting Authority in a correction of the capability map row (§5.9, Corrections: a design choice, applied as a decision); otherwise `not set`.
+4. Where a level would change a design choice (the leverage test, §5.1 step 9), it is asked through EX-11 "How mature each capability is", once per child.
+5. Maturity is of a capability. It is never of a role, a position or a person.
+
+### H.5 Outside parties' journeys (S6)
+
+1. For each entry of the counterparty register (Annex E.5), the Hand-off Analyst records its journey, `JNY-n`: the moments where that party meets the organisation, in order. Each moment is a crossing already in that entry, with the value stream and the phase it meets on the child's side. Field list: H.10.4.
+2. It adds no crossing and designs nothing on the party's side (`docs/CARRIED-RULES.md` §8.1 rule 9). The order is as the sources state it, cited, or `order not stated`.
+3. A moment the sources describe that no crossing carries is a seam finding (`missing counterpart`), routed back like any other (§5.6). A crossing that meets no designed phase reads `phase not designed`.
+4. Code checks every moment and every phase (H.11 check 4). The journey is put to decision with its counterparty class row (§5.9). It is the release part `outside-party journeys`.
+
+### H.6 The value case (S8)
+
+1. **One entry per outcome** of the decided frame (Design Brief section 6): the change, as the outcome states it; its measures, which are the criteria decided for it at S1 or S3 and the critical numbers of the strategy frame it moves; for each measure, its baseline (atoms, with their date, or `unknown`) and its target (an atom or a decision reference, or `not set`); the elements it rests on; and the assumptions it rests on (Design Brief section 9), each with what breaks if it is false. Field list: H.10.5.
+2. **Compiled by code** from the decided parts and the decision references, by the Chief of Staff's value-case code step. It re-compiles byte-identical at T9. It holds no figure that is not an atom or a decision, and no estimate of this AIOC.
+3. **Decided** as one non-delegable row (§5.9). A correction may set a target; it is applied as a decision.
+4. It is the release part `value case`. The stage that carries the model into the organisation reads it as the start of its register of value (H.12).
+
+### H.7 Priority (S8)
+
+1. **Proposed by code**, never by an author. Each element row (§5.9) carries a proposed priority, by a fixed rule:
+   - `must`: the element lies on a critical value stream (H.3), carries an obligation of the organisation (Design Brief section 12), or holds an item of the legal and regulatory perimeter;
+   - `should`: an outcome of the frame, or a one-year goal of the strategy frame, traces to it (the element's basis cites an atom that the outcome or the goal cites);
+   - `could`: any other element.
+2. **Decided** with the element. `ACCEPT` keeps the proposed priority; `CORRECT` may change it. The decided priority is recorded on the decision (`decisions[].decision.priority`). An element row decided `ACCEPT` or `CORRECT` without a priority fails T8.
+3. Priority orders the next stages' work. It never removes an element and never changes a gate. A carried element keeps its decided priority.
+
+### H.8 Records of the work as it runs today, and the activity profile (S0, S1)
+
+1. **What it is.** Records of the work as it runs today, exported from the organisation's own systems (work queues, case logs, workflow and time records), aggregated by role-type and by process. Never about a person. This AIOC never watches work: it reads only what an approved export states. The label `observed` stays unused (Annex B.1).
+2. **How it enters.** As a source of origin kind `export`, through the same socket and adapter, labelled `source-backed` as of its export date (Annex B.1a). It is asked, where the leverage test passes, through the export request (`docs/ASKING-CATALOGUE.md` §4.3), which names the aggregation: by role-type and by process, with no field that says who did the work.
+3. **The projection is the organisation's.** Before such an export is recorded in Source Lifecycle, the organisation's own mechanism removes who did the work, and any line that would still point to whoever did it; the seat that holds data protection (HF-17) records an impact assessment of the export and its decision on it (H-40; `docs/INTAKE-WITH-SOURCE-LIFECYCLE.md`, SL-A13). This AIOC never sees the records before that projection.
+4. **Refused.** An export whose records still carry a field that says who did the work is refused at the socket, `person-level records` (§4.3; Annex E.1; Annex E.2), and nothing of it is kept.
+5. **The activity profile.** At S1, before the authors start, the Chief of Staff runs the activity-profile code step on the pack version named: per role-type and per process, as the admitted exports name them, the share of time or the volume each export states, with its date and its atoms. Field list: H.10.6. It describes today; it designs nothing and sets no workload. Both authors read it as present state (§5.1 step 5), and RP1 reviews it. It is the release part `current-state activity profile`.
+6. **None.** Where no such export is admitted, the part reads `no observation`, and the run goes on. Nothing is inferred in its place.
+7. **Decided by.** GOV directed this input (`decisions/DR-0006`; §13, H-07). Each export is admitted only through its own HF-17 decision (H-40).
+
+### H.9 The organisation dictionary (S1)
+
+Source Lifecycle serves, by reference, the organisation's dictionary: its own terms, each with its definition and its source. Where it is served, the read plan opens it (§5.1 step 1), and it is a held source like any other. In reader text, a term the dictionary defines is used in that meaning. A source that uses the term differently raises a candidate contradiction (Annex B.2). The dictionary decides nothing and is never a precedence rule.
+
+### H.10 Field lists
+
+"Element" below means `{atoms, label}`, where `atoms` holds at least one atom ID; or `{not_given: {needs_ref, outcome}}`, where `outcome` is `declared absent`, `declined` or `dont know`.
+
+**H.10.1 Strategy frame** (release part `strategy frame`; made at S1)
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `purpose` | element | yes | |
+| `values` | array of element, minItems 1 | yes | one `not given` entry where none is stated |
+| `long_range_target` | element | yes | |
+| `three_year_picture` | element | yes | |
+| `one_year_goals` | array of `{goal: element, measure: element}`, minItems 1 | yes | one `not given` goal where none is stated |
+| `critical_numbers` | array of `{name: element, definition: element}`, minItems 1 | yes | as above |
+| `purpose_and_values_ref` | source reference | after T1 | the source in force, or the signed `set-purpose-or-values` decision |
+| `decision_ref` | source reference | after T1 | the strategy frame row |
+
+**H.10.2 Design ledger, capability** (adds to `docs/CARRIED-RULES.md` §8.2)
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `delivery_model` | enum `in-house`, `shared service`, `outsourced`, `partner`, `not decided` | yes | with the element's provenance, confidence and basis |
+| `make_or_buy` | enum `make`, `buy`, `not decided` | yes | by code (H.2 item 2) |
+| `delivered_through` | array of crossing references | unless `in-house` or `not decided` | minItems 1 |
+| `maturity.now` | integer 1–5, or `unknown` | yes | |
+| `maturity.now_basis` | array of atom IDs, with `as_of` | unless `unknown` | |
+| `maturity.target` | integer 1–5, or `not set` | yes | |
+| `maturity.target_basis` | atom ID or decision reference | unless `not set` | |
+
+**H.10.3 Design ledger, value stream**
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `critical` | enum `yes`, `no`, `not decided` | yes | |
+| `critical_reasons` | array of `{reason, basis}`; `reason` enum `revenue`, `customer`, `legal or regulatory`, `safety`, `continuity`; `basis` atom IDs, minItems 1 | when `yes`, minItems 1 | |
+
+**H.10.4 Outside-party journey** (release part `outside-party journeys`; made at S6)
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `journey_id` | `^JNY-[0-9]+$` | yes | |
+| `counterparty_id` | `^CPR-[0-9]+$` | yes | the entry of the counterparty register |
+| `moments` | array, minItems 1, of `{order, crossing: {child, crossing_ref}, phase, basis}`; `order` an integer or `order not stated`; `phase` `{child, stream, phase}` or `phase not designed` | yes | each crossing is one of that entry's crossings |
+| `seam_refs` | array of `^SF-[0-9]+$` | no | moments with no crossing |
+| `decision_ref` | source reference | after T8 | its counterparty class row |
+
+**H.10.5 Value case entry** (release part `value case`; made by code at S8)
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `entry_id` | `^VC-[0-9]+$` | yes | |
+| `outcome_ref` | reference to Design Brief section 6 | yes | |
+| `measures` | array, minItems 1, of `{measure_ref, baseline, target}`; `measure_ref` a criterion or a critical number; `baseline` `{atoms, as_of}` or `unknown`; `target` an atom ID or a decision reference, or `not set` | yes | |
+| `elements` | array of element IDs, minItems 1 | yes | |
+| `assumptions` | array of references to Design Brief section 9 | yes, may be empty | |
+| `decision_ref` | source reference | after T8 | |
+
+**H.10.6 Current-state activity profile** (release part `current-state activity profile`; made by code at S1)
+
+| Field | Type | Req | Meaning |
+|---|---|---|---|
+| `state` | enum `profile`, `no observation` | yes | |
+| `exports` | array of `{source_ref, as_of}` | when `profile`, minItems 1 | |
+| `lines` | array of `{role_type, process, measure, value, atoms}`; `measure` enum `share of time`, `volume` | when `profile`, minItems 1 | `role_type` and `process` as the export names them; `value` as the export states it |
+
+None of these lists holds a field about a person.
+
+### H.11 The checks by code
+
+1. **S1.** Every element of the strategy frame has its atoms, or is `not given` with its needs reference. The activity profile re-compiles from the pack version named, or reads `no observation` (T1).
+2. **S5 and S6.** Every capability has a `delivery_model` in the closed list and the `make_or_buy` that follows from it; every `shared service`, `outsourced` or `partner` capability names its crossings (T5); at S6 each such crossing is paired, or in the counterparty register, or a deferred boundary of the class of service providers (T6). (`docs/CARRIED-RULES.md` §8.3 item 11.)
+3. **S5.** Every `critical: yes` stream has a reason with its atoms; every `maturity.now` other than `unknown` cites atoms; every `maturity.target` other than `not set` cites an atom or a decision (T5). (§8.3 item 12.)
+4. **S6.** Every moment of a journey is a crossing of its counterparty entry, and every phase is a phase of a decided ledger (T6).
+5. **S8.** Every element row decided `ACCEPT` or `CORRECT` carries its priority; the proposed priorities re-compute by the rule of H.7 (T8). The value case and the activity profile re-compile byte-identical from the frozen parts and the decision references (T9).
+6. **S0.** No admitted export carries person-level records (T0 condition (f)).
+
+### H.12 How the stages after it read these
+
+Each reads by reference from Source Lifecycle, as it reads every part.
+- **Process and Position Design** starts its objectives from the goals and critical numbers of the strategy frame; designs the critical streams first; gives a capability that is `outsourced` or `partner` a hand-off to the outside party, never an in-house process; reads the activity profile as today's workload; and orders its work by priority.
+- **Delivery and Implementation** carries the value case as the start of its register of value, and the priorities into its rollout.
+
+**Done when.** The checks of H.11 pass at their gates, and RP1, RP5, RP6 and RP8 settle with these additions in their packets.
+
+*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.6.0 · Powered by 49GAION*

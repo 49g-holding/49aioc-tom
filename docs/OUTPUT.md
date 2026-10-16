@@ -1,13 +1,14 @@
 # The output: a TOM Release
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026.** Exactly what the Target Operating Model AIOC delivers. The manifest's machine contract is `contracts/tom-release.schema.json`; the filing receipt's is `contracts/tom-filing-receipt.schema.json`.
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026, adds four parts and what the model also states (blueprint Annex H).** Exactly what the Target Operating Model AIOC delivers. The manifest's machine contract is `contracts/tom-release.schema.json`; the filing receipt's is `contracts/tom-filing-receipt.schema.json`.
 
 ## 0. What you receive, in plain words
 
 When a run ends well, you receive one package, the **TOM Release**. Read it in this order:
 1. **The Decision Package.** In your own language: what the model is, why, what is still unknown, and what you decided. This part is written for you.
-2. **For each part of your organisation:** what it must be able to do, how its main work flows, who decides what (by role, never by name), and where it hands work to other parts and to outside parties.
-3. **The hand-offs between parts and with outside parties,** and the legal questions for a lawyer.
+2. **For each part of your organisation:** what it must be able to do, how each capability is delivered and how mature it is, how its main work flows and which flows are critical, who decides what (by role, never by name), and where it hands work to other parts and to outside parties.
+3. **The hand-offs between parts and with outside parties,** each outside party's journey through your organisation, and the legal questions for a lawyer.
+3a. **Your strategy on one page,** as your documents state it or as you decided it; **the value case**: for each change, how it is measured, where it starts and what it aims at; **the priority** of each element; and **how the work runs today**, where you gave records of it.
 4. **The role register:** every role in the model, once, with what it decides, what it answers for, and what it hands to whom.
 5. **The test against realistic situations,** and the quality checks made at each stage by checkers who did not make the work.
 6. **What is still open:** unknowns, assumptions, deferred items, anything you accepted as a known defect, and what is missing.
@@ -46,6 +47,16 @@ It names roles and what each decides. It does not say what fills a role. You can
 | Known defect | a material finding you decided to accept and proceed with; it is stated in the release's headline |
 | Frozen and content-addressed | every file has a fingerprint; any change is a new release |
 | Input Pack | the sealed, numbered set of passages from your documents that the design was made from; an answer or a decision you gave later is added as a new version |
+| Strategy frame | your strategy on one page: purpose, values, long-range target, three-year picture, one-year goals with their measures, and critical numbers; each from your documents or your decision, or marked `not given` |
+| Delivery model | how a capability is delivered: in-house, as a shared service, outsourced, or by a partner; never who the provider is |
+| Make or buy | `make` for in-house or a shared service; `buy` for outsourced or a partner |
+| Maturity | how established a capability is, on five levels: ad hoc, repeatable, defined, measured, improving; today's level only from your documents, the target only from your documents or your decision |
+| Critical value stream | a value stream marked critical for a stated reason: revenue, customers, legal or regulatory, safety, or continuity |
+| Journey | the moments where one outside party meets your organisation, in order; nothing on the party's own side |
+| Value case | for each change the design is for: its measures, where each starts and what it aims at, from your documents or decisions only |
+| Priority | `must`, `should` or `could`, proposed by a fixed rule and decided by you with each element |
+| Activity profile | how the work runs today, by role-type and process, from records you approved; never about a person |
+| Organisation dictionary | your own terms and what each means; where you have one, the model uses your words in your meaning |
 
 ## 1. In one paragraph
 
@@ -54,9 +65,10 @@ A run delivers one **TOM Release**: the organisation's target operating model, d
 - how the work flows, at the level of phases;
 - who decides what, as accountable role-types, never people, with every role listed once in the role register;
 - where it hands work to other children and to outside parties;
+- how each capability is delivered and how mature it is, and which flows are critical;
 - what is still unknown or deferred.
 
-It says why, with every element traced to the organisation's own sources. It has been walked through realistic situations and independently checked at every stage. It names roles and what each decides. It does not say what fills a role. It covers one slice of the organisation, and says which. The release is filed into Source Lifecycle as a source of origin kind `operating model`. The next stage, Process and Position Design, is told of it at once and reads it there.
+With them come your strategy on one page, each outside party's journey, the value case, the priority of each element, and how the work runs today where you gave records of it. It says why, with every element traced to the organisation's own sources. It has been walked through realistic situations and independently checked at every stage. It names roles and what each decides. It does not say what fills a role. It covers one slice of the organisation, and says which. The release is filed into Source Lifecycle as a source of origin kind `operating model`. The next stage, Process and Position Design, is told of it at once and reads it there.
 
 ## 2. The parts of a release
 
@@ -79,8 +91,12 @@ It says why, with every element traced to the organisation's own sources. It has
 | 15 | Decision Package and decision references | the Requesting Authority | §10 |
 | 16 | Registers | everyone | §11 |
 | 17 | Trace | auditors; the next stages | §12 |
+| 18 | Strategy frame | the Requesting Authority; the next stages | §4a |
+| 19 | Outside-party journeys | the organisation; the next stages | §7.7 |
+| 20 | Value case | the Requesting Authority; the next stages | §10a |
+| 21 | Current-state activity profile | the next stages | §11a |
 
-- **Files.** Parts 2-17 are each a file named in the manifest by hash.
+- **Files.** Parts 2-21 are each a file named in the manifest by hash.
 - **Run records** are not part of the release: read plans, round logs, the lens record, the party register, child packages, packaging ledgers, gate reports, the pairing table, the walk input, walkthrough hop traces, review records, ruling sheets, the run preview, the two drafts and the difference registers of the Frame and of each part's Design, the lint report and the carry-forward record. They are kept in the organisation's records repository and referenced from the manifest by hash. They hold atom IDs and hashes, never the text of a source.
 - **The filing receipt** is kept beside the manifest, never inside it.
 
@@ -100,7 +116,7 @@ It says why, with every element traced to the organisation's own sources. It has
 | `release_lint` | the lint result (pass), the deny-list version, and any exemption by part, rule, count and source passages, never the word |
 | `carries` | the earlier releases this one carries forward, if any |
 | `reference_models` | the catalogue of general patterns read, by version and hash, or `unavailable`; and each pattern used, by its plain name, with the parts it informed and how many elements rest on it alone |
-| `decisions` | each decision reference in Source Lifecycle, with its subject, value, deciding Cell, date taken, date recorded, and for a listed type its `signature_ref` |
+| `decisions` | each decision reference in Source Lifecycle, with its subject, value, deciding Cell, date taken, date recorded, for an element its decided priority, and for a listed type its `signature_ref` |
 | `final_status` | `ACCEPT`, or `ACCEPT WITH CORRECTIONS` (before or after the next stage) |
 | `honesty_ceiling` | the release ceiling, the per-entity ceilings, and the ceilings of the present state, the outcome and each criterion; each named with its claim and its label distribution; and the reliance on general patterns |
 | `known_defects` | any material finding the Requesting Authority accepted as a known defect, with the element and the decision reference |
@@ -137,6 +153,7 @@ It says why, with every element traced to the organisation's own sources. It has
 17. Version and change control: later steps may extend the brief, never rewrite it.
 18. The request kind, with its reason: a reading that may be revised.
 19. The run depth: `light`, `standard` or `deep`, as the design request states it, or `standard`.
+20. The strategy frame, filed as its own part (§4a).
 
 With the frame, the organisation also answered: whether this is how it reads its own request (the understanding check); whether each finding the sources hold, and the request did not state, was known; and whether each load-bearing assumption and obligation stands. With the frame, the organisation also answered, where two separate readings of its request differed and the documents did not settle it, which reading it meant. Each answer is a source, by reference.
 
@@ -158,6 +175,10 @@ With the frame, the organisation also answered: whether this is how it reads its
 
 It is a deliverable, not a rejection slip. It is filed into Source Lifecycle as a source of origin kind `design report`, with the ID `TOMD-` + SHA-256 of its body and a filing receipt. A Held Report, after a CLOSE choice (blueprint §5.8), is filed the same way.
 
+## 4a. Strategy frame
+
+Your strategy on one page, decided with the frame: the purpose; the values; the long-range target; the three-year picture; the one-year goals, each with its measure; the critical numbers, each with its definition. Each element is quoted from your documents, with its label, or marked `not given`, with what was asked and the answer. Nothing here was written for you, and nothing was worked out from other material: what your organisation wants comes only from you. Purpose and values are those of a document in force, or those the Cell carrying `[ORG]HOAC-GOV` signed. The next stage starts its objectives from the goals and the critical numbers.
+
 ## 5. Decided structure and slice
 
 - The parent statement.
@@ -173,7 +194,8 @@ It is a deliverable, not a rejection slip. It is filed into Source Lifecycle as 
 - **A0 Framing.**
 - **A1 Entity type used**, with provenance, confidence, basis and what would change it.
 - **A2 Capability map.** Each capability with its description, provenance, confidence and basis. A capability whose finer shape the evidence cannot tell apart is shown "deliberately undecomposed"; the candidates for its finer shape appear only in the brief, never here. How fine the map is follows the run depth (§3, `depth`): at `light`, each part's main capabilities only; at `deep`, one level finer where the documents support it. Where a general pattern suggested part of the map, it is named, and each element that rests on it alone is marked as an assumption.
-- **A3 Value streams**, at capability-level phases only, each phase labelled. A stream ends at its boundary crossing. A stream that cannot be described locally is marked `interface-dependent`.
+- **A2, also**, for each capability: its **delivery model** (`in-house`, `shared service`, `outsourced`, `partner`, or `not decided`), never naming a provider, with the crossings that deliver it where it is not in-house; its **make or buy**; and its **maturity**, today's level and the target, each with where it comes from, or `unknown` and `not set`.
+- **A3 Value streams**, at capability-level phases only, each phase labelled. A stream ends at its boundary crossing. A stream that cannot be described locally is marked `interface-dependent`. Each stream is marked **critical** or not; a critical stream names its reasons (revenue, customers, legal or regulatory, safety, continuity), each with its sources.
 - **A4 Decision rights and governance skeleton**: decision domains, accountable role-types and interfaces. No policy text, no meeting cadence, no procedure.
 - **A5 Expected interface map**, in two separate parts: **stated interface points**, which are authoritative; and **inferred or unresolved interface candidates**, which are not authoritative and satisfy no dependency.
 - **A6 Run status**: `complete`, with the stated reason why the grain is enough; or `incomplete-design`, naming the element and the missing fact-type.
@@ -191,7 +213,7 @@ It is a deliverable, not a rejection slip. It is filed into Source Lifecycle as 
 - Run statistics, computed by the renderer.
 
 ### 6.3 Design ledger
-The machine-readable record both outputs are rendered from. Every element has its ID, type, claim, provenance (`stated`, `inferred`, `unresolved`, or `assumed` where it rests on no passage of your documents), confidence, basis references and class (`authoritative`, `candidate`, `narrative`); where a general pattern informed it, the pattern and the catalogue version. A decision domain names its decision and its accountable role-type. The next stages read the ledger. An entry of class `candidate` or `narrative` is never consumed as designed content.
+The machine-readable record both outputs are rendered from. Every element has its ID, type, claim, provenance (`stated`, `inferred`, `unresolved`, or `assumed` where it rests on no passage of your documents), confidence, basis references and class (`authoritative`, `candidate`, `narrative`); where a general pattern informed it, the pattern and the catalogue version. A decision domain names its decision and its accountable role-type. A capability carries its delivery model, make or buy, the crossings that deliver it, and its maturity now and target; a value stream carries whether it is critical, and why. The next stages read the ledger. An entry of class `candidate` or `narrative` is never consumed as designed content.
 
 ## 7. Hand-offs and outside parties
 
@@ -214,6 +236,9 @@ Every crossing that did not pair, or paired with a contradiction, and how it was
 
 ### 7.6 Role register
 One entry per role-type named anywhere in the release: what it decides; what it is accountable for; where it appears, by part and element; and the hand-offs it sends and receives, with what crosses. It is built by a code check from the decided designs and registers, never written by hand. It lists roles only: never a person or a position. Two names are one role only where you decided so. Where roles conflicted (one role named two ways; one decision held by two roles; a decision with no role; a hand-off with no role at one end), the conflict and how it was settled are listed. The next stage reads this part first: positions and job descriptions are made from it.
+
+### 7.7 Outside-party journeys
+For each outside party of the counterparty register, its journey: the moments where it meets your organisation, in order, each a crossing already in the counterparty register, with the value stream and phase it meets. The order is as your documents state it, or `order not stated`. Nothing is designed on the party's own side, and no crossing is added: a moment your documents describe that no crossing carries was routed back as a seam finding. Each journey was decided with its counterparty class.
 
 ## 8. Walkthrough report
 
@@ -259,16 +284,28 @@ One more section covers the questions put to your organisation. The quality chec
 - how fine the model is (the run depth), in plain words, and where your documents stopped a part earlier;
 - the general patterns used, and each element that rests on a pattern alone, with what breaks if it is false;
 - the role register in plain words, with each role conflict and how it was settled;
+- the strategy frame, with each element `not given`;
+- each capability's delivery model and maturity, and each critical stream with its reasons;
+- each outside party's journey;
+- the value case (§10a);
+- how the work runs today, or that no record of it was given;
+- each element's proposed priority, and the rule that gave it;
 - the number of rows and passes the decision will take.
 
 Every statement in the package traces to a reviewed part of the release and claims no more than that part (checked before any decision row is sent).
 
 **The decision references** are those, in Source Lifecycle, of every decision taken on the package:
-- per element, `ACCEPT`, `CORRECT` with comment, or `REJECT`; each role of the role register is an element;
+- the strategy frame, decided with the frame;
+- per element, `ACCEPT`, `CORRECT` with comment, or `REJECT`, with its priority (`must`, `should`, `could`): the proposed priority on `ACCEPT`, yours on `CORRECT`; each role of the role register is an element;
+- the value case;
 - the final status;
 - the purpose-and-values rows signed at the gateway by the Cell carrying `[ORG]HOAC-GOV`;
 - any choice on a material finding notice;
 - your answers on two readings of your request, and on two names for one role.
+
+## 10a. Value case
+
+One entry for each outcome of the frame: the change, as the outcome states it; its measures, which are the criteria you decided and the critical numbers of your strategy frame; for each measure, where it starts (the baseline, from your documents, with its date, or `unknown`) and what it aims at (the target, from your documents or your decision, or `not set`); the elements it rests on; and the assumptions it rests on, each with what breaks if it is false. It is put together by a code check from the decided parts and your decisions, and holds no figure that is not quoted from your documents or decided by you. You decided it as one row, and you could set a target by correcting it. The stage that carries the model into your organisation starts its register of value from it.
 
 ## 11. Registers
 
@@ -283,6 +320,10 @@ Every statement in the package traces to a reviewed part of the release and clai
 | Demand signals | the missing capability or fact-type, by type only, and what raised it |
 | Known defects | the finding, the element, the decision that accepted it |
 | Superseded since read | the source and version, the date it was superseded, the elements resting on it |
+
+## 11a. Current-state activity profile
+
+How the work runs today, where you gave records of it: for each role-type and each process, as your records name them, the share of time or the volume your records state, with their date. The records were exported from your own systems by role-type and process, with nothing that says who did the work; your organisation approved each export, after its data-protection review, before it was recorded in Source Lifecycle. The profile describes today. It designs nothing and sets no workload. Where you gave no such records, it reads `no observation`, and nothing is put in its place.
 
 ## 12. Trace
 
@@ -299,6 +340,7 @@ A code check confirms that no element is orphaned, and that every cited passage 
 
 - Not a job description, a position list, a workload, a process manual, a policy, a choice of systems, or an assignment of work to anything other than an accountable role. Those are later stages, and each is a product in its own right.
 - Not evidence that the model works in practice. The walkthrough tests the design, not operations.
+- Not a record of how any person works. The activity profile is by role-type and process only.
 - Not a legal determination.
 - Not final for ever: a change is a new release that supersedes it.
 
@@ -306,6 +348,7 @@ A code check confirms that no element is orphaned, and that every cited passage 
 
 - **The next stage**, Process and Position Design, is told of each decided release at once, by a release notice that names it by reference. It reads the filed release from Source Lifecycle: the role register first, and the design ledgers as its machine input.
 - **Returning a release.** Process and Position Design, and Delivery and Implementation after it, return a release only by naming the parts and elements it concerns, using one of: accepted · cannot use, missing X · contradiction found · assumption invalid · request kind unsupported. A return comes back to this stage directly and is put to you. It never changes the release. It ends in one of four ways: answered by a new release; answered by your decision; set aside by your decision and carried forward as a known defect or a decided assumption; or withdrawn by the stage that sent it. Each round has a deadline; past it, the return comes to you for a decision. None is left open.
+- **What the next stages start from.** Process and Position Design starts its objectives from the strategy frame, designs the critical streams first, gives a capability that is outsourced or delivered by a partner a hand-off to the outside party, reads the activity profile as today's workload, and orders its work by priority. Delivery and Implementation starts its register of value from the value case.
 - **The next slice.** It is designed in a continuation run that carries this release forward: its decided parts are kept by hash and not asked again; only the children named for change, or whose sources changed, are designed again. The new release supersedes this one and contains every slice designed so far.
 - **Used on its own.** The release names accountable role-types and what each decides. An organisation may stop here and carry each role in a position of its own.
 - **Smaller stops.** An organisation may also stop after the decided Design Brief, or take a Readiness Report on its own. Each is filed into Source Lifecycle.

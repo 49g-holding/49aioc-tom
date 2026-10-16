@@ -41,11 +41,12 @@ import argparse, hashlib, json, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEFAULT_DENY_LIST = ROOT / "tests" / "release-lint" / "DENY-LIST.json"
 
-# The sixteen release parts (contracts/tom-release.schema.json), and their file-name slugs.
+# The twenty release parts (contracts/tom-release.schema.json), and their file-name slugs.
 PARTS = ["design brief", "structure", "blueprint", "rationale and evidence brief", "design ledger",
          "hand-offs register", "counterparty register", "legal and regulatory perimeter",
          "deferred-boundary register", "seam findings", "role register", "walkthrough report", "quality checks",
-         "decision package", "registers", "trace"]
+         "decision package", "registers", "trace", "strategy frame", "outside-party journeys", "value case",
+         "current-state activity profile"]
 SLUGS = {p.replace(" ", "-"): p for p in PARTS}
 MACHINE_PARTS = {"manifest", "design ledger", "trace"}      # rule set B does not apply
 NEVER_EXEMPT = {"manifest", "quality checks"}

@@ -1,6 +1,6 @@
 # Asking catalogue
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026.** What the Target Operating Model AIOC asks the Chief of Staff of `[ORG]AIOC-SL` for, in what form, and why. Each entry names the design decision it feeds, so no question is asked for its own sake. The catalogue is configuration: an organisation may add entries as tested changes; it never removes the rules of `INTAKE-WITH-SOURCE-LIFECYCLE.md`.
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026: EX-10, EX-11, records of the work, and priority on element rows (blueprint Annex H).** What the Target Operating Model AIOC asks the Chief of Staff of `[ORG]AIOC-SL` for, in what form, and why. Each entry names the design decision it feeds, so no question is asked for its own sake. The catalogue is configuration: an organisation may add entries as tested changes; it never removes the rules of `INTAKE-WITH-SOURCE-LIFECYCLE.md`.
 
 ## 1. Choosing the form
 
@@ -43,6 +43,8 @@ An explainer is the organisation's own account, given in a guided conversation t
 | EX-07 | The change wanted | What should be different after this design? How would anyone tell, by looking at the world, that it worked? | Outcomes and at least one observable criterion are the floor of the brief | outcomes; success criteria (decided by the Requesting Authority) |
 | EX-08 | Limits and obligations | What limits apply: legal, regulatory, money, time, people? What must the organisation itself provide or decide during the design? | Hard limits and obligations bound the design | constraints; obligations |
 | EX-09 | One real case, end to end | Take one real recent case of the main work. Walk it from start to finish: what happened, in what order, who handed what to whom, what went differently from the rule? Then one exception, and a second case. | Value streams and walkthrough situations need a real instance, not the general rule; differences between cases become candidate contradictions, not corrections | value streams; walkthrough situations |
+| EX-10 | Strategy on one page | Only the elements the sources lack, one at a time: What is this organisation for? What does it hold to? Where does it mean to be in the long run? What should it look like in three years? What must be true in one year, and how would anyone tell? Which few numbers show how it is doing, and what does each count? | The strategy frame is the organisation's own; it is never inferred. The priority of each element, the value case and the next stage's objectives start from it (blueprint Annex H.1) | strategy frame; purpose and values (GOV) |
+| EX-11 | How mature each capability is | For each capability of one part, as the model names it: how established is it today, on five levels (done differently each time; done the same way each time; written down and followed; measured; improved on its measures)? Is there a level it should reach? Asked once per part, only where a level would change a design choice | Today's level is a fact only the organisation holds; the target is its decision (blueprint Annex H.4) | maturity now; maturity target (decided by the Requesting Authority) |
 
 The full question set of each template, its order and its wording are kept as configuration of the Chief of Staff of `[ORG]AIOC-SL` (proposed addition SL-A4, `INTAKE-WITH-SOURCE-LIFECYCLE.md` §9). This catalogue fixes their IDs, purpose and what they feed.
 
@@ -110,10 +112,13 @@ All five are delegable. An answer by delegation is recorded `delegated, not deci
 ### 4.3 Export request
 `# · the system of record (by role, never by tool name in central text) · what to export · as of which date · why`. An export is a snapshot; it is never a live read. The contract requires all three of what, from which system and as of which date.
 
+**Records of the work as it runs today** (new in v0.6.0; blueprint Annex H.8). The request also states `aggregation: by role-type and process`, and says plainly that the export must carry no field that says who did the work. The organisation makes the projection and records its impact assessment and its data-protection decision (HF-17) before the export is recorded in Source Lifecycle (`INTAKE-WITH-SOURCE-LIFECYCLE.md`, SL-A13). An export that still says who did the work is refused at the socket (`person-level records`). Where none is given, nothing is put in its place.
+
 ### 4.4 Decision row
 `# · the decision, in one line · what changes depending on it · options · the deciding seat · the rows it depends on · your decision`. One decision per row. Rows only the Requesting Authority may answer are marked, and only its Cell may answer them. Rows of a listed type (for example purpose and values) are signed at the tool gateway, never in Source Lifecycle's own screens.
 - **Contradictions:** `A governs / B governs / both, in different cases / don't know`. The decision holds only for this brief; the losing side stays in the register; where both sides rest on the same source, the row is carried, not closed.
-- **Elements of the model:** `ACCEPT / CORRECT (comment) / REJECT`. A fact in a correction is admitted as `organisation-stated`.
+- **Elements of the model:** `ACCEPT / CORRECT (comment) / REJECT`. A fact in a correction is admitted as `organisation-stated`. Each row shows its proposed priority (`must / should / could`; blueprint Annex H.7): `ACCEPT` keeps it; `CORRECT` may change it.
+- **The strategy frame** (blueprint Annex H.1) and **the value case** (H.6): `ACCEPT / CORRECT (comment) / REJECT`, one row each. A correction of the value case may set a target; nothing is set for the organisation.
 - **Final status:** `ACCEPT / ACCEPT WITH CORRECTIONS (before or after the next stage) / RETURN FOR REDESIGN / REJECT`.
 - **A material finding notice:** `SUPPLY / WITHDRAW / REDESIGN / ACCEPT AS KNOWN DEFECT / CLOSE`, each with its cost, and one recommended choice; none is adopted until the Requesting Authority decides.
 - **Two readings of the request** (blueprint Annex G): `reading A / reading B / both readings / don't know`. Non-delegable. It asks what the organisation means, never which design is better.

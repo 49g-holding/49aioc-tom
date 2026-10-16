@@ -22,6 +22,7 @@
     "computed_sha256": "02409753d11d5a9d941c9ef614c23e14dd41c5691aeeba6ac87a44af5be45304",
     "atomisable": true,
     "carries_secret": false,
+    "person_level_records": false,
     "conversation_derived": false
   },
   "expect": {

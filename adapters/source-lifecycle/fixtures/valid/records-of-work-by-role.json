@@ -1,0 +1,49 @@
+{
+  "case": "An export of records of the work by role-type and process, with no field about a person: admitted, source-backed as of its date (blueprint Annex H.8).",
+  "served": {
+    "source_id": "SRC-EXPORT-0003",
+    "held": "held",
+    "version": "1",
+    "sha256": "02409753d11d5a9d941c9ef614c23e14dd41c5691aeeba6ac87a44af5be45304",
+    "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+    "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+    "origin_kind": "export",
+    "status": "in force",
+    "confidentiality": "internal",
+    "as_of": "2026-10-31"
+  },
+  "context": {
+    "channel": "adapter",
+    "in_scope": true,
+    "scope_expires": "2027-01-01",
+    "read_on": "2026-11-01",
+    "revoked": false,
+    "resolves": true,
+    "computed_sha256": "02409753d11d5a9d941c9ef614c23e14dd41c5691aeeba6ac87a44af5be45304",
+    "atomisable": true,
+    "carries_secret": false,
+    "person_level_records": false,
+    "conversation_derived": false
+  },
+  "expect": {
+    "admitted": true,
+    "refusal_reason": null,
+    "origin_kind": "export",
+    "status": "in force",
+    "confidentiality": "internal",
+    "defaulted": [],
+    "status_cap": "none",
+    "unknown": null,
+    "as_of": "2026-10-31",
+    "labels": [
+      {
+        "anchor": "e1",
+        "label": "source-backed"
+      },
+      {
+        "anchor": "e2",
+        "label": "source-backed"
+      }
+    ]
+  }
+}

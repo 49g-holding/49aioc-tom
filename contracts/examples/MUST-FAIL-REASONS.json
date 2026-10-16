@@ -79,6 +79,10 @@
     "path": "",
     "keyword": "not"
   },
+  "needs-request.export-by-person.json": {
+    "path": "/asking_form/aggregation",
+    "keyword": "const"
+  },
   "needs-request.export-incomplete.json": {
     "path": "/asking_form",
     "keyword": "required"
@@ -187,6 +191,10 @@
     "path": "/scope",
     "keyword": "required"
   },
+  "tom-release.no-strategy-frame.json": {
+    "path": "/parts",
+    "keyword": "contains"
+  },
   "tom-release.one-part-only.json": {
     "path": "/parts",
     "keyword": "minItems"
@@ -194,6 +202,10 @@
   "tom-release.patterns-without-catalogue.json": {
     "path": "/reference_models/patterns_used",
     "keyword": "maxItems"
+  },
+  "tom-release.priority-not-in-list.json": {
+    "path": "/decisions/2/decision/priority",
+    "keyword": "enum"
   },
   "tom-release.review-records-part.json": {
     "path": "/parts/15/part",

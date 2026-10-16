@@ -1,0 +1,66 @@
+{
+  "request_id": "NR-EXP-0002",
+  "version": 1,
+  "run_id": "RUN-EXAMPLE-001",
+  "parent_work_item": "WI-RUN-EXAMPLE-001",
+  "raised_by": "[ORG]POD-TRR",
+  "type": "export",
+  "question_plain": "Please export the records of the work as it runs today, by role-type and by process, as of 31 October 2026, with no field that says who did the work.",
+  "question_original": "The present state names the work and its roles but not how the time and the volume spread across them; the frame's outcomes rest on that.",
+  "asking_form": {
+    "form": "export request",
+    "export_of": "the records of the work in the case queues, by role-type and process",
+    "system_role": "the case management system",
+    "as_of": "2026-10-31",
+    "aggregation": "by role-type and process"
+  },
+  "why_it_matters": "The present state, and the next stage's reading of today's workload, need how the work runs today.",
+  "blocks": "Design Brief section 5 (present state); the current-state activity profile",
+  "effect_of_answer": "The activity profile states the share of time and the volume by role-type and process; without it the part reads no observation.",
+  "if_unanswered": {
+    "carried_as": "unknown",
+    "cost": "The activity profile reads no observation; the next stage reads today's workload from nothing in this release."
+  },
+  "minimality_proof": {
+    "searched": [
+      {
+        "source_id": "SRC-ARTICLES",
+        "held": "held",
+        "version": "1",
+        "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+        "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+        "origin_kind": "document",
+        "status": "in force",
+        "confidentiality": "internal"
+      }
+    ],
+    "why_unanswered": "The articles name the parent only, not its subsidiaries or their owners."
+  },
+  "leverage": {
+    "breadth": "high",
+    "irreversibility": "medium",
+    "cost_of_being_wrong": "high"
+  },
+  "suggested_seat": {
+    "role_as_named": "the company secretary, as the articles name the role",
+    "citation": {
+      "source_id": "SRC-ARTICLES",
+      "held": "held",
+      "version": "1",
+      "sha256": "76b809a01069ff7d9f42f0ca33b04dbeb0cfaccc2e53cc62229a1c87e1eede56",
+      "location": "[ORG]AIOC-SL output socket @ SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "snapshot_id": "SLM-0600aba3e5d8a927341ce6fe09ff9257309c0448fb6397fedf689cd05a6c284f",
+      "origin_kind": "document",
+      "status": "in force",
+      "confidentiality": "internal",
+      "anchor": "s20"
+    }
+  },
+  "non_delegable": false,
+  "depends_on": [],
+  "pass_id": "PASS-1",
+  "row": 5,
+  "due": "2026-11-01",
+  "missing_report_ref": "MR-RUN-EXAMPLE-001-1"
+}

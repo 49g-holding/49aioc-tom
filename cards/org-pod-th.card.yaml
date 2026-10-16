@@ -5,16 +5,16 @@ full_name: TOM Hand-offs
 parent: '[ORG]AIOC-TOM'
 accountable_to: '[ORG]CELL-TDL'
 type: AI Pod
-card_version: v0.5.0
-version: 0.5.0
+card_version: v0.6.0
+version: 0.6.0
 lineage:
   id: '[ORG]POD-TH'
-  version: 0.5.0
+  version: 0.6.0
   relation: original
 lifecycle_state: designed
 fixed_test:
   id: TEST-TOM-TH
-  version: v4
+  version: v5
   owner: '[ORG]CELL-TDL'
 inner_units:
 - '[ORG]CELL-THA'
@@ -32,7 +32,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-TOM
   required_tests:
-  - TEST-TOM-TH v4
+  - TEST-TOM-TH v5
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-TH'
   port: ai-out
@@ -49,7 +49,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-TOM
   required_tests:
-  - TEST-TOM-TH v4
+  - TEST-TOM-TH v5
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-TH'
   port: hu-in
@@ -61,7 +61,7 @@ ports:
   authority_limit: the signer's authority_scope; nothing received here is a source
   audit_trail: the run record of [ORG]AIOC-TOM
   required_tests:
-  - TEST-TOM-TH v4
+  - TEST-TOM-TH v5
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-TH'
   port: hu-out
@@ -73,7 +73,7 @@ ports:
   authority_limit: information only
   audit_trail: the run record of [ORG]AIOC-TOM
   required_tests:
-  - TEST-TOM-TH v4
+  - TEST-TOM-TH v5
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-TH'
   port: stop
@@ -85,6 +85,6 @@ ports:
   authority_limit: stop only
   audit_trail: unit register
   required_tests:
-  - TEST-TOM-TH v4
+  - TEST-TOM-TH v5
   enforcement: shared-gateway-outside-unit
   stop_door: true

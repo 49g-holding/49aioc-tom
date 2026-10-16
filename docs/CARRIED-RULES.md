@@ -1,6 +1,6 @@
 # Carried rules: the full texts behind `[ORG]AIOC-TOM`
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026.**
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026 (blueprint Annex H): §4.1 sections 16 and 22, §4.5, §8.2, §8.3, §12.1 and §12.2.**
 
 This file holds the full text of every rule that the blueprint (`blueprint/TOM-BLUEPRINT.md`) carries from an earlier organisation-design chain and states there only in short. With it, any organisation can run these rules without access to any private text. The wording is kept as close to the earlier text as plain English allows. Where a rule had to be adapted to this AIOC (it works only from documents served by Source Lifecycle, it never asks a person anything, and its model names roles and what each decides, never who fills them), the rule keeps its force: nothing is weakened, dropped or tightened in the adaptation. Where the blueprint itself changes a carried rule, a line marked **Here** says so, and `docs/DESIGN-BASIS.md` gives the reason. The section numbers are fixed, because the blueprint cites them. "Must", "never" and "only" are binding. Positions are those of the blueprint (§3): the Requesting Authority decides; the Chief of Staff of `[ORG]AIOC-SL` asks people; the Source Proxy, Request Analyst, Second Request Analyst, Frame Reconciler, Work Structurer, Packager, Designer, Second Designer, Ledger Reviser, Hand-off Analyst, Situation Author, Situation Walker and the Blind Reviewers A–E do the work of this AIOC.
 
@@ -201,12 +201,13 @@ Every row is labelled (blueprint Annex B). The frame comes first; then one child
 13. **The decided structure**: the per-child decision record.
 14. **Evidence basis**: the coverage line (§1.1); each source read, with its version, status and the anchors cited; what was requested and not provided, named as a gap, never left as silence.
 15. **Gate A record** (§3.1), with the floor result.
-16. **Honesty ceiling** (blueprint Annex B.3): per committed entity; the brief ceiling as the lowest of the committed entities; each context entity's ceiling stated separately; the ceiling for the present state, the outcome and each criterion; the weakest load-bearing claim, named; the label distribution; and "nothing in this brief was observed: yes".
+16. **Honesty ceiling** (blueprint Annex B.3): per committed entity; the brief ceiling as the lowest of the committed entities; each context entity's ceiling stated separately; the ceiling for the present state, the outcome and each criterion; the weakest load-bearing claim, named; the label distribution; and "nothing in this brief was watched: yes". Records of the work as it runs today, where given, are approved exports by role-type and process, read as sources like any other (blueprint Annex H.8).
 17. **Open items** (§3.1).
 18. **Stop reason and declared residue** (§5.7, §5.8).
 19. **Change control.** A later step may extend the brief but never rewrite it. Any change to sections 1 to 14 needs a new decision on the changed and dependent rows, and a new version.
 20. **Request kind** (§2.8): the kind, its reason, its label, and any re-classification.
 21. **Run depth** (blueprint Annex F): the depth, and the atom of the Design Request that states it, or `standard` by default.
+22. **Strategy frame** (new in v0.6.0; blueprint Annex H.1): purpose, values, long-range target, three-year picture, one-year goals with their measures, critical numbers with their definitions; each cited, or `not given`, with the needs reference and its answer. Filed as its own release part. Never written or inferred by an author.
 
 ### §4.2 Contradictions
 
@@ -262,7 +263,7 @@ The Readiness Report is the honest output when no brief (or no child brief for a
 ### §4.5 The frame decision pass
 
 The frame decision pass (blueprint §5.1, step 12) carries:
-- non-delegable decision rows: scope and exclusions; the entity roster with `committed` and `context`; each contradiction touching them that no held source settles;
+- non-delegable decision rows: scope and exclusions; the entity roster with `committed` and `context`; each contradiction touching them that no held source settles; the strategy frame, as one row, naming each element `not given` (new in v0.6.0; blueprint Annex H.1); and, where no source in force states them, purpose and values, as the listed type `set-purpose-or-values`;
 - delegable confirmation rows (`asking_form.row_purpose`):
   - `understanding check`: one row, "This is how we read your request", with the frame in plain words and its main consequences;
   - `found, not said`: one row per finding the sources hold and the Design Request did not state (the answer records `known_before`);
@@ -530,7 +531,7 @@ The gates run on every package. **Any finding blocks the package.**
 
 ### §8.2 The ledger, its classes, and the narrative-cell contract
 
-1. **The design ledger is the authored artefact.** Each element carries: an ID, its type, its claim, its provenance (`stated`, `inferred`, `unresolved`, or `assumed` only where its basis holds no atom), its confidence, its basis references, its limitations, its class, and, where a reference model informed it, its pattern references (pattern ID, catalogue version, what it suggested; blueprint Annex E.19). An element of type decision domain also carries its decision, its accountable role-type (or `unknown`) and any roles declared to hold it jointly; an element of type capability may carry its accountable role-type. The role register is compiled from these fields (blueprint Annex E.17). Outputs A and B are rendered from the ledger by code. The Designer never writes Output A directly.
+1. **The design ledger is the authored artefact.** Each element carries: an ID, its type, its claim, its provenance (`stated`, `inferred`, `unresolved`, or `assumed` only where its basis holds no atom), its confidence, its basis references, its limitations, its class, and, where a reference model informed it, its pattern references (pattern ID, catalogue version, what it suggested; blueprint Annex E.19). An element of type decision domain also carries its decision, its accountable role-type (or `unknown`) and any roles declared to hold it jointly; an element of type capability may carry its accountable role-type. The role register is compiled from these fields (blueprint Annex E.17). **New in v0.6.0** (blueprint Annex H.2–H.4; field lists H.10.2 and H.10.3): an element of type capability also carries its delivery model, its make-or-buy (by code), the crossings that deliver it where it is not in-house, and its maturity now and target, each with its basis; an element of type value stream carries `critical`, with its reasons and their atoms. A delivery model never names a provider. A maturity level now is only what an atom states; a target only what an atom states or a decision sets. Outputs A and B are rendered from the ledger by code. The Designer never writes Output A directly.
 2. **The classes:**
    - `authoritative`: designed content that later stages may consume;
    - `candidate`: a non-authoritative finer structure, in the brief only, with its exact item terms declared (so that code can bar them from Output A);
@@ -558,6 +559,8 @@ Run by the Chief of Staff as a code step on the locked, rendered draft; never in
 8. **Schema:** typed fields, closed confidence values, mandatory basis references, and **no undeclared section** (the rendered sections are fixed).
 9. **Patterns:** every pattern reference resolves to a pattern of the catalogue pinned for the run, by ID and version; an element whose basis holds no atom has provenance `assumed`, with what breaks if it is false and when to re-check; no pattern is cited as a basis atom.
 10. **Role fields:** every decision-domain element names its decision and its accountable role-type, or `unknown`.
+11. **Delivery** (new in v0.6.0; blueprint Annex H.2): every capability's delivery model is in the closed list; its make-or-buy is the one that follows from it; a `shared service`, `outsourced` or `partner` capability names at least one crossing of the child's register in `delivered_through`, and one that names none is an undeclared-crossing flag.
+12. **Criticality and maturity** (new in v0.6.0; blueprint Annex H.3, H.4): every `critical: yes` stream has at least one reason with its atoms; every `maturity.now` other than `unknown` cites atoms, with their date; every `maturity.target` other than `not set` cites an atom or a decision reference.
 
 ### §8.4 The verification labels
 
@@ -808,7 +811,7 @@ The Decision Package is written for the Requesting Authority as a decision-maker
 4. the decision model: each decision, where accountability sits, the authority boundary that applies, and what cannot be decided locally;
 5. the boundary, as **inside, outside and deferred, made visually obvious** (three visibly separate blocks);
 6. *(Withdrawn in v0.3.0: there is no model of the whole; blueprint §5.6.)*
-7. the design rationale and evidence brief, in readable form, distinguishing what is established in a source from what is a design choice (the design decided it, and could have decided otherwise), and noting that nothing was observed;
+7. the design rationale and evidence brief, in readable form, distinguishing what is established in a source from what is a design choice (the design decided it, and could have decided otherwise), and noting that nothing was watched;
 8. **the open items, in five separate blocks**:
    - **A** evidence gaps (*not questions for the decider*);
    - **B** implementation and instrument gaps (*not questions for the decider*);
@@ -826,7 +829,13 @@ The Decision Package is written for the Requesting Authority as a decision-maker
 16. the sources superseded since they were read, and what rests on them, in plain words;
 17. the run depth, in plain words: how fine the model is, and where the evidence stopped a part earlier;
 18. the general patterns used: for each part, the pattern that suggested its structure, by its plain name; that a general pattern is not evidence about the organisation; and each element that rests on the pattern alone, with what breaks if it is false;
-19. the role register, in plain words: each role-type, what it decides and is accountable for, and what it hands to whom; each role finding and how it was settled.
+19. the role register, in plain words: each role-type, what it decides and is accountable for, and what it hands to whom; each role finding and how it was settled;
+20. the strategy frame, with each element `not given` (new in v0.6.0; blueprint Annex H.1);
+21. each capability's delivery model and maturity, and each critical stream with its reasons (H.2–H.4);
+22. each outside party's journey (H.5);
+23. the value case (H.6);
+24. how the work runs today, or that no record of it was given (H.8);
+25. each element's proposed priority, and the rule that gave it (H.7).
 
 ### §12.2 The decision sheet
 
@@ -835,7 +844,7 @@ The Decision Package is written for the Requesting Authority as a decision-maker
 - **`CORRECT`**, with a comment;
 - **`REJECT`**.
 
-Each row has a comment field.
+Each row has a comment field. **New in v0.6.0** (blueprint Annex H.7): each element row shows its proposed priority (`must`, `should`, `could`), which `ACCEPT` keeps and `CORRECT` may change; the decided priority is recorded with the decision. **One row for the value case** (H.6), answered the same way; a correction may set a target.
 
 **One final-status row**, choosing exactly one of:
 - **`ACCEPT`**: the model stands as delivered;

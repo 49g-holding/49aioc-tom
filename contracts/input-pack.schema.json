@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:49gaion:library:tom:input-pack:v0.4",
-  "title": "[ORG]AIOC-TOM Input Pack v0.4",
+  "$id": "urn:49gaion:library:tom:input-pack:v0.6",
+  "title": "[ORG]AIOC-TOM Input Pack v0.6",
   "description": "One version of the Input Pack: what the Input socket hands to the engine (blueprint §4.3; Annex E.1). It holds references, hashes and labels only, never the text of a source. pack_id is 'TOMI-' + SHA-256 of the canonical pack body without pack_id (the canon of the release: keys sorted, separators ',' and ':', UTF-8, non-ASCII kept). P0 is made at admission; each later version adds atoms or flags and removes nothing. Dates are checked by the validator with format assertion on.",
   "type": "object",
   "additionalProperties": false,
@@ -729,6 +729,7 @@
               "does not resolve",
               "hash mismatch",
               "carries a secret",
+              "person-level records",
               "not atomisable",
               "human port",
               "other channel",

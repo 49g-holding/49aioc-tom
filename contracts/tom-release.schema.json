@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:49gaion:library:tom:tom-release:v0.4",
-  "title": "[ORG]AIOC-TOM TOM Release manifest v0.4",
-  "description": "The manifest of one TOM Release (docs/OUTPUT.md §3). release_id is 'TOMR-' + SHA-256 of the canonical manifest body without release_id; the filing reference is kept in a separate filing receipt, so filing never changes the content address. The manifest names every part and every run record by hash, and every Input Pack version with its snapshots (docs/OUTPUT.md §3). Dates are checked by the validator with format assertion on. It states the run depth, the reference-model catalogue read and the patterns used.",
+  "$id": "urn:49gaion:library:tom:tom-release:v0.6",
+  "title": "[ORG]AIOC-TOM TOM Release manifest v0.6",
+  "description": "The manifest of one TOM Release (docs/OUTPUT.md §3). release_id is 'TOMR-' + SHA-256 of the canonical manifest body without release_id; the filing reference is kept in a separate filing receipt, so filing never changes the content address. The manifest names every part and every run record by hash, and every Input Pack version with its snapshots (docs/OUTPUT.md §3). Dates are checked by the validator with format assertion on. It states the run depth, the reference-model catalogue read and the patterns used. From v0.6 it names twenty parts, among them the strategy frame, the outside-party journeys, the value case and the current-state activity profile (blueprint Annex H), and each element decision carries its decided priority.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -377,7 +377,11 @@
                   "quality checks",
                   "decision package",
                   "registers",
-                  "trace"
+                  "trace",
+                  "strategy frame",
+                  "outside-party journeys",
+                  "value case",
+                  "current-state activity profile"
                 ]
               },
               "rule": {
@@ -531,7 +535,7 @@
     },
     "parts": {
       "type": "array",
-      "minItems": 16,
+      "minItems": 20,
       "allOf": [
         {
           "contains": {
@@ -724,6 +728,54 @@
               "part"
             ]
           }
+        },
+        {
+          "contains": {
+            "properties": {
+              "part": {
+                "const": "strategy frame"
+              }
+            },
+            "required": [
+              "part"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "properties": {
+              "part": {
+                "const": "outside-party journeys"
+              }
+            },
+            "required": [
+              "part"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "properties": {
+              "part": {
+                "const": "value case"
+              }
+            },
+            "required": [
+              "part"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "properties": {
+              "part": {
+                "const": "current-state activity profile"
+              }
+            },
+            "required": [
+              "part"
+            ]
+          }
         }
       ],
       "items": {
@@ -753,7 +805,11 @@
               "quality checks",
               "decision package",
               "registers",
-              "trace"
+              "trace",
+              "strategy frame",
+              "outside-party journeys",
+              "value case",
+              "current-state activity profile"
             ]
           },
           "child": {
@@ -883,6 +939,14 @@
                     "type": "string",
                     "minLength": 1,
                     "description": "The correction in the decider's own wording; a fact in it is admitted as organisation-stated by this decision's reference."
+                  },
+                  "priority": {
+                    "enum": [
+                      "must",
+                      "should",
+                      "could"
+                    ],
+                    "description": "The decided priority of an element row (blueprint Annex H.7): proposed by code, kept on ACCEPT, changed only by CORRECT."
                   },
                   "listed_type": {
                     "enum": [
