@@ -11,6 +11,7 @@
     "computed_sha256": null,
     "atomisable": true,
     "carries_secret": false,
+    "person_level_records": false,
     "conversation_derived": false
   },
   "expect": {

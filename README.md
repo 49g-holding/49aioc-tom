@@ -10,6 +10,7 @@
 > 1. An approved design request, recorded in Source Lifecycle, the organisation's library of sources: who asks, what the design is for, what should be different, and how fine the model should be (light, standard or deep).
 > 2. The organisation's own documents, read only by reference. The input socket checks them, cuts them into numbered passages, labels each passage with how far it can be trusted, and hands the engine one sealed Input Pack.
 > 3. Answers to what the documents do not say. TOM never asks a person. It asks the Chief of Staff of Source Lifecycle, who gets the answer from the right person, has it approved and recorded, and returns it. Each answer arrives as a new version of the Input Pack.
+> 4. Where the organisation has them, records of how the work runs today, exported by role and by process and never about a person. Where there are none, the model says so and goes on.
 >
 > Today Source Lifecycle is the only source. Other kinds of source plug into the same socket, each through its own adapter file, and only to be read.
 >
@@ -28,8 +29,9 @@
 >
 > **What comes out: the TOM Release**
 > 1. The Decision Package: a plain summary, what is still unknown, and the choices to make.
-> 2. For each part: what it must be able to do, its main flows, who decides what, and where it hands work over, each with its reasons and sources.
-> 3. The hand-offs between parts and with outside parties, and the legal questions for a lawyer.
+> 2. For each part: what it must be able to do, how each capability is delivered and how mature it is, its main flows and which are critical, who decides what, and where it hands work over, each with its reasons and sources.
+> 3. The hand-offs between parts and with outside parties, each outside party's journey through the organisation, and the legal questions for a lawyer.
+> 3a. The strategy on one page, the value the change is meant to bring, the priority of each element, and how the work runs today where records exist.
 > 4. The role register: every role in the model, what it decides, what it answers for, and what it hands to whom.
 > 5. The test against situations, and the quality checks made at each stage.
 > 6. What is still open: unknowns, assumptions, deferred items, and any defect the organisation chose to accept.
@@ -44,19 +46,19 @@
 
 The writing repository of **`[ORG]AIOC-TOM`, Target Operating Model**: the AIOC that designs an organisation's target operating model from its own documents. It is the second stage of an organisation's design under 49GAION, after Source Lifecycle: the Library part 49GAION Target Operating Model (Operating Protocol §19; `49GAION/DR-0016`), whose mother blueprint this is. In each organisation this repository is named `<org>aioc-tom` (49GAION Naming Standard R9).
 
-**Status: draft `v0.5.0`, 16 October 2026: closed at v0.4.0; v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 links this AIOC directly to the stages after it (`decisions/DR-0005`). Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 added four features to the closed v0.3.0 and removed nothing (`decisions/DR-0003`).
+**Status: draft `v0.6.0`, 16 October 2026: closed at v0.4.0; v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 links this AIOC directly to the stages after it (`decisions/DR-0005`); v0.6.0 adds what the model also states and reads (`decisions/DR-0006`; blueprint Annex H). Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 added four features to the closed v0.3.0 and removed nothing (`decisions/DR-0003`).
 
 ## Where to read
 
 | File | What it is |
 |---|---|
 | [`docs/OUTPUT.md`](docs/OUTPUT.md) | **start here** after the page above: what you receive, in plain words, with a glossary; then exactly what a TOM Release contains |
-| [`blueprint/TOM-BLUEPRINT.md`](blueprint/TOM-BLUEPRINT.md) | the blueprint, on the 49GAION AIOC Blueprint Template `v1.5.0`: identity, card, placement, positions, the four standard and nine functional capabilities, the nine stages, each with its input, output and done-test (§5.0), the Review Panel rule (§5.8), run states, gates, labels, decision rules, the field lists of the new objects (Annex E), the run depth (Annex F), the two authors (Annex G), Cells and Pods |
+| [`blueprint/TOM-BLUEPRINT.md`](blueprint/TOM-BLUEPRINT.md) | the blueprint, on the 49GAION AIOC Blueprint Template `v1.5.0`: identity, card, placement, positions, the four standard and nine functional capabilities, the nine stages, each with its input, output and done-test (§5.0), the Review Panel rule (§5.8), run states, gates, labels, decision rules, the field lists of the new objects (Annex E), the run depth (Annex F), the two authors (Annex G), what the model also states and reads (Annex H), Cells and Pods |
 | [`docs/INTAKE-WITH-SOURCE-LIFECYCLE.md`](docs/INTAKE-WITH-SOURCE-LIFECYCLE.md) | how it learns anything: only documents; the Design Request; needs requests to the Chief of Staff of `[ORG]AIOC-SL`; the Missing Report; what Source Lifecycle is asked to add |
 | [`docs/ASKING-CATALOGUE.md`](docs/ASKING-CATALOGUE.md) | the document kinds, explainer templates, request kinds and row forms it asks with, and why |
 | [`docs/CARRIED-RULES.md`](docs/CARRIED-RULES.md) | the full text of every rule carried from an earlier organisation-design chain |
 | [`docs/DESIGN-BASIS.md`](docs/DESIGN-BASIS.md) | why each rule is here, and which test case checks it |
-| [`tests/TEST-TOM.md`](tests/TEST-TOM.md) | the fixed test, written before use: 108 cases, the Design Lead's seat test, path qualification, the walkthrough battery and the reviewer battery |
+| [`tests/TEST-TOM.md`](tests/TEST-TOM.md) | the fixed test, written before use: 123 cases, the Design Lead's seat test, path qualification, the walkthrough battery and the reviewer battery |
 | [`tests/release-lint/`](tests/release-lint/) | the words a release may not hold, and their fixtures |
 | [`adapters/`](adapters/) | one file per source type that plugs into the Input socket; today Source Lifecycle |
 | [`contracts/`](contracts/) | the machine contracts, with valid and must-fail examples; `tools/check_contracts.py` checks them |

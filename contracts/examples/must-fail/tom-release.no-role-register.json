@@ -1,5 +1,5 @@
 {
-  "release_id": "TOMR-589375b2eae61ccc77576b7f7076462b43d5a0c91694a078fdaf16ab9ae7d893",
+  "release_id": "TOMR-f21771575e55f5b05452e2823dca4a0b253a3ccf4bc81fd3abe20b3a410446f8",
   "org_aion": "[ORG]AION",
   "scope": {
     "subject": "whole organisation",
@@ -136,6 +136,30 @@
       "path": "trace.md",
       "sha256": "eafe895eb8119e6e5d06463590b2ef81b3651c157d5c8e18f1889186c7fd0ac0",
       "bytes": 2200
+    },
+    {
+      "part": "strategy frame",
+      "path": "strategy-frame.md",
+      "sha256": "55669b2a46ddfd8021d382d8c59dccf910d4b64336e176664caaefdaaf9d697e",
+      "bytes": 1800
+    },
+    {
+      "part": "outside-party journeys",
+      "path": "outside-party-journeys.md",
+      "sha256": "db981349c058b5facf64d120c0f0d4140b16d4ec4c11116d38a4312583974689",
+      "bytes": 1600
+    },
+    {
+      "part": "value case",
+      "path": "value-case.md",
+      "sha256": "1b400be5c8b64017b0e2a68578e4ab3277f7b986695f72b56f1d5a46b54f9fd0",
+      "bytes": 1400
+    },
+    {
+      "part": "current-state activity profile",
+      "path": "current-state-activity-profile.md",
+      "sha256": "6d56aef2cae57f60e1a2acf2832f3b75464159cf83498dfb9005f195e020b9e6",
+      "bytes": 900
     }
   ],
   "run_records": [

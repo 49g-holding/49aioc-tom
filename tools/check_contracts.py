@@ -228,6 +228,8 @@ def adapter_outcome(block, served, ctx):
         return refuse("hash mismatch")
     if ctx["carries_secret"]:
         return refuse("carries a secret")
+    if ctx["person_level_records"]:
+        return refuse("person-level records")
     if held and not ctx["atomisable"]:
         return refuse("not atomisable")
     m, defaulted, values = block["mappings"], [], {}

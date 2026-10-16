@@ -1,6 +1,6 @@
 # Intake with Source Lifecycle
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026.** How the Target Operating Model AIOC gets everything it knows. It reads only sources, and where the sources are silent it asks through the Chief of Staff of `[ORG]AIOC-SL`. The machine contracts are in `contracts/`:
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026, adds SL-A13 and the v0.6 sockets contract (§9).** How the Target Operating Model AIOC gets everything it knows. It reads only sources, and where the sources are silent it asks through the Chief of Staff of `[ORG]AIOC-SL`. The machine contracts are in `contracts/`:
 - `source-reference.schema.json`;
 - `input-pack.schema.json`;
 - `needs-request.schema.json` and `needs-answer.schema.json` (`:v0.4`);
@@ -54,7 +54,7 @@ The Chief of Staff of `[ORG]AIOC-SL` is a connecting Chief of Staff: it connects
 2. **Needs requests.** Each needs request is a sub-item of the run, with `parent_work_item` set to the run and chain depth 1:
    - receiver: `[ORG]AIOC-SL`;
    - requested output: a needs answer under `contracts/needs-answer.schema.json`;
-   - acceptance test: TEST-TOM v4, case 11 (the eight checks of blueprint §4.3);
+   - acceptance test: TEST-TOM v5, case 11 (the eight checks of blueprint §4.3);
    - sources: the references of `minimality_proof.searched`, each with its location (the output socket, at the snapshot of the pack version the request was raised from).
 
    Source Lifecycle answers the sub-item. It never opens a new item back to this AIOC, so the chain never loops (Protocol §4.6, item 2).
@@ -174,7 +174,7 @@ Protocol §13 already gives most of it:
 - connections approved, scoped and revoked by a labelled human seat, through the tool gateway;
 - the output socket that answers by reference.
 
-This AIOC needs twelve additions. They are proposed to Source Lifecycle, not decided here. Gate T0 fails with the reason `SL contract not supported` until Source Lifecycle's card declares them.
+This AIOC needs thirteen additions. They are proposed to Source Lifecycle, not decided here. Gate T0 fails with the reason `SL contract not supported` until Source Lifecycle's card declares them.
 
 | ID | Addition | Acceptance test (one line) |
 |---|---|---|
@@ -190,7 +190,10 @@ This AIOC needs twelve additions. They are proposed to Source Lifecycle, not dec
 | SL-A10 | **The organisation-design grant.** The approving seat is the `[ORG]HOAC-ACS` seat that `[ORG]AIOC-SL` is accountable to, signing `connect-external-port` at the gateway, recorded in the unit register. The grant has three parts: unrestricted read; least-privilege write for SL-A9 only; and needs requests. Scope expiry is checked on every read. | A grant made without that seat's gateway signature does not work; a read after expiry is refused; a write outside the named origin kinds is refused. |
 | SL-A11 | **Notices to connected parts.** On a revocation, a narrowing of scope, a reclassification or a supersession affecting references a part has read, Source Lifecycle sends that part a notice naming each affected reference and version, never the content. | After revocation, the test part receives a notice naming every reference it read under the grant, and its next read is refused. |
 | SL-A12 | **The sockets contract, published.** The needs-request, needs-answer, needs-status, Missing Report and source-reference contracts are versioned JSON Schemas with fixtures. A change names every connected part it affects and re-runs the cross-AIOC test (Protocol §11, item 2). | The contract fixtures pass in CI; a breaking change without a list of affected parts fails the check. |
+| SL-A13 | **Records of the work, never about a person** (new in v0.6.0; blueprint Annex H.8). An export of records of the work as it runs (work queues, case logs, workflow and time records) is recorded only as the organisation's projection by role-type and process: the organisation's own mechanism removes who did the work, and any line that would still point to whoever did it; the seat that holds data protection (HF-17) records an impact assessment of the export and its decision on it (where the projection moves personal data, the listed type `export-share-or-purge-personal-data`). It is served as origin kind `export`, with its `as_of` date. | An export offered with a field that says who did the work is not recorded; an export recorded without its impact assessment and its HF-17 decision is not served; an admitted one is served as `export` with its date. |
 
 **The v0.4 decision options.** The options `reading A`, `reading B`, `both readings`, `same role` and `different roles` are a change of the published sockets contract under SL-A12. Source Lifecycle shows them as it shows every option (SL-A5), and declares support for the v0.4 needs-request and needs-answer contracts on its card (gate T0, condition (c)). No new addition is asked.
+
+**The v0.6 sockets contract** (blueprint Annex H.7, H.8). The needs-request contract adds `asking_form.proposed_priority` (on an element row) and `asking_form.aggregation` (on an export of records of the work); the needs-answer contract adds `decision.priority`. Source Lifecycle shows the proposed priority with the row, records the priority decided with the decision, and states the aggregation on the export request. It declares support for the v0.6 contracts on its card (gate T0, condition (c)); with SL-A13, that is the whole change.
 
 *Powered by 49GAION*

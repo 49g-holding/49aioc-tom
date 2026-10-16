@@ -1,12 +1,12 @@
 # Design basis: why each rule of `[ORG]AIOC-TOM` is here
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026.**
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026, adds §9a.**
 
-This register says, for every rule of `[ORG]AIOC-TOM`, why it is here, where the blueprint states it, where its full text is, and which case of TEST-TOM v3 checks it. Each rule either comes from an earlier organisation-design chain (and is then marked kept, changed, moved, restored or dropped) or is new in this AIOC. The earlier chain is described here only generically. The private register that maps each rule to the earlier texts, their versions and the decision records behind them is kept in the organisation's code project (`docs/LINEAGE.md` there), and the earlier texts themselves are kept unchanged there under `legacy/`. Nothing in this file needs those texts: the full text of every carried rule is in `docs/CARRIED-RULES.md`. The earlier chain is a case study: blueprint §0. No earlier test result or run outcome is given here as a reason.
+This register says, for every rule of `[ORG]AIOC-TOM`, why it is here, where the blueprint states it, where its full text is, and which case of TEST-TOM v5 checks it. Each rule either comes from an earlier organisation-design chain (and is then marked kept, changed, moved, restored or dropped) or is new in this AIOC. The earlier chain is described here only generically. The private register that maps each rule to the earlier texts, their versions and the decision records behind them is kept in the organisation's code project (`docs/LINEAGE.md` there), and the earlier texts themselves are kept unchanged there under `legacy/`. Nothing in this file needs those texts: the full text of every carried rule is in `docs/CARRIED-RULES.md`. The earlier chain is a case study: blueprint §0. No earlier test result or run outcome is given here as a reason.
 
 **Marks:** **kept** (carried as written, adapted only in wording) · **changed** (carried with a stated change) · **moved** (now held by another AIOC) · **restored** (not carried in v0.2.0, carried again in v0.3.0) · **kept, split** (one half carried here, the other held by another AIOC) · **dropped** (not carried, with the reason) · **new** (not in the earlier chain).
 
-**Columns:** *Here* is the section of `blueprint/TOM-BLUEPRINT.md`. *Rule text* is the section of `docs/CARRIED-RULES.md`; "—" means the blueprint states the rule in full. *Test case* is the case number in TEST-TOM v3 (`tests/TEST-TOM.md`); "—" means no case covers it yet.
+**Columns:** *Here* is the section of `blueprint/TOM-BLUEPRINT.md`. *Rule text* is the section of `docs/CARRIED-RULES.md`; "—" means the blueprint states the rule in full. *Test case* is the case number in TEST-TOM v5 (`tests/TEST-TOM.md`); "—" means no case covers it yet.
 
 ---
 
@@ -318,6 +318,25 @@ The gates, the sufficiency standard, the evaluator's questions (restored: §5.8;
 
 ---
 
+## §9a What the model also states, and the organisation as it runs today (new in v0.6.0)
+
+Each rule below is new, under the direction recorded in `decisions/DR-0006`. Its source is a study of comparable products (each feature taken as a method, never as evidence) and the governing seat's direction that the stages after this one must find in the release what they need to start.
+
+| Rule (short) | Why | Mark | Here | Rule text | Test case |
+|---|---|---|---|---|---|
+| The strategy frame, from sources and decisions only, asked once through EX-10, never blocking | The next stages' objectives, the priority of each element and the value case start from the organisation's strategy; what the organisation wants is never inferred | new | §5.1 steps 7, 9, 12; Annex H.1 | §4.1 section 22; §4.5 | 109–111 |
+| Delivery model and make-or-buy per capability, never a provider; carried by a crossing | How a capability is delivered decides where the next stage designs a process and where a hand-off; naming a provider is a choice of supplier, which this AIOC never makes | new | §5.5; §5.6 step 4b; Annex H.2 | §8.2; §8.3 item 11 | 112, 113 |
+| Critical value streams, each on a cited reason from a closed list | The next stage designs the critical streams first; a stream made critical by judgement alone would order the work on nothing | new | §5.5; Annex H.3 | §8.2; §8.3 item 12 | 114 |
+| Maturity now only from a source; the target only from a source or a decision | Assessing a level is forensic discovery of the present state, which the design never does; a target is the organisation's ambition | new | §5.5; Annex H.4 | §8.2; §8.3 item 12 | 115 |
+| Outside parties' journeys, from crossings already declared | The path an outside party takes shows gaps between the parts it meets; adding a crossing or designing the party's side would invent what the evidence does not hold | new | §5.6 steps 4a, 4b; Annex H.5 | §9 | 116 |
+| The value case, compiled by code, with no figure of its own | The stage that carries the model into the organisation needs where each change starts and what it aims at; a figure this AIOC made up would be an estimate presented as a fact | new | §5.9 step 1b; Annex H.6 | §12.1 item 23; §12.2 | 117 |
+| Priority proposed by a fixed rule, decided with each element | Priority is the organisation's trade-off (§1.2 item 4); a rule proposes it so that no author's preference does | new | §5.9 steps 1b, 4; Annex H.7 | §12.2 | 118 |
+| Records of the work as it runs today: exports by role-type and process only; `person-level records` refused; the activity profile by code, or `no observation` | The governing seat directed this input; positions only, and the personal-data floor (HF-17), mean that a record of who did the work never enters | new | §4.3; Annex H.8; Annex E.1, E.2 | — | 119–121 |
+| Twenty release parts; a decided priority on each element decision | The new parts are read by reference like every part, and each is required, so that a release without one is visibly incomplete | new | `contracts/tom-release.schema.json`; Annex H | — | 122 |
+| The organisation dictionary read where served | The stages use the organisation's words in its own meaning; a difference of meaning between sources is a contradiction, never a silent choice | new | §5.1 step 1; Annex H.9 | §4.2 | 123 |
+
+---
+
 ## §10 Dropped or replaced
 
 | Rule (short) | Why | Mark | Here | Rule text | Test case |
@@ -329,7 +348,7 @@ The gates, the sufficiency standard, the evaluator's questions (restored: §5.8;
 | The run's self-critique of its own inferred rows | Sticky inferred, the process audit (RP1b) and the review at RP1 do this work | replaced | §5.1 | §2.1; §2.3 | 14, 15 |
 | Base passes four and five (boundary and consequence probes), and the prediction recorded before the second instance | They were probes of a conversation; boundary and consequence tests are done by the structuring checks and the walkthrough | dropped | `docs/ASKING-CATALOGUE.md` §3 | §1.5 | — |
 | The `externally-researched` label | No research is done | dropped | Annex B.1 | — | — |
-| The `observed` label, and closing a contradiction by cited observation | No observation of real work is admitted; admitting it is a decision of GOV (blueprint §13, H-07) | reserved | Annex B.1 | §3.1 (S8) | — |
+| The `observed` label, and closing a contradiction by cited observation | This AIOC never watches work. GOV directed records of the work as it runs as an input (`decisions/DR-0006`); they enter as exports by role-type and process, labelled as exports, never as observation (§9a) | not used | Annex B.1; Annex H.8 | §3.1 (S8) | 119–121 |
 | "Treat unopened material as read" (a prohibition) | Examined with the drops | kept: carried as a rule, not dropped | §5.1 limits | §1.1 | 8 |
 | Up to two scope questions before reading | The approved Design Request sets the scope | dropped | §4.3 | — | 3 |
 | Simulation as a channel for facts | The walkthrough is not a simulation, and nothing simulated is a fact | dropped | §5.7 | §10 | 21 |

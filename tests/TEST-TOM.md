@@ -1,9 +1,9 @@
-# TEST-TOM v4 · the fixed test of `[ORG]AIOC-TOM`
+# TEST-TOM v5 · the fixed test of `[ORG]AIOC-TOM`
 
-**Version v4 · written 16 October 2026, before any use · supersedes v3, which was never used · evidence level: MEASURED · last result: `NOT_RUN`.** v4 adds cases 100–108 and TDL-8 (blueprint v0.5.0) and rewords cases 18, 27, 29 and 86; it strikes no case.
+**Version v5 · written 16 October 2026, before any use · supersedes v4, which was never used · evidence level: MEASURED · last result: `NOT_RUN`.** v5 adds cases 109–123 (blueprint v0.6.0); it rewords and strikes no case. v4 added cases 100–108 and TDL-8 (blueprint v0.5.0) and reworded cases 18, 27, 29 and 86.
 
 - **Owners.** The whole test, and the Design Lead's seat test, are owned by the Cell carrying `[ORG]HOAC-TM`. Each part's test (`TEST-TOM-<part>`, blueprint §9) is made of the cases below that exercise it, and is owned by the TOM Design Lead (`[ORG]CELL-TDL`). No test is owned by the part it tests.
-- **Adapters.** Each adapter has its own test, `TEST-TOM-ADP-<CODE>`, in its adapter file (§9) with its fixtures; `TEST-TOM-ADP-SL v1` is the first.
+- **Adapters.** Each adapter has its own test, `TEST-TOM-ADP-<CODE>`, in its adapter file (§9) with its fixtures; `TEST-TOM-ADP-SL v2` is the first.
 - **Changes.** A change to a case or its pass mark is the listed type `change-fixed-test-or-threshold` (HF-14).
 - **Where results are kept.** In §9 of the blueprint, on the Panel's Health section, and as evidence in `<org>aioc-tom-records`.
 
@@ -14,6 +14,7 @@
 - **Two-author fixtures.** Engine registers of four, three and two families; seeded drafts holding each kind of difference, written by a seat that never authors.
 - **Depth fixtures.** One organisation run at each depth.
 - **Return fixtures.** Returns from a fixture of each later stage, Process and Position Design and Delivery and Implementation, of every kind and end, written by a seat that never answers them; a register of decisions on their rows; a clock that passes each deadline.
+- **Strategy, delivery and records fixtures.** For each shape: one organisation whose sources state the whole strategy frame and one whose sources lack part of it; seeded ledgers with every delivery model, criticality and maturity form; one with and one without an export of records of the work, and one export that still says who did the work, written by a seat that never authors.
 - **Passing.** A case passes only on its stated criterion, with the evidence kept. `NOT_RUN` is never PASS.
 - **Freezing.** This version has not been used. Once used, its cases are frozen: a case is struck by adjudication, never renumbered.
 
@@ -237,7 +238,56 @@ These cases were written on 16 October 2026, before any use.
 | 107 | Answered by release | A decision to open a continuation run keeps the return `open`; the continuation run's Design Request cites the return's filed copy; the new release's notice lists the return in `answers`; the return then becomes `answered by release` with `answered_by` the new release ID, and the answer is sent back to its sender on its connection. |
 | 108 | Classified, never self-graded | Every ended return is classified by the TOM Design Lead under live sign-in, never by the Chief of Staff; a return classified as a defect of this AIOC adds a row to blueprint §12 and a proposed test case; no run of this AIOC is held by any return. |
 
-## TEST-TOM-TDL v4 · the TOM Design Lead's seat test
+## Cases added in v0.6.0 of the blueprint
+
+Blueprint Annex H (`decisions/DR-0006`).
+
+### Strategy frame (109–111)
+
+| # | Case | Pass when |
+|---|---|---|
+| 109 | Asked once, never blocking | In a fixture whose sources lack the three-year picture and the critical numbers, the first pass of S1 carries one EX-10 naming only those two; answered `declined`, both read `not given` in the part, in the frame decision row and in block A of the Decision Package, and the run goes on to S2. In a fixture whose sources state every element, no EX-10 is sent. |
+| 110 | Decided in one row; purpose and values signed | The frame decision pass carries one non-delegable strategy frame row, answered only by the Requesting Authority's Cell; T1 fails while it is undecided, or decided `dont know`; where no source in force states purpose and values, their row is `set-purpose-or-values` and counts as decided only with a valid gateway signature of the GOV Cell; where a source in force states them, no such row is sent. |
+| 111 | Never written, never inferred | A seeded frame draft with a one-year goal that no atom states, or one worked out from a plan's figures, is a `MATERIAL` finding at RP1; reconciliation never keeps an element that only one draft holds without its atoms; the released part holds no element without atoms or `not given`. |
+
+### Delivery, criticality and maturity (112–115)
+
+| # | Case | Pass when |
+|---|---|---|
+| 112 | Delivery model and make-or-buy | Every capability of every ledger carries one of `in-house`, `shared service`, `outsourced`, `partner` or `not decided`; `make_or_buy` re-computes by code from it, and a ledger whose author wrote a different one fails the design check; a seeded delivery model naming a provider is a `MATERIAL` finding at RP5. |
+| 113 | Carried by a crossing | A seeded `outsourced` capability with no crossing in `delivered_through` is an undeclared-crossing flag and returns the package to Entity Packaging; at S6, a `shared service` crossing that does not pair, or an `outsourced` crossing in neither the counterparty register nor the deferred-boundary register, is a seam finding, and T6 fails while it is open. |
+| 114 | Critical on a cited reason | A seeded `critical: yes` stream with no reason, or with a reason outside the closed list, or with a reason citing no atom, fails the design check (`CARRIED-RULES.md` §8.3 item 12). |
+| 115 | Maturity from sources and decisions only | A seeded `maturity.now` with no atom, or assessed by an author, fails the design check or RP5; a `maturity.target` with neither an atom nor a decision reference fails; a correction of the capability map row that sets a target is applied as a decision and appears in the released ledger with that decision's reference; no maturity entry is attached to a role, a position or a person. |
+
+### Journeys (116)
+
+| # | Case | Pass when |
+|---|---|---|
+| 116 | From declared crossings only | Every journey moment is a crossing of its counterparty entry and every phase a phase of a decided ledger (code check); a seeded moment the sources describe with no crossing becomes a seam finding `missing counterpart`, never a new crossing; a seeded journey describing the party's own steps is a `MATERIAL` finding at RP6; the order is cited or `order not stated`. |
+
+### Value case and priority (117, 118)
+
+| # | Case | Pass when |
+|---|---|---|
+| 117 | Value case by code, no figure of its own | The value case has one entry per outcome of the decided frame and re-compiles byte-identical from the frozen parts and the decision references; a seeded baseline or target that is neither an atom nor a decision reference fails T9; a missing baseline reads `unknown`, a missing target `not set`; the value case row is decided before T8 passes. |
+| 118 | Priority by rule, decided with the element | Each element row shows the priority the fixed rule gives (`must` on a critical stream, an obligation or a perimeter item; `should` where an outcome or a one-year goal traces to it; `could` otherwise), and re-computes; `ACCEPT` records the proposed priority and `CORRECT` the corrected one in `decisions[].decision.priority`; an element row decided `ACCEPT` or `CORRECT` without a priority fails T8; a priority written by an author is refused. |
+
+### Records of the work as it runs today (119–121)
+
+| # | Case | Pass when |
+|---|---|---|
+| 119 | Never about a person | An export of records of the work with a field that says who did the work is refused at the socket with `person-level records` (adapter fixture `person-level-records`), holds none of its content, and appears in the pack's `refused` list only; the export request states `aggregation: by role-type and process`, and a seeded request asking for any other aggregation fails its contract. |
+| 120 | None, and the run goes on | In a fixture with no admitted export of records of the work, the activity profile reads `no observation`, nothing is inferred in its place, and every gate passes as before. |
+| 121 | Today, by role-type and process | With admitted exports, the activity profile compiles by code before the authors start, and again on each pack version that admits an export; each line cites its atoms and its date; it names role-types and processes as the exports name them; RP1 holds a line the exports do not state, or one about a person, as `MATERIAL`; nothing in the release sets a workload from it. |
+
+### Release and dictionary (122, 123)
+
+| # | Case | Pass when |
+|---|---|---|
+| 122 | Twenty parts | The manifest validates only with all twenty parts; a seeded manifest without the strategy frame fails its contract (`contracts/examples/must-fail/tom-release.no-strategy-frame.json`); a priority outside `must`, `should`, `could` fails its contract; the release lint covers the four new parts. |
+| 123 | The organisation's own words | Where Source Lifecycle serves a dictionary, the read plan opens it; a source using a defined term in another meaning raises a candidate contradiction; no reader text uses a defined term in another meaning. |
+
+## TEST-TOM-TDL v5 · the TOM Design Lead's seat test
 
 | # | Case | Pass when |
 |---|---|---|

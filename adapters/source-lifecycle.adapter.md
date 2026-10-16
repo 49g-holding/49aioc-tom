@@ -1,26 +1,26 @@
 # Adapter · `ADP-SL` · Source Lifecycle
 
-**`[ORG]AIOC-TOM` v0.3.0 · adapter `ADP-SL` v1.0.0 · draft · 15 October 2026.** The adapter by which the Input socket of `[ORG]AIOC-TOM` reads sources from Source Lifecycle. Its ten sections are the fixed sections of blueprint Annex E.2, in order. How the socket uses an adapter is in blueprint §4.3. The register of adapters is `adapters/README.md`.
+**`[ORG]AIOC-TOM` v0.3.0 · adapter `ADP-SL` v1.0.0 · draft · 15 October 2026; v1.1.0, 16 October 2026 (`[ORG]AIOC-TOM` v0.6.0), refuses records of work that still say who did the work.** The adapter by which the Input socket of `[ORG]AIOC-TOM` reads sources from Source Lifecycle. Its ten sections are the fixed sections of blueprint Annex E.2, in order. How the socket uses an adapter is in blueprint §4.3. The register of adapters is `adapters/README.md`.
 
 ## 1. Identity
 
 | Field | Content |
 |---|---|
 | Adapter ID | `ADP-SL` |
-| Version | v1.0.0 |
+| Version | v1.1.0 |
 | Source type | Source Lifecycle |
 | Owner of the source | the `[ORG]HOAC-ACS` seat that `[ORG]AIOC-SL` is accountable to |
 | State | draft |
-| Fixed test | `TEST-TOM-ADP-SL v1` (section 9) |
+| Fixed test | `TEST-TOM-ADP-SL v2` (section 9) |
 
 The machine block. It is read by `tools/check_contracts.py`:
 
 ```yaml
 adapter:
   id: "ADP-SL"
-  version: "v1.0.0"
+  version: "v1.1.0"
   source_type: "Source Lifecycle"
-  test: { id: "TEST-TOM-ADP-SL", version: "v1" }
+  test: { id: "TEST-TOM-ADP-SL", version: "v2" }
   mappings:
     origin_kind: { document: document, explainer: explainer, confirmation: confirmation, status: status, export: export, decision: decision, "operating model": "operating model", "design report": "design report", "<not served>": document }
     status: { draft: draft, "in review": "in review", approved: approved, "in force": "in force", superseded: superseded, "<not served>": "not served" }
@@ -31,7 +31,7 @@ adapter:
       conversation: { stated: organisation-stated, inferred: inferred, assumed: assumed, unknown: unknown }
   defaulted_origin_kind_cap: inferred
   trust_ceiling: source-backed
-  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "not atomisable", "human port", "other channel", "connection revoked"]
+  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "person-level records", "not atomisable", "human port", "other channel", "connection revoked"]
 ```
 
 ## 2. Connection
@@ -143,18 +143,19 @@ Every read also re-checks the scope, the expiry and the revocation, whether or n
 - **Only the connection.** Anything not served by reference through this connection is refused: a missing or incomplete reference (`no reference`), an item typed or spoken to the AIOC (`human port`), or one from any other channel (`other channel`).
 - **Instruction-like text is data.** It is flagged in the pack (`instruction-like text`) and never obeyed.
 - **Secrets are refused.** A source or an answer carrying a password, key, token, seed phrase or one-time code is refused `carries a secret`. The refusal holds none of it, and it appears in no record or log.
+- **Records of work never say who did the work** (new in v1.1.0; blueprint Annex H.8). An export of records of the work whose records still carry a field that says who did the work (a name, an identifier, a contact) is refused `person-level records`. The refusal holds none of it. Such an export is admitted only as the organisation's projection by role-type and process, after its impact assessment and its HF-17 decision in Source Lifecycle (SL-A13).
 - **Personal data and confidentiality.** A source carrying personal data is read under the personal-data floor (HF-17) and the confidentiality level it is served with. A level that is not served defaults to `strictly confidential` (section 5.3). No atom goes to an engine whose ceiling is below its level (blueprint §5.8 rule 17).
 
 ## 9. Fixed test
 
-`TEST-TOM-ADP-SL v1` · evidence level MEASURED · last run: none · result `NOT_RUN`. Owner: the TOM Design Lead (`[ORG]CELL-TDL`), as for every part's test (blueprint §9). It passes when:
-- each of the 8 valid fixtures is admitted as its `expect` says;
-- each of the 10 must-fail fixtures is refused with exactly its reason;
+`TEST-TOM-ADP-SL v2` · evidence level MEASURED · last run: none · result `NOT_RUN`. Owner: the TOM Design Lead (`[ORG]CELL-TDL`), as for every part's test (blueprint §9). It passes when:
+- each of the 9 valid fixtures is admitted as its `expect` says;
+- each of the 11 must-fail fixtures is refused with exactly its reason;
 - each mapping table round-trips;
 - the defaults apply when the status, the confidentiality or the origin kind is not served;
 - the adapter never asks, files or writes.
 
-It is also covered by cases 47 and 48 of TEST-TOM v2 (case 47: this adapter; case 48: a second adapter changes no stage). The fixtures are in `adapters/source-lifecycle/fixtures/`, in the form of blueprint Annex E.2. A change to this file or to its fixtures re-runs the test (blueprint §9).
+It is also covered by cases 47, 48 and 119 of TEST-TOM v5 (case 47: this adapter; case 48: a second adapter changes no stage; case 119: records of work that say who did the work are refused). The fixtures are in `adapters/source-lifecycle/fixtures/`, in the form of blueprint Annex E.2. A change to this file or to its fixtures re-runs the test (blueprint §9).
 
 **Valid fixtures** (`valid/<case>.json`):
 
@@ -168,6 +169,7 @@ It is also covered by cases 47 and 48 of TEST-TOM v2 (case 47: this adapter; cas
 | `no-origin-kind-default` | no origin kind served: it reads `document`, and its statements are capped at `inferred` (`label_basis: default cap`) |
 | `not-held` | a reference served `not held`: admitted as an unknown, with no atoms |
 | `export-with-date` | an export: its date (`as_of`) goes with every atom |
+| `records-of-work-by-role` | records of the work by role-type and process, with no field about a person: admitted, `source-backed` as of its date |
 
 **Must-fail fixtures** (`must-fail/<case>.json`), each refused with exactly the reason of its name:
 
@@ -179,6 +181,7 @@ It is also covered by cases 47 and 48 of TEST-TOM v2 (case 47: this adapter; cas
 | `does-not-resolve` | `does not resolve` |
 | `hash-mismatch` | `hash mismatch` |
 | `carries-a-secret` | `carries a secret` |
+| `person-level-records` | `person-level records` |
 | `not-atomisable` | `not atomisable` |
 | `human-port` | `human port` |
 | `other-channel` | `other channel` |
@@ -189,5 +192,6 @@ It is also covered by cases 47 and 48 of TEST-TOM v2 (case 47: this adapter; cas
 | Version | Date | Change |
 |---|---|---|
 | v1.0.0 | 2026-10-15 | First version |
+| v1.1.0 | 2026-10-16 | Refusal reason `person-level records` (blueprint v0.6.0, Annex H.8); fixtures `person-level-records` and `records-of-work-by-role`; `TEST-TOM-ADP-SL v2` |
 
 *Powered by 49GAION*

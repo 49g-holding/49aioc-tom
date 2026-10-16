@@ -35,7 +35,7 @@ adapter:
       conversation: { "<label served>": "<Annex B label>" }
   defaulted_origin_kind_cap: inferred
   trust_ceiling: "<the highest Annex B label a statement of this source type may reach>"
-  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "not atomisable", "human port", "other channel", "connection revoked"]
+  refusal_reasons: ["no reference", "outside scope", "scope expired", "does not resolve", "hash mismatch", "carries a secret", "person-level records", "not atomisable", "human port", "other channel", "connection revoked"]
 ```
 
 ## 2. Connection

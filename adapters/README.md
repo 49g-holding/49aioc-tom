@@ -10,7 +10,7 @@ An adapter is the Standard's converter for one source type (`49GAION-aioc` `docs
 
 | Adapter ID | Source type | File | Version | Test | State |
 |---|---|---|---|---|---|
-| `ADP-SL` | Source Lifecycle | [`source-lifecycle.adapter.md`](source-lifecycle.adapter.md) | v1.0.0 | TEST-TOM-ADP-SL v1 · NOT_RUN | draft |
+| `ADP-SL` | Source Lifecycle | [`source-lifecycle.adapter.md`](source-lifecycle.adapter.md) | v1.1.0 | TEST-TOM-ADP-SL v2 · NOT_RUN | draft |
 
 ## What is in this folder
 
