@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:tom:release-notice:v0.5",
+  "title": "[ORG]AIOC-TOM - release notice to the next stage",
+  "description": "Sent to the next stage on every filing of a decided TOM Release (blueprint §5.9 step 8a; Annex E.20; Protocol §19, item 5). It points to the filed release; it never carries release text, atom text or the name of a person. notice_id is 'TOMN-' + the SHA-256 of the canonical notice without notice_id. It is this AIOC's specialisation of the Library's release notice contract, proposed to 49GAION (library/contracts/release-notice.schema.json of 49GAION-protocol): the same fields, with this AIOC's patterns and values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "notice_id",
+    "from",
+    "to",
+    "release",
+    "rests_on",
+    "filed_ref",
+    "final_status",
+    "final_status_ref",
+    "supersedes",
+    "answers",
+    "sent_at"
+  ],
+  "properties": {
+    "notice_id": {
+      "type": "string",
+      "pattern": "^TOMN-[a-f0-9]{64}$"
+    },
+    "from": {
+      "const": "[ORG]AIOC-TOM"
+    },
+    "to": {
+      "const": "[ORG]AIOC-PPD"
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "release_id",
+        "version",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "release_id": {
+          "type": "string",
+          "pattern": "^TOMR-[a-f0-9]{64}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "rests_on": {
+      "type": "array",
+      "maxItems": 0,
+      "description": "The decided releases this release was designed from. A TOM Release rests on sources, never on another release, so the list is empty."
+    },
+    "filed_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "version",
+        "sha256"
+      ],
+      "description": "The filed copy of the release in Source Lifecycle, as the filing receipt names it.",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "final_status": {
+      "enum": [
+        "ACCEPT",
+        "ACCEPT WITH CORRECTIONS"
+      ],
+      "description": "Only a decided release is announced."
+    },
+    "final_status_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The decision reference in Source Lifecycle."
+    },
+    "supersedes": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^TOMR-[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "answers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2,8}R-[0-9]+$"
+      },
+      "description": "The returns this release answers (blueprint §5.10); may be empty."
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "return_id": "DIR-1",
+  "run_id": "RUN-0011",
+  "release": {
+    "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "kind": "contradiction found",
+  "elements": [
+    {
+      "part": "hand-offs register",
+      "element_id": "HO-7"
+    },
+    {
+      "part": "role register",
+      "element_id": "ROLE-3"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "HO-7"
+    },
+    {
+      "ref": "ROLE-3"
+    }
+  ],
+  "held_here": [
+    "GAP-2"
+  ],
+  "round": 1,
+  "filed_ref": {
+    "source_id": "SRC-150",
+    "version": "1",
+    "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "status": "answered by release",
+  "answered_by": "TOMR-dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+}

@@ -1,0 +1,21 @@
+{
+  "notice_id": "TOMN-9cfe86ff1e53f3c273ede8abfb416f49bcb75d5c66aef879b214aca8c65cb796",
+  "from": "[ORG]AIOC-TOM",
+  "release": {
+    "release_id": "TOMR-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "version": "1",
+    "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "filed_ref": {
+    "source_id": "SRC-120",
+    "version": "1",
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "final_status": "REJECT",
+  "final_status_ref": "DEC-41",
+  "supersedes": null,
+  "answers": [],
+  "to": "[ORG]AIOC-PPD",
+  "sent_at": "2026-10-16T09:00:00Z",
+  "rests_on": []
+}

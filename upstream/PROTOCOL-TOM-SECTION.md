@@ -1,5 +1,7 @@
 # Proposed Protocol section: Target Operating Model, the second stage
 
+> **Superseded, 16 October 2026.** Merged in a revised form as §19 of the 49GAION Operating Protocol (`49GAION-protocol` pull request #36; `49GAION/DR-0016`). This draft is kept unedited below as history; the merged text governs.
+
 **Draft for the 49GAION Operating Protocol · from `[ORG]AIOC-OCO` · blueprint `v0.4.0` · 15 October 2026 · not yet proposed.** Generalised: no organisation's name or data. If adopted, it would follow §13 as a new §14, under an unreleased version row of the Protocol CHANGELOG, with its Library card (`target-operating-model.part-card.json`, `DRAFT`, `last_result` `NOT_RUN`) and one TEST-TOM case for every rule. It changes no rule of §13; it names what §13, item 6 calls "the next stage". The full text of the part is the blueprint of `[ORG]AIOC-TOM` (`blueprint/TOM-BLUEPRINT.md` of its writing repository).
 
 ---

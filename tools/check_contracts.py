@@ -36,11 +36,18 @@
    three set. When it is 'in the Library', --catalogue gives the catalogue file, which must validate
    against the same schema, carry the pinned version, and have the pinned SHA-256. Without
    --catalogue, check 10 then prints SKIPPED and the script exits 2, never 0 (as check 7).
+11. The design return contract (blueprint §5.10): --design-return gives the Library's
+   library/contracts/design-return.schema.json, whose SHA-256 must equal contracts/PINS.json
+   design_return_contract.sha256; every example in contracts/examples/design-return/ validates against
+   it; and an example of an `accepted` return that has ended is `answered by release`, by the release
+   it names. Without --design-return, check 11 prints SKIPPED and the script exits 2, never 0.
+   The ID of a release notice is its content address too ('TOMN-', as check 4).
 
-Usage: python3 tools/check_contracts.py --signature-list <path> [--catalogue <path>]
+Usage: python3 tools/check_contracts.py --signature-list <path> --design-return <path> [--catalogue <path>]
   --signature-list: the 49GAION hub's upstream/human-floor-signature-types.json (check 7)
   --catalogue: the catalogue file pinned in contracts/PINS.json, when it is in the Library (check 10)
-Exit 0 when every check passes; 1 on any failure; 2 when check 7 or check 10 was skipped and nothing failed.
+  --design-return: the Library's design return contract at the commit pinned in contracts/PINS.json (check 11)
+Exit 0 when every check passes; 1 on any failure; 2 when check 7, 10 or 11 was skipped and nothing failed.
 """
 import argparse, datetime, hashlib, importlib.util, json, pathlib, re, sys
 import jsonschema, yaml
@@ -53,7 +60,9 @@ ADAPTERS = ROOT / "adapters"
 LINT_FIXTURES = ROOT / "tests" / "release-lint" / "fixtures"
 OUTPUT_MD = ROOT / "docs" / "OUTPUT.md"
 SEED = ROOT / "upstream" / "reference-model-catalogue.seed.json"
-ID_FIELDS = {"tom-release": ("release_id", "TOMR-"), "input-pack": ("pack_id", "TOMI-")}
+ID_FIELDS = {"tom-release": ("release_id", "TOMR-"), "input-pack": ("pack_id", "TOMI-"),
+             "release-notice": ("notice_id", "TOMN-")}
+RETURN_EXAMPLES = EXAMPLES / "design-return"
 DENIED_LISTED_TYPES = ["move-work-toward-ai", "change-gateway-policy", "widen-ai-budget-or-unattended-action",
                        "change-fixed-test-or-threshold", "set-or-rotate-golden-set", "approve-change-or-promote-challenger"]
 LABEL_ORDER = ["source-backed", "inferred", "organisation-stated", "assumed", "unknown"]   # Annex B.1, highest first
@@ -434,10 +443,43 @@ def check_catalogue(schemas, registry, catalogue):
     return failures, skipped, n
 
 
+# ---------------------------------------------------------------- check 11: design return contract
+def check_design_return(path):
+    """Check 11. Returns (failures, skipped, examples)."""
+    pins = json.loads((C / "PINS.json").read_text(encoding="utf-8"))
+    pin = pins.get("design_return_contract")
+    if not pin or not all(pin.get(k) for k in ("repository", "path", "commit", "sha256")):
+        print("FAIL check 11: contracts/PINS.json has no complete design_return_contract pin"); return 1, False, 0
+    files = sorted(RETURN_EXAMPLES.glob("*.json"))
+    if not path:
+        print("SKIPPED check 11 (design return contract): no --design-return given"); return 0, True, len(files)
+    raw = pathlib.Path(path).read_bytes()
+    got = hashlib.sha256(raw).hexdigest()
+    if got != pin["sha256"]:
+        print(f"FAIL check 11: the design return contract has SHA-256 {got}, not the pinned {pin['sha256']}"); return 1, False, len(files)
+    schema = json.loads(raw.decode("utf-8"))
+    jsonschema.Draft202012Validator.check_schema(schema)
+    v = jsonschema.Draft202012Validator(schema, format_checker=format_checker())
+    failures = 0
+    if not files:
+        print("FAIL check 11: no example in contracts/examples/design-return/"); failures += 1
+    for f in files:
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        errs = list(v.iter_errors(doc))
+        ok, why = not errs, (errs[0].message if errs else "")
+        if ok and doc.get("kind") == "accepted" and doc.get("status") != "open":
+            if doc.get("status") != "answered by release" or doc.get("answered_by") != doc["release"]["release_id"]:
+                ok, why = False, "an accepted return ends as answered by release, by the release it names (§5.10, limit 3)"
+        print(("pass" if ok else "FAIL") + f" design-return/{f.name}" + ("" if ok else f": {why}"))
+        failures += 0 if ok else 1
+    return failures, False, len(files)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Check the contracts of [ORG]AIOC-TOM.")
     ap.add_argument("--signature-list", help="the 49GAION hub's upstream/human-floor-signature-types.json")
     ap.add_argument("--catalogue", help="the reference-model catalogue file pinned in contracts/PINS.json (check 10)")
+    ap.add_argument("--design-return", help="the Library's design return contract at the commit pinned in contracts/PINS.json (check 11)")
     a = ap.parse_args(argv)
     schemas, registry = load_schemas()
     print(f"{len(schemas)} schemas sound (2020-12): {', '.join(schemas)}")
@@ -446,13 +488,15 @@ def main(argv=None):
     f8, adapter_count = check_adapters(schemas, registry)
     f9, lint_count = check_lint(schemas)
     f10, skipped10, patterns = check_catalogue(schemas, registry, a.catalogue)
-    failures += f7 + f8 + f9 + f10
+    f11, skipped11, returns = check_design_return(a.design_return)
+    failures += f7 + f8 + f9 + f10 + f11
     print(f"{counts['valid']} valid, {counts['must-fail']} must-fail, adapter fixtures {adapter_count}, "
-          f"lint fixtures {lint_count}, catalogue seed {patterns} patterns; "
-          f"check 7 {'SKIPPED' if skipped else 'run'}; check 10 {'SKIPPED' if skipped10 else 'run'}; {failures} failures")
+          f"lint fixtures {lint_count}, catalogue seed {patterns} patterns, design-return examples {returns}; "
+          f"check 7 {'SKIPPED' if skipped else 'run'}; check 10 {'SKIPPED' if skipped10 else 'run'}; "
+          f"check 11 {'SKIPPED' if skipped11 else 'run'}; {failures} failures")
     if failures:
         return 1
-    return 2 if (skipped or skipped10) else 0
+    return 2 if (skipped or skipped10 or skipped11) else 0
 
 
 if __name__ == "__main__":

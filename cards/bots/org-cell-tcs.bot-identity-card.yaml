@@ -15,6 +15,10 @@ allowed_actions:
 - send run previews and ruling sheets to the TOM Design Lead
 - file a release whose final status is decided
 - compare two locked drafts and compile the role register through the code steps
+- send the release notice of a filed release to [ORG]AIOC-PPD
+- admit or refuse a return by the pinned contract and record it
+- generate return briefs through the code step and send their rows to [ORG]AIOC-SL
+- send return answers to the sender of each return
 ask_first_actions:
 - a second run in parallel
 - a budget above the cap

@@ -14,7 +14,7 @@ When a run ends well, you receive one package, the **TOM Release**. Read it in t
 
 If only part of the organisation was designed, the release says which part.
 
-It names roles and what each decides. It does not say who fills a role, or how many people are needed. You can stop here, give each role to a person, and run the model.
+It names roles and what each decides. It does not say what fills a role. You can stop here and run the model, carrying each role in a position of your own.
 
 ### Glossary
 
@@ -56,7 +56,7 @@ A run delivers one **TOM Release**: the organisation's target operating model, d
 - where it hands work to other children and to outside parties;
 - what is still unknown or deferred.
 
-It says why, with every element traced to the organisation's own sources. It has been walked through realistic situations and independently checked at every stage. It names roles and what each decides. It does not say who fills a role, or how many people are needed. It covers one slice of the organisation, and says which. The release is filed into Source Lifecycle as a source of origin kind `operating model`, and the next stage reads it there.
+It says why, with every element traced to the organisation's own sources. It has been walked through realistic situations and independently checked at every stage. It names roles and what each decides. It does not say what fills a role. It covers one slice of the organisation, and says which. The release is filed into Source Lifecycle as a source of origin kind `operating model`. The next stage, Process and Position Design, is told of it at once and reads it there.
 
 ## 2. The parts of a release
 
@@ -213,7 +213,7 @@ Every boundary class not yet designed, with its durable ID, its evidence by atom
 Every crossing that did not pair, or paired with a contradiction, and how it was resolved: upstream, by decision, or by registration. None was bridged.
 
 ### 7.6 Role register
-One entry per role-type named anywhere in the release: what it decides; what it is accountable for; where it appears, by part and element; and the hand-offs it sends and receives, with what crosses. It is built by a code check from the decided designs and registers, never written by hand. It lists roles only: never a person, a holder, a number of people or a position. Two names are one role only where you decided so. Where roles conflicted (one role named two ways; one decision held by two roles; a decision with no role; a hand-off with no role at one end), the conflict and how it was settled are listed. The next stage reads this part first: positions and job descriptions are made from it.
+One entry per role-type named anywhere in the release: what it decides; what it is accountable for; where it appears, by part and element; and the hand-offs it sends and receives, with what crosses. It is built by a code check from the decided designs and registers, never written by hand. It lists roles only: never a person or a position. Two names are one role only where you decided so. Where roles conflicted (one role named two ways; one decision held by two roles; a decision with no role; a hand-off with no role at one end), the conflict and how it was settled are listed. The next stage reads this part first: positions and job descriptions are made from it.
 
 ## 8. Walkthrough report
 
@@ -297,17 +297,17 @@ A code check confirms that no element is orphaned, and that every cited passage 
 
 ## 13. What a release is not
 
-- Not a job description, a position list, a headcount, a process manual, a policy, a choice of systems, or an assignment of work to anything other than an accountable role. Those are later stages, and each is a product in its own right.
+- Not a job description, a position list, a workload, a process manual, a policy, a choice of systems, or an assignment of work to anything other than an accountable role. Those are later stages, and each is a product in its own right.
 - Not evidence that the model works in practice. The walkthrough tests the design, not operations.
 - Not a legal determination.
 - Not final for ever: a change is a new release that supersedes it.
 
 ## 14. How the next stage uses it
 
-- **The next stage** (positions and job descriptions, and the stages after them) reads the filed release from Source Lifecycle by reference. It reads the role register first, and the design ledgers as its machine input.
-- **Returning a release.** A later stage returns a release only by naming the part, using one of: accepted · cannot use, missing X · contradiction found · assumption invalid · request kind unsupported.
+- **The next stage**, Process and Position Design, is told of each decided release at once, by a release notice that names it by reference. It reads the filed release from Source Lifecycle: the role register first, and the design ledgers as its machine input.
+- **Returning a release.** Process and Position Design, and Delivery and Implementation after it, return a release only by naming the parts and elements it concerns, using one of: accepted · cannot use, missing X · contradiction found · assumption invalid · request kind unsupported. A return comes back to this stage directly and is put to you. It never changes the release. It ends in one of four ways: answered by a new release; answered by your decision; set aside by your decision and carried forward as a known defect or a decided assumption; or withdrawn by the stage that sent it. Each round has a deadline; past it, the return comes to you for a decision. None is left open.
 - **The next slice.** It is designed in a continuation run that carries this release forward: its decided parts are kept by hash and not asked again; only the children named for change, or whose sources changed, are designed again. The new release supersedes this one and contains every slice designed so far.
-- **Used on its own.** The release names accountable role-types and what each decides. An organisation gives each role to a person in its own holders register, and may stop here.
+- **Used on its own.** The release names accountable role-types and what each decides. An organisation may stop here and carry each role in a position of its own.
 - **Smaller stops.** An organisation may also stop after the decided Design Brief, or take a Readiness Report on its own. Each is filed into Source Lifecycle.
 
 *Powered by 49GAION*

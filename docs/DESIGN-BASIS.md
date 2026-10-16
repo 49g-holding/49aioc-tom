@@ -104,7 +104,7 @@ The gates, the sufficiency standard, the evaluator's questions (restored: §5.8;
 | Gate B of the case study, mapped | Its parts are carried; its two delegable parts are restored as confirmation rows | kept, mapped; two parts restored | §5.1 step 12; Annex C.4 item 9 | §4.5 | 76 |
 | An independent evaluator of the brief, with its question set and verdicts | Its questions serve the job; the Review Panel asks them | **restored** as the question set of RP1 and RP3; no separate capability | §5.8 | §11.1 | 72 |
 | A run starts only on an approved Design Request, through gate admission | A run needs a defined, approved request to start | new | §4.2 step 1; §4.3; Annex C.2 | — | 3 |
-| The TOM Design Lead is not a source, and is never the holder of the Requesting Authority's seat | The seat that runs the method must not also decide the design | new | §2.1; §4.3 | — | 29 |
+| The TOM Design Lead is not a source, and its Cell is never the Requesting Authority's Cell | The seat that runs the method must not also decide the design; two positions are two parties, and who occupies them is never read (`49GAION/DR-0015`) | new; reworded in v0.5.0 | §2.1; §4.3; Annex C.2 T0 (d) | — | 29 |
 
 **Gate B, mapped.** The source is the case study's interpreted-request gate (Gate B): the requester's item-by-item decision gate on the interpreted request. It maps to nothing removed:
 
@@ -285,7 +285,10 @@ The gates, the sufficiency standard, the evaluator's questions (restored: §5.8;
 | The release is frozen, content-addressed and filed into Source Lifecycle; a change is a new release | Later stages read one decided model from the source of record | new | §5.9 steps 6, 7 | §4.4 | 24 |
 | Carry-forward of earlier slices | A decided slice is not asked again | new | §5.9 | §4.4 | 69 |
 | A unit as the subject | A unit of an organisation can ask for its own model | new | §2.2 | — | 82 |
-| The release names roles and what each decides, and stands alone | Who fills a role, and how many people are needed, are decisions of later stages | new | §2.2; §5.9 | — | 27 |
+| The release names roles and what each decides, and stands alone | What fills a role, and the workload of each position, are matters of later stages | new; reworded in v0.5.0 | §2.2; §5.9 | — | 27 |
+| The next stage is told of each decided release directly, by reference | A later stage that only reads Source Lifecycle learns late, and a release that nobody is told of waits unused (`49GAION/DR-0016`, item 4) | new in v0.5.0 | §5.9 step 8a; Annex E.20 | — | 100 |
+| Returns arrive directly, and each ends in one of four ways | A return that only waits in Source Lifecycle is not heard, and a return without an end can block the stage after it (`49GAION/DR-0016`, item 5; `DR-0018`) | new in v0.5.0 | §5.10; Annex E.21, E.22 | §4.4 | 101–107 |
+| Each ended return is classified by the Design Lead | A return for what this AIOC should have obtained is its defect; no unit grades its own work | new in v0.5.0 | §5.10 limit 8 | §4.4 item 3 | 108 |
 | An Office is proposed, never self-created | A unit never enlarges itself | new | §4.1 | — | 25 |
 | A stop through the stop door halts every part at once | The human seat can always stop the AIOC | new | §4.2 step 8; Annex C.1 | — | 26 |
 | Two authors never lower a review: four families; one author at S5 only with the TM Cell's permission, declared | The several-engine review (D5) comes first; an added check must not weaken it | new (v0.4.0) | Annex G.3, G.7; §13 H-05, H-32 | — | 94, 95 |
