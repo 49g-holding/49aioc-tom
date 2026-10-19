@@ -1,6 +1,6 @@
 # Decision records
 
-**`[ORG]AIOC-TOM` v0.6.0 · 16 October 2026.**
+**`[ORG]AIOC-TOM` v0.6.1 · 19 October 2026.**
 
 One `DR-####` file per decided subject, numbered in order. A record file never changes once merged; a change is a new record. The status of each record is kept only in this index.
 
@@ -12,5 +12,6 @@ One `DR-####` file per decided subject, numbered in order. A record file never c
 | [`DR-0004`](DR-0004-tom-v0-4-1-positions-only.md) | 2026-10-15 | TOM v0.4.1: no natural person; positions only | in force; its item 2 is completed at gate T0 by DR-0005 |
 | [`DR-0005`](DR-0005-tom-v0-5-0-direct-links-and-returns.md) | 2026-10-16 | TOM v0.5.0: direct links to the stages after it; every return ends | in force |
 | [`DR-0006`](DR-0006-tom-v0-6-0-what-the-model-also-states.md) | 2026-10-16 | TOM v0.6.0: what the model also states, and the organisation as it runs today | in force |
+| [`DR-0007`](DR-0007-tom-v0-6-1-cos-code.md) | 2026-10-19 | TOM v0.6.1: the Chief of Staff takes its COS code | in force |
 
 *Powered by 49GAION*

@@ -46,7 +46,7 @@
 
 The writing repository of **`[ORG]AIOC-TOM`, Target Operating Model**: the AIOC that designs an organisation's target operating model from its own documents. It is the second stage of an organisation's design under 49GAION, after Source Lifecycle: the Library part 49GAION Target Operating Model (Operating Protocol §19; `49GAION/DR-0016`), whose mother blueprint this is. In each organisation this repository is named `<org>aioc-tom` (49GAION Naming Standard R9).
 
-**Status: draft `v0.6.0`, 16 October 2026: closed at v0.4.0; v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 links this AIOC directly to the stages after it (`decisions/DR-0005`); v0.6.0 adds what the model also states and reads (`decisions/DR-0006`; blueprint Annex H). Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 added four features to the closed v0.3.0 and removed nothing (`decisions/DR-0003`).
+**Status: draft `v0.6.1`, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSTOM` (`decisions/DR-0007`); it builds on `v0.6.0`, 16 October 2026: closed at v0.4.0; v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 links this AIOC directly to the stages after it (`decisions/DR-0005`); v0.6.0 adds what the model also states and reads (`decisions/DR-0006`; blueprint Annex H). Nothing here has run; every fixed test reads `NOT_RUN`.** Version 0.4.0 added four features to the closed v0.3.0 and removed nothing (`decisions/DR-0003`).
 
 ## Where to read
 

@@ -3,7 +3,7 @@
   "version": 1,
   "run_id": "RUN-EXAMPLE-001",
   "parent_work_item": "WI-RUN-EXAMPLE-001",
-  "raised_by": "[ORG]CELL-TCS",
+  "raised_by": "[ORG]CELL-COSTOM",
   "type": "decision",
   "question_plain": "Is this the organisation's purpose, as you want it stated in the operating model?",
   "question_original": "Purpose-and-values row 1 of the decision sheet.",
