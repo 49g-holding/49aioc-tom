@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.6.0"
+  blueprint_version: "v0.6.1"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -25,9 +25,9 @@ blueprint:
     functional: ["Request Reconstruction", "Needs Requests", "Structuring", "Entity Packaging", "Entity Model Design", "Hand-offs", "Operational Walkthrough", "Independent Review", "Decision Package and Release"]
 ```
 
-# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.6.0`
+# Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · `v0.6.1`
 
-**Draft, closed at v0.4.0, 15 October 2026; v0.4.1 the same day changes wording only (`decisions/DR-0004`): every human position is a HOAC position, and no natural person exists in the system. v0.5.0, 16 October 2026, links this AIOC directly to the stages after it (`decisions/DR-0005`): a release notice to Process and Position Design on every filing, and the returns of Process and Position Design and of Delivery and Implementation received directly, each carried to an end under the Library's design return contract (§5.10). v0.6.0, 16 October 2026, adds what the model also states and reads (`decisions/DR-0006`; Annex H): the strategy on one page, how each capability is delivered and how mature it is, the critical value streams, each outside party's journey, the value case, the priority of each element, and records of the work as it runs today, never about a person.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002`, `decisions/DR-0003`, `decisions/DR-0005` and `decisions/DR-0006`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
+**Draft, closed at v0.4.0, 15 October 2026; v0.4.1 the same day changes wording only (`decisions/DR-0004`): every human position is a HOAC position, and no natural person exists in the system. v0.5.0, 16 October 2026, links this AIOC directly to the stages after it (`decisions/DR-0005`): a release notice to Process and Position Design on every filing, and the returns of Process and Position Design and of Delivery and Implementation received directly, each carried to an end under the Library's design return contract (§5.10). v0.6.0, 16 October 2026, adds what the model also states and reads (`decisions/DR-0006`; Annex H): the strategy on one page, how each capability is delivered and how mature it is, the critical value streams, each outside party's journey, the value case, the priority of each element, and records of the work as it runs today, never about a person. v0.6.1, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSTOM` (`decisions/DR-0007`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`, `decisions/DR-0002`, `decisions/DR-0003`, `decisions/DR-0005` and `decisions/DR-0006`. Version 0.4.0 adds four features to the closed v0.3.0, and removes or weakens nothing of it: a register of the roles across the release (§5.6; Annex E.17), a run depth (Annex F), two independent authors at Frame and Design (Annex G), and reference models from the 49GAION Library (§5.5; Annex B.5). Every rule here either rests on a 49GAION text, is carried from the case study (`docs/DESIGN-BASIS.md`; full rule texts in `docs/CARRIED-RULES.md`), or is new in this AIOC and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
 > **TOM in one page**
 >
@@ -86,7 +86,7 @@ blueprint:
 | Description | "`[ORG]AIOC-TOM` is `<organisation>`'s Target Operating Model core, built from 49GAION Target Operating Model" |
 | Kind | AIOC |
 | Parent | `<code of the Charter of this [ORG]AION>`; the cards use the example code `[ORG]AIOC-CH`. A top-level AIOC: only the Charter has parent `none` (Standard §1.7, item 13). A change of parent is the listed type `change-parent` |
-| Inner units | `[ORG]CELL-TDL`, `[ORG]CELL-TCS`, `[ORG]POD-TRR`, `[ORG]POD-TS`, `[ORG]POD-TEP`, `[ORG]POD-TEM`, `[ORG]POD-TH`, `[ORG]POD-TW`, `[ORG]POD-TR`: seven Pods with their seventeen Cells, and two Cells directly under the AIOC (§17). No inner AIOC |
+| Inner units | `[ORG]CELL-TDL`, `[ORG]CELL-COSTOM`, `[ORG]POD-TRR`, `[ORG]POD-TS`, `[ORG]POD-TEP`, `[ORG]POD-TEM`, `[ORG]POD-TH`, `[ORG]POD-TW`, `[ORG]POD-TR`: seven Pods with their seventeen Cells, and two Cells directly under the AIOC (§17). No inner AIOC |
 | HOAC label | `[ORG]HOAC-ACS`, held by its top Cell, the TOM Design Lead `[ORG]CELL-TDL` (`label_holder`) |
 | Accountable to | `<code of the Cell carrying [ORG]HOAC-TM>`; the cards use the example code `[ORG]CELL-TMS` (Naming Standard R15). That Cell signs this AIOC's install, its `change-parent` and its `restart-stopped-unit` (Standard §5.3, item 4; §4.4, item 3) |
 | Type | Specialised: the organisation needs a decided target operating model (§16) |
@@ -96,7 +96,7 @@ blueprint:
 | Made from | the Library part 49GAION Target Operating Model, part card `v1` (DRAFT), and the Protocol section of the same name (§19), merged on 15 October 2026 (`49GAION/DR-0016`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `06b00d9` |
 | Mother | 49GAION Target Operating Model, part card `v1`. This text is its mother blueprint (`49GAION/DR-0016`, item 7) |
-| Blueprint version and status | `v0.6.0` · draft, closed at v0.4.0 (the Closure statement above §0); v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 adds the direct links to the stages after it (`decisions/DR-0005`); v0.6.0 adds Annex H (`decisions/DR-0006`) |
+| Blueprint version and status | `v0.6.1` · draft, closed at v0.4.0 (the Closure statement above §0); v0.4.1 changed wording only (`decisions/DR-0004`); v0.5.0 adds the direct links to the stages after it (`decisions/DR-0005`); v0.6.0 adds Annex H (`decisions/DR-0006`); v0.6.1 gives the Chief of Staff its COS code `[ORG]CELL-COSTOM` (`decisions/DR-0007`) |
 | Writing repository | `<org>aioc-tom`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch Strictly confidential sources or personal data (Naming Standard R9) |
 | Code project | `<org>aioc-tom`, on the organisation's code platform |
 | Panel | not yet built |
@@ -116,10 +116,10 @@ card:
   unit_kind: "AIOC"
   code: "[ORG]AIOC-TOM"
   parent: "[ORG]AIOC-CH"                  # example code of the Charter, the root AIOC; only it has parent none (Standard §1.7, item 13)
-  inner_units: ["[ORG]CELL-TDL", "[ORG]CELL-TCS", "[ORG]POD-TRR", "[ORG]POD-TS", "[ORG]POD-TEP", "[ORG]POD-TEM", "[ORG]POD-TH", "[ORG]POD-TW", "[ORG]POD-TR"]
+  inner_units: ["[ORG]CELL-TDL", "[ORG]CELL-COSTOM", "[ORG]POD-TRR", "[ORG]POD-TS", "[ORG]POD-TEP", "[ORG]POD-TEM", "[ORG]POD-TH", "[ORG]POD-TW", "[ORG]POD-TR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.6.0"
+  card_version: "v0.6.1"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -165,7 +165,7 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "needs open", "needs past deadline", "run state", "pack version", "reviews held", "review budget used", "run depth", "authoring", "role findings open", "returns open", "returns past deadline", "return age", "return round", "strategy elements not given", "activity profile"] } }
     back_office: { converses_with_humans: false, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-tom, blueprint/TOM-BLUEPRINT.md", version: "v0.6.0" }
+    definition: { location: "<org>aioc-tom, blueprint/TOM-BLUEPRINT.md", version: "v0.6.1" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "source of record", connector: "[ORG]AIOC-SL output socket", access_managed_in: "panel" }   # the Panel shows and requests it; the grant itself is signed at the tool gateway as connect-external-port by the [ORG]HOAC-ACS seat over [ORG]AIOC-SL (Protocol §13, item 5; upstream/PROPOSALS.md, item 4)
@@ -173,10 +173,10 @@ card:
       - { role: "returns from the last stage", connector: "[ORG]AIOC-DI output port: returns in", access_managed_in: "panel" }   # signed as above (Protocol §20, item 3; H-35)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Target Operating Model"
-  version: "0.6.0"
-  lineage: { id: "[ORG]AIOC-TOM", version: "0.6.0", relation: "original" }
+  version: "0.6.1"
+  lineage: { id: "[ORG]AIOC-TOM", version: "0.6.1", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.6.0"
+  blueprint_version: "v0.6.1"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-TDL"
@@ -272,7 +272,7 @@ card:
 | Position (standard title) | Purpose | Reports to | Run today by | Deputy |
 |---|---|---|---|---|
 | TOM Design Lead | the accountable seat of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; decides a re-base; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a HOAC position (`[ORG]HOAC-ACS`); who occupies it is top management's own mechanism, never seen by this AIOC | as top management arranges (`appoint-acting-filler`, Standard §4.1, item 12) |
-| Chief of Staff | keep each run moving, honest and traced; the only door to Source Lifecycle | TOM Design Lead | an agent (`[ORG]CELL-TCS`) | none; the run halts |
+| Chief of Staff | keep each run moving, honest and traced; the only door to Source Lifecycle | TOM Design Lead | an agent (`[ORG]CELL-COSTOM`) | none; the run halts |
 | Source Proxy | answer only from the sources, with a citation, or refuse | Chief of Staff | an agent (`[ORG]CELL-TSP`) | none; the step halts |
 | Request Analyst | reconstruct the request into the Design Brief; derive and read the lenses; write the party register; raise only the needs that pass the leverage test; author A of the frame | Chief of Staff | an agent (`[ORG]CELL-TRA`) | none; the step halts |
 | Second Request Analyst | write the frame a second time, blind to the Request Analyst's draft, on an engine of the other author family (Annex G) | Chief of Staff | an agent (`[ORG]CELL-TSRA`) | none; the step halts |
@@ -307,7 +307,7 @@ Default.
 #### Role card
 None while the form is a single Chief of Staff.
 #### Fixed test
-TEST-TOM-TCS v5 (TEST-TOM v5, case 25: an Office is proposed, never self-created) · result `NOT_RUN`
+TEST-TOM-COSTOM v5 (TEST-TOM v5, case 25: an Office is proposed, never self-created) · result `NOT_RUN`
 
 ### 4.2 Chief of Staff
 #### Definition
@@ -334,7 +334,7 @@ Default, plus:
 |---|---|
 | Name | Chief of Staff |
 | Position and seat | the position Chief of Staff; accountable seat: the TOM Design Lead (`[ORG]HOAC-ACS`) |
-| Performed by | an agent (`[ORG]CELL-TCS`, full name TOM Chief of Staff) |
+| Performed by | an agent (`[ORG]CELL-COSTOM`, full name TOM Chief of Staff) |
 | Purpose | keep each run moving, honest and traced; be this AIOC's voice to the Design Lead and its only door to Source Lifecycle |
 | Authority limits | alone: dispatch, lock, record, batch and send needs requests and Missing Reports, run code steps (the socket's and the review's included), file a release whose final status is decided, send its release notice, admit or refuse a return by the contract, generate its brief and send its rows and its answer; needs the TOM Design Lead: a second run in parallel, a budget above the cap, any change to configuration, a ruling on a review finding, a re-base, a reduced review level for the run, single authoring at S5, any review budget above the run's; never: ask a person anything about the organisation, answer a needs request itself, take anything from the Design Lead as a source, decide for the Requesting Authority, rule on or dismiss a finding, sign, close a Work Item this AIOC performed, lower the engines, families, rounds or level of a review, write a verification label, set or change the run depth, join two role names or settle a role finding, settle a difference between two drafts, run a two-author stage with one author outside Annex G.7, answer or classify a return, edit a filed release, let a return wait without its round and deadline |
 | Write location | the run record and this AIOC's Work Items |
@@ -342,10 +342,10 @@ Default, plus:
 | Escalation | to the Design Lead in one line, with evidence linked; a stop goes to the stop door, never through this Cell |
 | Tools and access | the connection of each adapter (in this version, Source Lifecycle's), and the connections with `[ORG]AIOC-PPD` and `[ORG]AIOC-DI`, through the tool gateway, within their signed scopes; the code steps of the code project; no credential in any instruction |
 | Deputy and cover | none; on failure the run halts and the Design Lead is told |
-| Fixed test and score | TEST-TOM-TCS v5 (§9), plus the default Chief of Staff test (a)-(h) |
+| Fixed test and score | TEST-TOM-COSTOM v5 (§9), plus the default Chief of Staff test (a)-(h) |
 | Card version and status | v0.6.0 · draft |
 #### Fixed test
-TEST-TOM-TCS v5 · result `NOT_RUN`
+TEST-TOM-COSTOM v5 · result `NOT_RUN`
 
 ### 4.3 Input socket
 #### Definition
@@ -416,9 +416,9 @@ Default, plus the socket's five steps (STANDARD-CAPABILITIES §4.3), run by the 
 5. **Deliver.** Write the next pack version and its pack report. Hand the list of re-opened work to the Chief of Staff.
 
 #### Role card
-Default; performed by the Chief of Staff (`[ORG]CELL-TCS`) through the socket's code steps and its adapters (Definition, part 4).
+Default; performed by the Chief of Staff (`[ORG]CELL-COSTOM`) through the socket's code steps and its adapters (Definition, part 4).
 #### Fixed test
-TEST-TOM-TCS v5 (TEST-TOM v5, cases 1-6, 29, 31-34, 44, 46, 49-52, 61, 81, 89, 96, 119 and 120); each adapter's own test (`TEST-TOM-ADP-SL v2`); plus the default Input socket test · result `NOT_RUN`
+TEST-TOM-COSTOM v5 (TEST-TOM v5, cases 1-6, 29, 31-34, 44, 46, 49-52, 61, 81, 89, 96, 119 and 120); each adapter's own test (`TEST-TOM-ADP-SL v2`); plus the default Input socket test · result `NOT_RUN`
 
 ### 4.4 Panel
 #### Definition
@@ -622,7 +622,7 @@ TEST-TOM-TRR v5: TEST-TOM v5, cases 4, 5, 8, 14, 15, 28, 73-76, 83, 91-93, 109-1
 |---|---|
 | Name | Chief of Staff (needs requests) |
 | Position and seat | Chief of Staff; accountable seat the TOM Design Lead |
-| Performed by | an agent (`[ORG]CELL-TCS`); the raising Cell drafts each candidate |
+| Performed by | an agent (`[ORG]CELL-COSTOM`); the raising Cell drafts each candidate |
 | Purpose | ask the organisation, through Source Lifecycle, only what the design needs and the sources cannot answer |
 | Authority limits | as in §4.2; never: name a person; choose who answers a delegable row; send a pass before RPa has settled clear, or a decision row before the review of its stage has settled clear (§5.8) |
 | Write location | the needs log |
@@ -630,11 +630,11 @@ TEST-TOM-TRR v5: TEST-TOM v5, cases 4, 5, 8, 14, 15, 28, 73-76, 83, 91-93, 109-1
 | Escalation | as in §4.2 |
 | Tools and access | as in §4.2 |
 | Deputy and cover | none; the run halts |
-| Fixed test and score | TEST-TOM-TCS v5 (cases 7-13, 28, 30, 75, 76, 109) |
+| Fixed test and score | TEST-TOM-COSTOM v5 (cases 7-13, 28, 30, 75, 76, 109) |
 | Card version and status | v0.4.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v5 (cases 7-13, 28, 30, 75, 76 and 109 for this capability) · result `NOT_RUN`
+TEST-TOM-COSTOM v5 (cases 7-13, 28, 30, 75, 76 and 109 for this capability) · result `NOT_RUN`
 
 ### 5.3 Structuring
 
@@ -1173,7 +1173,7 @@ Each finding states what was injected, where the path stopped, which element and
 |---|---|
 | Name | Chief of Staff (decision and release) |
 | Position and seat | Chief of Staff; accountable seat the TOM Design Lead |
-| Performed by | an agent (`[ORG]CELL-TCS`); the attestation is by the TOM Design Lead (§3) |
+| Performed by | an agent (`[ORG]CELL-COSTOM`); the attestation is by the TOM Design Lead (§3) |
 | Purpose | put the decision to the Requesting Authority honestly, and release and file exactly what was decided |
 | Authority limits | as in §4.2; never: decide; send a row before RP8 has settled clear; file a release whose final status is not decided, whose release lint failed, or whose RP9 is not settled |
 | Write location | the run record; the release; the filing |
@@ -1181,11 +1181,11 @@ Each finding states what was injected, where the path stopped, which element and
 | Escalation | as in §4.2 |
 | Tools and access | as in §4.2, plus the write scope of the connection, for origin kinds `operating model` and `design report` only |
 | Deputy and cover | none; the run halts |
-| Fixed test and score | TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 117, 118, 122) |
+| Fixed test and score | TEST-TOM-COSTOM v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 117, 118, 122) |
 | Card version and status | v0.6.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 100, 117, 118 and 122 for this capability) · result `NOT_RUN`
+TEST-TOM-COSTOM v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 100, 117, 118 and 122 for this capability) · result `NOT_RUN`
 
 ### 5.10 Returns from later stages
 
@@ -1231,7 +1231,7 @@ TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 100, 1
 |---|---|
 | Name | Chief of Staff (returns) |
 | Position and seat | Chief of Staff; accountable seat the TOM Design Lead |
-| Performed by | an agent (`[ORG]CELL-TCS`); the classification is by the TOM Design Lead (§3) |
+| Performed by | an agent (`[ORG]CELL-COSTOM`); the classification is by the TOM Design Lead (§3) |
 | Purpose | carry every return to an end, honestly, without changing a release |
 | Authority limits | as in §4.2; alone: admit or refuse a return by limit 1, record it, run the return-brief code step, send its rows and its answer; never: decide, answer or classify a return, edit a release, write a brief by hand, let a return wait without its round and deadline |
 | Write location | the returns log; the return's versions |
@@ -1239,11 +1239,11 @@ TEST-TOM-TCS v5 (cases 23, 24, 27, 36, 51, 52, 64, 67-69, 80, 82, 85, 98, 100, 1
 | Escalation | as in §4.2; a return past its deadline goes to the Requesting Authority and the Cell carrying `[ORG]HOAC-TM` (limit 6) |
 | Tools and access | as in §4.2: the connections with `[ORG]AIOC-PPD` and `[ORG]AIOC-DI` and with Source Lifecycle |
 | Deputy and cover | none; returns wait, each shown on the Panel with its age |
-| Fixed test and score | TEST-TOM-TCS v5 (cases 101–108) |
+| Fixed test and score | TEST-TOM-COSTOM v5 (cases 101–108) |
 | Card version and status | v0.5.0 · draft |
 
 #### Fixed test
-TEST-TOM-TCS v5 (cases 101–108 for this capability) and TEST-TOM-TDL v5 (TDL-8) · result `NOT_RUN`
+TEST-TOM-COSTOM v5 (cases 101–108 for this capability) and TEST-TOM-TDL v5 (TDL-8) · result `NOT_RUN`
 
 ---
 
@@ -1320,7 +1320,7 @@ Each part has its own fixed test, made of the cases of TEST-TOM v5 (`tests/TEST-
 |---|---|---|---|---|---|
 | `[ORG]AIOC-TOM` (whole), with path qualification | TEST-TOM v5 | all (1–123), path qualification, the walkthrough battery, the reviewer battery | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-TDL` TOM Design Lead | TEST-TOM-TDL v5 | TDL-1 to TDL-8 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-TCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-TOM-TCS v5 | 1–13, 23–36, 40, 43, 44, 46, 49–52, 61, 64, 67–69, 75, 76, 78, 80–82, 85, 87, 89, 90, 92, 94–96, 98–110, 117–122 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-COSTOM` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-TOM-COSTOM v5 | 1–13, 23–36, 40, 43, 44, 46, 49–52, 61, 64, 67–69, 75, 76, 78, 80–82, 85, 87, 89, 90, 92, 94–96, 98–110, 117–122 | MEASURED | — | `NOT_RUN` |
 | Input socket adapter `ADP-SL` | TEST-TOM-ADP-SL v2 | its fixtures (adapter file §9); cases 47, 48, 119 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-TRR` Request Reconstruction | TEST-TOM-TRR v5 | 4, 5, 8, 14, 15, 28, 73–76, 83, 91–93, 109–111, 120, 121, 123 | MEASURED | — | `NOT_RUN` |
@@ -1355,7 +1355,7 @@ Each part has its own fixed test, made of the cases of TEST-TOM v5 (`tests/TEST-
 
 Template defaults. In addition:
 - **Validators.** The code project builds, from `contracts/`, the validators for every contract.
-- **Cards.** `tools/make_cards.py` generates the unit cards and the bot identity cards in `cards/` from §17 of this file, and checks them. It writes 26 unit cards and 18 bot identity cards. The blueprint governs; the generated cards are copies. It also checks every code against Naming Standard R15 and the withdrawn codes (§17).
+- **Cards.** `tools/make_cards.py` generates the unit cards and the bot identity cards in `cards/` from §17 of this file, and checks them. It writes 26 unit cards and 18 bot identity cards. The blueprint governs; the generated cards are copies. It also checks every code against Naming Standard R15 and R16 and the withdrawn codes (§17).
 - **Contract checks.** `tools/check_contracts.py` validates every contract and example; checks the content addresses of the release and the Input Pack; checks that the listed-type enums are a subset of the pinned signature list (`contracts/PINS.json`); checks each adapter's fixtures against its mapping block; and runs the release lint over `docs/OUTPUT.md`, the release enum strings and the lint fixtures; validates the reference-model catalogue seed in `upstream/` and checks its pin (check 10); checks the pin of the Library's design return contract and validates this AIOC's return examples against it (check 11).
 - **Release lint.** `tools/release_lint.py` is the release-lint code step of S8, and the CI check (Annex D item 19; Annex E.15).
 
@@ -1448,6 +1448,7 @@ H-01 to H-27, H-30 to H-34, H-36, H-37 and H-39 are taken by GOV, the TM Cell or
 | v0.4.0 | 2026-10-15 | Adds four features, under the direction recorded in `decisions/DR-0003`, and removes or weakens nothing of v0.3.0: the role register, made by code at S6 (§5.6; Annex E.17); the run depth (Annex F); two independent authors at S1 and S5, with the Second Request Analyst, the Frame Reconciler and the Second Designer (Annex G); reference models from the 49GAION Library, as methods never evidence (§5.5; Annex B.5; Annex E.19). TEST-TOM v3 (cases 85–99; TDL-7) | v1.5.0 | this commit |
 | v0.5.0 | 2026-10-16 | Links this AIOC directly to the stages after it, under the direction recorded in `decisions/DR-0005` and `49GAION/DR-0016`; removes nothing. A release notice to Process and Position Design on every filing (§5.9 step 8a; `contracts/release-notice.schema.json`); the returns of Process and Position Design and of Delivery and Implementation received directly, under the Library's design return contract pinned in `contracts/PINS.json`, and carried round by round to one of four ends (§5.10, new; Annex E.20 to E.22; slots `return_round_deadline` and `return_rounds_max`; H-35 to H-38); the mother is the Library part (§0). Wording, under `49GAION/DR-0015`: two positions are two parties, and no check reads who occupies a position (T0 condition (d), H-02, H-11, the filing); no text states a number of people, even to deny one. TEST-TOM v4 (cases 100–108; TDL-8; cases 18, 27, 29 and 86 reworded) | v1.5.0 | this commit |
 | v0.6.0 | 2026-10-16 | Adds what the model also states and reads, under the direction recorded in `decisions/DR-0006`; removes nothing (Annex H, new): the strategy frame at S1, asked once through EX-10 and decided in one row (H.1); each capability's delivery model, make-or-buy and maturity, and each value stream's criticality, at S5 (H.2–H.4); each outside party's journey at S6 (H.5); the value case and each element's priority, by code, at S8 (H.6, H.7); records of the work as it runs today, exports by role-type and process only, the refusal `person-level records` and the activity profile (H.8); the organisation dictionary read where served (H.9). Four release parts (twenty in all); a decided priority on each element decision; the v0.6 contracts (`tom-release`, `input-pack`, `needs-request`, `needs-answer`); adapter `ADP-SL` v1.1.0; H-07 rewritten; H-39, H-40. TEST-TOM v5 (cases 109–123) | v1.5.0 | this commit |
+| v0.6.1 | 2026-10-19 | The Chief of Staff takes its COS code: `[ORG]CELL-TCS` → `[ORG]CELL-COSTOM` (Naming Standard R16, `49GAION/DR-0028`; `decisions/DR-0007`). The old code is retired and kept in the card's lineage; the part test is renamed; the needs-request contract names the new code and takes the id `v0.6.1`; nothing else changes | v1.5.0 | this repository's pull request for this version |
 
 ---
 
@@ -1504,7 +1505,7 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 | Code | Kind | Type | Filler kind | HOAC label | Parent | Attached to | Fixed test (owner) | External ports |
 |---|---|---|---|---|---|---|---|---|
 | `[ORG]CELL-TDL` | CELL | Human Seat | human | `[ORG]HOAC-ACS` | `[ORG]AIOC-TOM` | none | TEST-TOM-TDL v5 (the Cell carrying `[ORG]HOAC-TM`) | none |
-| `[ORG]CELL-TCS` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-TOM` | none | TEST-TOM-TCS v5 (`[ORG]CELL-TDL`) | `[ORG]AIOC-SL`: `sl-in` and `sl-out`; `[ORG]AIOC-PPD`: `ppd-in` and `ppd-out`; `[ORG]AIOC-DI`: `di-in` and `di-out`; all through the tool gateway |
+| `[ORG]CELL-COSTOM` | CELL | AI Chief of Staff | ai | none | `[ORG]AIOC-TOM` | none | TEST-TOM-COSTOM v5 (`[ORG]CELL-TDL`) | `[ORG]AIOC-SL`: `sl-in` and `sl-out`; `[ORG]AIOC-PPD`: `ppd-in` and `ppd-out`; `[ORG]AIOC-DI`: `di-in` and `di-out`; all through the tool gateway |
 | `[ORG]POD-TRR` | POD | AI Pod | — | none | `[ORG]AIOC-TOM` | — | TEST-TOM-TRR v5 (`[ORG]CELL-TDL`) | — |
 | `[ORG]CELL-TSP` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TSP v5 (`[ORG]CELL-TDL`) | none |
 | `[ORG]CELL-TRA` | CELL | AI Agent | ai | none | `[ORG]POD-TRR` | none | TEST-TOM-TRA v5 (`[ORG]CELL-TDL`) | none |
@@ -1536,8 +1537,8 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-TDL"
-    card_version: "v0.6.0"
-    version: "0.6.0"
+    card_version: "v0.6.1"
+    version: "0.6.1"
     lifecycle_state: "designed"
     test_version: "v5"
     test_owner: "[ORG]CELL-TDL"
@@ -1563,14 +1564,16 @@ parts:
       ai_out: ["run control and configuration"]
       hu_in: ["direction from the Cell carrying [ORG]HOAC-TM"]
       hu_out: ["rulings, attestations, reduced-level acceptances, re-base decisions and the classification of ended returns, under live sign-in", "report to the Cell carrying [ORG]HOAC-TM"]
-    - code: "[ORG]CELL-TCS"
+    - code: "[ORG]CELL-COSTOM"
+      code_rule: "R16"                     # 49GAION/DR-0028; replaces [ORG]CELL-TCS (retired, R5)
+      lineage: { id: "[ORG]CELL-TCS", version: "0.6.0", relation: "derived" }
       full_name: "TOM Chief of Staff"
       role: "Chief of Staff"
       parent: "[ORG]AIOC-TOM"
       type: "AI Chief of Staff"
       filler_kind: "ai"
       cell_kind: "chief-of-staff-cell"
-      test: { id: "TEST-TOM-TCS", cases: "1-13, 23-36, 40, 43, 44, 46, 49-52, 61, 64, 67-69, 75, 76, 78, 80-82, 85, 87, 89, 90, 92, 94-96, 98-108" }
+      test: { id: "TEST-TOM-COSTOM", cases: "1-13, 23-36, 40, 43, 44, 46, 49-52, 61, 64, 67-69, 75, 76, 78, 80-82, 85, 87, 89, 90, 92, 94-96, 98-108" }
       ai_in: ["source reference", "needs answer", "needs status", "needs candidate", "locked outputs of the Pods", "settled review records", "return"]
       ai_out: ["Input Pack version", "dispatch to a Pod", "review packet", "needs request", "missing report", "needs status", "TOM Release filing", "difference register", "role register", "release notice", "return brief", "return answer"]
       hu_out: ["run brief to the TOM Design Lead", "run preview to the TOM Design Lead", "ruling sheets to the TOM Design Lead", "release notice to the Requesting Authority's Cell"]
@@ -1615,10 +1618,10 @@ parts:
 - **The Design Lead's authority.** The `authority_scope` of `[ORG]CELL-TDL` lists the listed types it signs on this AIOC's Cells (Protocol §4.10, item 12). Every other listed type on this AIOC's parts is signed by the Cell carrying `[ORG]HOAC-TM`. The expiry date is a placeholder that each organisation sets.
 - **Bots.** Each AI Cell's bot (eighteen) has its own identity card, with its own credential, `never_signs: true` and its memory sealed on a change of filler (Protocol §10, item 3); the cards are generated into `cards/bots/`. The credential IDs there are placeholders; the credentials themselves live only in the organisation's vault.
 - **Engines.** A bot's identity card names no engine. The gateway binds engines per call, and the draw binds them per review (§8; §5.8).
-- **Codes.** The codes follow the initials of each part's own name (Naming Standard R15) and pass the collision check of §5 (table below). `[ORG]POD-TOR`, `[ORG]POD-TGA`, `[ORG]CELL-TOA`, `[ORG]CELL-TA` and `[ORG]CELL-TPA` were never registered; they are withdrawn and never issued again for any meaning.
+- **Codes.** The codes follow the initials of each part's own name (Naming Standard R15), except the Chief of Staff's, `[ORG]CELL-COSTOM`, which takes COS and the initials of `[ORG]AIOC-TOM` (R16, `49GAION/DR-0028`). All pass the collision check of §5 (table below). `[ORG]POD-TOR`, `[ORG]POD-TGA`, `[ORG]CELL-TOA`, `[ORG]CELL-TA` and `[ORG]CELL-TPA` were never registered; they are withdrawn and never issued again for any meaning. `[ORG]CELL-TCS`, the Chief of Staff's code until v0.6.0, is retired at v0.6.1 (R5) and never issued again.
 - The Requesting Authority and the Chief of Staff of `[ORG]AIOC-SL` are not Cells of this AIOC.
 
-**Code checks** (Naming Standard R15 and §5), recorded on 15 October 2026. Each organisation repeats the check of §5.2 against its own register before first use (R9, R15.3).
+**Code checks** (Naming Standard R15, R16 and §5), recorded on 15 October 2026; the Chief of Staff's COS code on 19 October 2026. Each organisation repeats the check of §5.2 against its own register before first use (R9, R15.3).
 
 | Code | Initials of the full name (R15) | §5.1: no `AIOC`, `AION` or `49GAION` | §5.2: no match in this blueprint's codes | §5.3: not a version suffix or misleading acronym | §5.4: recorded before first use |
 |---|---|---|---|---|---|
@@ -1632,8 +1635,9 @@ parts:
 | `[ORG]CELL-TSRA` | **T**OM **S**econd **R**equest **A**nalyst → TSRA (4 letters) | pass | pass (distinct from `[ORG]CELL-TSA`, `-TSP`, `-TRA`) | pass | blueprint §17, 15 October 2026; each organisation's register before first use |
 | `[ORG]CELL-TFR` | **T**OM **F**rame **R**econciler → TFR | pass | pass | pass | as above |
 | `[ORG]CELL-TSD` | **T**OM **S**econd **D**esigner → TSD | pass | pass (distinct from `[ORG]CELL-TD`, `-TSP`, `-TSA`, `-TSW`) | pass | as above |
+| `[ORG]CELL-COSTOM` | R16, item 2 (`49GAION/DR-0028`): COS and the initials of `[ORG]AIOC-TOM` → COSTOM. It replaces `[ORG]CELL-TCS`, retired at v0.6.1 (R5) and kept in the card's lineage | pass | pass (distinct from the COS codes of the other mothers: `COSSL`, `COSOER`, `COSPC`, `COSDI`, `COSPPD`, `COSCH`) | pass | blueprint §17, 19 October 2026; each organisation's register before first use |
 
-The codes checked against: `[ORG]CELL-TDL`, `-TCS`, `-TSP`, `-TRA`, `-TWS`, `-TP`, `-TD`, `-TLR`, `-THA`, `-TSA`, `-TSW`, `-TBRA` to `-TBRE`; `[ORG]POD-TRR`, `-TS`, `-TEP`, `-TEM`, `-TH`, `-TW`, `-TR`; the example codes `[ORG]AIOC-CH`, `[ORG]AIOC-SL`, `[ORG]AIOC-OCO`, `[ORG]CELL-TMS`, `[ORG]CELL-GOV`, `[ORG]CELL-SLCS`, `[ORG]POD-RV`; the withdrawn codes; and the three new codes against each other.
+The codes checked against: `[ORG]CELL-TDL`, `-TCS`, `-TSP`, `-TRA`, `-TWS`, `-TP`, `-TD`, `-TLR`, `-THA`, `-TSA`, `-TSW`, `-TBRA` to `-TBRE`; `[ORG]POD-TRR`, `-TS`, `-TEP`, `-TEM`, `-TH`, `-TW`, `-TR`; the example codes `[ORG]AIOC-CH`, `[ORG]AIOC-SL`, `[ORG]AIOC-OCO`, `[ORG]CELL-TMS`, `[ORG]CELL-GOV`, `[ORG]CELL-SLCS`, `[ORG]POD-RV`; the withdrawn codes; and the three new codes against each other. On 19 October 2026, `[ORG]CELL-COSTOM` against all of these and against the COS codes of the other mothers.
 
 ---
 
@@ -2620,4 +2624,4 @@ Each reads by reference from Source Lifecycle, as it reads every part.
 
 **Done when.** The checks of H.11 pass at their gates, and RP1, RP5, RP6 and RP8 settle with these additions in their packets.
 
-*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.6.0 · Powered by 49GAION*
+*Blueprint · `[ORG]AIOC-TOM` · Target Operating Model · v0.6.1 · Powered by 49GAION*

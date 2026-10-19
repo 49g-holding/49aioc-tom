@@ -5,11 +5,11 @@ full_name: TOM Blind Reviewer A
 parent: '[ORG]POD-TR'
 accountable_to: '[ORG]CELL-TDL'
 type: AI Agent
-card_version: v0.6.0
-version: 0.6.0
+card_version: v0.6.1
+version: 0.6.1
 lineage:
   id: '[ORG]CELL-TBRA'
-  version: 0.6.0
+  version: 0.6.1
   relation: original
 lifecycle_state: designed
 fixed_test:

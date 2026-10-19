@@ -1,6 +1,6 @@
 # Intake with Source Lifecycle
 
-**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026, adds SL-A13 and the v0.6 sockets contract (§9).** How the Target Operating Model AIOC gets everything it knows. It reads only sources, and where the sources are silent it asks through the Chief of Staff of `[ORG]AIOC-SL`. The machine contracts are in `contracts/`:
+**`[ORG]AIOC-TOM` v0.4.0 · draft · 15 October 2026; v0.6.0, 16 October 2026, adds SL-A13 and the v0.6 sockets contract (§9); v0.6.1, 19 October 2026, gives the Chief of Staff its COS code `[ORG]CELL-COSTOM` in `raised_by`, and the needs-request contract takes the id `v0.6.1`.** How the Target Operating Model AIOC gets everything it knows. It reads only sources, and where the sources are silent it asks through the Chief of Staff of `[ORG]AIOC-SL`. The machine contracts are in `contracts/`:
 - `source-reference.schema.json`;
 - `input-pack.schema.json`;
 - `needs-request.schema.json` and `needs-answer.schema.json` (`:v0.4`);
@@ -91,7 +91,7 @@ Observation of real work is not a type of request. Admitting it would be a decis
 |---|---|
 | `request_id`, `version` | stable ID; a changed request is a new version, which supersedes the earlier one |
 | `run_id`, `parent_work_item` | the design run and its Work Item |
-| `raised_by` | the code of the Pod that raised it (`[ORG]POD-TRR`, `-TS`, `-TEP`, `-TEM`, `-TH`, `-TW`, `-TR`), or of the Chief of Staff (`[ORG]CELL-TCS`) for decision-sheet and notice rows |
+| `raised_by` | the code of the Pod that raised it (`[ORG]POD-TRR`, `-TS`, `-TEP`, `-TEM`, `-TH`, `-TW`, `-TR`), or of the Chief of Staff (`[ORG]CELL-COSTOM`) for decision-sheet and notice rows |
 | `type` | one of the six types |
 | `question_plain` | the question in the organisation's language, short, one thing |
 | `question_original` | the raising Pod's own wording, verbatim; Source Lifecycle keeps it beside the plain question and records any simplification |
